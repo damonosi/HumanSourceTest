@@ -1,0 +1,126 @@
+import ImgFillerBlog from "../../../public/imagini/blog/heroBlogImg.png";
+
+const dateBloguri = [
+  {
+    id: 1,
+    data: "Luni, 24 Septembrie 2019",
+    src: ImgFillerBlog,
+
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 2,
+    data: "Luni, 24 Septembrie 2020",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 3,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 4,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 5,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 6,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 7,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 8,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 9,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 10,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 11,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 12,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 13,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 14,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 15,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 16,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+  {
+    id: 17,
+    data: "Luni, 24 Septembrie 2030",
+    src: ImgFillerBlog,
+    descriere: "Cele mai cautate locuri de munca in strainatate",
+    categorie: "Categorie",
+  },
+];
+
+export default dateBloguri;
