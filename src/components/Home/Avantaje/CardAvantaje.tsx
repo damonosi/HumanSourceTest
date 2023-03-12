@@ -12,21 +12,23 @@ const CardAvantaje = ({ titlu, descriere, icon }: ICardAvantaje) => {
   return (
     <Card
       elevation={0}
-      className="m-2 my-8 max-w-[300px]  border-0 border-l-0  lg:px-4 "
+      className="m-2  max-w-[300px]  border-0 border-l-0  lg:px-4 "
     >
       <CardContent className="flex h-fit flex-col items-center gap-2   lg:px-4">
-        <div className="text-[#BF4546]">
-          {icon === "bank" && <AccountBalanceIcon />}
-          {icon === "ue" && <ContactsIcon />}
-          {icon === "manageri" && <DirectionsBoatIcon />}
-          {icon === "suport" && <ImportContactsIcon />}
+        <div className="flex flex-col gap-4">
+          <div className="text-[#BF4546]">
+            {icon === "bank" && <AccountBalanceIcon />}
+            {icon === "ue" && <ContactsIcon />}
+            {icon === "manageri" && <DirectionsBoatIcon />}
+            {icon === "suport" && <ImportContactsIcon />}
+          </div>
+          <div className="flex flex-col gap-2">
+            <h6 className=" text-colors-gri-brand lg:px-6 ">{titlu}</h6>
+            <p className="text-colors-gri-brand opacity-50 lg:px-4">
+              {descriere}
+            </p>
+          </div>
         </div>
-        <h1 className=" text-[20px] font-[500] leading-[30px] text-[#383A3C] lg:px-6 ">
-          {titlu}
-        </h1>
-        <p className="text-[16px] font-[350] leading-[24px] text-[#383A3C] opacity-50 lg:px-4">
-          {descriere}
-        </p>
       </CardContent>
     </Card>
   );

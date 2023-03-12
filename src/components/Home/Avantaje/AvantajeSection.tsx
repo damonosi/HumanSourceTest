@@ -3,11 +3,15 @@ import dateAvantaje from "./dateAvantaje";
 const AvantajeSection = () => {
   return (
     <section className="container flex flex-col items-center pb-24 text-center">
-      <h1 className="mb-24 px-2 text-[28px] font-[700] leading-[42px]">
-        Firma de recrutare strainatate - Avantajele serviciilor Human Source
+      <h1 className="mb-24 px-2 ">
+        <span className="hidden md:block">
+          {" "}
+          Firma de recrutare strainatate -
+        </span>{" "}
+        Avantajele serviciilor Human Source
       </h1>
 
-      <div className="mb-20 grid w-full grid-cols-2 place-items-center gap-6 2xl:grid-cols-4    ">
+      <div className="mb-20 grid  w-full grid-cols-2 place-items-center gap-x-5 gap-y-10 2xl:grid-cols-4    ">
         {dateAvantaje.map(({ titlu, descriere, icon, id }) => (
           <CardAvantaje
             key={id}

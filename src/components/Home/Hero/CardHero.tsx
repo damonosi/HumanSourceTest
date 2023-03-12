@@ -22,33 +22,23 @@ const CardHero = ({
 }: ICardHero) => {
   return (
     <Card
-      className={`grid h-[165px] w-full grid-cols-1 items-center justify-between rounded-t-[30px]  rounded-br-[30px]  border bg-white  px-6  py-2 text-center  lg:h-[194px]  ${
+      className={`grid w-full grid-cols-1 items-center justify-between rounded-t-[30px] rounded-br-[30px]  border  bg-white py-2  px-2 text-center  md:h-[165px] md:px-6  lg:h-[194px]  ${
         icon === "angajator" && "rounded-bl-[30px] rounded-tr-[0px] "
       }  ${icon === "muncitor" && " rounded-bl-[30px] rounded-tl-[0px] "}`}
       id="card-hero"
     >
       {" "}
-      <CardContent className="flex h-full flex-col gap-6 px-0 ">
-        <div className="flex items-center justify-between " id="titlu-card">
+      <CardContent className=" flex h-full gap-4  px-0 ">
+        <div className=" flex w-1/4 ">
           <Image className="h-6 w-6" alt="imagine-hero" src={src} />
-
-          <div className="ml-6 flex w-full ">
-            <h1 className=" text-[16px] font-[700] leading-[22px] ">{titlu}</h1>
-          </div>
         </div>
-        <div
-          className="  bg-white text-[14px] font-[350] leading-[18px] text-[#383A3C]"
-          id="descriere-card"
-        >
-          <span>{descriere}</span>
-        </div>
-        <div
-          className="flex  w-full items-center justify-between text-red-700 "
-          id="buton-link-container"
-        >
+        <div className=" flex w-full flex-col items-start justify-between text-colors-gri-brand ">
+          <h6 className="font-bold">{titlu}</h6>
+          <span className="text-start">{descriere}</span>
           <Link href={`/${link}`} className="w-full ">
-            <button className="w-full items-start justify-between text-[14px] font-bold lowercase leading-[16.8px] text-red-700 hover:bg-black ">
-              {textButon} <ArrowForwardIcon />
+            <button className="flex w-full items-start   font-bold  text-red-700 ">
+              <p className="font-bold">{textButon}</p>{" "}
+              <ArrowForwardIcon className="" />
             </button>
           </Link>{" "}
         </div>
@@ -61,7 +51,7 @@ const CarduriHero = () => {
   return (
     <div
       id="container-carduri  "
-      className="relative z-20 grid w-full  grid-cols-2   items-center  gap-2 pt-16    lg:pt-0 "
+      className="relative z-20 grid w-full  grid-cols-2 items-center gap-2 px-8  pt-16   md:px-0    lg:pt-0 "
     >
       {dateHero.map(({ titlu, icon, descriere, link, textButon, id, src }) => (
         <CardHero
