@@ -11,12 +11,12 @@ import ServiciiSection from "../components/Home/Servicii/ServiciiSection";
 export default function Home() {
   return (
     <div
-      className=" grid  grid-cols-1  items-center justify-center "
+      className="   grid grid-cols-1 items-center justify-center "
       id="container-home"
     >
       <HeroSection />
 
-      <div className="  translate-y-[-2%] lg:translate-y-[-4%]">
+      <div className="  h-full translate-y-[-2%]  lg:translate-y-[-4%]">
         <div
           className="mx-1 flex flex-col rounded-t-[10px] bg-white pt-16  md:mx-2 md:items-center md:justify-center    lg:py-36 lg:px-48"
           id="background"

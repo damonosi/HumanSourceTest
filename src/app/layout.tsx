@@ -13,7 +13,7 @@ export default function RootLayout({
     <html id="root" lang="en">
       <head />
 
-      <body className="m-0 mx-auto flex items-center  justify-center  overflow-x-hidden bg-[#E5E5E5] ">
+      <body className="m-0 mx-auto flex items-center  justify-center  overflow-x-hidden bg-[#fff] ">
         <div
           className=" relative grid w-full  grid-cols-1  "
           id="site-container"
