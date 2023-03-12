@@ -1,14 +1,10 @@
 "use client";
 import dateBloguri from "@/components/Blog/dateBloguri";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { FC } from "react";
 
 interface IpageProps {
   params: { slug: string };
-}
-interface IblogInfo {
-  text: string;
-  src: StaticImageData;
 }
 
 const Blog: FC<IpageProps> = ({ params }) => {
@@ -16,9 +12,9 @@ const Blog: FC<IpageProps> = ({ params }) => {
     <section className="min-h-screen py-6 text-start md:px-20">
       {dateBloguri
         .filter((blog) => blog.slug === params.slug)
-        .map(({ src, text }) => {
+        .map(({ src, text, id }) => {
           return (
-            <div className="">
+            <div key={id} className="">
               <div className="flex max-h-[405px] w-full justify-center py-6">
                 <Image src={src} className="h-auto w-full" alt="cover-blog" />{" "}
               </div>
