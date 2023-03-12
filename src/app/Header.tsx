@@ -31,7 +31,7 @@ function NavList() {
       <NavItem href="munca" label="Locuri de munca" />
       <NavItem href="contact" label="Contact" />
       <NavItem href="servicii" label="Servicii" />
-      <NavItem href="blog" label="Blog" />
+      <NavItem href="bloguri" label="Blog" />
       <button className="hidden h-8  w-20 rounded-2xl bg-red-600 text-white lg:inline-block">
         Aplica
       </button>

@@ -1,9 +1,9 @@
 import dateBloguri from "@/components/Blog/dateBloguri";
 import Image from "next/image";
 import BlogCover from "../../../public/imagini/blog/heroBlogImg.png";
-import CardBlogSecundar from "./../../components/Blog/CardBlogSecundar";
+import CardBlogSecundar from "../../components/Blog/CardBlogSecundar";
 
-const BlogPage = () => {
+const BloguriPage = () => {
   return (
     <section className="mx-16 flex flex-col items-center gap-16 py-28 ">
       <section className="flex w-full items-center" id="hero-bloguri">
@@ -28,11 +28,12 @@ const BlogPage = () => {
         </div>
       </section>
       <div className="grid gap-5 md:grid-cols-3" id="container-bloguri">
-        {dateBloguri.map(({ id, src, data, descriere, categorie }) => (
+        {dateBloguri.map(({ id, src, data, descriere, categorie, slug }) => (
           <CardBlogSecundar
             key={id}
             src={src}
             data={data}
+            slug={slug}
             descriere={descriere}
             categorie={categorie}
           />
@@ -43,4 +44,4 @@ const BlogPage = () => {
   );
 };
 
-export default BlogPage;
+export default BloguriPage;
