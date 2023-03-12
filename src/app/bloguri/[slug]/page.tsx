@@ -16,10 +16,10 @@ const Blog: FC<IpageProps> = ({ params }) => {
           return (
             <div key={id} className="">
               <div className="flex max-h-[405px] w-full justify-center py-6">
-                <Image src={src} className="h-auto w-full" alt="cover-blog" />{" "}
+                <Image src={src} className="h-auto w-full" alt="cover-blog" />
               </div>
               <div className="flex flex-col gap-5 text-start">
-                <p>By Author Name</p> <p>Luni, 24 Septembrie 2019</p>{" "}
+                <p>By Author Name</p> <p>Luni, 24 Septembrie 2019</p>
                 <h4 className="text-start font-bold">
                   Lorem ipsum dolor sit amet consectetur. Magnis sem a.
                 </h4>
