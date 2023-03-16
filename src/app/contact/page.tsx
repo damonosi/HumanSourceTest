@@ -1,14 +1,19 @@
 "use client";
+import { Breadcrumbs, Checkbox, Input } from "@material-tailwind/react";
+import EmailIcon from "@mui/icons-material/Email";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
+import PhoneIcon from "@mui/icons-material/Phone";
 import Image from "next/image";
+import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
 import imgContact from "../../../public/imagini/contact/imgContact.png";
-
 type Inputs = {
   nume: string;
   dataNastere: string;
   email: string;
   telefon: string;
   mesaj: string;
+  privacy: boolean;
 };
 const Contact = () => {
   const {
@@ -19,105 +24,114 @@ const Contact = () => {
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
   return (
-    <section className="flex p-16">
-      <div className="">
-        <h3 className="text-start font-bold">Contacteaza-ne!</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Cras felis tristique pharetra
-          magna. Orci quis dui viverra mi lacus amet pulvinar quis. Eu auctor
-          ullamcorper imperdiet ultricies amet elementum quam. T
-        </p>
-        <div className="flex bg-[#D0D0D0] p-16">
-          <form className="" onSubmit={handleSubmit(onSubmit)}>
-            <div className="grid grid-cols-2 gap-2">
-              <div className="mb-4">
-                <label
-                  className="mb-2 block text-sm font-bold text-gray-700"
-                  htmlFor="nume"
-                >
-                  Numele tau complet
-                </label>
-                <input
-                  className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
-                  placeholder="&nbsp;"
+    <section className="flex flex-col bg-[#E5E5E5] px-4  md:px-16">
+      <Breadcrumbs
+        className="mx-0 my-12 bg-transparent"
+        fullWidth
+        separator=">"
+      >
+        <Link className="text-colors-gri-brand" href="/">
+          Home
+        </Link>
+        <Link className="text-red-600" href="/contact">
+          Contact
+        </Link>
+      </Breadcrumbs>
+      <div className="flex flex-col-reverse gap-14 py-4 md:flex-row ">
+        <div className="flex w-full flex-col justify-between gap-4 md:w-1/2 md:gap-0">
+          <div className="flex flex-col gap-8 md:pr-12">
+            <h3 className="text-start font-bold">Contacteaza-ne!</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Cras felis tristique
+              pharetra magna. Orci quis dui viverra mi lacus amet pulvinar quis.
+              Eu auctor ullamcorper imperdiet ultricies amet elementum quam. T
+            </p>
+          </div>
+          <div className="flex flex-col items-start gap-2 md:flex-row">
+            <span className="rounded-2xl border bg-white py-2 px-3">
+              <EmailIcon /> office@humansource.com
+            </span>
+            <span className="rounded-2xl border bg-white py-2 px-3">
+              {" "}
+              <PhoneIcon /> +40209764893
+            </span>
+          </div>
+          <div className="flex rounded-2xl bg-[#D0D0D0] p-4 md:p-16">
+            <form className="" onSubmit={handleSubmit(onSubmit)}>
+              <div className="mb-4 grid grid-cols-1 gap-6 md:grid-cols-2">
+                <Input
+                  variant="outlined"
                   type="text"
                   {...register("nume", { required: true })}
                   id="nume"
+                  label="  Numele tau complet"
+                  placeholder="  Numele tau complet"
+                  color="purple"
                 />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="mb-2 block text-sm font-bold text-gray-700"
-                  htmlFor="nume"
-                >
-                  Data Nastere
-                </label>
-                <input
-                  className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
-                  placeholder="&nbsp;"
-                  type="text"
+
+                <Input
+                  variant="outlined"
+                  type="date"
                   {...register("dataNastere", { required: true })}
                   id="dataNastere"
+                  label="Data Nastere"
+                  placeholder="Data Nastere"
                 />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="mb-2 block text-sm font-bold text-gray-700"
-                  htmlFor="email"
-                >
-                  Adresa de email
-                </label>
-                <input
-                  className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
-                  placeholder="&nbsp;"
+
+                <Input
+                  variant="outlined"
                   type="text"
                   {...register("email", { required: true })}
+                  icon={<EmailOutlinedIcon />}
                   id="email"
+                  label="Email"
+                  placeholder="Email"
                 />
-              </div>
-              <div className="mb-4">
-                <label
-                  className="mb-2 block text-sm font-bold text-gray-700"
-                  htmlFor="telefon"
-                >
-                  Numar de telefon
-                </label>
-                <input
-                  className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
-                  placeholder="&nbsp;"
+
+                <Input
+                  variant="outlined"
                   type="text"
                   {...register("telefon", { required: true })}
                   id="telefon"
+                  label="Numar de telefon"
+                  placeholder="Numar de telefon"
                 />
               </div>
-            </div>
-            <div className="mb-4">
-              <label
-                className="mb-2 block text-sm font-bold text-gray-700"
-                htmlFor="mesaj"
-              >
-                Trimite-ne un mesaj
-              </label>
-              <input
-                className="focus:shadow-outline w-full appearance-none rounded border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none"
-                placeholder="&nbsp;"
+              <Checkbox
+                {...register("privacy", { required: true })}
+                label={
+                  <span className="text-xs text-white">
+                    *Sunt de acord cu
+                    <a
+                      href="politica-confidentialitate"
+                      className=" mx-2 text-colors-gri-bg underline underline-offset-4"
+                    >
+                      Politica de confidentialitate
+                    </a>
+                    in vederea prelucrarii datelor personale.
+                  </span>
+                }
+              />
+
+              <Input
+                variant="outlined"
                 type="text"
                 {...register("mesaj", { required: true })}
                 id="telefon"
+                aria-expanded
+                label="Trimite-ne un mesaj"
+                placeholder="Trimite-ne un mesaj"
               />
-            </div>
 
-            {/* include validation with required or other standard HTML validation rules */}
+              {errors.nume && <span>This field is required</span>}
 
-            {/* errors will return when field validation fails  */}
-            {errors.nume && <span>This field is required</span>}
-
-            <button type="submit">Submit</button>
-          </form>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
         </div>
-      </div>
-      <div className="">
-        <Image alt="imagine contact" src={imgContact} />
+        <div className="flex w-full md:w-1/2">
+          <Image alt="imagine contact" src={imgContact} />
+        </div>
       </div>
     </section>
   );

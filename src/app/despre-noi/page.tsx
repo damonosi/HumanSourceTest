@@ -1,6 +1,8 @@
 "use client";
 import PageTransitionWrapper from "@/utils/PageTransitionWrapper";
+import { Breadcrumbs } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 import Hi5 from "../../../public/imagini/about/hi5.png";
 
 import { CardEchipa, CardValori } from "./CarduriAbout";
@@ -10,6 +12,18 @@ const DespreNoiPage = () => {
   return (
     <PageTransitionWrapper>
       <section className="grid grid-cols-1  gap-16 px-5 py-16 lg:px-20">
+        <Breadcrumbs
+          className="mx-0 my-12 bg-transparent"
+          fullWidth
+          separator=">"
+        >
+          <Link className="text-colors-gri-brand" href="/">
+            Home
+          </Link>
+          <Link className="text-red-600" href="/despre-coi">
+            Despre Noi
+          </Link>
+        </Breadcrumbs>
         <div className="container mx-auto flex w-full flex-col-reverse gap-6  lg:flex-row ">
           <div
             className="grid w-full flex-col items-start gap-6 text-left lg:w-1/2"

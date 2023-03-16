@@ -1,6 +1,8 @@
 "use client";
 import dateBloguri from "@/components/Blog/dateBloguri";
+import { Breadcrumbs } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 
 interface IpageProps {
@@ -10,6 +12,17 @@ interface IpageProps {
 const Blog: FC<IpageProps> = ({ params }) => {
   return (
     <section className="min-h-screen py-6 text-start md:px-20">
+      <Breadcrumbs className="px-0 py-6" fullWidth separator=">">
+        <Link className="text-colors-gri-brand" href="/">
+          Home
+        </Link>
+        <Link className="text-colors-gri-brand" href="/bloguri">
+          Bloguri
+        </Link>
+        <Link className="text-red-600" href={`/bloguri/${params.slug}`}>
+          {params.slug}
+        </Link>
+      </Breadcrumbs>
       {dateBloguri
         .filter((blog) => blog.slug === params.slug)
         .map(({ src, text, id }) => {

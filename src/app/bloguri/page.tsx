@@ -1,14 +1,31 @@
+"use client";
 import dateBloguri from "@/components/Blog/dateBloguri";
+import { Breadcrumbs } from "@material-tailwind/react";
 import Image from "next/image";
+import Link from "next/link";
 import BlogCover from "../../../public/imagini/blog/heroBlogImg.png";
 import CardBlogSecundar from "../../components/Blog/CardBlogSecundar";
-
 const BloguriPage = () => {
   return (
-    <section className="mx-16 flex flex-col items-center gap-16 py-28 ">
-      <section className="flex w-full items-center" id="hero-bloguri">
+    <section className="mx-4 flex flex-col  gap-16 pb-28 md:mx-16 ">
+      <Breadcrumbs
+        className="mx-0 my-12 bg-transparent"
+        fullWidth
+        separator=">"
+      >
+        <Link className="text-colors-gri-brand" href="/">
+          Home
+        </Link>
+        <Link className="text-red-600" href="/bloguri">
+          Bloguri
+        </Link>
+      </Breadcrumbs>
+      <section
+        className="flex w-full flex-col-reverse items-center gap-8 md:flex-row"
+        id="hero-bloguri"
+      >
         <div
-          className="flex w-1/2 flex-col items-start"
+          className="flex flex-col items-start gap-6 md:w-1/2"
           id="container-text-blog"
         >
           <h1>Blogul nostru</h1>
@@ -20,7 +37,7 @@ const BloguriPage = () => {
           </p>
         </div>
         <div
-          className="flex w-1/2 items-center justify-center"
+          className="flex items-center justify-center md:w-1/2"
           id="container-imagine"
         >
           {" "}
