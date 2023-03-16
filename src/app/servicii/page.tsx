@@ -20,7 +20,7 @@ const ServiciiPage = () => {
         <Link className="text-colors-gri-brand" href="/">
           Home
         </Link>
-        <Link className="text-red-600" href="/bloguri">
+        <Link className="text-red-600" href="/servicii">
           Servicii
         </Link>
       </Breadcrumbs>
@@ -70,8 +70,13 @@ const ServiciiPage = () => {
         </div>
       </section>
       <div className="flex flex-col justify-between md:flex-row">
-        {dateServiciiCard.map(({ src, titlu, descriere }) => (
-          <CardServicii src={src} titlu={titlu} descriere={descriere} />
+        {dateServiciiCard.map(({ id, src, titlu, descriere }) => (
+          <CardServicii
+            key={id}
+            src={src}
+            titlu={titlu}
+            descriere={descriere}
+          />
         ))}
       </div>
     </section>

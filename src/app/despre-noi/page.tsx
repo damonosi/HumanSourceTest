@@ -20,7 +20,7 @@ const DespreNoiPage = () => {
           <Link className="text-colors-gri-brand" href="/">
             Home
           </Link>
-          <Link className="text-red-600" href="/despre-coi">
+          <Link className="text-red-600" href="/despre-noi">
             Despre Noi
           </Link>
         </Breadcrumbs>

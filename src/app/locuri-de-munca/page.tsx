@@ -18,8 +18,8 @@ const CategorieJoburi = () => {
         <Link className="text-colors-gri-brand" href="/">
           Home
         </Link>
-        <Link className="text-red-600" href="/bloguri">
-          Servicii
+        <Link className="text-red-600" href="/locuri-de-munca">
+          Locuri de munca
         </Link>
       </Breadcrumbs>
       <Typography variant="h3" className="text-bold text-center">
