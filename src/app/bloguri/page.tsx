@@ -1,10 +1,9 @@
 "use client";
-import dateBloguri from "@/components/Blog/dateBloguri";
-import { Breadcrumbs } from "@material-tailwind/react";
+import { Breadcrumbs, Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
 import BlogCover from "../../../public/imagini/blog/heroBlogImg.png";
-import CardBlogSecundar from "../../components/Blog/CardBlogSecundar";
+import PaginatedItems from "./Paginate.jsx";
 const BloguriPage = () => {
   return (
     <section className="flex flex-col gap-16  bg-[#E5E5E5] px-4 pb-28 md:px-16">
@@ -28,13 +27,15 @@ const BloguriPage = () => {
           className="flex flex-col items-start gap-6 md:w-1/2"
           id="container-text-blog"
         >
-          <h1>Blogul nostru</h1>
-          <h5>Et semper nulla sit quis feugiat.</h5>
-          <p>
+          <Typography variant="h2">Blogul nostru</Typography>
+          <Typography className="text-colors-gri-brand" variant="h5">
+            Et semper nulla sit quis feugiat.
+          </Typography>
+          <Typography variant="paragraph">
             Lorem ipsum dolor sit amet consectetur. Duis faucibus erat
             adipiscing elit ultrices in libero. Tincidunt commodo augue
             consectetur suspendisse ornare elementum. Maecenas hac arcu.
-          </p>
+          </Typography>
         </div>
         <div
           className="flex items-center justify-center md:w-1/2"
@@ -44,18 +45,8 @@ const BloguriPage = () => {
           <Image alt="cover-blog" src={BlogCover} />{" "}
         </div>
       </section>
-      <div className="grid gap-5 md:grid-cols-3" id="container-bloguri">
-        {dateBloguri.map(({ id, src, data, descriere, categorie, slug }) => (
-          <CardBlogSecundar
-            key={id}
-            src={src}
-            data={data}
-            slug={slug}
-            descriere={descriere}
-            categorie={categorie}
-          />
-        ))}
-        )
+      <div id="container-bloguri">
+        <PaginatedItems itemsPerPage={9} />
       </div>
     </section>
   );

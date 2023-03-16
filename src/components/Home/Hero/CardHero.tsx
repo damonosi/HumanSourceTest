@@ -1,4 +1,5 @@
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import { Button, Typography } from "@material-tailwind/react";
 import { Card, CardContent } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -32,14 +33,22 @@ const CardHero = ({
         <div className=" flex w-1/4 ">
           <Image className="h-6 w-6" alt="imagine-hero" src={src} />
         </div>
-        <div className=" flex w-full flex-col items-start justify-between text-colors-gri-brand ">
-          <h6 className="font-bold">{titlu}</h6>
-          <span className="text-start">{descriere}</span>
+        <div className=" flex w-3/4 flex-col items-start justify-between text-colors-gri-brand ">
+          <Typography variant="h6" className="font-bold">
+            {titlu}
+          </Typography>
+          <Typography variant="paragraph" className="text-start">
+            {descriere}
+          </Typography>
           <Link href={`/${link}`} className="w-full ">
-            <button className="flex w-full items-start   font-bold  text-red-700 ">
-              <p className="font-bold">{textButon}</p>{" "}
-              <ArrowForwardIcon className="" />
-            </button>
+            <Button
+              variant="text"
+              ripple={true}
+              className="flex items-center gap-3 px-0 text-red-800"
+            >
+              {textButon}
+              <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
+            </Button>
           </Link>{" "}
         </div>
       </CardContent>

@@ -1,5 +1,10 @@
 "use client";
-import { Breadcrumbs, Checkbox, Input } from "@material-tailwind/react";
+import {
+  Breadcrumbs,
+  Checkbox,
+  Input,
+  Textarea,
+} from "@material-tailwind/react";
 import EmailIcon from "@mui/icons-material/Email";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -7,7 +12,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
 import imgContact from "../../../public/imagini/contact/imgContact.png";
-
 
 type Inputs = {
   nume: string;
@@ -115,9 +119,8 @@ const Contact = () => {
                 }
               />
 
-              <Input
+              <Textarea
                 variant="outlined"
-                type="text"
                 {...register("mesaj", { required: true })}
                 id="telefon"
                 aria-expanded

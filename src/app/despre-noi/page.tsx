@@ -1,6 +1,6 @@
 "use client";
 import PageTransitionWrapper from "@/utils/PageTransitionWrapper";
-import { Breadcrumbs } from "@material-tailwind/react";
+import { Breadcrumbs, Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
 import Hi5 from "../../../public/imagini/about/hi5.png";
@@ -29,15 +29,24 @@ const DespreNoiPage = () => {
             className="grid w-full flex-col items-start gap-6 text-left lg:w-1/2"
             id="text-about"
           >
-            <h1 className=" text-bold text-left text-colors-gri-brand ">
+            <Typography
+              variant="h1"
+              className=" text-bold text-left text-colors-gri-brand "
+            >
               Despre noi
-            </h1>
-            <h5 className="text-left font-bold text-colors-gri-brand ">
+            </Typography>
+            <Typography
+              variant="h5"
+              className="text-left font-bold text-colors-gri-brand "
+            >
               Companie de resurse umane ce oferă servicii de atât pe partea de
               leasign de personal, recrutare, selecție cât și pe partea de
               payroll si administrare de personal.
-            </h5>
-            <p className="font text-left font-normal leading-5 text-colors-gri-brand ">
+            </Typography>
+            <Typography
+              variant="paragraph"
+              className="font text-left font-normal leading-5 text-colors-gri-brand "
+            >
               Lorem ipsum dolor sit amet consectetur. Cras felis tristique
               pharetra magna. Orci quis dui viverra mi lacus amet pulvinar quis.
               Eu auctor ullamcorper imperdiet ultricies amet elementum quam.
@@ -47,7 +56,7 @@ const DespreNoiPage = () => {
               tellus adipiscing amet vel risus. Nulla libero pulvinar nullam
               posuere blandit dignissim viverra eu magna. Blandit euismod risus
               vel leo.
-            </p>
+            </Typography>
           </div>
           <div
             className="flex w-full items-center justify-center lg:w-1/2"
@@ -57,8 +66,10 @@ const DespreNoiPage = () => {
             <Image alt="imagine-about" className="w-full" src={Hi5} />
           </div>
         </div>
-        <section className="flex flex-col gap-16 px-5 lg:px-0">
-          <h3 className="bold">Valorile Companiei</h3>
+        <section className="flex flex-col gap-16 px-5 text-center lg:px-0">
+          <Typography variant="h3" className="bold">
+            Valorile Companiei
+          </Typography>
           <div
             className="container mx-auto grid grid-cols-1 flex-col   gap-5 sm:grid-cols-2 lg:grid-cols-4 "
             id="container-carduri-about"
@@ -78,9 +89,9 @@ const DespreNoiPage = () => {
           id="container echipa"
         >
           <div className="mb-24 text-center">
-            <h3 className="mb-2 font-bold  text-colors-gri-brand ">
+            <Typography variant="h3" className="bold text-colors-gri-brand">
               Echipa Noastra
-            </h3>
+            </Typography>
           </div>
 
           <div className="grid w-full gap-8 md:grid-cols-2 md:px-8 lg:grid-cols-3 ">

@@ -1,3 +1,4 @@
+import { Typography } from "@material-tailwind/react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 interface ICardBlogSecundar {
@@ -25,13 +26,21 @@ const CardBlogSecundar = ({
         </div>
         <div className="flex flex-col gap-2">
           {" "}
-          <span className="text-start text-colors-gri-brand opacity-50">
+          <Typography
+            variant="small"
+            className="text-start text-colors-gri-brand opacity-50"
+          >
             {data}
-          </span>
-          <h4 className="text-start font-bold text-colors-gri-brand">
+          </Typography>
+          <Typography
+            variant="h4"
+            className="text-start font-bold text-colors-gri-brand"
+          >
             {descriere}
-          </h4>
-          <p className="text-start text-red-600">{categorie}</p>
+          </Typography>
+          <Typography variant="paragraph" className="text-start text-red-600">
+            {categorie}
+          </Typography>
         </div>
       </div>
     </Link>

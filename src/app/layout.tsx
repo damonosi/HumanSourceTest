@@ -1,17 +1,22 @@
 import Providers from "@/utils/providers";
 import Footer from "./Footer";
 
+import localFont from "next/font/local";
 import Header from "./Header";
+
 export const metadata = {
   title: "Human Source",
 };
+const myFont = localFont({
+  src: "../../public/fonts/Madera.ttf",
+});
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html id="root" lang="en">
+    <html id="root" lang="en" className={myFont.className}>
       <head />
       <Providers>
         <body className="m-0 mx-auto flex items-center  justify-center  overflow-x-hidden bg-[#fff] ">

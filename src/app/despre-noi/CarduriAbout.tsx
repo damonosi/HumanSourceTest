@@ -1,10 +1,5 @@
 "use client";
-import {
-  Card,
-  CardHeader,
-  IconButton,
-  Typography,
-} from "@material-tailwind/react";
+import { Card, CardHeader, Typography } from "@material-tailwind/react";
 import Image, { StaticImageData } from "next/image";
 
 interface IEchipaInfo {
@@ -35,23 +30,12 @@ export const CardEchipa = ({ src, nume, pozitie }: IEchipaInfo) => {
         {nume}
       </Typography>
 
-      <Typography className=" mb-3 font-bold text-colors-gri-bg">
+      <Typography
+        variant="paragraph"
+        className=" mb-3 font-bold text-colors-gri-bg"
+      >
         {pozitie}
       </Typography>
-
-      <div className="flex items-center">
-        <IconButton variant="text" color="blue-gray">
-          <i className="fa-brands fa-twitter text-lg not-italic" />
-        </IconButton>
-
-        <IconButton variant="text" color="blue-gray">
-          <i className="fa-brands fa-linkedin text-lg not-italic" />
-        </IconButton>
-
-        <IconButton variant="text" color="blue-gray">
-          <i className="fa-brands fa-dribbble text-lg not-italic" />
-        </IconButton>
-      </div>
     </Card>
   );
 };
@@ -59,15 +43,22 @@ export const CardEchipa = ({ src, nume, pozitie }: IEchipaInfo) => {
 export const CardValori = ({ titlu, descriere, src }: IValoriInfo) => {
   return (
     <div className="flex flex-col items-center gap-7 rounded-2xl bg-white px-8 py-16  md:px-8 lg:px-6 ">
-      <div className="h-14 w-14 p-1" id="imgsection">
-        <Image alt="icon-card-about" className="h-auto w-full" src={src} />
+      <div
+        className="flex w-full items-center justify-center p-1"
+        id="imgsection"
+      >
+        <Image alt="icon-card-about" className="h-auto w-12" src={src} />
       </div>
       <div
         className="flex flex-col  items-center gap-6 text-center"
         id="text-section"
       >
-        <h6 className="font-bold text-colors-gri-brand">{titlu}</h6>
-        <p className="text-colors-gri-brand">{descriere}</p>
+        <Typography variant="h6" className=" font-bold text-colors-gri-brand">
+          {titlu}
+        </Typography>
+        <Typography variant="paragraph" className="text-colors-gri-brand">
+          {descriere}
+        </Typography>
       </div>
     </div>
   );

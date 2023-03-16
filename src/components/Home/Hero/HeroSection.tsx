@@ -1,6 +1,7 @@
 import CarduriHero from "./CardHero";
 
 import PageTransitionWrapper from "@/utils/PageTransitionWrapper";
+import { Typography } from "@material-tailwind/react";
 import HartaHero from "../../../../public/imagini/hero/hartaPinuri.svg";
 
 const HeroSection = () => {
@@ -26,17 +27,20 @@ const HeroSection = () => {
             className=" flex  w-full flex-col gap-2 pt-6 text-start lg:pb-16"
             id="container-text"
           >
-            <p className="uppercase text-white opacity-80 ">
+            <Typography
+              variant="small"
+              className="uppercase text-white opacity-80 "
+            >
               AGENTIE DE PLASARE FORȚĂ DE MUNCĂ
-            </p>
-            <h2 className="text-start  text-white  ">
+            </Typography>
+            <Typography variant="h2" className="text-start  text-white  ">
               Construiește-ți viitorul <br /> alături de noi
-            </h2>
-            <p className="font-light">
+            </Typography>
+            <Typography variant="paragraph" className="font-light">
               HumanSource - alege să colaborezi cu noi pentru job-ul tau de vis
               sau <br className="hidden md:block" /> pentru gasirea candidatului
               potrivit.{" "}
-            </p>
+            </Typography>
           </div>
           <div className="hidden w-full lg:block">
             <CarduriHero />

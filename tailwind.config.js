@@ -5,7 +5,11 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 module.exports = withMT({
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   important: "#root",
+
   theme: {
+    fontFamily: {
+      sans: ["__myFont_bdf87e", "Madera Regular"],
+    },
     extend: {
       boxShadow: {
         parteneriShadow: "inset 0px 0px 20px rgba(102, 102, 102, 0.1)",

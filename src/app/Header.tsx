@@ -1,5 +1,10 @@
 "use client";
-import { MobileNav, Navbar, Typography } from "@material-tailwind/react";
+import {
+  Button,
+  MobileNav,
+  Navbar,
+  Typography,
+} from "@material-tailwind/react";
 import Link from "next/link";
 import { useState } from "react";
 import Hamburger from "../../public/imagini/hamburger.svg";
@@ -13,10 +18,8 @@ function NavItem({ label, href }: INavItem) {
   return (
     <Link href={href}>
       <Typography
-        as="li"
         variant="small"
-        color="black"
-        className="flex items-center gap-1.5 p-1 font-normal"
+        className="flex  items-center gap-1.5 p-1 text-colors-gri-brand"
       >
         {label}
       </Typography>
@@ -32,9 +35,12 @@ function NavList() {
       <NavItem href="contact" label="Contact" />
       <NavItem href="servicii" label="Servicii" />
       <NavItem href="bloguri" label="Blog" />
-      <button className="hidden h-8  w-20 rounded-2xl bg-red-600 text-white lg:inline-block">
+      <Button
+        ripple={true}
+        className="hidden  rounded-full bg-red-800 text-white lg:inline-block"
+      >
         Aplica
-      </button>
+      </Button>
     </ul>
   );
 }
