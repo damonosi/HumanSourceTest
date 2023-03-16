@@ -11,8 +11,12 @@ interface IpageProps {
 
 const Blog: FC<IpageProps> = ({ params }) => {
   return (
-    <section className="min-h-screen py-6 text-start md:px-20">
-      <Breadcrumbs className="px-0 py-6" fullWidth separator=">">
+    <section className="min-h-screen bg-[#E5E5E5] py-6 text-start px-4 md:px-20">
+      <Breadcrumbs
+        className="mx-0 my-4 bg-transparent md:my-12"
+        fullWidth
+        separator=">"
+      >
         <Link className="text-colors-gri-brand" href="/">
           Home
         </Link>

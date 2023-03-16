@@ -7,9 +7,9 @@ import BlogCover from "../../../public/imagini/blog/heroBlogImg.png";
 import CardBlogSecundar from "../../components/Blog/CardBlogSecundar";
 const BloguriPage = () => {
   return (
-    <section className="mx-4 flex flex-col  gap-16 pb-28 md:mx-16 ">
+    <section className="flex flex-col gap-16  bg-[#E5E5E5] px-4 pb-28 md:px-16">
       <Breadcrumbs
-        className="mx-0 my-12 bg-transparent"
+        className="mx-0 my-4 bg-transparent md:my-12"
         fullWidth
         separator=">"
       >

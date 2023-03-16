@@ -20,7 +20,7 @@ export default function RootLayout({
             id="site-container"
           >
             <Header />
-            <main className=" z-30 mt-16 flex w-full flex-col  ">
+            <main className=" z-30 mt-14 flex w-full flex-col  ">
               {children}
             </main>
 

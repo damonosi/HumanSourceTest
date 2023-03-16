@@ -7,6 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
 import imgContact from "../../../public/imagini/contact/imgContact.png";
+
+
 type Inputs = {
   nume: string;
   dataNastere: string;
@@ -26,7 +28,7 @@ const Contact = () => {
   return (
     <section className="flex flex-col bg-[#E5E5E5] px-4  md:px-16">
       <Breadcrumbs
-        className="mx-0 my-12 bg-transparent"
+        className="mx-0 my-4 bg-transparent md:my-12"
         fullWidth
         separator=">"
       >

@@ -11,9 +11,9 @@ import { dateEchipa, dateValori } from "./dateCarduriAbout";
 const DespreNoiPage = () => {
   return (
     <PageTransitionWrapper>
-      <section className="grid grid-cols-1  gap-16 px-5 py-16 lg:px-20">
+      <section className="grid grid-cols-1 gap-16 bg-[#E5E5E5] px-5 pb-16 lg:px-20">
         <Breadcrumbs
-          className="mx-0 my-12 bg-transparent"
+          className="mx-0 my-4 bg-transparent md:my-12"
           fullWidth
           separator=">"
         >
