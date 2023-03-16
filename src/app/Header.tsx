@@ -31,7 +31,7 @@ function NavList() {
   return (
     <ul className="mb-4 mt-2 flex flex-col gap-3  lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-8">
       <NavItem href="despre-noi" label="Despre noi" />
-      <NavItem href="munca" label="Locuri de munca" />
+      <NavItem href="locuri-de-munca" label="Locuri de munca" />
       <NavItem href="contact" label="Contact" />
       <NavItem href="servicii" label="Servicii" />
       <NavItem href="bloguri" label="Blog" />

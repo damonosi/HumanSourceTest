@@ -1,4 +1,6 @@
 "use client";
+import CardServicii from "@/components/Servicii/CardServicii";
+import dateServiciiCard from "@/components/Servicii/dateServicii";
 import { Breadcrumbs, Typography } from "@material-tailwind/react";
 import AttachEmailOutlinedIcon from "@mui/icons-material/AttachEmailOutlined";
 import GroupAddOutlinedIcon from "@mui/icons-material/GroupAddOutlined";
@@ -6,6 +8,7 @@ import Groups2OutlinedIcon from "@mui/icons-material/Groups2Outlined";
 import Image from "next/image";
 import Link from "next/link";
 import ServiciiCover from "../../../public/imagini/servicii/hero-servicii.png";
+
 const ServiciiPage = () => {
   return (
     <section className="flex flex-col gap-16  bg-[#E5E5E5] px-4 pb-28 md:px-16">
@@ -44,7 +47,7 @@ const ServiciiPage = () => {
           </Typography>
           <div className="flex w-full flex-col justify-between md:flex-row">
             {" "}
-            <span className="rounded-full border bg-white py-2 px-3">
+            <span className=" rounded-full border bg-white py-2 px-3 ">
               <Groups2OutlinedIcon className="text-red-800" /> Leasing de
               personal
             </span>
@@ -66,6 +69,11 @@ const ServiciiPage = () => {
           <Image alt="cover-servicii" src={ServiciiCover} />{" "}
         </div>
       </section>
+      <div className="flex flex-col justify-between md:flex-row">
+        {dateServiciiCard.map(({ src, titlu, descriere }) => (
+          <CardServicii src={src} titlu={titlu} descriere={descriere} />
+        ))}
+      </div>
     </section>
   );
 };
