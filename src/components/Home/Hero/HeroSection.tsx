@@ -10,11 +10,10 @@ const HeroSection = () => {
       id="hero-section"
       className=" relative mx-0 flex flex-col  overflow-hidden bg-colors-gri-bg  pt-0    lg:flex-row    lg:items-center  lg:justify-center  "
     >
-      <PageTransitionWrapper className=" container relative flex w-full  flex-col-reverse bg-gradient-to-b pb-56  lg:mx-16 lg:flex-row-reverse  ">
-        {" "}
-        <div className="flex md:w-full" id="container-harta">
-          <HartaHero className="h-auto w-full" alt="imagine-harta" />
-        </div>
+      <div className=" container relative flex w-full  flex-col-reverse bg-gradient-to-b pb-56  lg:mx-16 lg:flex-row-reverse  ">
+        <PageTransitionWrapper className=" flex md:w-full ">
+          <HartaHero fill alt="imagine-harta" />
+        </PageTransitionWrapper>
         <div className="block md:hidden">
           <CarduriHero />
         </div>
@@ -24,7 +23,7 @@ const HeroSection = () => {
         >
           {" "}
           <div
-            className=" flex  w-full flex-col gap-2 pt-6 text-start lg:pb-16"
+            className=" flex  w-full flex-col gap-6 pt-6 text-start lg:pb-16"
             id="container-text"
           >
             <Typography
@@ -45,8 +44,8 @@ const HeroSection = () => {
           <div className="hidden w-full lg:block">
             <CarduriHero />
           </div>{" "}
-        </div>
-      </PageTransitionWrapper>{" "}
+        </div>{" "}
+      </div>
     </section>
   );
 };
