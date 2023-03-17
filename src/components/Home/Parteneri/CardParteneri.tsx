@@ -1,3 +1,4 @@
+import { Typography } from "@material-tailwind/react";
 import { Card, CardContent, CardMedia } from "@mui/material";
 
 interface ICardParteneri {
@@ -8,7 +9,7 @@ interface ICardParteneri {
 const CardParteneri = ({ firma, descriere }: ICardParteneri) => {
   return (
     <Card sx={{ maxWidth: 210 }}>
-      <CardContent className="flex flex-col p-4 gap-4 shadow-parteneriShadow rounded-[10px] text-center ">
+      <CardContent className="flex flex-col gap-4 rounded-[10px] p-4 text-center shadow-parteneriShadow ">
         {firma === "Giorna" && (
           <CardMedia
             sx={{ height: 112 }}
@@ -45,8 +46,8 @@ const CardParteneri = ({ firma, descriere }: ICardParteneri) => {
           />
         )}
 
-        <h2>{firma}</h2>
-        <p className="max-w-[189px]">{descriere}</p>
+        <Typography variant="h2">{firma}</Typography>
+        <Typography variant="paragraph">{descriere}</Typography>
       </CardContent>
     </Card>
   );

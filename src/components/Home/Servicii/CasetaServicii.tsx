@@ -1,3 +1,4 @@
+import { Button, Typography } from "@material-tailwind/react";
 import LeasingImg from "../../../../public/imagini/leasing.svg";
 import PayrollImg from "../../../../public/imagini/MuncitorIcon.svg";
 import RecrutareImg from "../../../../public/imagini/recrutare.svg";
@@ -27,17 +28,20 @@ const CasetaServicii = ({
         <RecrutareImg width={34} height={34} alt="img-recrutare" />
       )}
 
-      <h1 className="text-[20px] font-[500]  leading-[30px] text-[#383A3C]">
+      <Typography variant="h5" className=" font-normal   text-colors-gri-brand">
         {titlu}
-      </h1>
-      <p className="text-[16px] font-[350] leading-[24px] text-[#383A3C] opacity-60">
+      </Typography>
+      <Typography
+        variant="paragraph"
+        className=" font-light text-colors-gri-brand opacity-60"
+      >
         {descriere}
-      </p>
-      <button className="rounded-[8px] border border-red-600 px-[18px] py-4 text-[#B21E23]  hover:bg-slate-50 ">
-        <span className="text-[14px] font-[700] leading-[16.8px]">
+      </Typography>
+      <Button className="hover:bg-slate-50 rounded-[8px] border border-red-600 bg-transparent px-[18px] py-4  text-[#B21E23] ">
+        <Typography variant="paragraph" className="font-bold  capitalize ">
           {textButon}
-        </span>
-      </button>
+        </Typography>
+      </Button>
     </div>
   );
 };

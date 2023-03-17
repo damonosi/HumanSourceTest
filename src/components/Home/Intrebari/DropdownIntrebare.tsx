@@ -1,3 +1,4 @@
+import { Typography } from "@material-tailwind/react";
 import { useState } from "react";
 import SageataIntrebari from "../../../../public/imagini/SageataIntrebari.svg";
 interface IDropdownInfo {
@@ -22,7 +23,9 @@ const DropdownIntrebare = ({
         onClick={handleClick}
         className="flex items-center justify-between text-start"
       >
-        <h4 className=" text-start text-white ">{intrebare}</h4>
+        <Typography variant="h4" className=" text-start text-white ">
+          {intrebare}
+        </Typography>
 
         <div
           className={`flex h-6 w-6 items-center justify-center ${
@@ -37,13 +40,14 @@ const DropdownIntrebare = ({
           />
         </div>
       </button>
-      <p
+      <Typography
+        variant="paragraph"
         className={` px-1 pb-4 pt-10 text-start  text-white opacity-60   lg:opacity-80 ${
           !showRaspuns ? "hidden" : "block"
         } `}
       >
         {raspuns}
-      </p>
+      </Typography>
     </div>
   );
 };

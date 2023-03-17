@@ -1,3 +1,4 @@
+import { Button, Typography } from "@material-tailwind/react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Card, CardContent, CardMedia } from "@mui/material";
 import { useState } from "react";
@@ -19,7 +20,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
   return (
     <Card
       elevation={0}
-      className={`relative flex h-[550px] max-w-[23.75rem] flex-col  overflow-hidden  text-[#383A3C]  ${
+      className={`relative flex h-[550px] w-[23.75rem] flex-col overflow-hidden  rounded-2xl  text-[#383A3C]  ${
         hovered && "justify-between text-[#ffff] "
       } `}
       onMouseEnter={handleMouseEnter}
@@ -65,35 +66,38 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
         }`}
         id="container-text-bloguri"
       >
-        <span
-          className={`text-[16px] font-[500] leading-[22px]  opacity-50  ${
+        <Typography
+          variant="paragraph"
+          className={` font-[500]   opacity-50  ${
             hovered && "text-[18px] font-[350]"
           } `}
         >
           {data}
-        </span>
-        <h1
+        </Typography>
+        <Typography
+          variant="h4"
           className={`max-w-[340px] text-[24px] font-[500] leading-[36px]  ${
             hovered && "text-[31px] font-[750] leading-[42px]"
           }`}
         >
           {titlu}
-        </h1>
-        <p
+        </Typography>
+        <Typography
+          variant="paragraph"
           className={`text-[16px] font-[350] leading-[24px]  ${
             hovered && "text-[18px] font-[400] leading-[22px]"
           }`}
         >
           {continut}
-        </p>
+        </Typography>
 
-        <button
-          className={`mt-4 text-start text-[#0D34C0] ${
+        <Button
+          className={`mt-4 bg-transparent text-start text-[#0D34C0] ${
             hovered && "text-[#FCFEFF]"
           }`}
         >
           Citeste mai mult <ArrowForwardIcon />
-        </button>
+        </Button>
       </CardContent>
     </Card>
   );

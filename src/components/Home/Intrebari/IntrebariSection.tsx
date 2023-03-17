@@ -1,3 +1,4 @@
+import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import ImgIntrebari from "../../../../public/imagini/intrebari/imgIntrebari.png";
 import dateIntrebari from "./dateIntrebari";
@@ -17,9 +18,9 @@ const IntrebariSection = () => {
         />
       </div>
       <div className="relative flex flex-col gap-8 sm:w-full lg:w-1/2  ">
-        <h3 className=" text-start font-bold text-white">
+        <Typography variant="h3" className=" text-start font-bold text-white">
           Intrebari frecvente adresate de clientii Human Source
-        </h3>
+        </Typography>
         {dateIntrebari.map(({ intrebare, raspuns, id, ultima }) => (
           <DropdownIntrebare
             key={id}

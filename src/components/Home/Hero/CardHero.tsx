@@ -29,14 +29,19 @@ const CardHero = ({
       id="card-hero"
     >
       {" "}
-      <CardContent className=" flex h-full gap-4  px-0 ">
-        <div className=" flex w-1/4 ">
+      <CardContent className=" flex h-full justify-center gap-4 px-2  md:px-0 ">
+        <div className="hidden w-1/5 md:flex ">
           <Image className="h-6 w-6" alt="imagine-hero" src={src} />
         </div>
-        <div className=" flex w-3/4 flex-col items-start justify-between text-colors-gri-brand ">
-          <Typography variant="h6" className="font-bold">
-            {titlu}
-          </Typography>
+        <div className=" flex w-4/5  flex-col items-start justify-between text-colors-gri-brand ">
+          <div className="flex ">
+            <div className="flex w-2/5 md:hidden ">
+              <Image className="h-6 w-6" alt="imagine-hero" src={src} />
+            </div>
+            <Typography variant="h6" className="font-bold">
+              {titlu}
+            </Typography>
+          </div>
           <Typography variant="paragraph" className="text-start">
             {descriere}
           </Typography>
@@ -44,7 +49,7 @@ const CardHero = ({
             <Button
               variant="text"
               ripple={true}
-              className="flex items-center gap-3 px-0 text-red-800"
+              className="flex items-center gap-3 px-0 text-left capitalize text-red-800"
             >
               {textButon}
               <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
@@ -60,7 +65,7 @@ const CarduriHero = () => {
   return (
     <div
       id="container-carduri  "
-      className="relative z-20 grid w-full  grid-cols-2 items-center gap-2 px-8  pt-16   md:px-0    lg:pt-0 "
+      className="relative z-20 grid w-full  grid-cols-2 items-center gap-2 px-2  pt-16   md:px-0    lg:pt-0 "
     >
       {dateHero.map(({ titlu, icon, descriere, link, textButon, id, src }) => (
         <CardHero

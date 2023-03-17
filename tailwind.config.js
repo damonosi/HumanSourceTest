@@ -8,7 +8,7 @@ module.exports = withMT({
 
   theme: {
     fontFamily: {
-      sans: ["__myFont_bdf87e", "Madera Regular"],
+      sans: ["var(--font-madera)"],
     },
     extend: {
       boxShadow: {
