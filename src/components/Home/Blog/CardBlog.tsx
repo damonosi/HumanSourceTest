@@ -20,7 +20,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
   return (
     <Card
       elevation={0}
-      className={`relative flex h-[550px] w-[23.75rem] flex-col overflow-hidden  rounded-2xl  text-[#383A3C]  ${
+      className={`relative flex h-[550px] w-[20.75rem] flex-col overflow-hidden  rounded-2xl  text-[#383A3C]  ${
         hovered && "justify-between text-[#ffff] "
       } `}
       onMouseEnter={handleMouseEnter}
