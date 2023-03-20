@@ -6,13 +6,13 @@ import BlogCover from "../../../public/imagini/blog/heroBlogImg.png";
 import PaginatedItems from "./Paginate.jsx";
 const BloguriPage = () => {
   return (
-    <section className="flex flex-col gap-16  bg-[#E5E5E5] px-4 pb-28 md:px-16">
+    <section className="bg-gri-deschis flex flex-col  gap-16 px-4 pb-28 md:px-16">
       <Breadcrumbs
         className="mx-0 my-4 bg-transparent md:my-12"
         fullWidth
         separator=">"
       >
-        <Link className="text-colors-gri-brand" href="/">
+        <Link className="text-gri-brand" href="/">
           Home
         </Link>
         <Link className="text-red-600" href="/bloguri">
@@ -28,7 +28,7 @@ const BloguriPage = () => {
           id="container-text-blog"
         >
           <Typography variant="h2">Blogul nostru</Typography>
-          <Typography className="text-colors-gri-brand" variant="h5">
+          <Typography className="text-gri-brand" variant="h5">
             Et semper nulla sit quis feugiat.
           </Typography>
           <Typography variant="paragraph">

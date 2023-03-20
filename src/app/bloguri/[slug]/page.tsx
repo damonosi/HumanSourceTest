@@ -17,10 +17,10 @@ const Blog: FC<IpageProps> = ({ params }) => {
         fullWidth
         separator=">"
       >
-        <Link className="text-colors-gri-brand" href="/">
+        <Link className="text-gri-brand" href="/">
           Home
         </Link>
-        <Link className="text-colors-gri-brand" href="/bloguri">
+        <Link className="text-gri-brand" href="/bloguri">
           Bloguri
         </Link>
         <Link className="text-red-600" href={`/bloguri/${params.slug}`}>

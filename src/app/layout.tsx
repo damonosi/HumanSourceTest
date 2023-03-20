@@ -77,9 +77,9 @@ export default function RootLayout({
     <html id="root" lang="en" className={madera.className}>
       <head />
       <Providers>
-        <body className="m-0 mx-auto flex items-center  justify-center overflow-x-hidden  bg-[#fff] text-colors-gri-brand ">
+        <body className="m-0 mx-auto flex items-center  justify-center overflow-x-hidden  bg-gri-deschis-bg text-gri-brand ">
           <div
-            className=" relative grid w-full  grid-cols-1  "
+            className="relative grid w-full grid-cols-1  overflow-hidden  "
             id="site-container"
           >
             <Header />

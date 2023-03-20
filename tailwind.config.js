@@ -18,14 +18,14 @@ module.exports = withMT({
         "card-blog":
           "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4))",
       },
+
       colors: {
-        colors: {
-          "rosu-brand": "#B82C2F",
-          "rosu-butoane": "#B21E23",
-          "gri-brand": "#383A3C",
-          "gri-bg": "#506673",
-          "gri-deschis-bg": "#D0D0D0",
-        },
+        "rosu-brand": "#B82C2F",
+        "rosu-butoane": "#B21E23",
+        "gri-brand": "#383A3C",
+        "gri-bg": "#506673",
+        "gri-deschis-bg": "#D0D0D0",
+        "alb-site": "#FCFEFF",
       },
     },
   },

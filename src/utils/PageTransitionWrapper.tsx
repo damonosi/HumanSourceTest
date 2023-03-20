@@ -8,6 +8,7 @@ interface ITranzitionProps {
   animate?: {};
   transition?: {};
   exit?: {};
+  id?: string;
 }
 const PageTransitionWrapper = ({
   children,
@@ -16,14 +17,16 @@ const PageTransitionWrapper = ({
   animate,
   transition,
   exit,
+  id,
 }: ITranzitionProps) => {
   return (
     <motion.div
-      initial={{ x: 100, opacity: 0 } || initial}
-      animate={{ x: 0, opacity: 1 } || animate}
-      transition={{ duration: 1 } || transition}
-      exit={{ x: 100, opacity: 0 } || exit}
+      initial={initial || { x: 100, opacity: 0 }}
+      animate={animate || { x: 0, opacity: 1 }}
+      transition={transition || { duration: 1 }}
+      exit={exit || { x: 100, opacity: 0 }}
       className={className}
+      id={id || "animationWrapper"}
     >
       {children}
     </motion.div>

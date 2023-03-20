@@ -17,7 +17,7 @@ const ServiciiPage = () => {
         fullWidth
         separator=">"
       >
-        <Link className="text-colors-gri-brand" href="/">
+        <Link className="text-gri-brand" href="/">
           Home
         </Link>
         <Link className="text-red-600" href="/servicii">
@@ -35,7 +35,7 @@ const ServiciiPage = () => {
           <Typography variant="h3">
             Serviciile oferite de Human Source
           </Typography>
-          <Typography className="text-colors-gri-brand" variant="h5">
+          <Typography className="text-gri-brand" variant="h5">
             Compania noastra de resurse umane oferă servicii de atât pe partea
             de leasign de personal, recrutare, selecție cât și pe partea de
             payroll si administrare de personal.

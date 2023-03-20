@@ -11,38 +11,38 @@ import ServiciiSection from "../components/Home/Servicii/ServiciiSection";
 export default function Home() {
   return (
     <div
-      className="   grid grid-cols-1 items-center justify-center "
+      className="   mb-[-10rem] grid grid-cols-1 items-center justify-center "
       id="container-home"
     >
       <HeroSection />
 
-      <div className="  h-full translate-y-[-2%]  lg:translate-y-[-4%]">
+      <div className=" h-full  translate-y-[-10rem]  ">
         <div
-          className="mx-1 flex flex-col rounded-t-[10px] bg-white pt-16  md:mx-2 md:items-center md:justify-center    lg:py-36 lg:px-48"
+          className="mx-1 flex flex-col rounded-t-[10px] bg-alb-site py-16  md:mx-2 md:items-center md:justify-center    md:px-16 lg:py-36"
           id="background"
         >
           <AvantajeSection />
         </div>
         <div
-          className="mx-1 flex flex-col bg-[#506673]  md:mx-2  md:items-center md:justify-center  lg:px-48 lg:pr-16 "
+          className="mx-1 flex flex-col bg-gri-bg  md:mx-2  md:items-center md:justify-center  md:px-16  "
           id="background"
         >
           <NevoiSection />
         </div>
         <div
-          className="mx-1 flex flex-col   bg-white md:mx-2  md:items-center md:justify-center md:lg:items-center lg:px-48 "
+          className="mx-1 flex flex-col   bg-alb-site md:mx-2  md:items-center md:justify-center md:px-16 md:lg:items-center "
           id="background"
         >
           <ServiciiSection />
         </div>{" "}
         <div
-          className="mx-1 flex flex-col  bg-[#506673]  md:mx-2 md:items-center md:justify-center  lg:px-48 "
+          className="mx-1 flex flex-col  bg-gri-bg  md:mx-2 md:items-center md:justify-center  md:px-16 "
           id="background"
         >
           <IntrebariSection />{" "}
         </div>
         <div
-          className="mx-1 flex flex-col rounded-b-[10px] bg-white  md:mx-2  md:items-center md:justify-center  lg:px-48 "
+          className="mx-1 flex flex-col rounded-b-[10px] bg-white  pb-12  md:mx-2 md:items-center  md:justify-center md:px-16 "
           id="background"
         >
           <ParteneriSection />

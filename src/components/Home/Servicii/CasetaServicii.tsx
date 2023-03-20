@@ -28,12 +28,12 @@ const CasetaServicii = ({
         <RecrutareImg width={34} height={34} alt="img-recrutare" />
       )}
 
-      <Typography variant="h5" className=" font-normal   text-colors-gri-brand">
+      <Typography variant="h5" className=" font-normal   text-gri-brand">
         {titlu}
       </Typography>
       <Typography
         variant="paragraph"
-        className=" font-light text-colors-gri-brand opacity-60"
+        className=" font-light text-gri-brand opacity-60"
       >
         {descriere}
       </Typography>

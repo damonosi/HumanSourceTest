@@ -23,14 +23,11 @@ const CardAvantaje = ({ titlu, descriere, icon }: ICardAvantaje) => {
             {icon === "manageri" && <DirectionsBoatIcon />}
             {icon === "suport" && <ImportContactsIcon />}
           </div>
-          <div className="flex flex-col gap-2 text-colors-gri-brand">
+          <div className="flex flex-col gap-2 text-gri-brand">
             <Typography variant="h6" className="  lg:px-6 ">
               {titlu}
             </Typography>
-            <Typography
-              variant="paragraph"
-              className=" opacity-50 lg:px-4"
-            >
+            <Typography variant="paragraph" className=" opacity-50 lg:px-4">
               {descriere}
             </Typography>
           </div>

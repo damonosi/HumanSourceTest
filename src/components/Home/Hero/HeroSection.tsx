@@ -2,19 +2,39 @@ import CarduriHero from "./CardHero";
 
 import PageTransitionWrapper from "@/utils/PageTransitionWrapper";
 import { Typography } from "@material-tailwind/react";
-import HartaHero from "../../../../public/imagini/hero/hartaPinuri.svg";
-
+import Image from "next/image";
+import Harta from "../../../../public/imagini/hero/Harta.svg";
+import Pinuri from "../../../../public/imagini/hero/Pinuri.svg";
+let initialAnimation = { x: 0, opacity: 0 };
 const HeroSection = () => {
   return (
     <section
       id="hero-section"
-      className=" relative mx-0 flex flex-col  overflow-hidden bg-colors-gri-bg  pt-0    lg:flex-row    lg:items-center  lg:justify-center  "
+      className=" relative mx-0 flex flex-col  overflow-hidden bg-gri-bg  pt-0    lg:flex-row    lg:items-center  lg:justify-center  "
     >
       <div className=" container relative flex w-full  flex-col-reverse bg-gradient-to-b pb-56  lg:mx-16 lg:flex-row-reverse  ">
-        <PageTransitionWrapper className=" flex md:w-full ">
-          <HartaHero fill alt="imagine-harta" />
-        </PageTransitionWrapper>
+        <div className="relative hidden md:flex  md:w-full">
+          <Harta
+            className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 transform"
+            fill
+            alt="imagine-harta"
+          />
+          <PageTransitionWrapper
+            initial={initialAnimation}
+            className="z-20 flex w-full"
+          >
+            <Pinuri className=" w-full" alt="imagine-harta" />
+          </PageTransitionWrapper>
+        </div>
         <div className="block md:hidden">
+          <div className="relative flex w-full">
+            <Image src={Harta} fill alt="imagine-harta" />
+            <Pinuri
+              className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 transform"
+              alt="imagine-harta"
+            />
+          </div>
+
           <CarduriHero />
         </div>
         <div

@@ -15,7 +15,7 @@ const CategorieJoburi = () => {
         fullWidth
         separator=">"
       >
-        <Link className="text-colors-gri-brand" href="/">
+        <Link className="text-gri-brand" href="/">
           Home
         </Link>
         <Link className="text-red-600" href="/locuri-de-munca">

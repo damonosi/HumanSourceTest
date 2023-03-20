@@ -25,7 +25,7 @@ const AvantajeSection = () => {
         ))}
       </div>
 
-      <Button className="mx-4  flex items-center justify-center rounded-[8px] bg-[#B21E23]  py-4 px-4 text-[14px] font-[700] leading-[20px]  text-white lg:px-9 lg:text-[16px]  ">
+      <Button className="mx-4  flex items-center justify-center rounded-[8px] bg-rosu-butoane  py-4 px-4 text-[14px] font-[700] leading-[20px]  text-white lg:px-9 lg:text-[16px]  ">
         Solicita serviciile HR Human Source
       </Button>
     </section>

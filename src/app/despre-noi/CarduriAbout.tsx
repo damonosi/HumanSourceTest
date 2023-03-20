@@ -23,17 +23,11 @@ export const CardEchipa = ({ src, nume, pozitie }: IEchipaInfo) => {
         />
       </CardHeader>
 
-      <Typography
-        variant="h4"
-        className="mb-1 text-left text-colors-gri-brand "
-      >
+      <Typography variant="h4" className="mb-1 text-left text-gri-brand ">
         {nume}
       </Typography>
 
-      <Typography
-        variant="paragraph"
-        className=" mb-3 font-bold text-colors-gri-bg"
-      >
+      <Typography variant="paragraph" className=" mb-3 font-bold text-gri-bg">
         {pozitie}
       </Typography>
     </Card>
@@ -53,10 +47,10 @@ export const CardValori = ({ titlu, descriere, src }: IValoriInfo) => {
         className="flex flex-col  items-center gap-6 text-center"
         id="text-section"
       >
-        <Typography variant="h6" className=" font-bold text-colors-gri-brand">
+        <Typography variant="h6" className=" font-bold text-gri-brand">
           {titlu}
         </Typography>
-        <Typography variant="paragraph" className="text-colors-gri-brand">
+        <Typography variant="paragraph" className="text-gri-brand">
           {descriere}
         </Typography>
       </div>

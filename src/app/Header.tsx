@@ -19,7 +19,7 @@ function NavItem({ label, href }: INavItem) {
     <Link href={href}>
       <Typography
         variant="small"
-        className="flex  items-center gap-1.5 p-1 text-colors-gri-brand"
+        className="flex  items-center gap-1.5 p-1 text-gri-brand"
       >
         {label}
       </Typography>

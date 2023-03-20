@@ -28,13 +28,13 @@ const CardBlogSecundar = ({
           {" "}
           <Typography
             variant="small"
-            className="text-start text-colors-gri-brand opacity-50"
+            className="text-start text-gri-brand opacity-50"
           >
             {data}
           </Typography>
           <Typography
             variant="h4"
-            className="text-start font-bold text-colors-gri-brand"
+            className="text-start font-bold text-gri-brand"
           >
             {descriere}
           </Typography>

@@ -7,7 +7,7 @@ const ParteneriSection = () => {
     <section className="container my-36 flex flex-col items-center justify-center text-start lg:text-center ">
       <Typography
         variant="h2"
-        className=" mb-24 px-2  font-[bold]  lg:text-colors-gri-brand "
+        className=" mb-24 px-2  font-[bold]  lg:text-gri-brand "
       >
         Firmele partenere care au avut incredere in serviciile Human Source
       </Typography>

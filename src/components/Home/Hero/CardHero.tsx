@@ -33,7 +33,7 @@ const CardHero = ({
         <div className="hidden w-1/5 md:flex ">
           <Image className="h-6 w-6" alt="imagine-hero" src={src} />
         </div>
-        <div className=" flex w-4/5  flex-col items-start justify-between text-colors-gri-brand ">
+        <div className=" flex w-4/5  flex-col items-start justify-between text-gri-brand ">
           <div className="flex ">
             <div className="flex w-2/5 md:hidden ">
               <Image className="h-6 w-6" alt="imagine-hero" src={src} />

@@ -36,7 +36,7 @@ const Contact = () => {
         fullWidth
         separator=">"
       >
-        <Link className="text-colors-gri-brand" href="/">
+        <Link className="text-gri-brand" href="/">
           Home
         </Link>
         <Link className="text-red-600" href="/contact">
@@ -110,7 +110,7 @@ const Contact = () => {
                     *Sunt de acord cu
                     <a
                       href="politica-confidentialitate"
-                      className=" mx-2 text-colors-gri-bg underline underline-offset-4"
+                      className=" mx-2 text-gri-bg underline underline-offset-4"
                     >
                       Politica de confidentialitate
                     </a>
