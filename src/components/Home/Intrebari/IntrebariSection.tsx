@@ -12,14 +12,17 @@ const IntrebariSection = () => {
         id="container-imagine-intrebari"
       >
         <Image
-          className=" lg:translate-y-[-10%]"
+          className=" translate-y-[-10%]"
           alt="imagine-intrebari"
           src={ImgIntrebari}
         />
       </div>
       <div className="relative flex flex-col gap-8 sm:w-full lg:w-1/2  ">
-        <Typography variant="h3" className=" text-start font-bold text-white">
-          Intrebari frecvente adresate de clientii Human Source
+        <Typography
+          variant="h5"
+          className=" text-start font-bold text-alb-site md:text-2xl"
+        >
+          Intrebari frecvente adresate de clientii <br /> Human Source
         </Typography>
         {dateIntrebari.map(({ intrebare, raspuns, id, ultima }) => (
           <DropdownIntrebare

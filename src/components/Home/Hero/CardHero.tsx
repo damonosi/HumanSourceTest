@@ -1,4 +1,4 @@
-import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
+import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
 import { Button, Typography } from "@material-tailwind/react";
 import { Card, CardContent } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
@@ -23,36 +23,44 @@ const CardHero = ({
 }: ICardHero) => {
   return (
     <Card
-      className={`grid w-full grid-cols-1 items-center justify-between rounded-t-[30px] rounded-br-[30px]  border  bg-white py-2  px-2 text-center  md:h-[165px] md:px-6  lg:h-[194px]  ${
+      className={`ext-gri-brand grid h-[185px]  grid-cols-1 items-center justify-between rounded-t-[30px] rounded-br-[30px] border bg-white  px-2  text-center drop-shadow-card-hero  md:h-48 md:w-full  md:px-6 md:pt-2    ${
         icon === "angajator" && "rounded-bl-[30px] rounded-tr-[0px] "
       }  ${icon === "muncitor" && " rounded-bl-[30px] rounded-tl-[0px] "}`}
       id="card-hero"
     >
       {" "}
-      <CardContent className=" flex h-full justify-center gap-4 px-2  md:px-0 ">
-        <div className="hidden w-1/5 md:flex ">
+      <CardContent className=" flex h-full justify-between gap-4 px-2   md:px-0 ">
+        <div className="hidden w-1/5 justify-center md:flex ">
           <Image className="h-6 w-6" alt="imagine-hero" src={src} />
         </div>
-        <div className=" flex w-4/5  flex-col items-start justify-between text-gri-brand ">
-          <div className="flex ">
-            <div className="flex w-2/5 md:hidden ">
-              <Image className="h-6 w-6" alt="imagine-hero" src={src} />
+        <div className="  flex w-full flex-col items-start justify-between  md:w-4/5 ">
+          <div className="flex w-full items-center gap-2">
+            <div className="flex  md:hidden ">
+              <div className="flex py-2">
+                <Image className="h-6 w-6" alt="imagine-hero" src={src} />
+              </div>
             </div>
-            <Typography variant="h6" className="font-bold">
+            <Typography
+              variant="paragraph"
+              className="font-bold uppercase text-gri-brand md:text-xl md:capitalize"
+            >
               {titlu}
             </Typography>
           </div>
-          <Typography variant="paragraph" className="text-start">
+          <Typography
+            variant="small"
+            className="text-start font-[350] text-gri-brand"
+          >
             {descriere}
           </Typography>
           <Link href={`/${link}`} className="w-full ">
             <Button
               variant="text"
               ripple={true}
-              className="flex items-center gap-3 px-0 text-left capitalize text-red-800"
+              className="flex w-full items-center gap-2 px-0 capitalize text-red-800 md:text-left"
             >
               {textButon}
-              <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
+              <ArrowSmallRightIcon strokeWidth={2} className="h-5 w-5" />
             </Button>
           </Link>{" "}
         </div>
@@ -65,7 +73,7 @@ const CarduriHero = () => {
   return (
     <div
       id="container-carduri  "
-      className="relative z-20 grid w-full  grid-cols-2 items-center gap-2 px-2  pt-16   md:px-0    lg:pt-0 "
+      className="relative z-20 grid w-full  grid-cols-2 items-center gap-5 px-2  pt-16   md:px-0    lg:pt-0 "
     >
       {dateHero.map(({ titlu, icon, descriere, link, textButon, id, src }) => (
         <CardHero

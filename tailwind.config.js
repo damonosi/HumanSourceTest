@@ -18,10 +18,14 @@ module.exports = withMT({
         "card-blog":
           "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4))",
       },
+      dropShadow: {
+        "card-hero": "5px 5px 20px rgba(0, 0, 0, 0.25);",
+      },
 
       colors: {
         "rosu-brand": "#B82C2F",
         "rosu-butoane": "#B21E23",
+        "rosu-icon": "#B21E23",
         "gri-brand": "#383A3C",
         "gri-bg": "#506673",
         "gri-deschis-bg": "#D0D0D0",

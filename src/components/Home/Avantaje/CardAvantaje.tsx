@@ -13,9 +13,9 @@ const CardAvantaje = ({ titlu, descriere, icon }: ICardAvantaje) => {
   return (
     <Card
       elevation={0}
-      className="m-2  max-w-[300px]  border-0 border-l-0  lg:px-4 "
+      className="m-2  max-w-[300px] border-0  border-l-0 bg-alb-site  md:px-6 "
     >
-      <CardContent className="flex h-fit flex-col items-center gap-2   lg:px-4">
+      <CardContent className="flex h-fit flex-col items-center gap-2   md:px-6">
         <div className="flex flex-col gap-4">
           <div className="text-[#BF4546]">
             {icon === "bank" && <AccountBalanceIcon />}
@@ -24,7 +24,7 @@ const CardAvantaje = ({ titlu, descriere, icon }: ICardAvantaje) => {
             {icon === "suport" && <ImportContactsIcon />}
           </div>
           <div className="flex flex-col gap-2 text-gri-brand">
-            <Typography variant="h6" className="  lg:px-6 ">
+            <Typography variant="h6" className="font-medium  lg:px-6 ">
               {titlu}
             </Typography>
             <Typography variant="paragraph" className=" opacity-50 lg:px-4">

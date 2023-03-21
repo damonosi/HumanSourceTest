@@ -1,6 +1,5 @@
 import { Typography } from "@material-tailwind/react";
 import { useState } from "react";
-import SageataIntrebari from "../../../../public/imagini/SageataIntrebari.svg";
 interface IDropdownInfo {
   intrebare: string;
   raspuns: string;
@@ -23,26 +22,25 @@ const DropdownIntrebare = ({
         onClick={handleClick}
         className="flex items-center justify-between text-start"
       >
-        <Typography variant="h4" className=" text-start text-white ">
+        <Typography
+          variant="h6"
+          className=" text-start font-medium text-alb-site md:text-2xl "
+        >
           {intrebare}
         </Typography>
 
         <div
-          className={`flex h-6 w-6 items-center justify-center ${
-            showRaspuns ? "rotate-180" : ""
-          } `}
+          className="flex h-6 w-6 items-center justify-center "
           id="sageata-container"
         >
-          <SageataIntrebari
-            fill="#ffff"
-            className="text-white"
-            alt="sageata-intrebari"
-          />
+          <span className="text-alb-site opacity-50">
+            {showRaspuns ? "-" : "+"}
+          </span>
         </div>
       </button>
       <Typography
         variant="paragraph"
-        className={` px-1 pb-4 pt-10 text-start  text-white opacity-60   lg:opacity-80 ${
+        className={` px-1 pb-4 pt-10 text-start  text-alb-site opacity-60   lg:opacity-80 ${
           !showRaspuns ? "hidden" : "block"
         } `}
       >

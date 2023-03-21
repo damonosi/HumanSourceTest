@@ -18,31 +18,31 @@ export default function Home() {
 
       <div className=" h-full  translate-y-[-10rem]  ">
         <div
-          className="mx-1 flex flex-col rounded-t-[10px] bg-alb-site py-16  md:mx-2 md:items-center md:justify-center    md:px-16 lg:py-36"
+          className="mx-1 flex flex-col items-center justify-center rounded-t-[10px]  bg-alb-site py-16 md:mx-2    md:px-16 lg:py-36"
           id="background"
         >
           <AvantajeSection />
         </div>
         <div
-          className="mx-1 flex flex-col bg-gri-bg  md:mx-2  md:items-center md:justify-center  md:px-16  "
+          className="mx-1 flex flex-col items-center  justify-center  bg-gri-bg md:mx-2  md:px-16  "
           id="background"
         >
           <NevoiSection />
         </div>
         <div
-          className="mx-1 flex flex-col   bg-alb-site md:mx-2  md:items-center md:justify-center md:px-16 md:lg:items-center "
+          className="mx-1 flex flex-col items-center  justify-center bg-alb-site   md:mx-2 md:px-16  "
           id="background"
         >
           <ServiciiSection />
         </div>{" "}
         <div
-          className="mx-1 flex flex-col  bg-gri-bg  md:mx-2 md:items-center md:justify-center  md:px-16 "
+          className="mx-1 flex flex-col  items-center  justify-center bg-gri-bg md:mx-2  md:px-16 "
           id="background"
         >
           <IntrebariSection />{" "}
         </div>
         <div
-          className="mx-1 flex flex-col rounded-b-[10px] bg-white  pb-12  md:mx-2 md:items-center  md:justify-center md:px-16 "
+          className="mx-1 flex flex-col items-center justify-center  rounded-b-[10px]  bg-white pb-12  md:mx-2 md:px-16 "
           id="background"
         >
           <ParteneriSection />

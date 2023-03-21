@@ -17,7 +17,7 @@ const CasetaServicii = ({
   icon,
 }: ICasetaServicii) => {
   return (
-    <div className="container flex max-h-[508px] max-w-[306px] flex-col items-center justify-between gap-4 rounded-[10px] pt-12 pb-8 text-center hover:shadow-xl lg:px-4 ">
+    <div className="container flex max-h-[508px] max-w-[306px] flex-col items-center justify-between gap-4 rounded-[10px] bg-alb-site pt-12 pb-8 text-center hover:shadow-xl lg:px-4 ">
       {icon === "leasing" && (
         <LeasingImg width={34} height={34} alt="img-leasing" />
       )}

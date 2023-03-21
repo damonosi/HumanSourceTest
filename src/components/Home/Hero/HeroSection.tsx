@@ -2,7 +2,6 @@ import CarduriHero from "./CardHero";
 
 import PageTransitionWrapper from "@/utils/PageTransitionWrapper";
 import { Typography } from "@material-tailwind/react";
-import Image from "next/image";
 import Harta from "../../../../public/imagini/hero/Harta.svg";
 import Pinuri from "../../../../public/imagini/hero/Pinuri.svg";
 let initialAnimation = { x: 0, opacity: 0 };
@@ -10,13 +9,12 @@ const HeroSection = () => {
   return (
     <section
       id="hero-section"
-      className=" relative mx-0 flex flex-col  overflow-hidden bg-gri-bg  pt-0    lg:flex-row    lg:items-center  lg:justify-center  "
+      className=" md:flex-rowc relative mx-0 flex   flex-col items-center  overflow-hidden    bg-gri-bg    pt-0  md:justify-center  "
     >
-      <div className=" container relative flex w-full  flex-col-reverse bg-gradient-to-b pb-56  lg:mx-16 lg:flex-row-reverse  ">
-        <div className="relative hidden md:flex  md:w-full">
+      <div className=" container relative flex w-full  flex-col-reverse items-center bg-gradient-to-b  pb-56 lg:mx-16 lg:flex-row-reverse  ">
+        <div className="relative hidden p-6 lg:flex  lg:w-full">
           <Harta
             className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 transform"
-            fill
             alt="imagine-harta"
           />
           <PageTransitionWrapper
@@ -26,9 +24,9 @@ const HeroSection = () => {
             <Pinuri className=" w-full" alt="imagine-harta" />
           </PageTransitionWrapper>
         </div>
-        <div className="block md:hidden">
-          <div className="relative flex w-full">
-            <Image src={Harta} fill alt="imagine-harta" />
+        <div className="block lg:hidden">
+          <div className="relative flex w-full py-4">
+            <Harta alt="imagine-harta" />
             <Pinuri
               className="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 transform"
               alt="imagine-harta"
@@ -61,7 +59,7 @@ const HeroSection = () => {
               potrivit.{" "}
             </Typography>
           </div>
-          <div className="hidden w-full lg:block">
+          <div className="hidden w-full md:block">
             <CarduriHero />
           </div>{" "}
         </div>{" "}
