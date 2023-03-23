@@ -1,7 +1,18 @@
-import { Button, Typography } from "@material-tailwind/react";
+import {
+  Button,
+  Card,
+  CardBody,
+  CardHeader,
+  Typography,
+} from "@material-tailwind/react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Card, CardContent, CardMedia } from "@mui/material";
+import CoverBlogFull from "../../../../public/imagini/blog/cover-blog-full.png";
+import CoverBlogSmall from "../../../../public/imagini/blog/cover-blog-small.png";
+
+import InViewWrapper from "@/utils/InViewWrapper";
+import Image from "next/image";
 import { useState } from "react";
+
 interface ICardBlog {
   data: string;
   titlu: string;
@@ -19,7 +30,6 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
   };
   return (
     <Card
-      elevation={0}
       className={`relative flex h-[550px] w-[20.75rem] flex-col overflow-hidden  rounded-2xl  text-[#383A3C]  ${
         hovered && "justify-between text-[#ffff] "
       } `}
@@ -33,34 +43,35 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
         }`}
         id="content-mask"
       />
-      {id === 1 && (
-        <CardMedia
-          component="img"
+      <CardHeader
+        className={`  flex  ${
+          hovered && "absolute z-10 h-screen w-screen   transition  ease-in-out"
+        }`}
+      >
+        <InViewWrapper
+          inView={{
+            opacity: 1,
+          }}
+          notInView={{
+            opacity: 0,
+          }}
+          transition={{
+            duration: 1,
+          }}
           className={`  flex  ${
             hovered && "absolute z-10 h-screen w-full   transition  ease-in-out"
           }`}
-          image="/imagini/blog1.png"
-        />
-      )}
-      {id === 2 && (
-        <CardMedia
-          component="img"
-          className={`   ${
-            hovered && "absolute bottom-0 z-10 h-full transition ease-in-out"
-          }`}
-          image="/imagini/blog2.png"
-        />
-      )}
-      {id === 3 && (
-        <CardMedia
-          component="img"
-          className={`   ${
-            hovered && "absolute bottom-0 z-10 h-full transition ease-in-out"
-          }`}
-          image="/imagini/blog1.png"
-        />
-      )}
-      <CardContent
+        >
+          <Image
+            alt="cover-img-small"
+            style={{
+              objectFit: "cover",
+            }}
+            src={!hovered ? CoverBlogSmall : CoverBlogFull}
+          />
+        </InViewWrapper>
+      </CardHeader>
+      <CardBody
         className={`z-20 grid grid-cols-1 gap-2 px-1 text-start lg:gap-4 lg:p-4 ${
           hovered && "h-screen gap-10 px-4 py-24 text-white"
         }`}
@@ -98,7 +109,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
         >
           Citeste mai mult <ArrowForwardIcon />
         </Button>
-      </CardContent>
+      </CardBody>
     </Card>
   );
 };
