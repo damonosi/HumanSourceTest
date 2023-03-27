@@ -43,37 +43,35 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
         }`}
         id="content-mask"
       />
-      <CardHeader
+      <InViewWrapper
+        inView={{
+          opacity: 1,
+        }}
+        notInView={{
+          opacity: 0,
+        }}
+        transition={{
+          duration: 1,
+        }}
         className={`  flex  ${
-          hovered && "absolute z-10 h-screen w-screen   transition  ease-in-out"
+          hovered && "absolute z-10 h-screen w-full   transition  ease-in-out"
         }`}
       >
-        <InViewWrapper
-          inView={{
-            opacity: 1,
-          }}
-          notInView={{
-            opacity: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
+        <CardHeader
           className={`  flex  ${
-            hovered && "absolute z-10 h-screen w-full   transition  ease-in-out"
+            hovered && "absolute z-10 h-screen w-screen   "
           }`}
         >
           <Image
             alt="cover-img-small"
-            style={{
-              objectFit: "cover",
-            }}
+            className="object-cover"
             src={!hovered ? CoverBlogSmall : CoverBlogFull}
           />
-        </InViewWrapper>
-      </CardHeader>
+        </CardHeader>
+      </InViewWrapper>
       <CardBody
         className={`z-20 grid grid-cols-1 gap-2 px-1 text-start lg:gap-4 lg:p-4 ${
-          hovered && "h-screen gap-10 px-4 py-24 text-white"
+          hovered && "h-screen gap-10  py-24 text-white"
         }`}
         id="container-text-bloguri"
       >
