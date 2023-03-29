@@ -6,9 +6,10 @@ import BlogCover from "../../../public/imagini/blog/heroBlogImg.png";
 import PaginatedItems from "./Paginate.jsx";
 const BloguriPage = () => {
   return (
-    <section className="bg-gri-deschis flex flex-col  gap-16 px-4 pb-28 md:px-16">
+    <section className="bg-gri-deschis    px-4 pb-28 md:px-[70px]">
+       <div className="container mx-auto flex flex-col  gap-16 ">
       <Breadcrumbs
-        className="mx-0 my-4 bg-transparent md:my-12"
+        className="mx-0 my-4 px-0 bg-transparent md:my-12"
         fullWidth
         separator=">"
       >
@@ -47,6 +48,7 @@ const BloguriPage = () => {
       </section>
       <div id="container-bloguri">
         <PaginatedItems itemsPerPage={9} />
+      </div>
       </div>
     </section>
   );

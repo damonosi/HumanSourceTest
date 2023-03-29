@@ -9,42 +9,10 @@ const buttonClasses =
 
 const Footer = () => {
   return (
-    <footer className="relative z-10  w-full overflow-hidden bg-gri-bg pt-4 pb-10 text-white lg:mx-auto   lg:items-center  lg:justify-center">
-      <div className="  mx-auto flex w-full flex-col items-center  justify-center   pb-0">
-        <nav className="container z-30 flex w-full flex-col items-center justify-between p-4 lg:items-start lg:px-36 ">
-          <div className="flex w-full flex-col justify-between gap-16 py-16  lg:flex-row">
-            <div
-              className="flex flex-col gap-10 text-[14px] lg:flex-row "
-              id="butoane-footer"
-            >
-              <button className={buttonClasses}>Completeaza formular</button>
-            </div>
-            <div
-              className="z-20 flex items-center justify-center gap-[16px]  p-[4px] lg:max-w-[196px]  "
-              id="social-media"
-            >
-              {" "}
-              <button>
-                <Image
-                  width={52}
-                  height={52}
-                  src={IcoInstagram}
-                  alt="instagram"
-                />{" "}
-              </button>{" "}
-              <button>
-                <Image
-                  width={52}
-                  height={52}
-                  src={IcoFacebook}
-                  alt="facebook"
-                />{" "}
-              </button>
-              <button>
-                <Image width={52} height={52} src={IcoTwitter} alt="twitter" />
-              </button>
-            </div>
-          </div>
+    <footer className="relative z-10  w-full overflow-hidden bg-gri-bg pt-4 pb-10 text-white md:mx-auto   md:items-center  md:justify-center">
+      <div className="md:px-[70px]  mx-auto flex w-full flex-col items-center  justify-center   pb-0">
+        <nav className="container z-30 flex w-full flex-col items-center justify-between  md:items-start  ">
+       
           <div className=" flex w-full  flex-col items-start justify-between gap-8 p-4 lg:flex-row ">
             <div className="flex flex-col gap-6">
               <h6 className=" text-[16px]   leading-[20px]">HUMAN SOURCE</h6>

@@ -29,7 +29,7 @@ function NavItem({ label, href }: INavItem) {
 
 function NavList() {
   return (
-    <ul className="mb-4 mt-2 flex flex-col gap-3  lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-8">
+    <ul className="mb-4 mt-2 flex flex-col gap-3  md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-8">
       <NavItem href="despre-noi" label="Despre noi" />
       <NavItem href="locuri-de-munca" label="Locuri de munca" />
       <NavItem href="contact" label="Contact" />
@@ -37,7 +37,7 @@ function NavList() {
       <NavItem href="bloguri" label="Blog" />
       <Button
         ripple={true}
-        className="hidden  rounded-full bg-red-800 text-white lg:inline-block"
+        className="hidden  rounded-full bg-red-800 text-white md:inline-block"
       >
         Aplica
       </Button>
@@ -73,7 +73,7 @@ export function Header() {
   return (
     <Navbar
       fullWidth
-      className="border-blue-gray-50 fixed z-50 w-full border-b bg-white p-2 lg:p-4"
+      className="fixed z-50  w-full justify-center border-b border-blue-gray-50 bg-white py-5 md:px-[70px] "
     >
       <div className="container mx-auto flex w-full items-center justify-between text-black">
         <Typography
@@ -85,11 +85,11 @@ export function Header() {
         >
           <Logo className="w-32" />
         </Typography>
-        <div className="hidden lg:block">
+        <div className="hidden  md:block">
           <NavList />
         </div>
 
-        <button className="lg:hidden" onClick={handleOpen}>
+        <button className="md:hidden" onClick={handleOpen}>
           {open ? menuCloseIcon : menuOpenIcon}
         </button>
       </div>
