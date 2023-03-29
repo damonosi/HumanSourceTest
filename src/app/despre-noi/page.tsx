@@ -12,7 +12,7 @@ const DespreNoiPage = () => {
   return (
     <section className="flex flex-col items-center justify-center gap-16 bg-[#E5E5E5] px-5 pb-16 md:px-16">
       <Breadcrumbs
-        className="justify-starty mx-0 my-4 bg-transparent md:my-12"
+        className="mx-0 my-4 bg-transparent px-0 md:my-12"
         fullWidth
         separator=">"
       >

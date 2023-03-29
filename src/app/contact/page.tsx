@@ -33,7 +33,7 @@ const Contact = () => {
     <section className="  bg-[#E5E5E5] px-4 md:px-[70px]">
       <div className="container mx-auto flex flex-col ">
         <Breadcrumbs
-          className="mx-0 my-4 bg-transparent md:my-12"
+          className="mx-0 my-4 bg-transparent px-0 md:my-12"
           fullWidth
           separator=">"
         >
