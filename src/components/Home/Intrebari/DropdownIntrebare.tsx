@@ -17,11 +17,10 @@ const DropdownIntrebare = ({
     setShowRaspuns(false);
   });
   const handleClick = () => {
-   
     setShowRaspuns(!showRaspuns);
   };
   return (
-    <div className="flex flex-col" id="container-dd">
+    <div ref={ref} className="flex flex-col" id="container-dd">
       <button
         onClick={handleClick}
         className="flex items-center justify-between text-start"
@@ -35,10 +34,9 @@ const DropdownIntrebare = ({
 
         <div
           className="flex h-6 w-6 items-center justify-center "
-          ref={ref}
           id="sageata-container"
         >
-          <span  className="text-alb-site opacity-50">
+          <span className="text-alb-site opacity-50">
             {showRaspuns ? "-" : "+"}
           </span>
         </div>
