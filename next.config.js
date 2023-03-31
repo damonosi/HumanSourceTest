@@ -3,11 +3,28 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-  webpack: (config, options) => {
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"],
-    });
+  webpack(config) {
+    // Grab the existing rule that handles SVG imports
+    const fileLoaderRule = config.module.rules.find((rule) =>
+      rule.test?.test?.(".svg")
+    );
+
+    config.module.rules.push(
+      {
+        ...fileLoaderRule,
+        test: /\.svg$/i,
+        resourceQuery: /url/,
+      },
+
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        resourceQuery: { not: /url/ },
+        use: [{ loader: "@svgr/webpack", options: { icon: true } }],
+      }
+    );
+    fileLoaderRule.exclude = /\.svg$/i;
+
     return config;
   },
   async redirects() {

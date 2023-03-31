@@ -45,8 +45,8 @@ export default function Home() {
           className="mx-1 flex flex-col items-center justify-center  rounded-b-[10px]  bg-white pb-12  md:mx-2 md:px-16 "
           id="background"
         >
-          <ParteneriSection />
           <BlogSection />
+          <ParteneriSection />
         </div>
       </div>
     </div>

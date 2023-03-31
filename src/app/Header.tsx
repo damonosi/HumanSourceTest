@@ -73,7 +73,7 @@ export function Header() {
   return (
     <Navbar
       fullWidth
-      className="fixed z-50  w-full justify-center border-b border-blue-gray-50 bg-white py-5 md:px-[70px] "
+      className="fixed z-50  w-full justify-center border-b border-blue-gray-50 bg-white py-2 md:px-[70px] "
     >
       <div className="container mx-auto flex w-full items-center justify-between text-black">
         <Typography

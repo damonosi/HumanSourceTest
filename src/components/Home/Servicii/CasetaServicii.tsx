@@ -17,7 +17,10 @@ const CasetaServicii = ({
   icon,
 }: ICasetaServicii) => {
   return (
-    <div className="container flex max-h-[508px] max-w-[420px] flex-col items-center justify-between gap-4 rounded-[10px] bg-alb-site px-4 pt-12 pb-8 text-center hover:shadow-xl ">
+    <div
+      className="container flex max-h-[508px] w-full flex-col items-center justify-between gap-4 rounded-[10px] bg-alb-site px-4 pt-12 pb-8 text-center hover:shadow-xl "
+      id="caseta-servicii"
+    >
       {icon === "leasing" && (
         <LeasingImg width={34} height={34} alt="img-leasing" />
       )}
@@ -37,8 +40,8 @@ const CasetaServicii = ({
       >
         {descriere}
       </Typography>
-      <Button className="hover:bg-slate-50 rounded-[8px] border border-red-600 bg-transparent px-[18px] py-4  text-[#B21E23] ">
-        <Typography variant="paragraph" className="font-bold  capitalize ">
+      <Button className="rounded-[8px] border border-red-600 bg-transparent px-6 py-4 text-[#B21E23]  shadow-none hover:shadow-none ">
+        <Typography variant="paragraph" className="font-bold normal-case ">
           {textButon}
         </Typography>
       </Button>

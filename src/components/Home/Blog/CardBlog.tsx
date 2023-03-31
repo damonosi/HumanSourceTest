@@ -30,7 +30,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
   };
   return (
     <Card
-      className={`relative flex h-[550px] w-1/3 flex-col overflow-hidden  rounded-2xl  text-[#383A3C]  ${
+      className={`relative flex h-[550px] flex-col overflow-hidden rounded-2xl  text-[#383A3C]  md:w-full  ${
         hovered && "justify-between text-[#ffff] "
       } `}
       onMouseEnter={handleMouseEnter}
@@ -53,25 +53,27 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
         transition={{
           duration: 1,
         }}
-        className={`  flex  ${
-          hovered && "absolute z-10 h-screen w-full   transition  ease-in-out"
-        }`}
+        className="flex"
       >
-        <CardHeader
-          className={`  flex  ${
-            hovered && "absolute z-10 h-screen w-screen   "
-          }`}
-        >
-          <Image
-            alt="cover-img-small"
-            className="object-cover"
-            src={!hovered ? CoverBlogSmall : CoverBlogFull}
-          />
+        <CardHeader className="flex min-h-min">
+          {hovered ? (
+            <Image
+              alt="cover-img-small"
+              className="absolute  z-30 h-screen w-screen object-cover"
+              src={CoverBlogFull}
+            />
+          ) : (
+            <Image
+              alt="cover-img-small"
+              className="object-cover"
+              src={CoverBlogSmall}
+            />
+          )}
         </CardHeader>
       </InViewWrapper>
       <CardBody
-        className={`z-20 grid grid-cols-1 gap-2 px-1 text-start lg:gap-4 lg:p-4 ${
-          hovered && "h-screen gap-10  py-24 text-white"
+        className={`z-20 flex h-full flex-col  justify-between gap-2 px-1 text-start md:gap-4 md:p-4 ${
+          hovered && "h-2/3 gap-10  py-24 text-white"
         }`}
         id="container-text-bloguri"
       >
@@ -101,11 +103,12 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
         </Typography>
 
         <Button
-          className={`mt-4 bg-transparent text-start text-[#0D34C0] ${
+          className={`mt-4 bg-transparent text-start text-rosu-brand shadow-none ${
             hovered && "text-[#FCFEFF]"
           }`}
         >
-          Citeste mai mult <ArrowForwardIcon />
+          <span className="text-rosu-brand">Citeste mai mult</span>{" "}
+          <ArrowForwardIcon />
         </Button>
       </CardBody>
     </Card>

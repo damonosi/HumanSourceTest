@@ -4,8 +4,8 @@ import dateAvantaje from "./dateAvantaje";
 
 const AvantajeSection = () => {
   return (
-    <section className="container flex flex-col items-center pb-24 text-center">
-      <Typography variant="h3" className="hidden px-2 md:mb-24 md:block ">
+    <section className="container flex flex-col items-center  text-center">
+      <Typography variant="h3" className="hidden px-2 md:mb-16 md:block ">
         {" "}
         Firma de recrutare strainatate - Avantajele serviciilor Human Source
       </Typography>
@@ -14,7 +14,7 @@ const AvantajeSection = () => {
         Avantajele Human Source
       </Typography>
 
-      <div className="mb-20 grid  w-full grid-cols-2 place-items-center gap-x-5 gap-y-10 2xl:grid-cols-4    ">
+      <div className="mb-20 grid w-full grid-cols-2 place-items-center gap-x-5 gap-y-10 px-2 2xl:grid-cols-4    ">
         {dateAvantaje.map(({ titlu, descriere, icon, id }) => (
           <CardAvantaje
             key={id}
