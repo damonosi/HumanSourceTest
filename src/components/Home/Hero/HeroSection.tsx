@@ -13,7 +13,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero-section"
-      className=" md:flex-rowc relative mx-0 flex   flex-col items-center  overflow-hidden    bg-gri-bg    pt-0  md:justify-center  "
+      className=" relative mx-0 flex flex-col   items-center overflow-hidden  bg-gri-bg    pt-0    md:flex-row  md:justify-center  "
     >
       <div className=" container relative flex w-full  flex-col-reverse items-center gap-12 bg-gradient-to-b  pb-56 lg:mx-16 lg:flex-row-reverse  ">
         <div className="relative hidden p-6 md:flex  md:w-full">
