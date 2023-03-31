@@ -5,7 +5,7 @@ import dateBlog from "./dateBlog";
 const BlogSection = () => {
   return (
     <section className="container  text-center">
-      <Typography variant="h3" className=" my-24 text-start font-bold">
+      <Typography variant="h3" className=" my-[60px] text-start font-bold">
         Cele mai noi articole de pe blog
       </Typography>
 

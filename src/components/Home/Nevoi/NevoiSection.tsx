@@ -4,7 +4,7 @@ import imagineFemei from "../../../../public/imagini/femei.png";
 
 const NevoiSection = () => {
   return (
-    <section className="container relative flex w-full items-start justify-start bg-[#506673] pt-16   ">
+    <section className="container relative flex w-full items-start justify-start bg-[#506673] pb-[60px] pt-[60px] md:pb-[0px]   ">
       <div className="flex w-full flex-col-reverse  md:flex-row ">
         <div
           className="flex h-2/3 max-w-[606px]  flex-col gap-12  px-4 md:w-full md:pr-8 "

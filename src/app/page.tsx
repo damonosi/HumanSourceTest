@@ -18,7 +18,7 @@ export default function Home() {
 
       <div className=" h-full  translate-y-[-10rem]  ">
         <div
-          className="mx-1 flex flex-col items-center justify-center rounded-t-[10px]  bg-alb-site py-16 md:mx-2    md:px-16 lg:py-36"
+          className="mx-1 flex flex-col items-center justify-center rounded-t-[10px]  bg-alb-site  md:mx-2    md:py-[60px] md:pb-[160px]"
           id="background"
         >
           <AvantajeSection />
@@ -30,13 +30,13 @@ export default function Home() {
           <NevoiSection />
         </div>
         <div
-          className="mx-1 flex flex-col items-center  justify-center bg-alb-site   md:mx-2 md:px-16  "
+          className="mx-1 flex flex-col items-center  justify-center bg-alb-site   pb-[160px] md:mx-2  md:px-16"
           id="background"
         >
           <ServiciiSection />
         </div>{" "}
         <div
-          className="mx-1 flex flex-col  items-center  justify-center bg-gri-bg md:mx-2  md:px-16 "
+          className="mx-1 flex flex-col items-center justify-center  bg-gri-bg pb-[60px] md:mx-2 md:px-16  md:pb-[0px] "
           id="background"
         >
           <IntrebariSection />{" "}

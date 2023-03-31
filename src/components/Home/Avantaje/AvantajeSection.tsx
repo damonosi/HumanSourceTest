@@ -5,11 +5,11 @@ import dateAvantaje from "./dateAvantaje";
 const AvantajeSection = () => {
   return (
     <section className="container flex flex-col items-center  text-center">
-      <Typography variant="h3" className="hidden px-2 md:mb-16 md:block ">
+      <Typography variant="h3" className="hidden px-2 md:mb-[60px] md:block ">
         {" "}
         Firma de recrutare strainatate - Avantajele serviciilor Human Source
       </Typography>
-      <Typography variant="h5" className="mb-12 px-2 md:hidden ">
+      <Typography variant="h5" className="my-[60px] px-2 md:hidden ">
         {" "}
         Avantajele Human Source
       </Typography>

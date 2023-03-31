@@ -6,7 +6,7 @@ import DropdownIntrebare from "./DropdownIntrebare";
 
 const IntrebariSection = () => {
   return (
-    <section className="container relative flex w-full flex-col gap-10  px-2 py-8 text-start  md:flex-row md:text-center">
+    <section className="container relative flex w-full flex-col gap-10  px-2  text-start  md:flex-row md:text-center">
       <div
         className="flex  items-center justify-center  md:w-1/2"
         id="container-imagine-intrebari"
@@ -17,10 +17,10 @@ const IntrebariSection = () => {
           src={ImgIntrebari}
         />
       </div>
-      <div className="relative flex flex-col gap-8 sm:w-full lg:w-1/2  ">
+      <div className="relative flex flex-col gap-8 sm:w-full md:w-1/2  ">
         <Typography
           variant="h5"
-          className=" text-start font-bold text-alb-site md:text-2xl"
+          className=" text-start font-bold text-alb-site md:pt-[60px] md:text-2xl"
         >
           Intrebari frecvente adresate de clientii <br /> Human Source
         </Typography>
