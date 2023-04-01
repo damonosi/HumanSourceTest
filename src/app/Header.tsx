@@ -9,6 +9,10 @@ import Link from "next/link";
 import { useState } from "react";
 import Hamburger from "../../public/imagini/hamburger.svg";
 import Logo from "../../public/imagini/logo.svg";
+import LanguageSwitcher from "./../components/LanguageSwitcher/LanguageSwitcher";
+
+
+
 
 interface INavItem {
   label: string;
@@ -41,6 +45,7 @@ function NavList() {
       >
         Aplica
       </Button>
+      <LanguageSwitcher />
     </ul>
   );
 }

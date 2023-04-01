@@ -24,7 +24,6 @@ const Fata1Card = ({ data, titlu, continut }: IFata1Blog) => {
       notInView={{
         translateY: 10,
       }}
-      exit={{ opacity: 1 }}
       transition={{
         duration: 2,
         type: "spring",
