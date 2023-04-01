@@ -30,7 +30,7 @@ export default function Home() {
           <NevoiSection />
         </div>
         <div
-          className="mx-1 flex flex-col items-center  justify-center bg-alb-site   pb-[160px] md:mx-2  md:px-16"
+          className="mx-1 flex flex-col items-center  justify-center bg-alb-site  pb-32 md:mx-2 md:px-16  md:pb-[180px]"
           id="background"
         >
           <ServiciiSection />

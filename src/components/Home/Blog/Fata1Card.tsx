@@ -60,7 +60,7 @@ const Fata1Card = ({ data, titlu, continut }: IFata1Blog) => {
         >
           {continut}
         </Typography>
-        <Button className="mt-4 bg-transparent text-start text-rosu-brand shadow-none ">
+        <Button className="mt-4 bg-transparent text-start text-rosu-brand shadow-none hover:shadow-none ">
           <span className="text-rosu-brand">Citeste mai mult</span>{" "}
           <ArrowForwardIcon />
         </Button>{" "}
