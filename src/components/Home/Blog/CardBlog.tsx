@@ -16,41 +16,28 @@ interface ICardBlog {
 const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
   const [hovered, setHovered] = useState(false);
   const handleMouseEnter = () => {
-    setHovered(true);
+    setTimeout(() => {
+      setHovered(true);
+    }, 200);
   };
   const handleMouseLeave = () => {
-    setHovered(false);
+    setTimeout(() => {
+      setHovered(false);
+    }, 200);
   };
   return (
     <Card
-      className="relative flex h-[550px] flex-col overflow-hidden rounded-2xl  text-[#383A3C]  md:w-full"
+      className={` ${
+        hovered && "shadow-none"
+      }  relative flex h-[550px] flex-col overflow-hidden rounded-2xl border-none bg-transparent text-[#383A3C] transition    md:w-full`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {" "}
-      <InViewWrapper
-        inView={{
-          opacity: 1,
-          translateY: 0,
-        }}
-        notInView={{
-          opacity: 0.5,
-          translateY: 100,
-        }}
-        transition={{
-          duration: 1,
-          type: "spring",
-          damping: 10,
-          stiffness: 100,
-        }}
-        className=""
-      >
-        {!hovered ? (
-          <Fata1Card data={data} titlu={titlu} continut={continut} />
-        ) : (
-          <Fata2Card data={data} titlu={titlu} continut={continut} />
-        )}
-      </InViewWrapper>
+      {!hovered ? (
+        <Fata1Card data={data} titlu={titlu} continut={continut} />
+      ) : (
+        <Fata2Card data={data} titlu={titlu} continut={continut} />
+      )}
     </Card>
   );
 };

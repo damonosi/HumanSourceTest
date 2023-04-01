@@ -19,20 +19,20 @@ const Fata1Card = ({ data, titlu, continut }: IFata1Blog) => {
   return (
     <InViewWrapper
       inView={{
-        opacity: 1,
         translateY: 0,
       }}
       notInView={{
-        opacity: 0.5,
-        translateY: 100,
+        translateY: 10,
       }}
+      exit={{ opacity: 1 }}
       transition={{
-        duration: 1,
+        duration: 2,
         type: "spring",
+        ease: "linear",
         damping: 10,
         stiffness: 100,
       }}
-      className=""
+      className="block"
     >
       <CardHeader className="mx-0 mt-0 flex min-h-min  w-full rounded-none rounded-t-xl">
         <Image
@@ -42,7 +42,7 @@ const Fata1Card = ({ data, titlu, continut }: IFata1Blog) => {
         />
       </CardHeader>{" "}
       <CardBody
-        className="z-20 flex h-full flex-col  justify-between gap-2 px-1 text-start md:gap-4 md:p-4 "
+        className="z-20 flex h-full flex-col   gap-2 px-4 text-start   "
         id="container-text-bloguri"
       >
         {" "}

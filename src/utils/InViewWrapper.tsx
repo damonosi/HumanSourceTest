@@ -21,6 +21,7 @@ const InViewWrapper = ({
   className,
   transition,
   delay,
+  exit,
 }: IInViewProps) => {
   const [isInView, setIsInView] = useState(false);
 
@@ -30,6 +31,7 @@ const InViewWrapper = ({
       // animated si not animated le adaugam in props ca
       animate={isInView ? inView : notInView}
       transition={transition}
+      exit={exit}
       onViewportEnter={() => {
         setTimeout(() => {
           setIsInView(true);
