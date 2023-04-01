@@ -9,10 +9,9 @@ const buttonClasses =
 
 const Footer = () => {
   return (
-    <footer className="relative z-10  w-full overflow-hidden bg-gri-bg pt-4 pb-10 text-white md:mx-auto   md:items-center  md:justify-center">
-      <div className="md:px-[70px]  mx-auto flex w-full flex-col items-center  justify-center   pb-0">
+    <footer className="relative z-10  w-full overflow-hidden bg-gri-bg pt-12 pb-10 text-white md:mx-auto   md:items-center  md:justify-center">
+      <div className="mx-auto  flex w-full flex-col items-center justify-center  pb-0   md:px-[70px]">
         <nav className="container z-30 flex w-full flex-col items-center justify-between  md:items-start  ">
-       
           <div className=" flex w-full  flex-col items-start justify-between gap-8 p-4 lg:flex-row ">
             <div className="flex flex-col gap-6">
               <h6 className=" text-[16px]   leading-[20px]">HUMAN SOURCE</h6>
