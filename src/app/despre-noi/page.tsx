@@ -59,15 +59,15 @@ const DespreNoiPage = () => {
             </Typography>
           </PageTransitionWrapper>{" "}
           <div
-            className="flex w-full items-center justify-center lg:w-1/2"
+            className="flex w-full items-center justify-center md:w-1/2"
             id="imagine-about"
           >
             {" "}
-            <Image alt="imagine-about" className="w-full" src={Hi5} />
+            <Image alt="imagine-about" className="z-20 w-full" src={Hi5} />
           </div>
         </div>
-        <section className="flex flex-col gap-16 px-5 text-center lg:px-0">
-          <Typography variant="h3" className="bold">
+        <section className="flex flex-col   text-center md:px-0">
+          <Typography variant="h3" className="bold py-[60px]">
             Valorile Companiei
           </Typography>
           <div
@@ -85,11 +85,11 @@ const DespreNoiPage = () => {
           </div>
         </section>
         <section
-          className="flex w-full flex-col items-center py-8  lg:py-16"
+          className="flex w-full flex-col items-center   "
           id="container echipa"
         >
           <div className="mb-24 text-center">
-            <Typography variant="h3" className="bold text-gri-brand">
+            <Typography variant="h3" className="bold py-[60px] text-gri-brand">
               Echipa Noastra
             </Typography>
           </div>

@@ -3,11 +3,15 @@
 import { Typography } from "@mui/material";
 import { useState } from "react";
 
-const LanguageSwitcher = () => {
+interface ILanguageSwitcher {
+  className?: string;
+}
+
+const LanguageSwitcher = ({ className }: ILanguageSwitcher) => {
   const [selected, setSelected] = useState("ro");
 
   return (
-    <div className="flex  gap-[5px]">
+    <div className={`flex  gap-[5px] ${className}`}>
       <button
         onClick={() => setSelected("ro")}
         className={` ${
