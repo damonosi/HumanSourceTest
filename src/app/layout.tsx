@@ -1,6 +1,6 @@
 import Providers from "@/utils/providers";
 import Footer from "./Footer";
-
+import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 import Header from "./Header";
 
@@ -85,6 +85,7 @@ export default function RootLayout({
             <Header />
             <main className=" z-30 mt-14 flex w-full flex-col  ">
               {children}
+              <Analytics />
             </main>
 
             <Footer />
