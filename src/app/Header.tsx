@@ -78,23 +78,25 @@ export function Header() {
   return (
     <Navbar
       fullWidth
-      className="fixed z-50  w-full justify-center border-b border-blue-gray-50 bg-white py-2 md:px-[70px] "
+      className="fixed z-50 w-full   justify-center border-b border-alb-site bg-alb-site py-2 md:px-[70px] "
     >
-      <div className="container mx-auto flex w-full items-center justify-between text-black">
-        <Typography
-          as="a"
-          href="/"
-          variant="small"
-          color="black"
-          className="mr-4 cursor-pointer py-1.5 font-bold"
-        >
-          <Logo className="w-32" />
-        </Typography>
-        <div className="hidden  md:block">
+      <div className="container mx-auto flex  w-full items-center justify-between text-black">
+        <div className="flex w-1/3 ">
+          <Typography
+            as="a"
+            href="/"
+            variant="small"
+            color="black"
+            className="mr-4 cursor-pointer py-1.5 font-bold"
+          >
+            <Logo className="w-32" />
+          </Typography>
+        </div>
+
+        <div className="hidden h-[60px] w-full items-center justify-end gap-6 md:flex">
           <NavList />
         </div>
-        <div className='flex gap-2'>
-          {" "}
+        <div className="flex gap-2">
           <LanguageSwitcher className="flex md:hidden" />
           <button className="md:hidden" onClick={handleOpen}>
             {open ? menuCloseIcon : menuOpenIcon}

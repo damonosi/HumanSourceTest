@@ -27,6 +27,7 @@ const InViewWrapper = ({
 
   return (
     <motion.div
+      layout
       initial={false}
       // animated si not animated le adaugam in props ca
       animate={isInView ? inView : notInView}

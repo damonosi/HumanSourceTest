@@ -10,7 +10,7 @@ const BlogSection = () => {
       </Typography>
 
       <div
-        className=" flex flex-col items-center justify-center gap-8 md:flex-row md:gap-5 "
+        className=" flex flex-col items-center justify-center h-[550px] gap-8 md:flex-row md:gap-5 "
         id="continer-carduri-blog"
       >
         {dateBlog.map(({ data, titlu, continut, id }) => (
