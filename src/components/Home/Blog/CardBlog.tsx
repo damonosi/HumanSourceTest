@@ -32,6 +32,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
     <motion.div
       layout
       onMouseLeave={handleMouseLeave}
+      onTap={() => setHovered(!hovered)}
       style={{ originY: 1 }}
       transition={{
         layout: {
@@ -41,13 +42,13 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
           duration: 0.8,
         },
       }}
-      className="relative flex h-fit flex-col overflow-hidden rounded-2xl  border-none bg-transparent  pb-4 text-[#383A3C] shadow transition    md:w-full"
+      className="relative flex  min-h-[500px] flex-col justify-between overflow-hidden  rounded-2xl border-none  bg-transparent text-[#383A3C] shadow transition md:w-full     md:pb-4"
     >
       {hovered ? (
         <AnimatePresence>
           <motion.div
             layout
-            className="absolute z-10 mx-0 mt-0 flex min-h-min   w-full  rounded-none rounded-t-xl object-cover"
+            className="absolute z-10 mx-0 mt-0 flex    w-full  rounded-none rounded-t-xl object-cover"
           >
             <Image
               alt="background"
@@ -81,10 +82,13 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
         {" "}
         {hovered ? (
           <motion.div
-            className="flex min-h-[500px] flex-col justify-between gap-2 py-2 px-4 pt-16 text-start text-alb-site"
+            className="flex h-full flex-col justify-between gap-2 py-2 px-4 text-start text-alb-site md:min-h-[500px] md:pt-16"
             layout
           >
-            <div className="flex h-[150px] w-full" id="filler card"></div>
+            <div
+              className="hidden w-full md:flex md:h-[150px]"
+              id="filler card"
+            ></div>
             <Typography
               variant="paragraph"
               className="z-20 text-[18px] font-[350] text-alb-site opacity-50"
@@ -100,21 +104,24 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
             >
               {continut}
             </Typography>
-            <Button className="mt-4 bg-transparent text-start text-rosu-brand shadow-none hover:shadow-none ">
+            <Button className="mt-4 bg-transparent text-start text-rosu-brand shadow-none hover:scale-110 hover:shadow-none ">
               <span className="text-rosu-brand">Citeste mai mult</span>
               <ArrowForwardIcon />
             </Button>
           </motion.div>
         ) : (
           <AnimatePresence>
+            <hr className="h-2 w-full" />
             <motion.button
               layout
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ scale: 0.5 }}
+              animate={{ scale: 1 }}
               onMouseEnter={handleMouseEnter}
-              className="z-10 mt-4 bg-transparent text-center  text-rosu-brand shadow-none hover:shadow-none "
+              className="z-10 my-2  bg-transparent px-2 text-center  text-rosu-brand shadow-none hover:shadow-none "
             >
+              <Typography variant="h4" className="z-20 mb-2 font-medium">
+                {titlu}
+              </Typography>
               <UnfoldMoreDoubleIcon />
             </motion.button>{" "}
           </AnimatePresence>
