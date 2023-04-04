@@ -34,7 +34,12 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
       onMouseLeave={handleMouseLeave}
       style={{ originY: 1 }}
       transition={{
-        layout: { type: "spring", stiffness: 80, ease: "linear" },
+        layout: {
+          type: "spring",
+          stiffness: 100,
+          ease: "linear",
+          duration: 0.8,
+        },
       }}
       className="relative flex h-fit flex-col overflow-hidden rounded-2xl  border-none bg-transparent  pb-4 text-[#383A3C] shadow transition    md:w-full"
     >
