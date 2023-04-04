@@ -34,8 +34,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
       onMouseLeave={handleMouseLeave}
       style={{ originY: 1 }}
       transition={{
-        type: "spring",
-        stiffness: 100,
+        layout: { type: "spring", stiffness: 80, ease: "linear" },
       }}
       className="relative flex h-fit flex-col overflow-hidden rounded-2xl  border-none bg-transparent  pb-4 text-[#383A3C] shadow transition    md:w-full"
     >
@@ -43,10 +42,6 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
         <AnimatePresence>
           <motion.div
             layout
-            transition={{
-              type: "spring",
-              stiffness: 100,
-            }}
             className="absolute z-10 mx-0 mt-0 flex min-h-min   w-full  rounded-none rounded-t-xl object-cover"
           >
             <Image
@@ -60,6 +55,9 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
         <motion.div
           layout
           className="z-30 mx-0 mt-0 flex min-h-min  w-full rounded-none rounded-t-xl"
+          transition={{
+            layout: { type: "spring", stiffness: 10 },
+          }}
         >
           <Image
             alt="cover-img-small"
