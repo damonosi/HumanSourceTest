@@ -16,33 +16,33 @@ const LanguageSwitcher = ({ className }: ILanguageSwitcher) => {
         onClick={() => setSelected("ro")}
         className={` ${
           selected === "ro" && "bg-gri-brand"
-        } flex w-[42px] items-center justify-center  rounded-full border border-gri-brand p-2`}
+        } flex h-8 w-8  items-center justify-center rounded-full  border border-gri-brand p-4 md:h-10 md:w-10`}
         name="Ro"
         id="Ro"
       >
-        <Typography
+        <p
           className={`${
             selected === "ro" && "text-white"
-          }  font-bold text-gri-brand`}
+          }  text-xs font-bold text-gri-brand md:text-sm`}
         >
           RO
-        </Typography>
+        </p>
       </button>
       <button
         onClick={() => setSelected("it")}
         className={` ${
           selected === "it" && "bg-gri-brand"
-        } flex w-[42px]  items-center justify-center rounded-full border border-gri-brand p-2`}
+        } flex h-8 w-8 items-center justify-center rounded-full border border-gri-brand p-4  md:h-10 md:w-10`}
         name="It"
         id="It"
       >
-        <Typography
+        <p
           className={`${
             selected === "it" && "text-white"
-          }  font-bold text-gri-brand`}
+          } text-xs font-bold text-gri-brand md:text-sm`}
         >
           IT
-        </Typography>
+        </p>
       </button>
     </div>
   );
