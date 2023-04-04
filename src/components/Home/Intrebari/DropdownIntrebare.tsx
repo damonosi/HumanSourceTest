@@ -26,8 +26,8 @@ const DropdownIntrebare = ({
         className="flex items-center justify-between text-start"
       >
         <Typography
-          variant="h5"
-          className=" text-start font-medium text-alb-site md:text-2xl "
+          variant="h6"
+          className=" font-regular text-start text-alb-site md:text-2xl "
         >
           {intrebare}
         </Typography>
