@@ -27,7 +27,7 @@ const DropdownIntrebare = ({
       >
         <Typography
           variant="h6"
-          className=" font-regular text-start text-alb-site md:text-2xl "
+          className=" font-regular text-start text-alb-site  "
         >
           {intrebare}
         </Typography>
