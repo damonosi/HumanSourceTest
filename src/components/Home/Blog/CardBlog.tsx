@@ -32,23 +32,30 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
     <motion.div
       layout
       onMouseLeave={handleMouseLeave}
+      style={{ originY: 1 }}
       transition={{
-        layout: { duration: 0.6 },
+        type: "spring",
+        stiffness: 100,
       }}
-      className="relative flex h-fit flex-col  overflow-hidden rounded-2xl  border-none bg-transparent text-[#383A3C] transition    md:w-full"
+      className="relative flex h-fit flex-col overflow-hidden rounded-2xl  border-none bg-transparent  pb-4 text-[#383A3C] shadow transition    md:w-full"
     >
       {hovered ? (
-        <motion.div
-          layout
-          style={{ originY: 0 }}
-          className="absolute z-10 mx-0 mt-0 flex min-h-min   w-full  rounded-none rounded-t-xl object-cover"
-        >
-          <Image
-            alt="background"
-            className=" z-10  w-full object-cover"
-            src={BackImg}
-          />
-        </motion.div>
+        <AnimatePresence>
+          <motion.div
+            layout
+            transition={{
+              type: "spring",
+              stiffness: 100,
+            }}
+            className="absolute z-10 mx-0 mt-0 flex min-h-min   w-full  rounded-none rounded-t-xl object-cover"
+          >
+            <Image
+              alt="background"
+              className=" z-10  w-full object-cover"
+              src={BackImg}
+            />
+          </motion.div>
+        </AnimatePresence>
       ) : (
         <motion.div
           layout
@@ -65,6 +72,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
       <motion.div
         className="z-20 flex  flex-col    "
         id="container-text-bloguri"
+        style={{ originY: 0 }}
         layout
       >
         {" "}
