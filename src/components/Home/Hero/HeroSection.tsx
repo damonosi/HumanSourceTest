@@ -13,7 +13,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero-section"
-      className=" relative mx-0 flex flex-col   items-center overflow-hidden  bg-gri-bg    pt-0    md:flex-row  md:justify-center  "
+      className=" relative mx-0 flex flex-col   items-center overflow-hidden  bg-gri-bg  pt-14  md:flex-row    md:justify-center    "
     >
       <div className=" container  flex w-full  flex-col-reverse items-center gap-12 bg-gradient-to-b  pb-56 lg:mx-16 lg:flex-row-reverse  ">
         <div className=" relative hidden h-full  md:block md:w-1/2">
@@ -27,24 +27,20 @@ const HeroSection = () => {
           <CarduriHero />
         </div>
         <div
-          className="  z-30 flex flex-col-reverse items-center justify-start gap-16 px-6  text-white md:w-2/4 md:flex-col md:gap-0 md:p-24 md:px-0   "
+          className="  z-30 flex flex-col-reverse items-center justify-start gap-16 px-6   text-white md:flex-col md:gap-0 md:px-0 lg:w-2/4    "
           id="container-text-carduri"
         >
-          {" "}
           <div
-            className=" flex  w-full flex-col gap-6 pt-6 text-start lg:pb-16"
+            className=" flex  w-full flex-col gap-6 pt-6 text-start text-alb-site opacity-80 lg:pb-16"
             id="container-text"
           >
-            <Typography
-              variant="small"
-              className="uppercase text-white opacity-80 "
-            >
+            <Typography variant="small" className="uppercase ">
               AGENTIE DE PLASARE FORȚĂ DE MUNCĂ
             </Typography>
-            <Typography variant="h2" className="text-start  text-white  ">
+            <Typography variant="h1" className="text-start    ">
               Construiește-ți viitorul <br /> alături de noi
             </Typography>
-            <Typography variant="paragraph" className="font-light">
+            <Typography variant="paragraph" className="font-[350]  ">
               HumanSource - alege să colaborezi cu noi pentru job-ul tau de vis
               sau <br className="hidden md:block" /> pentru gasirea candidatului
               potrivit.{" "}
@@ -52,7 +48,7 @@ const HeroSection = () => {
           </div>
           <div className="hidden w-full md:block">
             <CarduriHero />
-          </div>{" "}
+          </div>
         </div>{" "}
       </div>
     </section>

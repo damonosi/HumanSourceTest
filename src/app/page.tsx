@@ -18,7 +18,7 @@ export default function Home() {
 
       <div className=" h-full  translate-y-[-10rem]  ">
         <div
-          className="mx-1 flex flex-col items-center justify-center rounded-t-[10px]  bg-alb-site  md:mx-2    md:py-[60px] md:pb-[160px]"
+          className="mx-1 flex  flex-col items-center justify-center rounded-t-[10px] bg-alb-site    md:mx-2    md:pt-[100px] md:pb-[160px]"
           id="background"
         >
           <AvantajeSection />
@@ -30,7 +30,7 @@ export default function Home() {
           <NevoiSection />
         </div>
         <div
-          className="mx-1 flex flex-col items-center  justify-center bg-alb-site  pb-32 md:mx-2 md:px-16  md:pb-[180px]"
+          className="mx-1 flex flex-col items-center  justify-center bg-alb-site  pb-32 pt-[100px] md:mx-2 md:px-16  md:pb-[180px]"
           id="background"
         >
           <ServiciiSection />

@@ -35,7 +35,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
       onTouchStart={() => {
         setHovered(!hovered);
       }}
-      className="relative flex h-full max-h-[350px]  flex-col justify-end overflow-hidden rounded-2xl  border-none bg-transparent  text-[#383A3C] shadow transition  md:max-h-[500px]   md:w-full  "
+      className="relative   flex h-[350px]  flex-col justify-end overflow-hidden rounded-2xl  border-none bg-transparent text-[#383A3C] shadow transition  md:h-[500px]   md:w-full  "
     >
       <AnimatePresence>
         {!hovered ? (

@@ -20,8 +20,9 @@ const DropdownIntrebare = ({
     setShowRaspuns(!showRaspuns);
   };
   return (
-    <div ref={ref} className="flex flex-col" id="container-dd">
+    <div className="flex flex-col" id="container-dd">
       <button
+        ref={ref}
         onClick={handleClick}
         className="flex items-center justify-between text-start"
       >
@@ -43,7 +44,7 @@ const DropdownIntrebare = ({
       </button>
       <Typography
         variant="paragraph"
-        className={` px-1 pb-4 pt-10 text-start  text-alb-site opacity-60   lg:opacity-80 ${
+        className={` px-1 pb-4 pt-2 text-start  text-alb-site opacity-60   lg:opacity-80 ${
           !showRaspuns ? "hidden" : "block"
         } `}
       >

@@ -17,7 +17,7 @@ const IntrebariSection = () => {
           src={ImgIntrebari}
         />
       </div>
-      <div className="relative flex flex-col gap-8 sm:w-full md:w-1/2  ">
+      <div className="relative flex flex-col  gap-8 sm:w-full md:w-1/2  ">
         <Typography
           variant="h5"
           className=" text-start font-bold text-alb-site md:pt-[60px] md:text-2xl"
