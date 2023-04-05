@@ -16,7 +16,7 @@ module.exports = withMT({
       },
       backgroundImage: {
         "card-blog":
-          "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .4))",
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), ",
       },
       dropShadow: {
         "card-hero": "5px 5px 20px rgba(0, 0, 0, 0.25);",

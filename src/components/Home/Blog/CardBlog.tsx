@@ -29,106 +29,103 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
     setHovered(false);
   };
   return (
-    <motion.div
-      layout
+    <div
       onMouseLeave={handleMouseLeave}
-      onTap={() => setHovered(!hovered)}
-      style={{ originY: 1 }}
-      transition={{
-        layout: {
-          type: "spring",
-          stiffness: 100,
-          ease: "linear",
-          duration: 0.8,
-        },
+      onMouseEnter={handleMouseEnter}
+      onTouchStart={() => {
+        setHovered(!hovered);
       }}
-      className="relative flex  min-h-[500px] flex-col justify-between overflow-hidden  rounded-2xl border-none  bg-transparent text-[#383A3C] shadow transition md:w-full     md:pb-4"
+      className="relative flex h-full max-h-[350px]  flex-col justify-end overflow-hidden rounded-2xl  border-none bg-transparent  text-[#383A3C] shadow transition  md:max-h-[500px]   md:w-full  "
     >
-      {hovered ? (
-        <AnimatePresence>
+      <AnimatePresence>
+        {!hovered ? (
           <motion.div
+            key="imagine"
             layout
-            className="absolute z-10 mx-0 mt-0 flex    w-full  rounded-none rounded-t-xl object-cover"
+            transition={{
+              layout: {
+                type: "spring",
+                stiffness: 20,
+                duration: 1,
+                height: "100vh",
+              },
+            }}
+            id="img-container"
+            className="relative z-40 object-fill"
           >
             <Image
               alt="background"
-              className=" z-10  w-full object-cover"
+              className="w-full object-fill"
               src={BackImg}
             />
           </motion.div>
-        </AnimatePresence>
-      ) : (
-        <motion.div
-          layout
-          className="z-30 mx-0 mt-0 flex min-h-min  w-full rounded-none rounded-t-xl"
-          transition={{
-            layout: { type: "spring", stiffness: 10 },
-          }}
-        >
-          <Image
-            alt="cover-img-small"
-            className="z-10 w-screen object-cover"
-            src={CoverBlogSmall}
-          />{" "}
-        </motion.div>
-      )}
-
-      <motion.div
-        className="z-20 flex  flex-col    "
-        id="container-text-bloguri"
-        style={{ originY: 0 }}
-        layout
-      >
-        {" "}
-        {hovered ? (
-          <motion.div
-            className="flex h-full flex-col justify-between gap-2 py-2 px-4 text-start text-alb-site md:min-h-[500px] md:pt-16"
-            layout
-          >
-            <div
-              className="hidden w-full md:flex md:h-[150px]"
-              id="filler card"
-            ></div>
-            <Typography
-              variant="paragraph"
-              className="z-20 text-[18px] font-[350] text-alb-site opacity-50"
-            >
-              {data}
-            </Typography>
-            <Typography variant="h4" className="z-20 font-medium ">
-              {titlu}
-            </Typography>
-            <Typography
-              variant="paragraph"
-              className="z-20 text-[18px] font-[400] leading-[22px]"
-            >
-              {continut}
-            </Typography>
-            <Button className="mt-4 bg-transparent text-start text-rosu-brand shadow-none hover:scale-110 hover:shadow-none ">
-              <span className="text-rosu-brand">Citeste mai mult</span>
-              <ArrowForwardIcon />
-            </Button>
-          </motion.div>
         ) : (
-          <AnimatePresence>
-            <hr className="h-2 w-full" />
-            <motion.button
-              layout
-              initial={{ scale: 0.5 }}
-              animate={{ scale: 1 }}
-              onMouseEnter={handleMouseEnter}
-              className="z-10 my-2  bg-transparent px-2 text-center  text-rosu-brand shadow-none hover:shadow-none "
-            >
-              <Typography variant="h4" className="z-20 mb-2 font-medium">
-                {titlu}
-              </Typography>
-              <UnfoldMoreDoubleIcon />
-            </motion.button>{" "}
-          </AnimatePresence>
+          <motion.div
+            key="imagine"
+            layout
+            transition={{
+              layout: { type: "spring", stiffness: 20, duration: 1 },
+            }}
+            id="img-container"
+            className="absolute top-0 bottom-0 h-full w-full"
+          >
+            <Image
+              alt="background"
+              className="relative h-full w-full object-fill "
+              src={BackImg}
+            />{" "}
+            <motion.div
+              key="mask"
+              transition={{
+                type: "spring",
+                stiffness: 20,
+                duration: 1,
+                delay: 500,
+              }}
+              className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden rounded-2xl bg-black bg-fixed opacity-50"
+            />
+          </motion.div>
         )}
-      </motion.div>
-    </motion.div>
+
+        <motion.div
+          key="container-text"
+          style={{
+            height: hovered ? "50vh" : "100vh",
+          }}
+          layout
+          transition={{
+            layout: { type: "spring", stiffness: 20 },
+          }}
+          className={`z-20 flex h-full flex-col justify-end gap-2 py-2 px-4 text-start md:justify-between ${
+            hovered ? "text-alb-site " : "text-gri-brand"
+          } `}
+          id="container-text-bloguri"
+        >
+          <Typography
+            variant="paragraph"
+            className="z-20 text-[18px] font-[350]  opacity-50 "
+          >
+            {data}
+          </Typography>
+          <Typography variant="h4" className="font-medium ">
+            {titlu}
+          </Typography>
+          <Typography
+            variant="paragraph"
+            className=" text-[18px] font-[400] leading-[22px]"
+          >
+            {continut}
+          </Typography>
+          <Button className="mt-4 bg-transparent text-start text-rosu-brand shadow-none hover:scale-110 hover:shadow-none ">
+            <span className="text-rosu-brand">Citeste mai mult</span>
+            <ArrowForwardIcon />
+          </Button>
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 };
 
 export default CardBlog;
+
+
