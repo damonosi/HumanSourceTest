@@ -33,7 +33,7 @@ function NavItem({ label, href }: INavItem) {
 
 function NavList() {
   return (
-    <ul className="mb-4 mt-2 flex flex-col gap-3   md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-8">
+    <ul className="mb-4 mt-2 flex flex-col gap-3    md:mb-0 md:mt-0 md:flex-row md:items-center md:gap-8">
       <NavItem href="despre-noi" label="Despre noi" />
       <NavItem href="locuri-de-munca" label="Locuri de munca" />
       <NavItem href="contact" label="Contact" />
@@ -104,7 +104,10 @@ export function Header() {
         </div>
       </div>
 
-      <MobileNav open={open}>
+      <MobileNav
+        className="ml-0 flex w-screen flex-col bg-alb-site "
+        open={open}
+      >
         <NavList />
         <button className=" h-8  w-20 rounded-2xl bg-red-600 text-white ">
           Aplica
