@@ -90,13 +90,13 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
         <motion.div
           key="container-text"
           style={{
-            height: hovered ? "50vh" : "100vh",
+            height: hovered ? "40vh" : "100vh",
           }}
           layout
           transition={{
             layout: { type: "spring", stiffness: 20 },
           }}
-          className={`z-20 flex h-full flex-col justify-end gap-2 py-2 px-4 text-start md:justify-between ${
+          className={`z-20 flex  flex-col justify-end gap-2 py-2 px-4 text-start md:justify-between ${
             hovered ? "text-alb-site " : "text-gri-brand"
           } `}
           id="container-text-bloguri"
@@ -116,9 +116,13 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
           >
             {continut}
           </Typography>
-          <Button className="mt-4 bg-transparent text-start text-rosu-brand shadow-none hover:scale-110 hover:shadow-none ">
-            <span className="text-rosu-brand">Citeste mai mult</span>
-            <ArrowForwardIcon />
+          <Button
+            className={`mt-4 bg-transparent text-start text-rosu-brand shadow-none hover:scale-110 hover:shadow-none ${
+              hovered && "text-alb-site"
+            }`}
+          >
+            <span>Citeste mai mult</span>
+            {hovered && <ArrowForwardIcon />}
           </Button>
         </motion.div>
       </AnimatePresence>
