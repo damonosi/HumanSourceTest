@@ -6,7 +6,7 @@ import DropdownIntrebare from "./DropdownIntrebare";
 
 const IntrebariSection = () => {
   return (
-    <section className="container relative flex w-full flex-col gap-10  px-2 text-start  md:flex-row  md:px-0 md:text-center">
+    <section className="container relative flex w-full flex-col gap-10 px-6 pb-16  text-start md:flex-row  md:px-0  md:pb-0 md:text-center">
       <div
         className="flex  items-center justify-center  md:w-1/2"
         id="container-imagine-intrebari"

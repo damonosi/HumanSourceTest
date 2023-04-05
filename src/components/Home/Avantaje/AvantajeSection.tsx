@@ -4,7 +4,7 @@ import dateAvantaje from "./dateAvantaje";
 
 const AvantajeSection = () => {
   return (
-    <section className="container flex flex-col items-center  text-center">
+    <section className="container flex flex-col items-center pb-[100px] md:pb-0 text-center">
       <Typography variant="h3" className="mb-[60px] hidden px-2   md:block ">
         {" "}
         Firma de recrutare strainatate - Avantajele serviciilor Human Source
