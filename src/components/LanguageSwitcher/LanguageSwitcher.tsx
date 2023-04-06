@@ -1,49 +1,79 @@
 "use client";
 
-import { Typography } from "@mui/material";
-import { useState } from "react";
 
+import React, { useState } from "react";
+import Ro from "../../../public/imagini/header/ro.svg";
+import It from "../../../public/imagini/header/it.svg";
+import Ge from "../../../public/imagini/header/ge.svg";
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import useOnclickOutside from "react-cool-onclickoutside";
 interface ILanguageSwitcher {
   className?: string;
 }
 
 const LanguageSwitcher = ({ className }: ILanguageSwitcher) => {
-  const [selected, setSelected] = useState("ro");
+  const [open, setOpened] = useState(false);
+  const [language, setLanguage] = useState("ro");
+  const ref = useOnclickOutside(() => {
+    setOpened(!open && false);
+  });
 
   return (
-    <div className={`flex  gap-[5px] ${className}`}>
-      <button
-        onClick={() => setSelected("ro")}
-        className={` ${
-          selected === "ro" && "bg-gri-brand"
-        } flex h-8 w-8  items-center justify-center rounded-full  border border-gri-brand p-4 md:h-10 md:w-10`}
-        name="Ro"
-        id="Ro"
+    <div
+      ref={ref}
+      className="relative flex  w-72 flex-col items-start justify-center"
+    >
+      <div
+        className="flex cursor-pointer items-center gap-2"
+        onClick={() => setOpened(!open)}
+        id="selector-limba"
       >
-        <p
-          className={`${
-            selected === "ro" && "text-white"
-          }  text-xs font-bold text-gri-brand md:text-sm`}
-        >
-          RO
-        </p>
-      </button>
-      <button
-        onClick={() => setSelected("it")}
-        className={` ${
-          selected === "it" && "bg-gri-brand"
-        } flex h-8 w-8 items-center justify-center rounded-full border border-gri-brand p-4  md:h-10 md:w-10`}
-        name="It"
-        id="It"
-      >
-        <p
-          className={`${
-            selected === "it" && "text-white"
-          } text-xs font-bold text-gri-brand md:text-sm`}
-        >
-          IT
-        </p>
-      </button>
+        {language === "ro" && <Ro className="h-5 w-5 rounded-[50px] " />}
+        {language === "it" && <It className="h-5 w-5 rounded-[50px] " />}
+        {language === "ge" && <Ge className="h-5 w-5 rounded-[50px]" />}
+
+        {open ? (
+          <MdOutlineKeyboardArrowUp />
+        ) : (
+          <MdOutlineKeyboardArrowUp className="rotate-180 " />
+        )}
+      </div>
+      {open && (
+        <div className="absolute top-full mt-2 flex flex-col gap-4 bg-alb-site py-5 px-2">
+          <button
+            onClick={() => {
+              setLanguage("ro");
+              setOpened(false);
+            }}
+            className=" flex items-center gap-4"
+          >
+            {" "}
+            <Ro
+              className="h-5 w-5 rounded-full 
+"
+            />{" "}
+            <span>Romana</span>
+          </button>
+          <button
+            onClick={() => {
+              setLanguage("it");
+              setOpened(false);
+            }}
+            className="flex items-center gap-4"
+          >
+            <It className="h-5 w-5 rounded-full" /> <span>Italiana</span>
+          </button>
+          <button
+            onClick={() => {
+              setLanguage("ge");
+              setOpened(false);
+            }}
+            className="flex items-center gap-4"
+          >
+            <Ge className="h-5 w-5 rounded-full" /> <span>Germana</span>
+          </button>
+        </div>
+      )}
     </div>
   );
 };

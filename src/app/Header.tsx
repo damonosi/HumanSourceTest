@@ -45,7 +45,6 @@ function NavList() {
       >
         Aplica
       </Button>
-      <LanguageSwitcher className="hidden md:flex" />
     </ul>
   );
 }
@@ -91,13 +90,13 @@ export function Header() {
           >
             <Logo className="w-32" />
           </Typography>
+          <LanguageSwitcher className="hidden md:flex" />
         </div>
 
         <div className="hidden  w-full items-center justify-end gap-6 md:flex">
           <NavList />
         </div>
         <div className="flex gap-2">
-          <LanguageSwitcher className="flex md:hidden" />
           <button className="md:hidden" onClick={handleOpen}>
             {open ? menuCloseIcon : menuOpenIcon}
           </button>{" "}
