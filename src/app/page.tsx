@@ -1,16 +1,16 @@
 "use client";
 
 import React, { Suspense } from "react";
+import HeroSection from "../components/Home/Hero/HeroSection";
 const AvantajeSection = React.lazy(
   () => import("../components/Home/Avantaje/AvantajeSection")
 );
 const BlogSection = React.lazy(
   () => import("../components/Home/Blog/BlogSection")
 );
-const HeroSection = React.lazy(
-  () => import("../components/Home/Hero/HeroSection"),
+
   
-);
+
 const IntrebariSection = React.lazy(
   () => import("../components/Home/Intrebari/IntrebariSection")
 );
