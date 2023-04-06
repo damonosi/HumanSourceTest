@@ -1,15 +1,10 @@
-import { Card } from "@material-tailwind/react";
+"use client";
 import { useState } from "react";
-import UnfoldMoreDoubleIcon from "@mui/icons-material/UnfoldMoreDouble";
+
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  CardBody,
-  CardHeader,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
+import { Typography, Button } from "@material-tailwind/react";
 import Image from "next/image";
-import CoverBlogSmall from "../../../../public/imagini/blog/cover-blog-small.png";
+
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import BackImg from "../../../../public/imagini/blog/cover-blog-full.png";
 
@@ -32,7 +27,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
     <div
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
-      onTouchStart={() => {
+      onTouchEnd={() => {
         setHovered(!hovered);
       }}
       className="relative   flex h-[350px]  w-full flex-col justify-end overflow-hidden  rounded-2xl border-none bg-transparent text-[#383A3C] shadow  transition   md:h-[500px]  "
@@ -131,5 +126,3 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
 };
 
 export default CardBlog;
-
-

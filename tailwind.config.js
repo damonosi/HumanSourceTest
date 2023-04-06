@@ -1,5 +1,6 @@
 
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require("tailwindcss/defaultTheme");
 const withMT = require("@material-tailwind/react/utils/withMT");
 
 module.exports = withMT({
@@ -7,10 +8,10 @@ module.exports = withMT({
   important: "#root",
 
   theme: {
-    fontFamily: {
-      sans: ["var(--font-madera)"],
-    },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-madera)", ...fontFamily.sans],
+      },
       boxShadow: {
         parteneriShadow: "inset 0px 0px 20px rgba(102, 102, 102, 0.1)",
       },
@@ -33,7 +34,5 @@ module.exports = withMT({
       },
     },
   },
-  plugins: [
-   
-  ],
+  plugins: [],
 });

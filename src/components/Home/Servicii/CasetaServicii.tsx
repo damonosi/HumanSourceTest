@@ -46,7 +46,7 @@ const CasetaServicii = ({
         id="caseta-servicii"
         onMouseLeave={handleMouseLeave}
         onMouseEnter={handleMouseEnter}
-        onTouchStart={() => {
+        onTouchEnd={() => {
           setHovered(!hovered);
         }}
       >

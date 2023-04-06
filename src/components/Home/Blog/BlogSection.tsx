@@ -1,3 +1,4 @@
+"use client";
 import { Typography } from "@material-tailwind/react";
 import CardBlog from "./CardBlog";
 import dateBlog from "./dateBlog";

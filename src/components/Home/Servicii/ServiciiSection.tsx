@@ -1,3 +1,4 @@
+"use client";
 import { Typography } from "@material-tailwind/react";
 import CasetaServicii from "./CasetaServicii";
 import dateServicii from "./dateServicii";

@@ -66,6 +66,7 @@ const madera = localFont({
       style: "italic",
     },
   ],
+  
   variable: "--font-madera",
 });
 export default function RootLayout({
@@ -74,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html id="root" lang="en" className={madera.className}>
+    <html id="root" lang="ro" className={`${madera.variable} font-sans`}>
       <head />
       <Providers>
         <body className="m-0 mx-auto flex items-center  justify-center overflow-x-hidden  bg-gri-deschis-bg text-gri-brand ">

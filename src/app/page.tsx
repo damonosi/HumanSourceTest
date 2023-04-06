@@ -1,12 +1,28 @@
 "use client";
 
-import AvantajeSection from "../components/Home/Avantaje/AvantajeSection";
-import BlogSection from "../components/Home/Blog/BlogSection";
-import HeroSection from "../components/Home/Hero/HeroSection";
-import IntrebariSection from "../components/Home/Intrebari/IntrebariSection";
-import NevoiSection from "../components/Home/Nevoi/NevoiSection";
-import ParteneriSection from "../components/Home/Parteneri/ParteneriSection";
-import ServiciiSection from "../components/Home/Servicii/ServiciiSection";
+import React, { Suspense } from "react";
+const AvantajeSection = React.lazy(
+  () => import("../components/Home/Avantaje/AvantajeSection")
+);
+const BlogSection = React.lazy(
+  () => import("../components/Home/Blog/BlogSection")
+);
+const HeroSection = React.lazy(
+  () => import("../components/Home/Hero/HeroSection"),
+  
+);
+const IntrebariSection = React.lazy(
+  () => import("../components/Home/Intrebari/IntrebariSection")
+);
+const NevoiSection = React.lazy(
+  () => import("../components/Home/Nevoi/NevoiSection")
+);
+const ParteneriSection = React.lazy(
+  () => import("../components/Home/Parteneri/ParteneriSection")
+);
+const ServiciiSection = React.lazy(
+  () => import("../components/Home/Servicii/ServiciiSection")
+);
 
 export default function Home() {
   return (
@@ -21,32 +37,45 @@ export default function Home() {
           className="mx-1 flex  flex-col items-center justify-center rounded-t-[10px] bg-alb-site px-4   md:mx-2    md:py-[100px] "
           id="background"
         >
-          <AvantajeSection />
+          <Suspense fallback={<div>Loading...</div>}>
+            <AvantajeSection />
+          </Suspense>
         </div>
         <div
           className="mx-1 flex flex-col items-center justify-center bg-gri-bg  px-4 md:mx-2  md:px-16  "
           id="background"
         >
-          <NevoiSection />
+          <Suspense fallback={<div>Loading...</div>}>
+            <NevoiSection />
+          </Suspense>
         </div>
         <div
           className="mx-1 flex flex-col items-center  justify-center bg-alb-site  pb-32 pt-[100px] md:mx-2 md:px-16  md:py-[100px]"
           id="background"
         >
-          <ServiciiSection />
+          <Suspense fallback={<div>Loading...</div>}>
+            <ServiciiSection />
+          </Suspense>
         </div>{" "}
         <div
           className="mx-1 flex flex-col items-center justify-center  bg-gri-bg pb-[60px] md:mx-2 md:px-16  md:pb-[0px] "
           id="background"
         >
-          <IntrebariSection />{" "}
+          {" "}
+          <Suspense fallback={<div>Loading...</div>}>
+            <IntrebariSection />
+          </Suspense>
         </div>
         <div
           className="mx-1 flex flex-col items-center justify-center  rounded-b-[10px]  bg-white pb-12  md:mx-2 md:px-16 "
           id="background"
         >
-          <BlogSection />
-          <ParteneriSection />
+          <Suspense fallback={<div>Loading...</div>}>
+            <BlogSection />{" "}
+          </Suspense>{" "}
+          <Suspense fallback={<div>Loading...</div>}>
+            <ParteneriSection />{" "}
+          </Suspense>
         </div>
       </div>
     </div>

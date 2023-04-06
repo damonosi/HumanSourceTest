@@ -48,7 +48,7 @@ const CardHero = ({ titlu, icon, descriere, link, textButon }: ICardHero) => {
         id="card-hero"
         onMouseLeave={handleMouseLeave}
         onMouseEnter={handleMouseEnter}
-        onTouchStart={() => {
+        onTouchEnd={() => {
           setHovered(!hovered);
         }}
       >
