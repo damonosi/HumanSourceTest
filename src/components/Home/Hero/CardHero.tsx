@@ -29,7 +29,7 @@ const CardHero = ({ titlu, icon, descriere, link, textButon }: ICardHero) => {
     <AnimatePresence>
       <motion.div
         key="container-card"
-        className={`grid h-[194px] w-[165px] grid-cols-1 items-center justify-between  rounded-t-[30px] rounded-br-[30px]   px-2 text-center text-gri-brand  drop-shadow-card-hero  md:h-[194px]   md:w-[308px]  md:px-6 md:pt-2    ${
+        className={`grid h-[194px] w-[165px] grid-cols-1 items-center justify-between  rounded-t-[30px] rounded-br-[30px]   px-2 text-center text-gri-brand  drop-shadow-card-hero  md:h-[194px]   md:w-full  md:px-6 md:pt-2    ${
           icon === "angajator" && "rounded-bl-[30px] rounded-tr-[0px] "
         }  ${icon === "muncitor" && " rounded-bl-[30px] rounded-tl-[0px] "}  ${
           !hovered ? "  " : ""
@@ -145,7 +145,7 @@ const CarduriHero = () => {
   return (
     <div
       id="container-carduri  "
-      className="relative z-20 grid w-full  grid-cols-2 items-center gap-5 px-6   md:px-0 "
+      className="relative z-20 flex w-full  items-center justify-center gap-5    md:px-0 "
     >
       {dateHero.map(({ titlu, icon, descriere, link, textButon, id, src }) => (
         <CardHero

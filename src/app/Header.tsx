@@ -79,7 +79,7 @@ export function Header() {
       fullWidth
       className="fixed z-50 h-[60px] w-full  items-center  justify-center border-b border-alb-site bg-alb-site  py-0   md:px-[70px] "
     >
-      <div className="container mx-auto flex h-[60px]  w-full items-center justify-between  px-4 text-gri-brand">
+      <div className="container mx-auto flex h-[60px]  w-full items-center justify-between  px-4 text-gri-brand md:px-0">
         <div className="flex w-1/3 ">
           <Typography
             as="a"

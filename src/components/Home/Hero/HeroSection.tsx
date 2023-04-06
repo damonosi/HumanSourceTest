@@ -4,7 +4,7 @@ import PageTransitionWrapper from "@/utils/PageTransitionWrapper";
 import { Typography } from "@material-tailwind/react";
 
 import { useEffect, useRef } from "react";
-import HartaHero from "./HartaHero";
+import { HartaHeroDesktop, HartaHeroMobil } from "./HartaHero";
 
 let initialAnimation = { x: 0, opacity: 0 };
 const HeroSection = () => {
@@ -15,13 +15,16 @@ const HeroSection = () => {
       id="hero-section"
       className=" relative mx-0 flex flex-col   items-center overflow-hidden  bg-gri-bg  pt-14  md:flex-row    md:justify-center    "
     >
-      <div className=" container  flex w-full  flex-col-reverse items-center gap-12 bg-gradient-to-b  pb-56 lg:mx-16 lg:flex-row-reverse  ">
-        <div className=" relative hidden h-full  md:block md:w-1/2">
-          <HartaHero />
+      <div className=" container  flex w-full  flex-col-reverse   items-center gap-12  bg-gradient-to-b  pb-56 lg:mx-16 lg:flex-row-reverse  ">
+        <div className=" relative hidden h-full md:block md:w-1/2">
+          <HartaHeroDesktop />
         </div>
-        <div className=" flex  flex-col md:hidden">
-          <div className="relative flex min-h-[300px] w-full py-4">
-            <HartaHero />
+        <div
+          className="  flex flex-col px-[20px] md:hidden"
+          id="container harta carduri mobil"
+        >
+          <div className="  flex min-h-[300px] w-full items-center py-4">
+            <HartaHeroMobil />
           </div>
 
           <CarduriHero />
@@ -46,7 +49,7 @@ const HeroSection = () => {
               potrivit.{" "}
             </Typography>
           </div>
-          <div className="hidden w-full md:block">
+          <div className=" hidden w-full md:block">
             <CarduriHero />
           </div>
         </div>{" "}
