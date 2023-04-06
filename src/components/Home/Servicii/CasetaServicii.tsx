@@ -42,7 +42,7 @@ const CasetaServicii = ({
         }}
         className={`container  ${
           hovered && "shadow-xl"
-        } flex h-[325px] w-full flex-col items-center justify-between  gap-4 rounded-[10px] bg-alb-site px-4 pb-8 text-center `}
+        } my-5 flex h-[338px] w-full flex-col items-center justify-between gap-4  rounded-[10px] bg-alb-site px-4 pb-8 text-center md:h-[325px] `}
         id="caseta-servicii"
         onMouseLeave={handleMouseLeave}
         onMouseEnter={handleMouseEnter}

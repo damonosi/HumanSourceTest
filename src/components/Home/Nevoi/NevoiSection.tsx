@@ -18,7 +18,7 @@ const NevoiSection = () => {
           </Typography>
 
           <Typography
-            variant="h5"
+            variant="h6"
             className=" text-start font-[500] text-alb-site "
           >
             &#x2713; &nbsp; Am o companie intr-o alta tara si am nevoie de

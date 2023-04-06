@@ -11,7 +11,7 @@ const ServiciiSection = () => {
       >
         Serviciile Human Source
       </Typography>
-      <div className="flex w-full flex-col justify-between gap-5 md:flex-row">
+      <div className="flex w-full flex-col justify-between gap-y-16 md:flex-row">
         {dateServicii.map(({ titlu, descriere, textButon, icon, id }) => (
           <CasetaServicii
             key={id}
