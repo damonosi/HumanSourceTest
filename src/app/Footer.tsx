@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import IcoFacebook from "../../public/imagini/facebook.png";
-import IcoInstagram from "../../public/imagini/instagram.png";
-import IcoTwitter from "../../public/imagini/twitter.png";
+import { FiFacebook } from "react-icons/fi";
+import { GrInstagram } from "react-icons/gr";
+import { SlSocialTwitter } from "react-icons/sl";
 
 const buttonClasses =
   "py-2 px-8 border rounded-[16px] hover:bg-white hover:text-black  ";
@@ -54,6 +54,20 @@ const Footer = () => {
                 <Link href="/contact">Politica privind Cookie-urile</Link>
               </div>
             </div>
+          </div>
+          <div
+            className="flex w-full items-center justify-center gap-6 pt-12 "
+            id="social container"
+          >
+            <a href="">
+              <FiFacebook className="hover:text-[#64C7CE]" />
+            </a>
+            <a href="">
+              <GrInstagram className="hover:text-[#64C7CE]" />
+            </a>{" "}
+            <a href="">
+              <SlSocialTwitter className="hover:text-[#64C7CE]" />
+            </a>
           </div>
         </nav>
       </div>

@@ -1,5 +1,6 @@
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
+import { Fragment } from "react";
 import ImgIntrebari from "../../../../public/imagini/intrebari/imgIntrebari.png";
 import dateIntrebari from "./dateIntrebari";
 import DropdownIntrebare from "./DropdownIntrebare";
@@ -12,7 +13,7 @@ const IntrebariSection = () => {
         id="container-imagine-intrebari"
       >
         <Image
-          className="h-[85%] w-full translate-y-[-15%]"
+          className="h-[92%] w-full translate-y-[-8%]"
           alt="imagine-intrebari"
           src={ImgIntrebari}
         />
@@ -24,6 +25,7 @@ const IntrebariSection = () => {
         >
           Intrebari frecvente adresate de clientii <br /> Human Source
         </Typography>
+
         {dateIntrebari.map(({ intrebare, raspuns, id, ultima }) => (
           <DropdownIntrebare
             key={id}

@@ -45,7 +45,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
             transition={{
               layout: {
                 type: "spring",
-                stiffness: 20,
+                stiffness: 30,
                 duration: 1,
                 height: "100vh",
               },
@@ -64,7 +64,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
             key="imagine"
             layout
             transition={{
-              layout: { type: "spring", stiffness: 20, duration: 1 },
+              layout: { type: "spring", stiffness: 30, duration: 1 },
             }}
             id="img-container"
             className="absolute top-0 bottom-0 h-full w-full"
@@ -78,7 +78,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
               key="mask"
               transition={{
                 type: "spring",
-                stiffness: 20,
+                stiffness: 40,
                 duration: 1,
                 delay: 500,
               }}
@@ -94,7 +94,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
           }}
           layout
           transition={{
-            layout: { type: "spring", stiffness: 20 },
+            layout: { type: "spring", stiffness: 40 },
           }}
           className={`z-20 flex  flex-col justify-end gap-2 py-2 px-4 text-start md:justify-between ${
             hovered ? "text-alb-site " : "text-gri-brand"
@@ -117,8 +117,8 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
             {continut}
           </Typography>
           <Button
-            className={`mt-4 bg-transparent text-start text-rosu-brand shadow-none hover:scale-110 hover:shadow-none ${
-              hovered && "text-alb-site"
+            className={`mt-4 bg-transparent text-start text-alb-site shadow-none hover:scale-110 hover:shadow-none ${
+              hovered && ""
             }`}
           >
             <span>Citeste mai mult</span>

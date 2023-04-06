@@ -2,6 +2,9 @@ import { Button, Typography } from "@material-tailwind/react";
 import PayrollImg from "../../../../public/imagini/MuncitorIcon.svg";
 import LeasingImg from "../../../../public/imagini/leasing.svg";
 import RecrutareImg from "../../../../public/imagini/recrutare.svg";
+import { HiOutlineUserGroup } from "react-icons/hi";
+import { IoDocumentAttachOutline } from "react-icons/io5";
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -47,16 +50,17 @@ const CasetaServicii = ({
           setHovered(!hovered);
         }}
       >
-        {" "}
-        {icon === "leasing" && (
-          <LeasingImg width={34} height={34} alt="img-leasing" />
-        )}
-        {icon === "payroll" && (
-          <PayrollImg width={34} height={34} alt="img-payroll" />
-        )}
-        {icon === "recrutare" && (
-          <RecrutareImg width={34} height={34} alt="img-recrutare" />
-        )}
+        <div className="h-[42px]  w-[42px]  text-rosu-brand">
+          {icon === "leasing" && (
+            <HiOutlineUserGroup className="h-full w-full" />
+          )}
+          {icon === "payroll" && (
+            <IoDocumentAttachOutline className="h-full w-full" />
+          )}
+          {icon === "recrutare" && (
+            <AiOutlineUsergroupAdd className="h-full w-full" />
+          )}
+        </div>
         <Typography variant="h5" className=" font-normal   text-gri-brand">
           {titlu}
         </Typography>
