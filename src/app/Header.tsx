@@ -11,9 +11,6 @@ import Hamburger from "../../public/imagini/hamburger.svg";
 import Logo from "../../public/imagini/logo.svg";
 import LanguageSwitcher from "./../components/LanguageSwitcher/LanguageSwitcher";
 
-
-
-
 interface INavItem {
   label: string;
   href: string;
@@ -41,7 +38,7 @@ function NavList() {
       <NavItem href="bloguri" label="Blog" />
       <Button
         ripple={true}
-        className="hidden  rounded-full bg-red-800 text-white md:inline-block"
+        className="hidden  rounded-full bg-red-800 px-4 py-3 text-white md:inline-block"
       >
         Aplica
       </Button>

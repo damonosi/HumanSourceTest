@@ -1,6 +1,5 @@
 "use client";
 
-
 import React, { useState } from "react";
 import Ro from "../../../public/imagini/header/ro.svg";
 import It from "../../../public/imagini/header/it.svg";
@@ -29,8 +28,8 @@ const LanguageSwitcher = ({ className }: ILanguageSwitcher) => {
         id="selector-limba"
       >
         {language === "ro" && <Ro className="h-5 w-5 rounded-[50px] " />}
-        {language === "it" && <It className="h-5 w-5 rounded-[50px] " />}
-        {language === "ge" && <Ge className="h-5 w-5 rounded-[50px]" />}
+        {language === "it" && <It className="h-5 w-5  " />}
+        {language === "ge" && <Ge className="h-5 w-5 " />}
 
         {open ? (
           <MdOutlineKeyboardArrowUp />
@@ -39,17 +38,19 @@ const LanguageSwitcher = ({ className }: ILanguageSwitcher) => {
         )}
       </div>
       {open && (
-        <div className="absolute top-full mt-2 flex flex-col gap-4 bg-alb-site py-5 px-2">
+        <div className="absolute top-full mt-2 flex flex-col gap-4 rounded-b-2xl bg-alb-site py-5 px-5">
           <button
             onClick={() => {
               setLanguage("ro");
               setOpened(false);
             }}
-            className=" flex items-center gap-4"
+            className={`${
+              language === "ro" && "font-bold"
+            } flex items-center gap-4`}
           >
             {" "}
             <Ro
-              className="h-5 w-5 rounded-full 
+              className="h-5 w-5  
 "
             />{" "}
             <span>Romana</span>
@@ -59,18 +60,23 @@ const LanguageSwitcher = ({ className }: ILanguageSwitcher) => {
               setLanguage("it");
               setOpened(false);
             }}
-            className="flex items-center gap-4"
+            className={`${
+              language === "it" && "font-bold"
+            } flex items-center gap-4`}
           >
-            <It className="h-5 w-5 rounded-full" /> <span>Italiana</span>
+            <It className="h-5 w-5 " /> <span>Italiana</span>
           </button>
           <button
             onClick={() => {
               setLanguage("ge");
               setOpened(false);
             }}
-            className="flex items-center gap-4"
+            className={`${
+              language === "ge" && "font-bold"
+            } flex items-center gap-4 hover:drop-shadow-2xl`}
           >
-            <Ge className="h-5 w-5 rounded-full" /> <span>Germana</span>
+            <Ge className="h-5 w-5 " />{" "}
+            <span>Germana</span>
           </button>
         </div>
       )}
