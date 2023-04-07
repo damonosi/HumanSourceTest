@@ -14,6 +14,7 @@ import IPin9 from "../../../../public/imagini/hero/pinguri/iPing9.png";
 import Image, { StaticImageData } from "next/image";
 import InViewWrapper from "@/utils/InViewWrapper";
 import { useState, useLayoutEffect, Fragment } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface IPinComponent {
   src: StaticImageData;
@@ -22,6 +23,7 @@ interface IPinComponent {
 
   translateX: number;
   translateY: number;
+  delay?: number;
 }
 
 const PinComponent = ({
@@ -30,6 +32,7 @@ const PinComponent = ({
   dimensions,
   translateX,
   translateY,
+  delay,
 }: IPinComponent) => {
   return (
     <InViewWrapper
@@ -39,7 +42,8 @@ const PinComponent = ({
         opacity: 1,
       }}
       notInView={{
-        translateY: 10,
+        translateY: translateY - 10,
+        translateX: translateX - 10,
         opacity: 0,
       }}
       transition={{
@@ -48,6 +52,7 @@ const PinComponent = ({
         damping: 10,
         stiffness: 80,
       }}
+      delay={delay}
       className={`absolute  ${className} z-40 h-[${dimensions}px] w-[${dimensions}px] transform`}
     >
       <div className={`  relative h-[${dimensions}px] w-[${dimensions}px]`}>
@@ -62,73 +67,94 @@ const PinComponent = ({
   );
 };
 export const HartaHeroDesktop = () => {
+  let delayBase = 500;
   return (
     <div className="relative block     ">
-      <PinComponent
-        src={IPin1}
-        translateX={10}
-        translateY={-87}
-        className=" bottom-0  "
-        dimensions={95}
-      />
-      <PinComponent
-        src={IPin2}
-        translateX={80}
-        translateY={77}
-        className=" top-0  "
-        dimensions={60}
-      />
-      <PinComponent
-        src={IPin3}
-        translateX={20}
-        translateY={-10}
-        className=" top-0  "
-        dimensions={43}
-      />
-      <PinComponent
-        src={IPin4}
-        translateX={-50}
-        translateY={-50}
-        className=" top-1/2 right-1/2 "
-        dimensions={70}
-      />
-      <PinComponent
-        src={IPin5}
-        translateX={-20}
-        translateY={20}
-        className=" top-0 right-1/2 "
-        dimensions={44}
-      />
-      <PinComponent
-        src={IPin6}
-        translateX={50}
-        translateY={-40}
-        className=" top-1/2 right-1/2 "
-        dimensions={109}
-      />
-      <PinComponent
-        src={IPin7}
-        translateX={-50}
-        translateY={-50}
-        className=" top-1/2 right-0 "
-        dimensions={73}
-      />
-      <PinComponent
-        src={IPin8}
-        translateX={-50}
-        translateY={-50}
-        className=" top-0 right-0 "
-        dimensions={52}
-      />
-      <PinComponent
-        src={IPin9}
-        translateX={-50}
-        translateY={-50}
-        className=" bottom-0 right-0 "
-        dimensions={106}
-      />
-
-      <Harta className="relative z-10  " alt="imagine-harta" />
+      <AnimatePresence>
+        {" "}
+        <PinComponent
+        key='pin1'
+          src={IPin1}
+          translateX={10}
+          translateY={-87}
+          className=" bottom-0  "
+          dimensions={95}
+          delay={delayBase}
+        />
+        <PinComponent
+         key='pin2'
+          src={IPin2}
+          translateX={80}
+          translateY={77}
+          className=" top-0  "
+          dimensions={60}
+          delay={delayBase * 2}
+        />
+        <PinComponent
+         key='pin3'
+          src={IPin3}
+          translateX={20}
+          translateY={-10}
+          className=" top-0  "
+          dimensions={43}
+          delay={delayBase * 3}
+        />
+        <PinComponent
+         key='pin4'
+          src={IPin4}
+          translateX={-50}
+          translateY={-50}
+          className=" top-1/2 right-1/2 "
+          dimensions={70}
+          delay={delayBase * 4}
+        />
+        <PinComponent
+         key='pin5'
+          src={IPin5}
+          translateX={-20}
+          translateY={20}
+          className=" top-0 right-1/2 "
+          dimensions={44}
+          delay={delayBase * 5}
+        />
+        <PinComponent
+         key='pin6'
+          src={IPin6}
+          translateX={40}
+          translateY={-40}
+          className=" top-1/2 right-1/2 "
+          dimensions={99}
+          delay={delayBase * 6}
+        />
+        <PinComponent
+         key='pin7'
+          src={IPin7}
+          translateX={-220}
+          translateY={-40}
+          className=" top-1/2 right-0 "
+          dimensions={73}
+          delay={delayBase * 7}
+        />
+        <PinComponent
+         key='pin8'
+          src={IPin8}
+          translateX={-150}
+          translateY={-70}
+          className=" top-1/2 right-0 "
+          dimensions={52}
+          delay={delayBase * 8}
+        />
+        <PinComponent
+         key='pin9'
+          src={IPin9}
+          translateX={-50}
+          translateY={-100}
+          className=" bottom-0 right-0 "
+          dimensions={106}
+          delay={delayBase * 9}
+        />
+      </AnimatePresence>
+      <Harta className="relative z-10 w-full " alt="imagine-harta" />
     </div>
   );
 };

@@ -53,6 +53,16 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
               className="w-full object-fill"
               src={BackImg}
             />
+            <motion.div
+              key="mask"
+              transition={{
+                type: "spring",
+                stiffness: 40,
+                duration: 1,
+                delay: 500,
+              }}
+              className="hidden"
+            />
           </motion.div>
         ) : (
           <motion.div
