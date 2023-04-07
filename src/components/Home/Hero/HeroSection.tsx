@@ -30,20 +30,23 @@ const HeroSection = () => {
           <CarduriHero />
         </div>
         <div
-          className="  z-30 flex flex-col-reverse items-center justify-start gap-16 px-6   text-white md:flex-col md:gap-0 md:px-0 lg:w-2/4    "
+          className="  z-30 flex flex-col-reverse items-center justify-start gap-16 px-6   text-alb-site md:flex-col md:gap-0 md:px-0 lg:w-2/4    "
           id="container-text-carduri"
         >
           <div
-            className=" flex  w-full flex-col gap-6 pt-6 text-start text-alb-site opacity-80 lg:pb-16"
+            className=" flex  w-full flex-col gap-6 pt-6 text-start text-alb-site  lg:pb-16"
             id="container-text"
           >
-            <Typography variant="small" className="uppercase ">
+            <Typography variant="small" className="uppercase opacity-80">
               AGENTIE DE PLASARE FORȚĂ DE MUNCĂ
             </Typography>
-            <Typography variant="h1" className="text-start    ">
+            <Typography
+              variant="h1"
+              className="text-start font-bold text-alb-site  "
+            >
               Construiește-ți viitorul <br /> alături de noi
             </Typography>
-            <Typography variant="paragraph" className="font-[350]  ">
+            <Typography variant="paragraph" className="font-[350]  opacity-80">
               HumanSource - alege să colaborezi cu noi pentru job-ul tau de vis
               sau <br className="hidden md:block" /> pentru gasirea candidatului
               potrivit.{" "}

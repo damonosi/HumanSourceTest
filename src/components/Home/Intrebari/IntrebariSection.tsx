@@ -13,7 +13,7 @@ const IntrebariSection = () => {
         id="container-imagine-intrebari"
       >
         <Image
-          className="h-[92%] w-full translate-y-[-8%]"
+          className=" w-full translate-y-[-8%]"
           alt="imagine-intrebari"
           src={ImgIntrebari}
         />
