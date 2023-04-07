@@ -11,6 +11,7 @@ import IPin6 from "../../../../public/imagini/hero/pinguri/iPing6.png";
 import IPin7 from "../../../../public/imagini/hero/pinguri/iPing7.png";
 import IPin8 from "../../../../public/imagini/hero/pinguri/iPing8.png";
 import IPin9 from "../../../../public/imagini/hero/pinguri/iPing9.png";
+import MPin1 from "../../../../public/imagini/hero/pinguri/mobil/MPing1.png";
 import Image, { StaticImageData } from "next/image";
 import InViewWrapper from "@/utils/InViewWrapper";
 import { useState, useLayoutEffect, Fragment } from "react";
@@ -24,8 +25,9 @@ interface IPinComponent {
   translateX: number;
   translateY: number;
   delay?: number;
+  fill?: string;
 }
-
+const delayBase = 400;
 const PinComponent = ({
   src,
   className,
@@ -33,6 +35,7 @@ const PinComponent = ({
   translateX,
   translateY,
   delay,
+  fill,
 }: IPinComponent) => {
   return (
     <InViewWrapper
@@ -56,7 +59,11 @@ const PinComponent = ({
       className={`absolute  ${className} z-40 h-[${dimensions}px] w-[${dimensions}px] transform`}
     >
       <div className={`  relative h-[${dimensions}px] w-[${dimensions}px]`}>
-        <Pin1 width={dimensions} height={dimensions} />
+        <Pin1
+          width={dimensions}
+          height={dimensions}
+          fill={`${fill ? fill : "#fff"}`}
+        />
         <Image
           alt="img-ping-1"
           className=" 	absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-2/3 transform "
@@ -67,11 +74,9 @@ const PinComponent = ({
   );
 };
 export const HartaHeroDesktop = () => {
-  let delayBase = 400;
   return (
     <div className="relative block     ">
       <AnimatePresence>
-        {" "}
         <PinComponent
           key="pin1"
           src={IPin1}
@@ -161,18 +166,93 @@ export const HartaHeroDesktop = () => {
 export const HartaHeroMobil = () => {
   return (
     <Fragment>
-      <div className="relative  flex h-full w-[120%] md:w-full ">
-        <div className=" z-30 flex h-full   w-full" id="container-pinuri">
+      <div className="relative mb-9 flex w-full">
+        <AnimatePresence>
           <PinComponent
-            src={IPin1}
-            translateX={70}
+            key="pin1"
+            src={MPin1}
+            translateX={20}
+            translateY={-80}
+            className=" bottom-0 left-0   "
+            fill="#B82C2F"
+            dimensions={56}
+            delay={delayBase}
+          />
+          <PinComponent
+            key="pin2"
+            src={IPin2}
+            translateX={80}
             translateY={77}
             className=" top-0  "
             dimensions={60}
+            delay={delayBase * 2}
           />
-        </div>
+          <PinComponent
+            key="pin3"
+            src={IPin3}
+            translateX={20}
+            translateY={-10}
+            className=" top-0  "
+            dimensions={43}
+            delay={delayBase * 3}
+          />
+          <PinComponent
+            key="pin4"
+            src={IPin4}
+            translateX={-50}
+            translateY={-50}
+            className=" top-1/2 right-1/2 hidden xl:block"
+            dimensions={70}
+            delay={delayBase * 4}
+          />
+          <PinComponent
+            key="pin5"
+            src={IPin5}
+            translateX={-20}
+            translateY={20}
+            className=" top-0 right-1/2 "
+            dimensions={44}
+            delay={delayBase * 5}
+          />
+          <PinComponent
+            key="pin6"
+            src={IPin6}
+            translateX={40}
+            translateY={-40}
+            className=" top-1/2 right-1/2 hidden 2xl:block"
+            dimensions={99}
+            delay={delayBase * 6}
+          />
+          <PinComponent
+            key="pin7"
+            src={IPin7}
+            translateX={-220}
+            translateY={-40}
+            className=" top-1/2 right-0 "
+            dimensions={73}
+            delay={delayBase * 7}
+          />
+          <PinComponent
+            key="pin8"
+            src={IPin8}
+            translateX={-150}
+            translateY={-70}
+            className=" top-1/2 right-0 "
+            dimensions={52}
+            delay={delayBase * 8}
+          />
+          <PinComponent
+            key="pin9"
+            src={IPin9}
+            translateX={-50}
+            translateY={-100}
+            className=" bottom-0 right-0 hidden xl:block"
+            dimensions={106}
+            delay={delayBase * 9}
+          />
+        </AnimatePresence>
         <HartaMobil
-          className="absolute top-1/2 left-1/2 z-10 w-[120%] -translate-x-1/2 -translate-y-1/2  transform object-fill md:w-full"
+          className="relative left-6 z-10 w-[120%] rotate-6 overflow-visible"
           alt="imagine-harta"
         />
         ;

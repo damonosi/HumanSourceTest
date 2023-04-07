@@ -20,10 +20,10 @@ const HeroSection = () => {
           <HartaHeroDesktop />
         </div>
         <div
-          className="  flex flex-col px-[20px] md:hidden"
+          className="  flex w-full flex-col md:hidden"
           id="container harta carduri mobil"
         >
-          <div className="  flex min-h-[300px] w-full items-center py-4">
+          <div className="  flex  w-full items-center py-4">
             <HartaHeroMobil />
           </div>
 
