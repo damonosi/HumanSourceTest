@@ -73,25 +73,25 @@ export const HartaHeroDesktop = () => {
       <AnimatePresence>
         {" "}
         <PinComponent
-        key='pin1'
+          key="pin1"
           src={IPin1}
           translateX={10}
           translateY={-87}
-          className=" bottom-0  "
+          className=" bottom-0  hidden xl:block"
           dimensions={95}
           delay={delayBase}
         />
         <PinComponent
-         key='pin2'
+          key="pin2"
           src={IPin2}
           translateX={80}
           translateY={77}
-          className=" top-0  "
+          className=" top-0 hidden 2xl:block "
           dimensions={60}
           delay={delayBase * 2}
         />
         <PinComponent
-         key='pin3'
+          key="pin3"
           src={IPin3}
           translateX={20}
           translateY={-10}
@@ -100,16 +100,16 @@ export const HartaHeroDesktop = () => {
           delay={delayBase * 3}
         />
         <PinComponent
-         key='pin4'
+          key="pin4"
           src={IPin4}
           translateX={-50}
           translateY={-50}
-          className=" top-1/2 right-1/2 "
+          className=" top-1/2 right-1/2 hidden xl:block"
           dimensions={70}
           delay={delayBase * 4}
         />
         <PinComponent
-         key='pin5'
+          key="pin5"
           src={IPin5}
           translateX={-20}
           translateY={20}
@@ -118,16 +118,16 @@ export const HartaHeroDesktop = () => {
           delay={delayBase * 5}
         />
         <PinComponent
-         key='pin6'
+          key="pin6"
           src={IPin6}
           translateX={40}
           translateY={-40}
-          className=" top-1/2 right-1/2 "
+          className=" top-1/2 right-1/2 hidden 2xl:block"
           dimensions={99}
           delay={delayBase * 6}
         />
         <PinComponent
-         key='pin7'
+          key="pin7"
           src={IPin7}
           translateX={-220}
           translateY={-40}
@@ -136,7 +136,7 @@ export const HartaHeroDesktop = () => {
           delay={delayBase * 7}
         />
         <PinComponent
-         key='pin8'
+          key="pin8"
           src={IPin8}
           translateX={-150}
           translateY={-70}
@@ -145,11 +145,11 @@ export const HartaHeroDesktop = () => {
           delay={delayBase * 8}
         />
         <PinComponent
-         key='pin9'
+          key="pin9"
           src={IPin9}
           translateX={-50}
           translateY={-100}
-          className=" bottom-0 right-0 "
+          className=" bottom-0 right-0 hidden xl:block"
           dimensions={106}
           delay={delayBase * 9}
         />
