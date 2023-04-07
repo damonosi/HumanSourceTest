@@ -159,7 +159,11 @@ export const HartaHeroDesktop = () => {
           delay={delayBase * 9}
         />
       </AnimatePresence>
-      <Harta className="relative z-10 w-full " alt="imagine-harta" />
+      <Harta
+        className="relative z-10 w-full "
+        priority="true"
+        alt="imagine-harta"
+      />
     </div>
   );
 };
@@ -253,7 +257,8 @@ export const HartaHeroMobil = () => {
         </AnimatePresence>
         <HartaMobil
           className="relative left-6 z-10 w-[120%] rotate-6 overflow-visible"
-          alt="imagine-harta"
+          alt="imagine-harta-mobil"
+          priority="true"
         />
         ;
       </div>

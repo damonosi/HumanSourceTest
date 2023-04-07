@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import BackImg from "../../../../public/imagini/blog/cover-blog-full.png";
+import BackSmall from "../../../../public/imagini/blog/cover-blog-small.png";
 
 interface ICardBlog {
   data: string;
@@ -42,16 +43,15 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
                 type: "spring",
                 stiffness: 30,
                 duration: 1,
-                height: "100vh",
               },
             }}
             id="img-container"
-            className="relative z-40 object-fill"
+            className=" relative z-40 flex items-center justify-center  "
           >
             <Image
               alt="background"
-              className="w-full object-fill"
-              src={BackImg}
+              className="  object-cover"
+              src={BackSmall}
             />
             <motion.div
               key="mask"
@@ -72,12 +72,12 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
               layout: { type: "spring", stiffness: 30, duration: 1 },
             }}
             id="img-container"
-            className="absolute top-0 bottom-0 h-full w-full"
+            className="absolute top-0 bottom-0 left-0 right-0 object-fill"
           >
             <Image
               alt="background"
-              className="relative h-full w-full object-fill "
-              src={BackImg}
+              className="relative h-full w-full  transform object-fill"
+              src={BackSmall}
             />{" "}
             <motion.div
               key="mask"
@@ -87,7 +87,7 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
                 duration: 1,
                 delay: 500,
               }}
-              className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden rounded-2xl bg-black bg-fixed opacity-50"
+              className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden rounded-2xl bg-black bg-fixed opacity-20"
             />
           </motion.div>
         )}
@@ -122,8 +122,8 @@ const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
             {continut}
           </Typography>
           <Button
-            className={`mt-4 bg-transparent text-start text-alb-site shadow-none hover:scale-110 hover:shadow-none ${
-              hovered && ""
+            className={`mt-4 bg-transparent text-start text-gri-deschis-bg shadow-none hover:scale-105 hover:shadow-none ${
+              hovered && "text-alb-site"
             }`}
           >
             <span>Citeste mai mult</span>
