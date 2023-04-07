@@ -67,7 +67,7 @@ const PinComponent = ({
   );
 };
 export const HartaHeroDesktop = () => {
-  let delayBase = 500;
+  let delayBase = 400;
   return (
     <div className="relative block     ">
       <AnimatePresence>
