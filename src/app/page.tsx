@@ -23,19 +23,19 @@ export default function Home() {
           <AvantajeSection />
         </div>
         <div
-          className="mx-1 flex flex-col items-center justify-center bg-gri-bg  px-4 md:mx-2  md:px-16  "
+          className="mx-1 flex flex-col items-center justify-center bg-gri-bg  px-4 pb-[100px] md:mx-2 md:px-16  "
           id="background"
         >
           <NevoiSection />
         </div>
         <div
-          className="mx-1 flex flex-col items-center  justify-center bg-alb-site  pb-32 pt-[100px] md:mx-2 md:px-16  md:py-[100px]"
+          className="mx-1 flex flex-col items-center  justify-center bg-alb-site  pb-32 pt-[100px] md:mx-2 md:px-16  lg:py-[100px]"
           id="background"
         >
           <ServiciiSection />
         </div>{" "}
         <div
-          className="mx-1 flex flex-col items-center justify-center  bg-gri-bg pb-[60px] md:mx-2 md:px-16  md:pb-[0px] "
+          className="mx-1 flex flex-col items-center justify-center  bg-gri-bg pb-[180px] md:mx-2 md:px-16  md:pb-[0px] "
           id="background"
         >
           {" "}

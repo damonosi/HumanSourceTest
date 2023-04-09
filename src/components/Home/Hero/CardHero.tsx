@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import dateHero from "./dateHero";
 import { motion, AnimatePresence } from "framer-motion";
-import { MdOutlinePersonSearch } from "react-icons/md";
+import { MdPersonSearch } from "react-icons/md";
 import { MdEngineering } from "react-icons/md";
 
 interface ICardHero {
@@ -56,7 +56,7 @@ const CardHero = ({ titlu, icon, descriere, link, textButon }: ICardHero) => {
           <motion.div className="hidden h-12 w-12  md:visible md:flex">
             {" "}
             {icon === "angajator" ? (
-              <MdOutlinePersonSearch
+              <MdPersonSearch
                 className={`h-full w-full ${
                   hovered ? "text-alb-site " : "text-rosu-brand"
                 }`}
@@ -79,7 +79,7 @@ const CardHero = ({ titlu, icon, descriere, link, textButon }: ICardHero) => {
               <div className="flex  md:hidden ">
                 <motion.div layout className="flex py-2">
                   {icon === "angajator" ? (
-                    <MdOutlinePersonSearch
+                    <MdPersonSearch
                       className={` h-6 w-6 ${
                         hovered ? "text-alb-site " : "text-rosu-brand"
                       }`}
@@ -147,7 +147,7 @@ const CarduriHero = () => {
       id="container-carduri  "
       className="relative z-20 flex w-full  items-center justify-center gap-5    md:px-0 "
     >
-      {dateHero.map(({ titlu, icon, descriere, link, textButon, id, src }) => (
+      {dateHero.map(({ titlu, icon, descriere, link, textButon, id }) => (
         <CardHero
           key={id}
           titlu={titlu}

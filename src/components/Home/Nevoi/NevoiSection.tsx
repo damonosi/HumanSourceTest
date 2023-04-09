@@ -1,11 +1,11 @@
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
-import imagineFemei from "../../../../public/imagini/femei.png";
+import imagineFemei from "../../../../public/imagini/nevoi/femei.png";
 
 const NevoiSection = () => {
   return (
     <section className="container relative flex w-full items-start justify-start bg-[#506673] px-2 pb-24 md:pr-6  md:pb-[0px]   ">
-      <div className="flex w-full flex-col-reverse  md:flex-row ">
+      <div className="flex w-full flex-col-reverse items-center lg:flex-row ">
         <div
           className="flex  max-w-[606px] flex-col justify-center gap-12   text-alb-site md:w-full md:pr-2"
           id="text"

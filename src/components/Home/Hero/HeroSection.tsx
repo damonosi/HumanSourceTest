@@ -1,14 +1,14 @@
 import CarduriHero from "./CardHero";
 
-import PageTransitionWrapper from "@/utils/PageTransitionWrapper";
+
 import { Typography } from "@material-tailwind/react";
 
-import { useEffect, useRef } from "react";
+
 import { HartaHeroDesktop, HartaHeroMobil } from "./HartaHero";
 
 let initialAnimation = { x: 0, opacity: 0 };
 const HeroSection = () => {
-  const pinuriRef = useRef();
+ 
 
   return (
     <section

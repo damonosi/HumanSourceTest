@@ -20,9 +20,8 @@ const DropdownIntrebare = ({
       setShowRaspuns(!showRaspuns);
     };
     return (
-      <div className="flex flex-col" id="container-dd">
+      <div ref={ref} className="flex flex-col" id="container-dd">
         <button
-          ref={ref}
           onClick={handleClick}
           className="flex items-center justify-between text-start"
         >
