@@ -47,24 +47,21 @@ const ServiciiPage = () => {
                 partea de leasign de personal, recrutare, selecție cât și pe
                 partea de payroll si administrare de personal.
               </Typography>
-              <div className="flex w-full flex-col justify-between md:flex-row">
+              <div className="flex w-full flex-col justify-between gap-5 md:gap-0 md:flex-row">
                 {" "}
-                <span className=" rounded-full border bg-white py-2 px-3 ">
-                  <Groups2OutlinedIcon className="text-red-800" /> Leasing de
-                  personal
-                </span>
-                <span className="rounded-full border bg-white py-2 px-3">
-                  <AttachEmailOutlinedIcon className="text-red-800" /> Payroll
-                  si administrare
-                </span>
-                <span className="rounded-full border bg-white py-2 px-3">
-                  <GroupAddOutlinedIcon className="text-red-800" /> Recrutare si
-                  selectie
-                </span>
+                <div className=" rounded-full border bg-white py-2 px-3 ">
+                  <Groups2OutlinedIcon className="text-red-800" /> <span> Leasing de personal</span>
+                </div>
+                <div className="rounded-full border bg-white py-2 px-3">
+                  <AttachEmailOutlinedIcon className="text-red-800" /> <span> Payroll si administrare</span>
+                </div>
+                <div className="rounded-full border bg-white py-2 px-3">
+                  <GroupAddOutlinedIcon className="text-red-800" /> <span>Recrutare si selectie</span>
+                </div>
               </div>
             </div>
             <div
-              className="flex items-center justify-center md:w-1/2"
+              className="flex items-center justify-center w-full md:w-1/2"
               id="container-imagine"
             >
               {" "}
@@ -72,11 +69,11 @@ const ServiciiPage = () => {
             </div>
           </section>
           <section
-            className="flex w-full flex-col-reverse items-center gap-8 md:flex-row"
+            className="flex w-full flex-col items-center gap-8 md:flex-row"
             id="sectiune-servicii-1"
           >
             <div
-              className="flex items-center justify-center md:w-1/2"
+              className="flex items-center w-full justify-center md:w-1/2"
               id="container-imagine"
             >
               {" "}
@@ -128,11 +125,11 @@ const ServiciiPage = () => {
             </div>
           </section>
           <section
-            className="flex w-full flex-col-reverse items-center gap-8 md:flex-row"
-            id="sectiune-servicii-1"
+            className="flex w-full flex-col items-center gap-8 md:flex-row"
+            id="sectiune-servicii-3"
           >
             <div
-              className="flex items-center justify-center md:w-1/2"
+              className="flex items-center w-full justify-center md:w-1/2"
               id="container-imagine"
             >
               {" "}
