@@ -47,7 +47,7 @@ const BloguriPage = () => {
           </div>
         </section>
         <div id="container-bloguri">
-          <PaginatedItems itemsPerPage={9} />
+          <PaginatedItems />
         </div>
       </div>
     </section>
