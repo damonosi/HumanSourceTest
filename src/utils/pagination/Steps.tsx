@@ -11,7 +11,7 @@ const StepsPagination = ({ data, currentPage }: IPasiFormular) => {
     >
       <span>{currentPage}</span>
       <span>/</span>
-      <span>{Math.round(data / 9)}</span>
+      <span>{data}</span>
     </div>
   );
 };

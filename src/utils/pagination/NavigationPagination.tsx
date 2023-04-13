@@ -1,5 +1,6 @@
 "use client";
 
+
 import StepsPagination from "./Steps";
 import { IoMdArrowRoundForward, IoMdArrowRoundBack } from "react-icons/io";
 
@@ -8,6 +9,7 @@ interface INavigatie {
   onPrevPage(): void;
   currentPage: number;
   dataLength: number;
+  pageSize: number;
 }
 
 const NavigationPagination = ({
@@ -15,7 +17,15 @@ const NavigationPagination = ({
   onPrevPage,
   currentPage,
   dataLength,
+  pageSize,
 }: INavigatie) => {
+  const isBrowser = () => typeof window !== "undefined"; 
+
+  function scrollToTop() {
+    if (!isBrowser()) return;
+
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
   return (
     <div
       className="relative mt-16 flex w-full justify-between text-gri-brand"
@@ -24,7 +34,10 @@ const NavigationPagination = ({
       {currentPage !== 1 ? (
         <button
           className="absolute left-0 rounded-2xl border border-gri-brand py-5 px-8"
-          onClick={() => onPrevPage()}
+          onClick={() => {
+            onPrevPage();
+            scrollToTop();
+          }}
         >
           <IoMdArrowRoundBack />
         </button>
@@ -32,10 +45,13 @@ const NavigationPagination = ({
         ""
       )}
       <StepsPagination currentPage={currentPage} data={dataLength} />
-      {currentPage !== Math.round(dataLength / 9) ? (
+      {currentPage !== dataLength ? (
         <button
           className="absolute right-0 rounded-2xl border border-gri-brand py-5 px-8 "
-          onClick={() => onNextPage()}
+          onClick={() => {
+            onNextPage();
+            scrollToTop();
+          }}
         >
           <IoMdArrowRoundForward />
         </button>

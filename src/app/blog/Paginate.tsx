@@ -1,7 +1,7 @@
 "use client";
 import CardBlogSecundar from "@/components/Blog/CardBlogSecundar";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import dateBloguri from "../../components/Blog/dateBloguri";
 import { paginate } from "@/utils/pagination/paginate";
@@ -12,6 +12,7 @@ import { StaticImageData } from "next/image";
 interface IPaginationData {
   currentPage: number;
   bloguri: Array<IPaginatedData>;
+  pageSize: number;
 }
 
 interface IPaginatedData {
@@ -24,8 +25,11 @@ interface IPaginatedData {
   categorie: string;
 }
 
-const ContentPagination = ({ currentPage, bloguri }: IPaginationData) => {
-  const pageSize = 9;
+const ContentPagination = ({
+  currentPage,
+  bloguri,
+  pageSize,
+}: IPaginationData) => {
   const paginatedPosts = paginate(bloguri, currentPage, pageSize);
   return (
     <div className="grid gap-5 md:grid-cols-3">
@@ -45,10 +49,12 @@ const ContentPagination = ({ currentPage, bloguri }: IPaginationData) => {
 };
 function PaginatedItems() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [pageSize, setPageSize] = useState(0);
   const dataLength = dateBloguri.length;
+  let numberOfPages = Math.round(dataLength / pageSize);
   const onNextPage = () => {
-    if (currentPage >= 3) {
-      setCurrentPage(3);
+    if (currentPage >= numberOfPages) {
+      setCurrentPage(numberOfPages);
     } else {
       setCurrentPage(currentPage + 1);
     }
@@ -60,19 +66,30 @@ function PaginatedItems() {
       setCurrentPage(currentPage - 1);
     }
   };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  useEffect(() => {
+    const isBrowser = () => typeof window !== "undefined";
+    if (!isBrowser()) return;
+    let windowWidth = window.innerWidth;
+    if (windowWidth < 500) {
+      setPageSize(3);
+    } else {
+      setPageSize(9);
+    }
+  }, []);
 
   return (
     <>
-      <ContentPagination currentPage={currentPage} bloguri={dateBloguri} />
+      <ContentPagination
+        pageSize={pageSize}
+        currentPage={currentPage}
+        bloguri={dateBloguri}
+      />
       <NavigationPagination
         currentPage={currentPage}
         onNextPage={onNextPage}
         onPrevPage={onPrevPage}
-        dataLength={dataLength}
+        dataLength={numberOfPages}
+        pageSize={pageSize}
       />
     </>
   );
