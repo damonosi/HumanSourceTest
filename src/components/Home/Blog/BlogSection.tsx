@@ -7,8 +7,8 @@ const BlogSection = () => {
   return (
     <section className="container  px-6 text-center md:px-0">
       <Typography
-        variant="h3"
-        className=" mb-[60px] mt-[100px]  text-start font-bold "
+        variant="h5"
+        className=" mb-[60px] mt-[100px] md:text-2xl  text-start font-bold "
       >
         Cele mai noi articole de pe blog
       </Typography>

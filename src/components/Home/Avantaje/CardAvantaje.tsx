@@ -1,5 +1,7 @@
 import { Card, CardBody, Typography } from "@material-tailwind/react";
-import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import { GiPiggyBank, GiEarthAmerica } from "react-icons/gi";
+import { FaUserTie } from "react-icons/fa";
+import { VscLaw } from "react-icons/vsc";
 import ContactsIcon from "@mui/icons-material/Contacts";
 import DirectionsBoatIcon from "@mui/icons-material/DirectionsBoat";
 import ImportContactsIcon from "@mui/icons-material/ImportContacts";
@@ -13,11 +15,11 @@ const CardAvantaje = ({ titlu, descriere, icon }: ICardAvantaje) => {
     <Card className="w-full  max-w-[300px] border-0 border-l-0 bg-alb-site md:px-2 shadow-none   ">
       <CardBody className="flex h-fit flex-col items-center gap-2 px-0  ">
         <div className="flex flex-col gap-4">
-          <div className="text-[#BF4546]">
-            {icon === "bank" && <AccountBalanceIcon />}
-            {icon === "ue" && <ContactsIcon />}
-            {icon === "manageri" && <DirectionsBoatIcon />}
-            {icon === "suport" && <ImportContactsIcon />}
+          <div className="text-[#BF4546] flex items-center justify-center">
+            {icon === "bank" && <GiPiggyBank className='w-8 h-8' />}
+            {icon === "ue" && <GiEarthAmerica className='w-8 h-8' />}
+            {icon === "manageri" && <FaUserTie className='w-8 h-8' />}
+            {icon === "suport" && <VscLaw className='w-8 h-8' />}
           </div>
           <div className="flex flex-col gap-2 text-gri-brand">
             <Typography variant="h6" className="font-medium  md:px-14 ">

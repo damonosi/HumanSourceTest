@@ -23,7 +23,7 @@ export default function Home() {
           <AvantajeSection />
         </div>
         <div
-          className="mx-1 flex flex-col items-center justify-center bg-gri-bg  px-4 pb-[100px] md:mx-2 md:px-16  "
+          className="mx-1 flex flex-col items-center justify-center bg-gri-bg  px-4  md:mx-2 md:px-16  "
           id="background"
         >
           <NevoiSection />
