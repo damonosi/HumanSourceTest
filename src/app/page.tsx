@@ -29,7 +29,7 @@ export default function Home() {
           <NevoiSection />
         </div>
         <div
-          className="mx-1 flex flex-col items-center  justify-center bg-alb-site  pb-32 pt-[100px] md:mx-2 md:px-16  lg:py-[100px]"
+          className="mx-1 flex flex-col items-center  justify-center bg-alb-site  pb-36 pt-[100px] md:mx-2 md:px-16  "
           id="background"
         >
           <ServiciiSection />

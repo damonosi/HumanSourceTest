@@ -35,7 +35,7 @@ function NavList() {
       <NavItem href="locuri-de-munca" label="Locuri de munca" />
       <NavItem href="contact" label="Contact" />
       <NavItem href="servicii" label="Servicii" />
-      <NavItem href="bloguri" label="Blog" />
+      <NavItem href="blog" label="Blog" />
       <Button
         ripple={true}
         className="hidden  rounded-full bg-red-800 px-4 py-3 text-white md:inline-block"
