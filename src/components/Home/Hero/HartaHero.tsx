@@ -176,7 +176,7 @@ export const HartaHeroMobil = () => {
             key="pin1"
             src={MPin1}
             translateX={20}
-            translateY={-80}
+            translateY={-50}
             className=" bottom-0 left-0   "
             fill="#B82C2F"
             dimensions={56}
@@ -189,15 +189,17 @@ export const HartaHeroMobil = () => {
             translateY={77}
             className=" top-0  "
             dimensions={60}
+            fill="#C9D39F"
             delay={delayBase * 2}
           />
           <PinComponent
             key="pin3"
             src={IPin3}
-            translateX={20}
-            translateY={-10}
-            className=" top-0  "
+            translateX={170}
+            translateY={-130}
+            className=" bottom-0 left-0  "
             dimensions={43}
+            fill="#8F947A"
             delay={delayBase * 3}
           />
           <PinComponent
@@ -205,7 +207,7 @@ export const HartaHeroMobil = () => {
             src={IPin4}
             translateX={-50}
             translateY={-50}
-            className=" top-1/2 right-1/2 hidden xl:block"
+            className=" top-1/2 right-1/2 "
             dimensions={70}
             delay={delayBase * 4}
           />
