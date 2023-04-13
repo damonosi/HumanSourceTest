@@ -18,7 +18,7 @@ const CardBlogSecundar = ({
   return (
     <Link
       className="cursor-pointer hover:bg-gray-300"
-      href={`/bloguri/${slug}`}
+      href={`/blog/${slug}`}
     >
       <div className="flex flex-col gap-5" id="container-card-blog-secundar">
         <div className="flex flex-col">

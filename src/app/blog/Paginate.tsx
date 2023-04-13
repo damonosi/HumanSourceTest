@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import dateBloguri from "../../components/Blog/dateBloguri";
 import { paginate } from "@/utils/pagination/paginate";
 import NavigationPagination from "@/utils/pagination/NavigationPagination";
-import StepsPagination from "@/utils/pagination/Steps";
+
 import { StaticImageData } from "next/image";
 
 interface IPaginationData {
