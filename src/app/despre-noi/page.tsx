@@ -13,7 +13,7 @@ const DespreNoiPage = () => {
     <section className="bg-[#E5E5E5] px-5 pb-16 md:px-[70px] ">
       <div className="container mx-auto flex flex-col ">
         <Breadcrumbs
-          className="mx-0 my-4 bg-transparent px-0 md:my-12"
+          className="mx-0 my-4 bg-transparent px-0 md:my-6"
           fullWidth
           separator=">"
         >
@@ -24,20 +24,20 @@ const DespreNoiPage = () => {
             Despre Noi
           </Link>
         </Breadcrumbs>
-        <div className="container  flex w-full flex-col-reverse gap-6  lg:flex-row ">
+        <div className="container mt-14 flex w-full flex-col-reverse gap-6 pb-[100px]  lg:flex-row ">
           <PageTransitionWrapper
             className="grid w-full  items-start gap-6 text-left lg:w-1/2"
             id="text-about"
           >
             <Typography
-              variant="h1"
+              variant="h3"
               className=" text-bold text-left text-gri-brand "
             >
               Despre noi
             </Typography>
             <Typography
               variant="h5"
-              className="text-left font-bold text-gri-brand "
+              className="max-w-[33rem] leading-[30px] text-left font-bold text-gri-brand "
             >
               Companie de resurse umane ce oferă servicii de atât pe partea de
               leasign de personal, recrutare, selecție cât și pe partea de
@@ -45,7 +45,7 @@ const DespreNoiPage = () => {
             </Typography>
             <Typography
               variant="paragraph"
-              className="font text-left font-normal leading-5 text-gri-brand "
+              className="opacity-80 text-left font-normal  text-gri-brand "
             >
               Lorem ipsum dolor sit amet consectetur. Cras felis tristique
               pharetra magna. Orci quis dui viverra mi lacus amet pulvinar quis.
@@ -66,8 +66,8 @@ const DespreNoiPage = () => {
             <Image alt="imagine-about" className="z-20 w-full" src={Hi5} />
           </div>
         </div>
-        <section className="flex flex-col   text-center md:px-0">
-          <Typography variant="h3" className="bold py-[60px]">
+        <section className="flex flex-col pb-[100px]  text-center md:px-0">
+          <Typography variant="h3" className="bold pb-[60px]">
             Valorile Companiei
           </Typography>
           <div
@@ -88,9 +88,9 @@ const DespreNoiPage = () => {
           className="flex w-full flex-col items-center   "
           id="container echipa"
         >
-          <div className="mb-24 text-center">
-            <Typography variant="h3" className="bold py-[60px] text-gri-brand">
-              Echipa Noastra
+          <div className=" text-center">
+            <Typography variant="h3" className="font-bold pb-[60px]  text-gri-brand">
+              Echipa noastra
             </Typography>
           </div>
 

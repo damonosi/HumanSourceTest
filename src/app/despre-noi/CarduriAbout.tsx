@@ -41,16 +41,16 @@ export const CardValori = ({ titlu, descriere, src }: IValoriInfo) => {
         className="flex w-full items-center justify-center p-1"
         id="imgsection"
       >
-        <Image alt="icon-card-about" className="h-auto w-12" src={src} />
+        <Image alt="icon-card-about" className="h-auto w-10" src={src} />
       </div>
       <div
-        className="flex flex-col  items-center gap-6 text-center"
+        className="flex flex-col  items-center gap-6 text-center text-gri-brand"
         id="text-section"
       >
-        <Typography variant="h6" className=" font-bold text-gri-brand">
+        <Typography variant="h6" className=" font-[500] ">
           {titlu}
         </Typography>
-        <Typography variant="paragraph" className="text-gri-brand">
+        <Typography variant="paragraph" className="">
           {descriere}
         </Typography>
       </div>

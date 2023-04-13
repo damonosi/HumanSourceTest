@@ -9,10 +9,11 @@ import ImgTransport from "../../../public/imagini/munca/transport.png";
 
 const CategorieJoburi = () => {
   return (
-    <section className=" bg-[#E5E5E5] md:px-[70px] pb-16 ">d
-      <div className="mx-auto grid container grid-cols-1 gap-16">
+    <section className=" bg-[#E5E5E5] pb-16 md:px-[70px] ">
+      d
+      <div className="container mx-auto grid grid-cols-1 gap-16">
         <Breadcrumbs
-          className="mx-0 my-4 bg-transparent px-0 md:my-12"
+          className="mx-0 my-4 bg-transparent px-0 md:my-6"
           fullWidth
           separator=">"
         >

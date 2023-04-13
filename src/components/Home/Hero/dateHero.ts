@@ -1,4 +1,3 @@
-
 const dateHero = [
   {
     id: 1,

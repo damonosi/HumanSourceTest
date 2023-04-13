@@ -1,6 +1,5 @@
 "use client";
 
-
 import StepsPagination from "./Steps";
 import { IoMdArrowRoundForward, IoMdArrowRoundBack } from "react-icons/io";
 
@@ -19,7 +18,7 @@ const NavigationPagination = ({
   dataLength,
   pageSize,
 }: INavigatie) => {
-  const isBrowser = () => typeof window !== "undefined"; 
+  const isBrowser = () => typeof window !== "undefined";
 
   function scrollToTop() {
     if (!isBrowser()) return;

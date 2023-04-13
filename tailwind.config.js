@@ -1,4 +1,3 @@
-
 /** @type {import('tailwindcss').Config} */
 const { fontFamily } = require("tailwindcss/defaultTheme");
 const withMT = require("@material-tailwind/react/utils/withMT");

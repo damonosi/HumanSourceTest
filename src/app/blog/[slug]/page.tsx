@@ -14,7 +14,7 @@ const Blog: FC<IpageProps> = ({ params }) => {
     <section className="min-h-screen bg-[#E5E5E5]  text-start md:px-20">
       <div className="container mx-auto grid ">
         <Breadcrumbs
-          className="mx-0 my-4 bg-transparent md:my-12"
+          className="mx-0 my-4 bg-transparent md:my-6"
           fullWidth
           separator=">"
         >

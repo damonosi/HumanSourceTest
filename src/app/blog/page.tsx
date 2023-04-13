@@ -9,7 +9,7 @@ const BloguriPage = () => {
     <section className="bg-gri-deschis    px-4 pb-28 md:px-[70px]">
       <div className="container mx-auto flex flex-col  gap-16 ">
         <Breadcrumbs
-          className="mx-0 my-4 bg-transparent px-0 md:my-12"
+          className="mx-0 my-4 bg-transparent px-0 md:my-6"
           fullWidth
           separator=">"
         >

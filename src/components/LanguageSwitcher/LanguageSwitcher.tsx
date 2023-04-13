@@ -75,8 +75,7 @@ const LanguageSwitcher = ({ className }: ILanguageSwitcher) => {
               language === "ge" && "font-bold"
             } flex items-center gap-4 hover:drop-shadow-2xl`}
           >
-            <Ge className="h-5 w-5 " />{" "}
-            <span>Germana</span>
+            <Ge className="h-5 w-5 " /> <span>Germana</span>
           </button>
         </div>
       )}
