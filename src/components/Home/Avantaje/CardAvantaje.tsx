@@ -12,14 +12,14 @@ interface ICardAvantaje {
 }
 const CardAvantaje = ({ titlu, descriere, icon }: ICardAvantaje) => {
   return (
-    <Card className="w-full  max-w-[300px] border-0 border-l-0 bg-alb-site md:px-2 shadow-none   ">
+    <Card className="w-full  max-w-[300px] border-0 border-l-0 bg-alb-site shadow-none md:px-2   ">
       <CardBody className="flex h-fit flex-col items-center gap-2 px-0  ">
         <div className="flex flex-col gap-4">
-          <div className="text-[#BF4546] flex items-center justify-center">
-            {icon === "bank" && <GiPiggyBank className='w-8 h-8' />}
-            {icon === "ue" && <GiEarthAmerica className='w-8 h-8' />}
-            {icon === "manageri" && <FaUserTie className='w-8 h-8' />}
-            {icon === "suport" && <VscLaw className='w-8 h-8' />}
+          <div className="flex items-center justify-center text-[#BF4546]">
+            {icon === "bank" && <GiPiggyBank className="h-8 w-8" />}
+            {icon === "ue" && <GiEarthAmerica className="h-8 w-8" />}
+            {icon === "manageri" && <FaUserTie className="h-8 w-8" />}
+            {icon === "suport" && <VscLaw className="h-8 w-8" />}
           </div>
           <div className="flex flex-col gap-2 text-gri-brand">
             <Typography variant="h6" className="font-medium  md:px-14 ">

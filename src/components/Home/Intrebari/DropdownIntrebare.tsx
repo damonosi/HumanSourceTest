@@ -17,7 +17,6 @@ const DropdownIntrebare = ({
     setTimeout(() => {
       setShowRaspuns(!showRaspuns && false);
     }, 100);
-
   });
   const handleClick = () => {
     setShowRaspuns(!showRaspuns);
@@ -46,8 +45,9 @@ const DropdownIntrebare = ({
       </button>
       <Typography
         variant="paragraph"
-        className={` px-1 pb-4 pt-2 text-start  text-alb-site opacity-60   lg:opacity-80 ${!showRaspuns ? "hidden" : "block"
-          } `}
+        className={` px-1 pb-4 pt-2 text-start  text-alb-site opacity-60   lg:opacity-80 ${
+          !showRaspuns ? "hidden" : "block"
+        } `}
       >
         {raspuns}
       </Typography>

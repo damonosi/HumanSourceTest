@@ -40,8 +40,9 @@ const CasetaServicii = ({
             duration: 1,
           },
         }}
-        className={`container  ${hovered && "shadow-xl"
-          } my-5 flex  h-fit min-h-[335px] w-full max-w-[500px] flex-col items-center justify-between gap-4  rounded-[10px] bg-alb-site px-4 py-8 text-center  `}
+        className={`container  ${
+          hovered && "shadow-xl"
+        } my-5 flex  h-fit min-h-[335px] w-full max-w-[500px] flex-col items-center justify-between gap-4  rounded-[10px] bg-alb-site px-4 py-8 text-center  `}
         id="caseta-servicii"
         onMouseLeave={handleMouseLeave}
         onMouseEnter={handleMouseEnter}
@@ -50,14 +51,12 @@ const CasetaServicii = ({
         }}
       >
         <div className="flex w-full items-center justify-center text-rosu-brand">
-          {icon === "leasing" && (
-            <HiOutlineUserGroup className='w-8 h-8' />
-          )}
+          {icon === "leasing" && <HiOutlineUserGroup className="h-8 w-8" />}
           {icon === "payroll" && (
-            <IoDocumentAttachOutline className='w-8 h-8' />
+            <IoDocumentAttachOutline className="h-8 w-8" />
           )}
           {icon === "recrutare" && (
-            <AiOutlineUsergroupAdd className='w-8 h-8' />
+            <AiOutlineUsergroupAdd className="h-8 w-8" />
           )}
         </div>
         <Typography variant="h5" className=" font-normal   text-gri-brand">
@@ -71,8 +70,9 @@ const CasetaServicii = ({
         </Typography>
         <motion.div layout>
           <Button
-            className={`rounded-[8px] border border-alb-site  bg-transparent px-6 py-4 text-[#B21E23]  shadow-none hover:shadow-none ${hovered && "  border-rosu-brand"
-              }`}
+            className={`rounded-[8px] border border-alb-site  bg-transparent px-6 py-4 text-[#B21E23]  shadow-none hover:shadow-none ${
+              hovered && "  border-rosu-brand"
+            }`}
           >
             <Typography variant="paragraph" className="font-bold normal-case ">
               {textButon}

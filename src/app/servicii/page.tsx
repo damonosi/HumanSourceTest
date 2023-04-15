@@ -47,21 +47,24 @@ const ServiciiPage = () => {
                 partea de leasign de personal, recrutare, selecție cât și pe
                 partea de payroll si administrare de personal.
               </Typography>
-              <div className="flex w-full flex-col justify-between gap-5 md:gap-0 md:flex-row">
+              <div className="flex w-full flex-col justify-between gap-5 md:flex-row md:gap-0">
                 {" "}
                 <div className=" rounded-full border bg-white py-2 px-3 ">
-                  <Groups2OutlinedIcon className="text-red-800" /> <span> Leasing de personal</span>
+                  <Groups2OutlinedIcon className="text-red-800" />{" "}
+                  <span> Leasing de personal</span>
                 </div>
                 <div className="rounded-full border bg-white py-2 px-3">
-                  <AttachEmailOutlinedIcon className="text-red-800" /> <span> Payroll si administrare</span>
+                  <AttachEmailOutlinedIcon className="text-red-800" />{" "}
+                  <span> Payroll si administrare</span>
                 </div>
                 <div className="rounded-full border bg-white py-2 px-3">
-                  <GroupAddOutlinedIcon className="text-red-800" /> <span>Recrutare si selectie</span>
+                  <GroupAddOutlinedIcon className="text-red-800" />{" "}
+                  <span>Recrutare si selectie</span>
                 </div>
               </div>
             </div>
             <div
-              className="flex items-center justify-center w-full md:w-1/2"
+              className="flex w-full items-center justify-center md:w-1/2"
               id="container-imagine"
             >
               {" "}
@@ -73,7 +76,7 @@ const ServiciiPage = () => {
             id="sectiune-servicii-1"
           >
             <div
-              className="flex items-center w-full justify-center md:w-1/2"
+              className="flex w-full items-center justify-center md:w-1/2"
               id="container-imagine"
             >
               {" "}
@@ -129,7 +132,7 @@ const ServiciiPage = () => {
             id="sectiune-servicii-3"
           >
             <div
-              className="flex items-center w-full justify-center md:w-1/2"
+              className="flex w-full items-center justify-center md:w-1/2"
               id="container-imagine"
             >
               {" "}

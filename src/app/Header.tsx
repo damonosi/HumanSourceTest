@@ -30,7 +30,7 @@ function NavItem({ label, href }: INavItem) {
 
 function NavList() {
   return (
-    <ul className=" flex flex-col gap-3 w-full  md:flex-row justify-end md:items-center md:gap-8">
+    <ul className=" flex w-full flex-col justify-end  gap-3 md:flex-row md:items-center md:gap-8">
       <NavItem href="despre-noi" label="Despre noi" />
       <NavItem href="locuri-de-munca" label="Locuri de munca" />
       <NavItem href="contact" label="Contact" />
@@ -72,7 +72,6 @@ export function Header() {
   );
 
   return (
-
     <Navbar
       fullWidth
       className="fixed z-50 h-[60px] w-full  items-center  justify-center border-b border-alb-site bg-alb-site  py-0   md:px-[70px] "
@@ -100,18 +99,13 @@ export function Header() {
           </button>
         </div>
       </div>
-      <MobileNav
-        className="  bg-alb-site "
-        open={open}
-      >
+      <MobileNav className="  bg-alb-site " open={open}>
         <NavList />
         <button className=" h-8  w-20 rounded-2xl bg-red-600 text-white ">
           Aplica
         </button>
       </MobileNav>
-
     </Navbar>
-
   );
 }
 

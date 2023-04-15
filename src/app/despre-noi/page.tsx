@@ -37,7 +37,7 @@ const DespreNoiPage = () => {
             </Typography>
             <Typography
               variant="h5"
-              className="max-w-[33rem] leading-[30px] text-left font-bold text-gri-brand "
+              className="max-w-[33rem] text-left font-bold leading-[30px] text-gri-brand "
             >
               Companie de resurse umane ce oferă servicii de atât pe partea de
               leasign de personal, recrutare, selecție cât și pe partea de
@@ -45,7 +45,7 @@ const DespreNoiPage = () => {
             </Typography>
             <Typography
               variant="paragraph"
-              className="opacity-80 text-left font-normal  text-gri-brand "
+              className="text-left font-normal text-gri-brand  opacity-80 "
             >
               Lorem ipsum dolor sit amet consectetur. Cras felis tristique
               pharetra magna. Orci quis dui viverra mi lacus amet pulvinar quis.
@@ -89,7 +89,10 @@ const DespreNoiPage = () => {
           id="container echipa"
         >
           <div className=" text-center">
-            <Typography variant="h3" className="font-bold pb-[60px]  text-gri-brand">
+            <Typography
+              variant="h3"
+              className="pb-[60px] font-bold  text-gri-brand"
+            >
               Echipa noastra
             </Typography>
           </div>

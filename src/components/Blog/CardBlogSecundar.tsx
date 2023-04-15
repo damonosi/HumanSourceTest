@@ -16,10 +16,7 @@ const CardBlogSecundar = ({
   slug,
 }: ICardBlogSecundar) => {
   return (
-    <Link
-      className="cursor-pointer hover:bg-gray-300"
-      href={`/blog/${slug}`}
-    >
+    <Link className="cursor-pointer hover:bg-gray-300" href={`/blog/${slug}`}>
       <div className="flex flex-col gap-5" id="container-card-blog-secundar">
         <div className="flex flex-col">
           <Image alt="imagine-blog" src={src} />

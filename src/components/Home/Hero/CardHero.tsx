@@ -29,9 +29,11 @@ const CardHero = ({ titlu, icon, descriere, link, textButon }: ICardHero) => {
     <AnimatePresence>
       <motion.div
         key="container-card"
-        className={`grid h-[194px] w-[165px] grid-cols-1 items-center justify-between  rounded-t-[30px] rounded-br-[30px]   px-2 text-center text-gri-brand  drop-shadow-card-hero  md:h-[194px]   md:w-full  md:px-6 md:pt-2    ${icon === "angajator" && "rounded-bl-[30px] rounded-tr-[0px] "
-          }  ${icon === "muncitor" && " rounded-bl-[30px] rounded-tl-[0px] "}  ${!hovered ? "  " : ""
-          }`}
+        className={`grid h-[194px] w-[165px] grid-cols-1 items-center justify-between  rounded-t-[30px] rounded-br-[30px]   px-2 text-center text-gri-brand  drop-shadow-card-hero  md:h-[194px]   md:w-full  md:px-6 md:pt-2    ${
+          icon === "angajator" && "rounded-bl-[30px] rounded-tr-[0px] "
+        }  ${icon === "muncitor" && " rounded-bl-[30px] rounded-tl-[0px] "}  ${
+          !hovered ? "  " : ""
+        }`}
         style={{
           backgroundColor: hovered ? "#B82C2F" : "#FCFEFF",
         }}
@@ -55,41 +57,47 @@ const CardHero = ({ titlu, icon, descriere, link, textButon }: ICardHero) => {
             {" "}
             {icon === "angajator" ? (
               <MdPersonSearch
-                className={`h-full w-full ${hovered ? "text-alb-site " : "text-rosu-brand"
-                  }`}
+                className={`h-full w-full ${
+                  hovered ? "text-alb-site " : "text-rosu-brand"
+                }`}
               />
             ) : (
               <MdEngineering
-                className={` h-full w-full  ${hovered ? "text-alb-site " : "text-rosu-brand"
-                  }`}
+                className={` h-full w-full  ${
+                  hovered ? "text-alb-site " : "text-rosu-brand"
+                }`}
               />
             )}
           </motion.div>
           <motion.div
             layout
-            className={`flex w-full flex-col items-start justify-between  md:w-4/5 ${hovered ? "text-alb-site " : "text-gri-brand"
-              } `}
+            className={`flex w-full flex-col items-start justify-between  md:w-4/5 ${
+              hovered ? "text-alb-site " : "text-gri-brand"
+            } `}
           >
             <div className="flex w-full items-center gap-2">
               <div className="flex  md:hidden ">
                 <motion.div layout className="flex py-2">
                   {icon === "angajator" ? (
                     <MdPersonSearch
-                      className={` h-6 w-6 ${hovered ? "text-alb-site " : "text-rosu-brand"
-                        }`}
+                      className={` h-6 w-6 ${
+                        hovered ? "text-alb-site " : "text-rosu-brand"
+                      }`}
                     />
                   ) : (
                     <MdEngineering
-                      className={` h-6 w-6  ${hovered ? "text-alb-site " : "text-rosu-brand"
-                        }`}
+                      className={` h-6 w-6  ${
+                        hovered ? "text-alb-site " : "text-rosu-brand"
+                      }`}
                     />
                   )}
                 </motion.div>
               </div>
               <Typography
                 variant="paragraph"
-                className={`font-bold uppercase  md:text-xl md:capitalize ${hovered ? "text-alb-site" : "text-brand-gri"
-                  } `}
+                className={`font-bold uppercase  md:text-xl md:capitalize ${
+                  hovered ? "text-alb-site" : "text-brand-gri"
+                } `}
               >
                 {titlu}
               </Typography>
@@ -101,8 +109,9 @@ const CardHero = ({ titlu, icon, descriere, link, textButon }: ICardHero) => {
               <Button
                 variant="text"
                 ripple={true}
-                className={`flex w-full items-center gap-2 px-0 capitalize  hover:bg-transparent  active:bg-transparent md:text-left  ${hovered ? "text-alb-site " : "text-rosu-brand"
-                  }`}
+                className={`flex w-full items-center gap-2 px-0 capitalize  hover:bg-transparent  active:bg-transparent md:text-left  ${
+                  hovered ? "text-alb-site " : "text-rosu-brand"
+                }`}
               >
                 {textButon}
 

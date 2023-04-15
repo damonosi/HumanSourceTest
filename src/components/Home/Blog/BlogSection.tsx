@@ -8,7 +8,7 @@ const BlogSection = () => {
     <section className="container  px-6 text-center md:px-0">
       <Typography
         variant="h5"
-        className=" mb-[60px] mt-[100px] md:text-2xl  text-start font-bold "
+        className=" mb-[60px] mt-[100px] text-start  font-bold md:text-2xl "
       >
         Cele mai noi articole de pe blog
       </Typography>
