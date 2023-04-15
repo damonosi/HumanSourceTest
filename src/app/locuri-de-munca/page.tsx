@@ -20,15 +20,18 @@ const CategorieJoburi = () => {
     <section className=" bg-[#E5E5E5] pb-16 md:px-[70px] ">
       <div className="container mx-auto grid grid-cols-1 gap-9">
         <Breadcrumbs
-          className="mx-0 my-4 bg-transparent px-0 md:my-6"
+          className="mx-0 my-4 bg-transparent px-0 md:my-6 text-gri-brand"
           fullWidth
           separator=">"
         >
-          <Link className="text-gri-brand" href="/">
+          <Link className="" href="/">
             Home
           </Link>
-          <Link className="text-red-600" href="/locuri-de-munca">
+          <Link className="" href="/locuri-de-munca">
             Locuri de munca
+          </Link>
+          <Link className="text-red-600 capitalize" href="/locuri-de-munca">
+            {selectedCategory}
           </Link>
         </Breadcrumbs>
         <Typography variant="h4" className="text-bold text-left">
