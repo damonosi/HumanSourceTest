@@ -49,16 +49,16 @@ const ServiciiPage = () => {
               </Typography>
               <div className="flex w-full flex-col justify-between gap-5 md:flex-row md:gap-0">
                 {" "}
-                <div className=" rounded-full border  py-2 px-3 ">
-                  <Groups2OutlinedIcon className="text-red-800" />{" "}
+                <div className=" rounded-full border text-gri-brand py-2 px-3 ">
+                  <Groups2OutlinedIcon className="mr-4" />{" "}
                   <span> Leasing de personal</span>
                 </div>
-                <div className="rounded-full border  py-2 px-3">
-                  <AttachEmailOutlinedIcon className="text-red-800" />{" "}
+                <div className="rounded-full border text-gri-brand py-2 px-3">
+                  <AttachEmailOutlinedIcon className="mr-4" />{" "}
                   <span> Payroll si administrare</span>
                 </div>
-                <div className="rounded-full border  py-2 px-3">
-                  <GroupAddOutlinedIcon className="text-red-800" />{" "}
+                <div className="rounded-full border text-gri-brand  py-2 px-3">
+                  <GroupAddOutlinedIcon className="mr-4" />{" "}
                   <span>Recrutare si selectie</span>
                 </div>
               </div>
@@ -93,8 +93,9 @@ const ServiciiPage = () => {
                 nunc ipsum urna. Nisi eget elementum elementum et dui ut id
                 turpis. Dui
               </Typography>
-              <button className="rounded-full border border-rosu-brand  py-2 px-3 font-bold text-rosu-brand ">
-                <Groups2OutlinedIcon className="mr-4 text-red-800" /> Solicita
+              <button className="rounded-full border border-rosu-brand  py-2 px-3 font-bold text-gri-brand ">
+                <Groups2OutlinedIcon className="mr-4 
+                " /> Solicita
                 oferta
               </button>
             </div>
@@ -114,8 +115,8 @@ const ServiciiPage = () => {
                 nunc ipsum urna. Nisi eget elementum elementum et dui ut id
                 turpis. Dui
               </Typography>
-              <button className="rounded-full border border-rosu-brand bg-white py-2 px-3 font-bold text-rosu-brand ">
-                <AttachEmailOutlinedIcon className="mr-4 text-red-800" />{" "}
+              <button className="rounded-full border border-rosu-brand  py-2 px-3 font-bold text-gri-brand ">
+                <AttachEmailOutlinedIcon className="mr-4 " />{" "}
                 Solicita oferta
               </button>
             </div>
@@ -149,8 +150,8 @@ const ServiciiPage = () => {
                 nunc ipsum urna. Nisi eget elementum elementum et dui ut id
                 turpis. Dui
               </Typography>
-              <button className="rounded-full border border-rosu-brand bg-white py-2 px-3 font-bold text-rosu-brand ">
-                <GroupAddOutlinedIcon className="mr-4 text-red-800" /> Solicita
+              <button className="rounded-full border border-rosu-brand  py-2 px-3 font-bold text-gri-brand ">
+                <GroupAddOutlinedIcon className="mr-4 " /> Solicita
                 oferta
               </button>
             </div>

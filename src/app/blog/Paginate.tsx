@@ -3,9 +3,9 @@ import CardBlogSecundar from "@/components/Blog/CardBlogSecundar";
 
 import { useEffect, useState } from "react";
 
-import dateBloguri from "../../components/Blog/dateBloguri";
-import { paginate } from "@/utils/pagination/paginate";
 import NavigationPagination from "@/utils/pagination/NavigationPagination";
+import { paginate } from "@/utils/pagination/paginate";
+import dateBloguri from "../../components/Blog/dateBloguri";
 
 import { StaticImageData } from "next/image";
 
@@ -29,6 +29,12 @@ const ContentPagination = ({
   currentPage,
   bloguri,
   pageSize,
+
+
+
+
+
+
 }: IPaginationData) => {
   const paginatedPosts = paginate(bloguri, currentPage, pageSize);
   return (
