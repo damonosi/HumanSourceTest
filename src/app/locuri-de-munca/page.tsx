@@ -1,11 +1,11 @@
 "use client";
-import CardCategorieMunca from "@/components/Munca/CardCategorieMunca";
-import { GiHospital } from 'react-icons/gi';
+
+import CardJob from '@/components/Munca/CardJob';
+import muncaFiller from "@/components/Munca/muncaFiller";
 import { Breadcrumbs, Typography } from "@material-tailwind/react";
 import Link from "next/link";
 import { useState } from "react";
-import muncaFiller from "@/components/Munca/muncaFiller";
-import Image from "next/image";
+import { GiHospital } from 'react-icons/gi';
 
 
 const CategorieJoburi = () => {
@@ -60,26 +60,9 @@ const CategorieJoburi = () => {
           <div className='grid grid-cols-3 gap-5' id='container joburi'>
             {muncaFiller
               .filter((job) => job.categorie === selectedCategory)
-              .map(({ src, titlu, id, data, descriere }) => {
+              .map(({ src, titlu, id, data, descriere, salariu }) => {
                 return (
-                  <div key={id} className="">
-                    <div className="flex max-h-[405px] w-full justify-center py-6">
-                      <Image src={src} className="h-auto w-full" alt="cover-blog" />
-                    </div>
-                    <div className="flex flex-col gap-5 text-start">
-
-                      <Typography variant="small">
-                        {data}
-                      </Typography>
-                      <Typography variant="h6">{titlu}</Typography>
-                      <Typography variant="paragraph" className="text-start font-bold">
-                        {descriere}
-                      </Typography>
-                    </div>
-                    <div className="py-8">
-
-                    </div>
-                  </div>
+                  <CardJob key={id} id={id} src={src} titlu={titlu} data={data} descriere={descriere} salariu={salariu} />
                 );
               })}</div>
         </section>
