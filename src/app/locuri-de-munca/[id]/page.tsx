@@ -16,7 +16,7 @@ const JobCategory: FC<IpageProps> = ({ params }) => {
       <div className="container mx-auto grid ">
        
         {muncaFiller
-          .filter((job) => job.id.toString() === params.id)
+          .filter((job) => job.id === params.id)
           .map(({ src, titlu, id ,categorie}) => {
             return (
               <div key={id} className="">
