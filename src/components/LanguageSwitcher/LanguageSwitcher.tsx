@@ -18,7 +18,7 @@ const LanguageSwitcher = ({className:string}) => {
   return (
     <div
       ref={ref}
-      className={`${className} && relative flex  w-72 flex-col items-start justify-center`}
+      className={`${className}  relative flex  w-72 flex-col items-start justify-center`}
     >
       <div
         className="flex cursor-pointer items-center gap-2"
