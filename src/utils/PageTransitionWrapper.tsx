@@ -4,10 +4,10 @@ import { ReactNode } from "react";
 interface ITranzitionProps {
   children: ReactNode;
   className?: string;
-  initial?: {};
-  animate?: {};
-  transition?: {};
-  exit?: {};
+  initial?: object;
+  animate?: object;
+  transition?: object;
+  exit?: object;
   id?: string;
 }
 const PageTransitionWrapper = ({

@@ -6,11 +6,9 @@ import It from "../../../public/imagini/header/it.svg";
 import Ge from "../../../public/imagini/header/ge.svg";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import useOnclickOutside from "react-cool-onclickoutside";
-interface ILanguageSwitcher {
-  className?: string;
-}
 
-const LanguageSwitcher = ({ className }: ILanguageSwitcher) => {
+
+const LanguageSwitcher = () => {
   const [open, setOpened] = useState(false);
   const [language, setLanguage] = useState("ro");
   const ref = useOnclickOutside(() => {

@@ -1,4 +1,4 @@
-import { Typography } from "@material-tailwind/react";
+
 import CardParteneri from "./CardParteneri";
 import dateParteneri from "./dateParteneri";
 
