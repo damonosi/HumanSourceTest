@@ -1,21 +1,20 @@
 "use client";
 import PageTransitionWrapper from "@/utils/PageTransitionWrapper";
-import { Breadcrumbs, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
 import Hi5 from "../../../public/imagini/about/hi5.png";
 
+import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import { CardEchipa, CardValori } from "./CarduriAbout";
 import { dateEchipa, dateValori } from "./dateCarduriAbout";
 
 const DespreNoiPage = () => {
   return (
-    <section className="bg-[#E5E5E5] px-5 pb-16 md:px-[70px] ">
+    <section className="bg-[#E5E5E5] px-5 pb-[100px] md:px-[70px] ">
       <div className="container mx-auto flex flex-col ">
         <Breadcrumbs
-          className="mx-0 my-4 bg-transparent px-0 md:my-6"
-          fullWidth
-          separator=">"
+
         >
           <Link className="text-gri-brand" href="/">
             Home

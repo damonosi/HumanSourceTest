@@ -1,22 +1,21 @@
 "use client";
-import { Breadcrumbs, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import EmailIcon from "@mui/icons-material/Email";
 
 import PhoneIcon from "@mui/icons-material/Phone";
 import Image from "next/image";
 import Link from "next/link";
 
-import imgContact from "../../../public/imagini/contact/imgContact.png";
+import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import ContactForm from "@/components/Contact/ContactForm";
+import imgContact from "../../../public/imagini/contact/imgContact.png";
 
 const Contact = () => {
   return (
-    <section className="  bg-[#E5E5E5] px-4 md:px-[70px]">
+    <section className="  bg-[#E5E5E5] px-4 md:px-[70px] pb-[100px]">
       <div className="container mx-auto flex flex-col ">
         <Breadcrumbs
-          className="mx-0 my-4 bg-transparent px-0 md:my-6"
-          fullWidth
-          separator=">"
+
         >
           <Link className="text-gri-brand" href="/">
             Home

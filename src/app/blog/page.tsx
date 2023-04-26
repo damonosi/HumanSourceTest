@@ -1,17 +1,18 @@
 "use client";
-import { Breadcrumbs, Typography } from "@material-tailwind/react";
+import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
+import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
 import BlogCover from "../../../public/imagini/blog/heroBlogImg.png";
 import PaginatedItems from "./Paginate";
+
+
 const BloguriPage = () => {
   return (
-    <section className="bg-gri-deschis    px-4 pb-28 md:px-[70px]">
+    <section className="bg-gri-deschis    px-4 pb-[100px] md:px-[70px]">
       <div className="container mx-auto flex flex-col  gap-16 ">
         <Breadcrumbs
-          className="mx-0 my-4 bg-transparent px-0 md:my-6"
-          fullWidth
-          separator=">"
+
         >
           <Link className="text-gri-brand" href="/">
             Home

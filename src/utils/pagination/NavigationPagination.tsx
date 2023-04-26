@@ -1,7 +1,7 @@
 "use client";
 
+import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
 import StepsPagination from "./Steps";
-import { IoMdArrowRoundForward, IoMdArrowRoundBack } from "react-icons/io";
 
 interface INavigatie {
   onNextPage(): void;
@@ -63,30 +63,4 @@ const NavigationPagination = ({
 
 export default NavigationPagination;
 
-{
-  /* <ul
-        className="flex justify-between items-center list-none"
-        id="pagination-buttons"
-      >
 
-        {pages.map((page) => {
-          return (
-            <a
-              className="cursor-pointer"
-              onClick={() => onPageChange(page)}
-            >
-              <li
-                key={page}
-                className={
-                  page === currentPage
-                    ? "flex items-center justify-center w-8 h-8 border border-[#eaeaea ] rounded-lg cursor-pointer bg-red-600"
-                    : "flex items-center justify-center w-8 h-8 border border-[#eaeaea ] rounded-lg cursor-pointer"
-                }
-              >
-                {page}
-              </li>
-            </a>
-          );
-        })}
-      </ul> */
-}

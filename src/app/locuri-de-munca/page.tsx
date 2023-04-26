@@ -1,12 +1,12 @@
 "use client";
 
+import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import CardJob from '@/components/Munca/CardJob';
 import muncaFiller from "@/components/Munca/muncaFiller";
-import { Breadcrumbs, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import Link from "next/link";
 import { useState } from "react";
 import { GiHospital } from 'react-icons/gi';
-
 
 const CategorieJoburi = () => {
   const [selectedCategory, setSelectedCategory] = useState('medical');
@@ -20,9 +20,7 @@ const CategorieJoburi = () => {
     <section className=" bg-[#E5E5E5] pb-16 md:px-[70px] ">
       <div className="container mx-auto grid grid-cols-1 gap-9">
         <Breadcrumbs
-          className="mx-0 my-4 bg-transparent px-0 md:my-6 text-gri-brand"
-          fullWidth
-          separator=">"
+
         >
           <Link className="" href="/">
             Home

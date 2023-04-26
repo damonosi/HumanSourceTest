@@ -29,12 +29,6 @@ const ContentPagination = ({
   currentPage,
   bloguri,
   pageSize,
-
-
-
-
-
-
 }: IPaginationData) => {
   const paginatedPosts = paginate(bloguri, currentPage, pageSize);
   return (

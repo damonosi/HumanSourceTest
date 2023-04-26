@@ -1,5 +1,6 @@
 "use client";
-import { Breadcrumbs, Typography } from "@material-tailwind/react";
+import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
+import { Typography } from "@material-tailwind/react";
 import AttachEmailOutlinedIcon from "@mui/icons-material/AttachEmailOutlined";
 import GroupAddOutlinedIcon from "@mui/icons-material/GroupAddOutlined";
 import Groups2OutlinedIcon from "@mui/icons-material/Groups2Outlined";
@@ -9,14 +10,33 @@ import ServiciiCover from "../../../public/imagini/servicii/hero-servicii.png";
 import ImgSec1 from "../../../public/imagini/servicii/img-sec-1.png";
 import ImgSec2 from "../../../public/imagini/servicii/img-sec-2.png";
 
+
+type Props = { children: JSX.Element | JSX.Element[]; text: string; };
+
+const CardHeroServicii = ({ children, text }: Props) => {
+  return (
+    <div className="flex items-center gap-4 rounded-full border text-gri-brand py-2 px-3 ">
+      {children}
+      <span className='text-sm'>{text}</span>
+    </div>
+  );
+};
+const ButonHeroServicii = ({ children, text }: Props) => {
+  return (
+    <button className="rounded-full items-center flex gap-4 border border-rosu-brand  py-2 px-3 font-bold text-rosu-brand ">
+      {children}
+      <span className='text-sm'>{text}</span>
+    </button>
+  );
+}
+
 const ServiciiPage = () => {
   return (
     <section className=" bg-[#E5E5E5] px-4 pb-28  md:px-[70px] ">
       <div className="container mx-auto flex flex-col ">
         <Breadcrumbs
-          className="mx-0 my-4 bg-transparent px-0 md:my-6"
-          fullWidth
-          separator=">"
+
+
         >
           <Link className="text-gri-brand" href="/">
             Home
@@ -32,7 +52,7 @@ const ServiciiPage = () => {
           >
             <div
               className="flex h-full flex-col items-start gap-12 md:w-1/2"
-              id="container-text-blog"
+              id="container-text-servicii"
             >
               <Typography variant="h3">
                 Serviciile oferite de Human Source
@@ -47,20 +67,21 @@ const ServiciiPage = () => {
                 partea de leasign de personal, recrutare, selecție cât și pe
                 partea de payroll si administrare de personal.
               </Typography>
-              <div className="flex w-full flex-col justify-between gap-5 md:flex-row md:gap-0">
-                {" "}
-                <div className=" rounded-full border text-gri-brand py-2 px-3 ">
-                  <Groups2OutlinedIcon className="mr-4" />{" "}
-                  <span> Leasing de personal</span>
-                </div>
-                <div className="rounded-full border text-gri-brand py-2 px-3">
-                  <AttachEmailOutlinedIcon className="mr-4" />{" "}
-                  <span> Payroll si administrare</span>
-                </div>
-                <div className="rounded-full border text-gri-brand  py-2 px-3">
-                  <GroupAddOutlinedIcon className="mr-4" />{" "}
-                  <span>Recrutare si selectie</span>
-                </div>
+              <div className="flex text-sm w-full flex-col justify-between gap-5 md:flex-row md:gap-0">
+                <CardHeroServicii text=' Leasing de personal'>
+                  <Groups2OutlinedIcon className="text-[15px]" />
+
+                </CardHeroServicii>
+                <CardHeroServicii text='Payroll si administrare'>
+                  <AttachEmailOutlinedIcon className="text-[15px]" />
+
+                </CardHeroServicii>
+                <CardHeroServicii text='Recrutare si selectie'>
+                  <GroupAddOutlinedIcon className="text-[15px]" />
+
+                </CardHeroServicii>
+
+
               </div>
             </div>
             <div
@@ -93,11 +114,10 @@ const ServiciiPage = () => {
                 nunc ipsum urna. Nisi eget elementum elementum et dui ut id
                 turpis. Dui
               </Typography>
-              <button className="rounded-full border border-rosu-brand  py-2 px-3 font-bold text-gri-brand ">
-                <Groups2OutlinedIcon className="mr-4 
-                " /> Solicita
-                oferta
-              </button>
+              <ButonHeroServicii text='Solicita oferta' >
+                <Groups2OutlinedIcon className="text-xl" />
+
+              </ButonHeroServicii>
             </div>
           </section>
           <section
@@ -115,10 +135,9 @@ const ServiciiPage = () => {
                 nunc ipsum urna. Nisi eget elementum elementum et dui ut id
                 turpis. Dui
               </Typography>
-              <button className="rounded-full border border-rosu-brand  py-2 px-3 font-bold text-gri-brand ">
-                <AttachEmailOutlinedIcon className="mr-4 " />{" "}
-                Solicita oferta
-              </button>
+              <ButonHeroServicii text='Solicita oferta'>
+                <AttachEmailOutlinedIcon className="text-xl" />
+              </ButonHeroServicii>
             </div>
             <div
               className="flex items-center justify-center md:w-1/2"
@@ -150,10 +169,9 @@ const ServiciiPage = () => {
                 nunc ipsum urna. Nisi eget elementum elementum et dui ut id
                 turpis. Dui
               </Typography>
-              <button className="rounded-full border border-rosu-brand  py-2 px-3 font-bold text-gri-brand ">
-                <GroupAddOutlinedIcon className="mr-4 " /> Solicita
-                oferta
-              </button>
+              <ButonHeroServicii text='Solicita oferta'>
+                <GroupAddOutlinedIcon className="text-xl" />
+              </ButonHeroServicii>
             </div>
           </section>
         </div>

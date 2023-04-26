@@ -1,6 +1,7 @@
 "use client";
 import dateBloguri from "@/components/Blog/dateBloguri";
-import { Breadcrumbs, Typography } from "@material-tailwind/react";
+import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
+import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
@@ -11,12 +12,10 @@ interface IpageProps {
 
 const Blog: FC<IpageProps> = ({ params }) => {
   return (
-    <section className="min-h-screen bg-[#E5E5E5]  text-start md:px-20">
+    <section className="min-h-screen bg-[#E5E5E5] pb-[100px] px-5  text-start md:px-20">
       <div className="container mx-auto grid ">
         <Breadcrumbs
-          className="mx-0 my-4 bg-transparent md:my-6"
-          fullWidth
-          separator=">"
+
         >
           <Link className="text-gri-brand" href="/">
             Home

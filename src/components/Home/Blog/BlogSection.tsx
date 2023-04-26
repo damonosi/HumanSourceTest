@@ -1,7 +1,7 @@
 "use client";
 import { Typography } from "@material-tailwind/react";
-import CardBlog from "./CardBlog";
-import dateBlog from "./dateBlog";
+import CaruselBloguri from "./CaruselBloguri";
+
 
 const BlogSection = () => {
   return (
@@ -13,20 +13,9 @@ const BlogSection = () => {
         Cele mai noi articole de pe blog
       </Typography>
 
-      <div
-        className=" flex flex-col items-center justify-center gap-y-10 md:h-[550px] md:flex-row md:gap-5 "
-        id="continer-carduri-blog"
-      >
-        {dateBlog.map(({ data, titlu, continut, id }) => (
-          <CardBlog
-            data={data}
-            titlu={titlu}
-            continut={continut}
-            key={id}
-            id={id}
-          />
-        ))}
-      </div>
+
+      <CaruselBloguri />
+
     </section>
   );
 };
