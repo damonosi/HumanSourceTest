@@ -8,7 +8,7 @@ import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import useOnclickOutside from "react-cool-onclickoutside";
 
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({className:string}) => {
   const [open, setOpened] = useState(false);
   const [language, setLanguage] = useState("ro");
   const ref = useOnclickOutside(() => {
@@ -18,7 +18,7 @@ const LanguageSwitcher = () => {
   return (
     <div
       ref={ref}
-      className="relative flex  w-72 flex-col items-start justify-center"
+      className={`${className} && relative flex  w-72 flex-col items-start justify-center`}
     >
       <div
         className="flex cursor-pointer items-center gap-2"
