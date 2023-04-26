@@ -1,20 +1,17 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FiFacebook } from "react-icons/fi";
 import { GrInstagram } from "react-icons/gr";
 import { SlSocialTwitter } from "react-icons/sl";
 
-const buttonClasses =
-  "py-2 px-8 border rounded-[16px] hover:bg-white hover:text-black  ";
 
 const Footer = () => {
   return (
     <footer className="relative z-10  w-full overflow-hidden bg-gri-bg pt-12 pb-10 text-white md:mx-auto   md:items-center  md:justify-center">
       <div className="mx-auto  flex w-full flex-col items-center justify-center  pb-0   md:px-[70px]">
-        <nav className="container z-30 flex w-full flex-col items-center justify-between  md:items-start  ">
-          <div className=" flex w-full  flex-col items-start justify-between gap-8 p-4 lg:flex-row ">
-            <div className="flex flex-col gap-6">
-              <h6 className=" text-[16px]   leading-[20px]">HUMAN SOURCE</h6>
+        <nav className="container z-30 flex w-full flex-col  items-center justify-between  md:items-start  ">
+          <div className=" flex w-full  flex-col items-center justify-center md:items-start md:justify-between gap-8 gap-y-6  p-4 lg:flex-row ">
+            <div className="flex flex-col items-center justify-center md:items-start w-full gap-6 md:w-1/4 ">
+              <h6 className=" text-[16px]  font-bold leading-[20px]">HUMAN SOURCE</h6>
               <hr className="h-2 w-full" />
               <div className="flex flex-col gap-8 text-[16px]  font-[350] leading-[24px]">
                 <Link href="/despre-noi">Despre noi </Link>
@@ -23,8 +20,8 @@ const Footer = () => {
                 <Link href="/munca">Locuri de munca</Link>
               </div>
             </div>
-            <div className="flex flex-col gap-6">
-              <h6 className="">SERVICII</h6>
+            <div className="flex flex-col items-center justify-center md:items-start w-full gap-6 md:w-1/4">
+              <h6 className="font-bold">SERVICII</h6>
 
               <hr className="h-2 w-full" />
               <div className="flex flex-col gap-8">
@@ -33,19 +30,19 @@ const Footer = () => {
                 <Link href="/cerere-oferta">Payroll si administrare</Link>
               </div>
             </div>
-            <div className="flex flex-col gap-6">
-              <h6 className="">CONTACT</h6>
+            <div className="flex flex-col items-center justify-center md:items-start w-full gap-6 md:w-1/4">
+              <h6 className="font-bold">CONTACT</h6>
               <hr className="h-2 w-full" />
-              <div className="flex flex-col gap-8">
+             
                 <p>
-                  Nr. de ordine in registrul comertului : <br /> J40/17607/20
+                  Nr. de ordine in registrul comertului :  J40/17607/20
                 </p>
                 <p>Cod unic de identificare : 38366948</p>
                 <p>Telefon : 0040743096465 </p>
                 <p>Email : office@humansource.ro</p>
-              </div>
+             
             </div>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col items-center justify-center md:items-start w-full gap-6 md:w-1/4">
               <h6 className="font-[500]">INFORMATII</h6>
               <hr className="h-2 w-full" />
               <div className="flex flex-col gap-8">

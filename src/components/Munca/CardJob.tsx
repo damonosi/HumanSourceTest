@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import  Link  from 'next/link';
+import Link from 'next/link';
 
 
 
@@ -16,11 +16,11 @@ interface ICardJob {
     descriere: string;
     src: StaticImageData;
 
-    salariu: number;
+    salariu?: number;
     id: number;
 }
 
-const CardJob = ({ data, titlu, descriere, id, src, salariu }: ICardJob) => {
+const CardJob = ({ data, titlu, descriere, id, src }: ICardJob) => {
 
     const [hovered, setHovered] = useState(false);
     const handleMouseEnter = () => {

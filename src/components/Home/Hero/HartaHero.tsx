@@ -1,7 +1,10 @@
 "use client";
+import InViewWrapper from "@/utils/InViewWrapper";
+import { AnimatePresence } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
+import { Fragment } from "react";
 import Harta from "../../../../public/imagini/hero/Harta.svg";
 import HartaMobil from "../../../../public/imagini/hero/HartaMobil.svg";
-import Pin1 from "../../../../public/imagini/hero/pinguri/ping1.svg";
 import IPin1 from "../../../../public/imagini/hero/pinguri/iPing1.png";
 import IPin2 from "../../../../public/imagini/hero/pinguri/iPing2.png";
 import IPin3 from "../../../../public/imagini/hero/pinguri/iPing3.png";
@@ -12,10 +15,7 @@ import IPin7 from "../../../../public/imagini/hero/pinguri/iPing7.png";
 import IPin8 from "../../../../public/imagini/hero/pinguri/iPing8.png";
 import IPin9 from "../../../../public/imagini/hero/pinguri/iPing9.png";
 import MPin1 from "../../../../public/imagini/hero/pinguri/mobil/MPing1.png";
-import Image, { StaticImageData } from "next/image";
-import InViewWrapper from "@/utils/InViewWrapper";
-import { useState, useLayoutEffect, Fragment } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import Pin1 from "../../../../public/imagini/hero/pinguri/ping1.svg";
 
 interface IPinComponent {
   src: StaticImageData;

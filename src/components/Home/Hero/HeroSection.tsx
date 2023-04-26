@@ -4,7 +4,7 @@ import { Typography } from "@material-tailwind/react";
 
 import { HartaHeroDesktop, HartaHeroMobil } from "./HartaHero";
 
-let initialAnimation = { x: 0, opacity: 0 };
+
 const HeroSection = () => {
   return (
     <section

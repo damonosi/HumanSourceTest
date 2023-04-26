@@ -10,7 +10,7 @@ interface IDropdownInfo {
 const DropdownIntrebare = ({
   intrebare,
   raspuns,
-  ultimaIntrebare,
+
 }: IDropdownInfo) => {
   const [showRaspuns, setShowRaspuns] = useState(false);
   const ref = useOnclickOutside(() => {

@@ -1,10 +1,8 @@
 import { Card, CardBody, Typography } from "@material-tailwind/react";
-import { GiPiggyBank, GiEarthAmerica } from "react-icons/gi";
 import { FaUserTie } from "react-icons/fa";
+import { GiEarthAmerica, GiPiggyBank } from "react-icons/gi";
 import { VscLaw } from "react-icons/vsc";
-import ContactsIcon from "@mui/icons-material/Contacts";
-import DirectionsBoatIcon from "@mui/icons-material/DirectionsBoat";
-import ImportContactsIcon from "@mui/icons-material/ImportContacts";
+
 interface ICardAvantaje {
   titlu: string;
   descriere: string;

@@ -1,8 +1,7 @@
 import {
   Card,
-  CardBody,
+
   CardHeader,
-  Typography,
 } from "@material-tailwind/react";
 import Image, { StaticImageData } from "next/image";
 
@@ -12,7 +11,7 @@ interface ICardParteneri {
   src: StaticImageData;
 }
 
-const CardParteneri = ({ firma, descriere, src }: ICardParteneri) => {
+const CardParteneri = ({ src }: ICardParteneri) => {
   return (
     <Card className="bg-transpartent max-w-[210px] shadow-none ">
       <CardHeader

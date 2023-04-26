@@ -6,10 +6,10 @@ import { ReactNode, useState } from "react";
 interface IInViewProps {
   children: ReactNode;
   className?: string;
-  inView?: {};
-  notInView?: {};
-  transition?: {};
-  exit?: {};
+  inView?: object;
+  notInView?: object;
+  transition?: object;
+  exit?: object;
   delay?: number;
   id?: string;
 }

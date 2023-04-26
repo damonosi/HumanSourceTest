@@ -51,7 +51,7 @@ function PaginatedItems() {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(0);
   const dataLength = dateBloguri.length;
-  let numberOfPages = Math.round(dataLength / pageSize);
+  const numberOfPages = Math.round(dataLength / pageSize);
   const onNextPage = () => {
     if (currentPage >= numberOfPages) {
       setCurrentPage(numberOfPages);
@@ -69,7 +69,7 @@ function PaginatedItems() {
   useEffect(() => {
     const isBrowser = () => typeof window !== "undefined";
     if (!isBrowser()) return;
-    let windowWidth = window.innerWidth;
+    const windowWidth = window.innerWidth;
     if (windowWidth < 500) {
       setPageSize(3);
     } else {

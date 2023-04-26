@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
 
+import { Button, Typography } from "@material-tailwind/react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Typography, Button } from "@material-tailwind/react";
 import Image from "next/image";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import BackImg from "../../../../public/imagini/blog/cover-blog-full.png";
+
 import BackSmall from "../../../../public/imagini/blog/cover-blog-small.png";
 
 interface ICardBlog {
@@ -16,7 +16,7 @@ interface ICardBlog {
   id: number;
 }
 
-const CardBlog = ({ data, titlu, continut, id }: ICardBlog) => {
+const CardBlog = ({ data, titlu, continut }: ICardBlog) => {
   const [hovered, setHovered] = useState(false);
   const handleMouseEnter = () => {
     setHovered(true);

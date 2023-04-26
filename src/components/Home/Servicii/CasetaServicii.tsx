@@ -1,12 +1,10 @@
 import { Button, Typography } from "@material-tailwind/react";
-import PayrollImg from "../../../../public/imagini/MuncitorIcon.svg";
-import LeasingImg from "../../../../public/imagini/leasing.svg";
-import RecrutareImg from "../../../../public/imagini/recrutare.svg";
+
+import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import { HiOutlineUserGroup } from "react-icons/hi";
 import { IoDocumentAttachOutline } from "react-icons/io5";
-import { AiOutlineUsergroupAdd } from "react-icons/ai";
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 
 interface ICasetaServicii {
   titlu: string;

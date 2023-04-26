@@ -17,7 +17,7 @@ const JobCategory: FC<IpageProps> = ({ params }) => {
        
         {muncaFiller
           .filter((job) => job.id === params.id)
-          .map(({ src, titlu, id ,categorie}) => {
+          .map(({ src, titlu, id }) => {
             return (
               <div key={id} className="">
                  <Breadcrumbs

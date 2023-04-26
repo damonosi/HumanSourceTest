@@ -1,13 +1,12 @@
 import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
 import { Button, Typography } from "@material-tailwind/react";
 import { CardContent } from "@mui/material";
-import Image, { StaticImageData } from "next/image";
+
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { MdEngineering, MdPersonSearch } from "react-icons/md";
 import dateHero from "./dateHero";
-import { motion, AnimatePresence } from "framer-motion";
-import { MdPersonSearch } from "react-icons/md";
-import { MdEngineering } from "react-icons/md";
 
 interface ICardHero {
   titlu: string;

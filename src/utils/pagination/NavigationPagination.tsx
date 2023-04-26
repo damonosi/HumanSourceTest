@@ -8,7 +8,7 @@ interface INavigatie {
   onPrevPage(): void;
   currentPage: number;
   dataLength: number;
-  pageSize: number;
+  pageSize?: number;
 }
 
 const NavigationPagination = ({
@@ -16,7 +16,7 @@ const NavigationPagination = ({
   onPrevPage,
   currentPage,
   dataLength,
-  pageSize,
+
 }: INavigatie) => {
   const isBrowser = () => typeof window !== "undefined";
 
