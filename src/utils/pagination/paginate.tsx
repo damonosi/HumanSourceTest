@@ -1,5 +1,8 @@
+
+
+
 export const paginate = (
-  items: Array<object>,
+  items: Array<any>,
   pageNumber: number,
   pageSize: number,
 ) => {

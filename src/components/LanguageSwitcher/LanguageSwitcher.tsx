@@ -1,14 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
-import Ro from "../../../public/imagini/header/ro.svg";
-import It from "../../../public/imagini/header/it.svg";
-import Ge from "../../../public/imagini/header/ge.svg";
-import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import { useState } from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
+import { MdOutlineKeyboardArrowUp } from "react-icons/md";
+import Ge from "../../../public/imagini/header/ge.svg";
+import It from "../../../public/imagini/header/it.svg";
+import Ro from "../../../public/imagini/header/ro.svg";
 
-
-const LanguageSwitcher = ({className:string}) => {
+interface Iclass {
+  className?: string;
+}
+const LanguageSwitcher = ({ className }: Iclass) => {
   const [open, setOpened] = useState(false);
   const [language, setLanguage] = useState("ro");
   const ref = useOnclickOutside(() => {
