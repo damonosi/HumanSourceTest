@@ -25,6 +25,7 @@ interface IPaginatedData {
   categorie: string;
 }
 
+
 const ContentPagination = ({
   currentPage,
   bloguri,
@@ -34,7 +35,7 @@ const ContentPagination = ({
   return (
     <div className="grid gap-5 md:grid-cols-3">
       {paginatedPosts &&
-        paginatedPosts.map(({ id, src, data, descriere, categorie, slug }) => (
+        paginatedPosts.map(({ id, src, data, descriere, categorie, slug }: IPaginatedData) => (
           <CardBlogSecundar
             key={id}
             src={src}
