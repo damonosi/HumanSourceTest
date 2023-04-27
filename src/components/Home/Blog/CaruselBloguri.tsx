@@ -57,6 +57,7 @@ const CaruselBloguri = () => {
         sliderClass=""
         slidesToSlide={1}
         swipeable
+        centerMode
       >
 
         {dateBlog.map(({ id, data, titlu, continut }) =>
