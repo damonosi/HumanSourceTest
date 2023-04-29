@@ -34,6 +34,8 @@ function NavList({ params }: { params: { lang: string; country: string; }; }) {
   const { t } = useTranslation(params.lang, 'header');
   return (
     <ul className=" flex w-full flex-col justify-end  gap-3 md:flex-row md:items-center md:gap-8">
+      {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
+              // @ts-ignore */}
       <NavItem href={`${params.lang}/despre-noi`} label={t('despre')} />
       <NavItem href={`${params.lang}/locuri-de-munca`} label={t('munca')} />
       <NavItem href={`${params.lang}/contact`} label={t('contact')} />
