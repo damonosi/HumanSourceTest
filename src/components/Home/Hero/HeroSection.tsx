@@ -44,6 +44,8 @@ const HeroSection = (
             id="container-text"
           >
             <Typography variant="small" className="uppercase opacity-80">
+              {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore */}
               {t('titlu')}
             </Typography>
             <Typography
