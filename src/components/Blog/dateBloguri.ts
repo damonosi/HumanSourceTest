@@ -1,4 +1,4 @@
-import ImgFillerBlog from "../../../public/imagini/blog/heroBlogImg.png";
+import ImgFillerBlog from "@/public/imagini/blog/heroBlogImg.png";
 import { StaticImageData } from "next/image";
 interface IdataBloguri {
   id: number;
