@@ -1,23 +1,23 @@
 "use client";
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useState } from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 
 import It from "@/public/imagini/header/it.svg";
 import Ro from "@/public/imagini/header/ro.svg";
-import Link from 'next/link';
 interface Iclass {
   className?: string;
   params: { lang: string; country: string; };
 }
 
 const LanguageSwitcher = ({ className, params }: Iclass) => {
+  const router = useRouter()
   const [open, setOpened] = useState(false);
   const [language, setLanguage] = useState(params.lang);
 
   console.log('lang:', params?.lang);
-  console.log('country:', params?.country)
+
   const ref = useOnclickOutside(() => {
     setOpened(!open && false);
   });
@@ -46,9 +46,9 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
       </div>
       {open && (
         <div className="absolute top-full mt-2 flex flex-col gap-4 rounded-b-2xl bg-alb-site py-5 px-5">
-          <button
+          <button 
             onClick={() => {
-
+              router.push('/ro')
               setOpened(false);
 
               setLanguage("ro");
@@ -64,18 +64,14 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
             />{" "}
             <span>Romana</span>
           </button>
-          <Link href="/it/IT" onClick={() => {
+          <button onClick={() => {
+            router.push('/it')
             setOpened(false);
             setLanguage("it");
           }} className={`${language === "it" && "font-bold"
-            } flex items-center gap-4`} locale='it-IT'>
-
-
-
-
+              } flex items-center gap-4`} >
             <It className="h-5 w-5 " /> <span>Italiana</span>
-
-          </Link>
+          </button>
         </div>
       )}
     </div>

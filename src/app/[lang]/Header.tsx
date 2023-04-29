@@ -11,6 +11,7 @@ import { useState } from "react";
 
 import Hamburger from "@/public/imagini/hamburger.svg";
 import Logo from "@/public/imagini/logo.svg";
+import { useTranslation } from "../i18n/client";
 
 interface INavItem {
   label: string;
@@ -29,19 +30,20 @@ function NavItem({ label, href }: INavItem) {
   );
 }
 
-function NavList() {
+function NavList({ params }: { params: { lang: string; country: string; }; }) {
+  const { t } = useTranslation(params.lang, 'header');
   return (
     <ul className=" flex w-full flex-col justify-end  gap-3 md:flex-row md:items-center md:gap-8">
-      <NavItem href="despre-noi" label="Despre noi" />
-      <NavItem href="locuri-de-munca" label="Locuri de munca" />
-      <NavItem href="contact" label="Contact" />
-      <NavItem href="servicii" label="Servicii" />
-      <NavItem href="blog" label="Blog" />
+      <NavItem href={`${params.lang}/despre-noi`} label={t('despre')} />
+      <NavItem href={`${params.lang}/locuri-de-munca`} label={t('munca')} />
+      <NavItem href={`${params.lang}/contact`} label={t('contact')} />
+      <NavItem href={`${params.lang}/servicii`} label={t('servicii')} />
+      <NavItem href={`${params.lang}/blog`} label={t('blog')} />
       <Button
         ripple={true}
-        className="hidden  rounded-full bg-red-800 px-4 py-3 text-white md:inline-block"
+        className="hidden hover:shadow-none  rounded-full bg-red-800 px-4 py-3 text-white md:inline-block"
       >
-        Aplica
+        {t('buton')}
       </Button>
     </ul>
   );
@@ -52,7 +54,7 @@ export function Header({ params }: { params: { lang: string; country: string; };
   const handleOpen = () => {
     setOpen(!open);
   };
-
+  const { t } = useTranslation(params.lang, 'header');
   const menuOpenIcon = <Hamburger className="h-8 w-8" />;
 
   const menuCloseIcon = (
@@ -92,7 +94,7 @@ export function Header({ params }: { params: { lang: string; country: string; };
         </div>
 
         <div className="hidden  w-full items-center justify-end gap-6 md:flex">
-          <NavList />
+          <NavList params={params} />
         </div>
         <div className="flex gap-2">
           <button className="md:hidden" onClick={handleOpen}>
@@ -101,9 +103,9 @@ export function Header({ params }: { params: { lang: string; country: string; };
         </div>
       </div>
       <MobileNav className="  bg-alb-site " open={open}>
-        <NavList />
+        <NavList params={params} />
         <button className=" h-8  w-20 rounded-2xl bg-red-600 text-white ">
-          Aplica
+          {t('buton')}
         </button>
       </MobileNav>
     </Navbar>

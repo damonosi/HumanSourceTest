@@ -4,12 +4,17 @@ import CarduriHero from "./CardHero";
 import { Typography } from "@material-tailwind/react";
 
 
+
+import { useTranslation } from './../../../app/i18n/client';
 import { HartaHeroDesktop, HartaHeroMobil } from "./HartaHero";
 
 
-const HeroSection = (
 
+const HeroSection = (
+  { params }: { params: { lang: string; country: string; }; }
 ) => {
+
+  const { t } = useTranslation(params.lang, 'home-hero');
 
   return (
     <section
@@ -39,18 +44,16 @@ const HeroSection = (
             id="container-text"
           >
             <Typography variant="small" className="uppercase opacity-80">
-              AGENTIE DE PLASARE FORȚĂ DE MUNCĂ
+              {t('titlu')}
             </Typography>
             <Typography
               variant="h1"
               className="text-start font-bold text-alb-site  "
             >
-              Construiește-ți viitorul <br /> alături de noi
+              {t('subtitlu')}
             </Typography>
             <Typography variant="paragraph" className="font-[350]  opacity-80">
-              HumanSource - alege să colaborezi cu noi pentru job-ul tau de vis
-              sau <br className="hidden md:block" /> pentru gasirea candidatului
-              potrivit.{" "}
+              {t('indemn')}
             </Typography>
           </div>
           <div className=" hidden w-full md:block">
