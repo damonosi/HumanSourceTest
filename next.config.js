@@ -37,6 +37,14 @@ const nextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: "/",
+        destination: "/ro",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
