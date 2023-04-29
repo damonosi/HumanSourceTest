@@ -1,21 +1,28 @@
 "use client";
-
+import { usePathname, useRouter, } from 'next/navigation';
 import { useState } from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
-import Ge from "../../../public/imagini/header/ge.svg";
-import It from "../../../public/imagini/header/it.svg";
-import Ro from "../../../public/imagini/header/ro.svg";
 
+import It from "@/public/imagini/header/it.svg";
+import Ro from "@/public/imagini/header/ro.svg";
+import Link from 'next/link';
 interface Iclass {
   className?: string;
+  params: { lang: string; country: string; };
 }
-const LanguageSwitcher = ({ className }: Iclass) => {
+
+const LanguageSwitcher = ({ className, params }: Iclass) => {
   const [open, setOpened] = useState(false);
-  const [language, setLanguage] = useState("ro");
+  const [language, setLanguage] = useState(params.lang);
+  const router = useRouter();
+  console.log('lang:', params?.lang);
+  console.log('country:', params?.country)
   const ref = useOnclickOutside(() => {
     setOpened(!open && false);
   });
+  const pathName = usePathname();
+  console.log('pathname:', pathName);
 
   return (
     <div
@@ -29,7 +36,7 @@ const LanguageSwitcher = ({ className }: Iclass) => {
       >
         {language === "ro" && <Ro className="h-5 w-5 rounded-[50px] " />}
         {language === "it" && <It className="h-5 w-5  " />}
-        {language === "ge" && <Ge className="h-5 w-5 " />}
+
 
         {open ? (
           <MdOutlineKeyboardArrowUp />
@@ -41,8 +48,10 @@ const LanguageSwitcher = ({ className }: Iclass) => {
         <div className="absolute top-full mt-2 flex flex-col gap-4 rounded-b-2xl bg-alb-site py-5 px-5">
           <button
             onClick={() => {
-              setLanguage("ro");
+
               setOpened(false);
+
+              setLanguage("ro");
             }}
             className={`${
               language === "ro" && "font-bold"
@@ -55,28 +64,18 @@ const LanguageSwitcher = ({ className }: Iclass) => {
             />{" "}
             <span>Romana</span>
           </button>
-          <button
-            onClick={() => {
-              setLanguage("it");
-              setOpened(false);
-            }}
-            className={`${
-              language === "it" && "font-bold"
-            } flex items-center gap-4`}
-          >
+          <Link href="/it/IT" onClick={() => {
+            setOpened(false);
+            setLanguage("it");
+          }} className={`${language === "it" && "font-bold"
+            } flex items-center gap-4`} locale='it-IT'>
+
+
+
+
             <It className="h-5 w-5 " /> <span>Italiana</span>
-          </button>
-          <button
-            onClick={() => {
-              setLanguage("ge");
-              setOpened(false);
-            }}
-            className={`${
-              language === "ge" && "font-bold"
-            } flex items-center gap-4 hover:drop-shadow-2xl`}
-          >
-            <Ge className="h-5 w-5 " /> <span>Germana</span>
-          </button>
+
+          </Link>
         </div>
       )}
     </div>

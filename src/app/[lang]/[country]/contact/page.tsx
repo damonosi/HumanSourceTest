@@ -8,7 +8,7 @@ import Link from "next/link";
 
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import ContactForm from "@/components/Contact/ContactForm";
-import imgContact from "../../../public/imagini/contact/imgContact.png";
+import imgContact from "@/public/imagini/contact/imgContact.png";
 
 const Contact = () => {
   return (

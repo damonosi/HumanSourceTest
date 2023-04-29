@@ -1,4 +1,5 @@
 "use client";
+import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcher";
 import {
   Button,
   MobileNav,
@@ -7,9 +8,9 @@ import {
 } from "@material-tailwind/react";
 import Link from "next/link";
 import { useState } from "react";
-import Hamburger from "../../public/imagini/hamburger.svg";
-import Logo from "../../public/imagini/logo.svg";
-import LanguageSwitcher from "./../components/LanguageSwitcher/LanguageSwitcher";
+
+import Hamburger from "@/public/imagini/hamburger.svg";
+import Logo from "@/public/imagini/logo.svg";
 
 interface INavItem {
   label: string;
@@ -46,7 +47,7 @@ function NavList() {
   );
 }
 
-export function Header() {
+export function Header({ params }: { params: { lang: string; }; }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(!open);
@@ -87,7 +88,7 @@ export function Header() {
           >
             <Logo className="w-32" />
           </Typography>
-          <LanguageSwitcher className="hidden md:flex" />
+          <LanguageSwitcher params={params} className="hidden md:flex" />
         </div>
 
         <div className="hidden  w-full items-center justify-end gap-6 md:flex">

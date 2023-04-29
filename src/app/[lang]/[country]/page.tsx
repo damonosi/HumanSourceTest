@@ -1,19 +1,26 @@
 "use client";
-import AvantajeSection from "../components/Home/Avantaje/AvantajeSection";
-import BlogSection from "../components/Home/Blog/BlogSection";
-import HeroSection from "../components/Home/Hero/HeroSection";
-import IntrebariSection from "../components/Home/Intrebari/IntrebariSection";
-import NevoiSection from "../components/Home/Nevoi/NevoiSection";
-import ParteneriSection from "../components/Home/Parteneri/ParteneriSection";
-import ServiciiSection from "../components/Home/Servicii/ServiciiSection";
 
-export default function Home() {
+import AvantajeSection from "@/components/Home/Avantaje/AvantajeSection";
+import BlogSection from "@/components/Home/Blog/BlogSection";
+import HeroSection from "@/components/Home/Hero/HeroSection";
+import IntrebariSection from "@/components/Home/Intrebari/IntrebariSection";
+import NevoiSection from "@/components/Home/Nevoi/NevoiSection";
+import ParteneriSection from "@/components/Home/Parteneri/ParteneriSection";
+import ServiciiSection from "@/components/Home/Servicii/ServiciiSection";
+import { getLocalePartsFrom, locales } from "../../../../i18n";
+
+export async function generateStaticParams() {
+  return locales.map((locale) => getLocalePartsFrom({ locale }));
+}
+export default function Home({ params }: { params: { lang: string; country: string; }; }) {
+
   return (
     <div
       className="mb-[-10rem] grid grid-cols-1 items-center justify-center "
       id="container-home"
     >
-      <HeroSection />
+
+      <HeroSection params={params} />
 
       <div className=" h-full  translate-y-[-10rem]  ">
         <div

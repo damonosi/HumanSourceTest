@@ -1,6 +1,6 @@
-import ImgFillerTransport from "../../../public/imagini/munca/transport.png";
-import ImgFillerConstructii from "../../../public/imagini/munca/constructii.png";
-import ImgFillerMedical from "../../../public/imagini/munca/medical.png";
+import ImgFillerConstructii from "@/public/imagini/munca/constructii.png";
+import ImgFillerMedical from "@/public/imagini/munca/medical.png";
+import ImgFillerTransport from "@/public/imagini/munca/transport.png";
 import { StaticImageData } from "next/image";
 interface IdataJoburi {
   id: number;
@@ -208,7 +208,7 @@ const muncaFiller: Idate = [
     salariu: 1000,
   },
   {
-    id:19,
+    id: 19,
     data: "Luni, 24 Septembrie 2030",
     src: ImgFillerTransport,
     descriere:

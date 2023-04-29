@@ -1,9 +1,9 @@
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 
-import ImgIntrebari from "../../../../public/imagini/intrebari/imgIntrebari.png";
-import dateIntrebari from "./dateIntrebari";
+import ImgIntrebari from "@/public/imagini/intrebari/imgIntrebari.png";
 import DropdownIntrebare from "./DropdownIntrebare";
+import dateIntrebari from "./dateIntrebari";
 
 const IntrebariSection = () => {
   return (

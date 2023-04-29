@@ -1,14 +1,14 @@
 "use client";
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
+import ServiciiCover from "@/public/imagini/servicii/hero-servicii.png";
+import ImgSec1 from "@/public/imagini/servicii/img-sec-1.png";
+import ImgSec2 from "@/public/imagini/servicii/img-sec-2.png";
 import { Typography } from "@material-tailwind/react";
 import AttachEmailOutlinedIcon from "@mui/icons-material/AttachEmailOutlined";
 import GroupAddOutlinedIcon from "@mui/icons-material/GroupAddOutlined";
 import Groups2OutlinedIcon from "@mui/icons-material/Groups2Outlined";
 import Image from "next/image";
 import Link from "next/link";
-import ServiciiCover from "../../../public/imagini/servicii/hero-servicii.png";
-import ImgSec1 from "../../../public/imagini/servicii/img-sec-1.png";
-import ImgSec2 from "../../../public/imagini/servicii/img-sec-2.png";
 
 
 type Props = { children: JSX.Element | JSX.Element[]; text: string; };
@@ -28,7 +28,7 @@ const ButonHeroServicii = ({ children, text }: Props) => {
       <span className='text-sm'>{text}</span>
     </button>
   );
-}
+};
 
 const ServiciiPage = () => {
   return (

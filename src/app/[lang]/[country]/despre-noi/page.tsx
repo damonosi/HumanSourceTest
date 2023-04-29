@@ -1,9 +1,9 @@
 "use client";
+import Hi5 from "@/public/imagini/about/hi5.png";
 import PageTransitionWrapper from "@/utils/PageTransitionWrapper";
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
-import Hi5 from "../../../public/imagini/about/hi5.png";
 
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import { CardEchipa, CardValori } from "./CarduriAbout";

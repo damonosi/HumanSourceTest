@@ -1,11 +1,20 @@
+
 import CarduriHero from "./CardHero";
 
 import { Typography } from "@material-tailwind/react";
 
+
 import { HartaHeroDesktop, HartaHeroMobil } from "./HartaHero";
 
 
-const HeroSection = () => {
+const HeroSection = (
+  {
+    params: { lang },
+  }: {
+    params: { lang: string; };
+  }
+) => {
+
   return (
     <section
       id="hero-section"

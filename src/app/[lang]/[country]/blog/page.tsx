@@ -1,9 +1,9 @@
 "use client";
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
+import BlogCover from "@/public/imagini/blog/heroBlogImg.png";
 import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 import Link from "next/link";
-import BlogCover from "../../../public/imagini/blog/heroBlogImg.png";
 import PaginatedItems from "./Paginate";
 
 
