@@ -8,11 +8,7 @@ import { HartaHeroDesktop, HartaHeroMobil } from "./HartaHero";
 
 
 const HeroSection = (
-  {
-    params: { lang },
-  }: {
-    params: { lang: string; };
-  }
+
 ) => {
 
   return (

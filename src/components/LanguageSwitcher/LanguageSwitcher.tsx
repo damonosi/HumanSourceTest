@@ -1,5 +1,5 @@
 "use client";
-import { usePathname, useRouter, } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useState } from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
@@ -15,7 +15,7 @@ interface Iclass {
 const LanguageSwitcher = ({ className, params }: Iclass) => {
   const [open, setOpened] = useState(false);
   const [language, setLanguage] = useState(params.lang);
-  const router = useRouter();
+
   console.log('lang:', params?.lang);
   console.log('country:', params?.country)
   const ref = useOnclickOutside(() => {
