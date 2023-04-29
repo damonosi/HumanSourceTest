@@ -47,7 +47,7 @@ function NavList() {
   );
 }
 
-export function Header({ params }: { params: { lang: string; }; }) {
+export function Header({ params }: { params: { lang: string; country: string; }; }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(!open);
