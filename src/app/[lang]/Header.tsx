@@ -16,13 +16,15 @@ import { useTranslation } from "../i18n/client";
 interface INavItem {
   label: string;
   href: string;
+  handleCloseMenu: () => void;
 }
-function NavItem({ label, href }: INavItem) {
+function NavItem({ label, href, handleCloseMenu }: INavItem) {
   return (
     <Link href={href}>
       <Typography
         variant="small"
         className="flex  items-center gap-1.5 p-1 text-gri-brand"
+        onClick={handleCloseMenu}
       >
         {label}
       </Typography>
@@ -30,17 +32,19 @@ function NavItem({ label, href }: INavItem) {
   );
 }
 
-function NavList({ params }: { params: { lang: string; country: string; }; }) {
+function NavList({ params, handleCloseMenu }: { params: { lang: string; country: string; }; handleCloseMenu: () => void; }) {
   const { t } = useTranslation(params.lang, 'header');
   return (
     <ul className=" flex w-full flex-col justify-end  gap-3 md:flex-row md:items-center md:gap-8">
       {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
               // @ts-ignore */}
-      <NavItem href={`${params.lang}/despre-noi`} label={t('despre')} />
-      <NavItem href={`${params.lang}/locuri-de-munca`} label={t('munca')} />
-      <NavItem href={`${params.lang}/contact`} label={t('contact')} />
-      <NavItem href={`${params.lang}/servicii`} label={t('servicii')} />
-      <NavItem href={`${params.lang}/blog`} label={t('blog')} />
+      <NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/despre-noi`} label={t('despre')} />
+      <NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/locuri-de-munca`} label={t('munca')} />
+      <NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/contact`} label={t('contact')} />
+      <NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/servicii`} label={t('servicii')} />
+      {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
+              // @ts-ignore */}
+      <NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/blog`} label={t('blog')} />
       <Button
         ripple={true}
         className="hidden hover:shadow-none  rounded-full bg-red-800 px-4 py-3 text-white md:inline-block"
@@ -57,6 +61,9 @@ export function Header({ params }: { params: { lang: string; country: string; };
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(!open);
+  };
+  const handleCloseMenu = () => {
+    setOpen(false);
   };
 
   const menuOpenIcon = <Hamburger className="h-8 w-8" />;
@@ -98,7 +105,7 @@ export function Header({ params }: { params: { lang: string; country: string; };
         </div>
 
         <div className="hidden  w-full items-center justify-end gap-6 md:flex">
-          <NavList params={params} />
+          <NavList handleCloseMenu={handleCloseMenu} params={params} />
         </div>
         <div className="flex gap-2">
           <button className="md:hidden" onClick={handleOpen}>
@@ -106,8 +113,8 @@ export function Header({ params }: { params: { lang: string; country: string; };
           </button>
         </div>
       </div>
-      <MobileNav className="md:hidden  bg-alb-site px-4 text-center py-4" onClick={handleOpen} open={open}>
-        <NavList params={params} />
+      <MobileNav className="md:hidden  bg-alb-site px-4 text-center py-4" open={open}>
+        <NavList handleCloseMenu={handleCloseMenu} params={params} />
      
       </MobileNav>
     </Navbar>
