@@ -92,7 +92,7 @@ export function Header({ params }: { params: { lang: string; country: string; };
           >
             <Logo className="w-32" />
           </Typography>
-          <LanguageSwitcher params={params} className="hidden md:flex" />
+          <LanguageSwitcher params={params} className=" md:flex" />
         </div>
 
         <div className="hidden  w-full items-center justify-end gap-6 md:flex">

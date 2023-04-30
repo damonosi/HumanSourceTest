@@ -175,38 +175,38 @@ export const HartaHeroMobil = () => {
           <PinComponent
             key="pin1"
             src={MPin1}
-            translateX={20}
-            translateY={-50}
+            translateX={30}
+            translateY={-70}
             className=" bottom-0 left-0   "
-            fill="#B82C2F"
+
             dimensions={56}
             delay={delayBase}
           />
           <PinComponent
             key="pin2"
             src={IPin2}
-            translateX={80}
-            translateY={77}
-            className=" top-0  "
+            translateX={90}
+            translateY={-110}
+            className=" bottom-0  left-0"
             dimensions={60}
-            fill="#C9D39F"
+
             delay={delayBase * 2}
           />
           <PinComponent
             key="pin3"
             src={IPin3}
-            translateX={170}
-            translateY={-130}
-            className=" bottom-0 left-0  "
+            translateX={60}
+            translateY={120}
+            className=" top-0 left-0  "
             dimensions={43}
-            fill="#8F947A"
+
             delay={delayBase * 3}
           />
           <PinComponent
             key="pin4"
             src={IPin4}
-            translateX={-50}
-            translateY={-50}
+            translateX={10}
+            translateY={-30}
             className=" top-1/2 right-1/2 "
             dimensions={70}
             delay={delayBase * 4}
@@ -214,48 +214,32 @@ export const HartaHeroMobil = () => {
           <PinComponent
             key="pin5"
             src={IPin5}
-            translateX={-20}
-            translateY={20}
+            translateX={40}
+            translateY={60}
             className=" top-0 right-1/2 "
-            dimensions={44}
+            dimensions={47}
             delay={delayBase * 5}
           />
+
           <PinComponent
             key="pin6"
-            src={IPin6}
-            translateX={40}
-            translateY={-40}
-            className=" top-1/2 right-1/2 hidden 2xl:block"
-            dimensions={99}
+            src={IPin7}
+            translateX={-110}
+            translateY={-20}
+            className=" top-1/2 right-0 "
+            dimensions={73}
             delay={delayBase * 6}
           />
           <PinComponent
             key="pin7"
-            src={IPin7}
-            translateX={-220}
-            translateY={-40}
-            className=" top-1/2 right-0 "
-            dimensions={73}
+            src={IPin8}
+            translateX={-50}
+            translateY={-30}
+            className=" bottom-0  right-0 "
+            dimensions={52}
             delay={delayBase * 7}
           />
-          <PinComponent
-            key="pin8"
-            src={IPin8}
-            translateX={-150}
-            translateY={-70}
-            className=" top-1/2 right-0 "
-            dimensions={52}
-            delay={delayBase * 8}
-          />
-          <PinComponent
-            key="pin9"
-            src={IPin9}
-            translateX={-50}
-            translateY={-100}
-            className=" bottom-0 right-0 hidden xl:block"
-            dimensions={106}
-            delay={delayBase * 9}
-          />
+
         </AnimatePresence>
         <HartaMobil
           className="relative left-6 z-10 w-[120%] rotate-6 overflow-visible"
