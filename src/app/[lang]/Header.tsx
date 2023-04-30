@@ -94,7 +94,7 @@ export function Header({ params }: { params: { lang: string; country: string; };
         <div className="flex w-1/3 ">
           <Typography
             as="a"
-            href={`${params.lang}`}
+            href={`/`}
             variant="small"
             color="black"
             className="mr-4 cursor-pointer py-1.5 font-bold"
