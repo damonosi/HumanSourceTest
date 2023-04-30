@@ -52,8 +52,9 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
             onClick={() => {
               setOpened(false);
               setLanguage("ro");
+              router.refresh()
               router.push('/ro');
-              router.refresh();
+
             }}
             className={`${
               language === "ro" && "font-bold"
