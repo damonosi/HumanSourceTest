@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from 'next/navigation';
+
 import { useState } from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
@@ -13,7 +13,7 @@ interface Iclass {
 }
 
 const LanguageSwitcher = ({ className, params }: Iclass) => {
-  const router = useRouter()
+
   const [open, setOpened] = useState(false);
   const [language, setLanguage] = useState(params.lang);
 
@@ -65,8 +65,8 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
             />{" "}
             <span>Romana</span>
           </Link>
-          <Link href='/it' onClick={() => {
-
+          <Link href='/it'
+            onClick={() => {
             setOpened(false);
             setLanguage("it");
           }} className={`${language === "it" && "font-bold"
