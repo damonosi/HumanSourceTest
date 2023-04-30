@@ -7,6 +7,7 @@ import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 import It from "@/public/imagini/header/it.svg";
 import Ro from "@/public/imagini/header/ro.svg";
 import Link from 'next/link';
+import { useRouter } from "next/navigation";
 interface Iclass {
   className?: string;
   params: { lang: string; country: string; };
@@ -23,7 +24,7 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
     setOpened(!open && false);
   });
 
-
+  const router = useRouter()
 
   return (
     <div
@@ -53,6 +54,7 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
               setOpened(false);
 
               setLanguage("ro");
+              router.refresh()
             }}
             className={`${
               language === "ro" && "font-bold"
@@ -69,6 +71,7 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
             onClick={() => {
             setOpened(false);
             setLanguage("it");
+              router.refresh()
           }} className={`${language === "it" && "font-bold"
               } flex items-center gap-4`} >
             <It className="h-5 w-5 " /> <span>Italiana</span>

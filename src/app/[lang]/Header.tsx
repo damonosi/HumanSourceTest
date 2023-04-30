@@ -45,6 +45,8 @@ function NavList({ params }: { params: { lang: string; country: string; }; }) {
         ripple={true}
         className="hidden hover:shadow-none  rounded-full bg-red-800 px-4 py-3 text-white md:inline-block"
       >
+        {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
+              // @ts-ignore */}
         {t('buton')}
       </Button>
     </ul>
