@@ -8,6 +8,7 @@ import It from "@/public/imagini/header/it.svg";
 import Ro from "@/public/imagini/header/ro.svg";
 
 import { useRouter } from "next/navigation";
+import Link from 'next/link';
 interface Iclass {
   className?: string;
   params: { lang: string; country: string; };
@@ -48,37 +49,33 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
       </div>
       {open && (
         <div className="absolute top-full mt-2 flex flex-col gap-4 rounded-b-2xl bg-alb-site py-5 px-5">
-          <button
+          <Link href='/ro' locale='ro'
             onClick={() => {
               setOpened(false);
               setLanguage("ro");
-              router.refresh()
               router.push('/ro');
+
 
             }}
             className={`${
               language === "ro" && "font-bold"
             } flex items-center gap-4`}
           >
-            {" "}
             <Ro
-              className="h-5 w-5  
-"
-            />{" "}
+              className="h-5 w-5 "
+            />
             <span>Romana</span>
-          </button>
-          <button
-            onClick={() => {
+          </Link>
+          <Link href='/it' locale='it' onClick={() => {
             setOpened(false);
-              setLanguage("it");
-              router.refresh()
+            setLanguage("it");
               router.push('/it');
 
             }}
             className={`${language === "it" && "font-bold"
               } flex items-center gap-4`} >
             <It className="h-5 w-5 " /> <span>Italiana</span>
-          </button>
+          </Link>
         </div>
       )}
     </div>

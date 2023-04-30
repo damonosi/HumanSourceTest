@@ -1,10 +1,6 @@
 "use client";
 import { ApolloProvider } from "@apollo/client/react";
 import { ThemeProvider } from "@material-tailwind/react";
-
-
-
-
 import { useApollo } from "@/app/apollo";
 import "../globals.css";
 interface IProviders {
@@ -13,6 +9,10 @@ interface IProviders {
 
 const Providers = ({ children }: IProviders) => {
   const client = useApollo();
-  return <ApolloProvider client={client}> <ThemeProvider>{children}</ThemeProvider></ApolloProvider>;
+  return (
+    <ApolloProvider client={client}>
+      <ThemeProvider>{children}</ThemeProvider>
+    </ApolloProvider>)
+    ;
 };
 export default Providers;

@@ -58,7 +58,7 @@ export function Header({ params }: { params: { lang: string; country: string; };
   const handleOpen = () => {
     setOpen(!open);
   };
-  const { t } = useTranslation(params.lang, 'header');
+
   const menuOpenIcon = <Hamburger className="h-8 w-8" />;
 
   const menuCloseIcon = (
@@ -108,9 +108,7 @@ export function Header({ params }: { params: { lang: string; country: string; };
       </div>
       <MobileNav className="md:hidden  bg-alb-site px-4 text-center py-4" open={open}>
         <NavList params={params} />
-        <button className=" h-8  w-20 rounded-2xl bg-red-600 text-white ">
-          {t('buton')}
-        </button>
+     
       </MobileNav>
     </Navbar>
   );
