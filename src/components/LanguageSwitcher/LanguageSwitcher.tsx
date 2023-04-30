@@ -47,7 +47,7 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
       </div>
       {open && (
         <div className="absolute top-full mt-2 flex flex-col gap-4 rounded-b-2xl bg-alb-site py-5 px-5">
-          <Link href='/ro' 
+          <Link href='/ro' locale='ro'
             onClick={() => {
 
               setOpened(false);
@@ -65,7 +65,7 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
             />{" "}
             <span>Romana</span>
           </Link>
-          <Link href='/it'
+          <Link href='/it' locale='it'
             onClick={() => {
             setOpened(false);
             setLanguage("it");
