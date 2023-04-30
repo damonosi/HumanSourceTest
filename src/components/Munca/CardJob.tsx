@@ -25,21 +25,22 @@ const CardJob = ({ data, titlu, descriere, id, src }: ICardJob) => {
     return (
         <div
             key={id}
-            className="relative   flex h-[350px]  w-full flex-col justify-end overflow-hidden  rounded-2xl border-none bg-transparent text-[#383A3C] shadow  transition   md:h-[500px]  "
+            className="relative   flex h-[350px]  w-full flex-col justify-end overflow-hidden  rounded-2xl border-none bg-transparent text-[#383A3C] hover:cursor-pointer shadow hover:shadow-xl    md:h-[500px]  "
         >
             <div
                         id="img-container"
-                        className=" relative z-40 flex items-center w-full justify-center  "
+                className=" relative z-40 h-2/5 flex  w-full "
                     >
                         <Image
                             alt="background"
-                            className="w-full  object-cover"
+                    className="object-fill w-full "
+                    placeholder="blur"
                             src={src}
                 />
                 </div>
                 <div
                     key="container-text"
-                    className="z-20 flex  flex-col justify-end gap-2 py-2 px-4 text-start md:justify-between "
+                className="z-20 flex  h-3/5 flex-col justify-center gap-5 py-2 px-4 text-start  "
                     id="container-text-bloguri"
                 >
                     <Typography

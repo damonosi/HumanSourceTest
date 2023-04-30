@@ -104,7 +104,7 @@ export function Header({ params }: { params: { lang: string; country: string; };
           </button>
         </div>
       </div>
-      <MobileNav className="  bg-alb-site px-4 text-center py-4" open={open}>
+      <MobileNav className="md:hidden  bg-alb-site px-4 text-center py-4" open={open}>
         <NavList params={params} />
         <button className=" h-8  w-20 rounded-2xl bg-red-600 text-white ">
           {t('buton')}
