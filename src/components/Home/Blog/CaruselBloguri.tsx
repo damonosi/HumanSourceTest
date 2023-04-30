@@ -43,20 +43,21 @@ const CustomButtonGroupAsArrows = ({ next, previous }: { next: () => void, previ
 const CaruselBloguri = () => {
 
   return (
-    <div className='flex relative w-full px-6'>
+    <div className='flex relative w-full md:px-6'>
       <Carousel
         responsive={responsive}
         additionalTransfrom={0}
         arrows={false}
         autoPlaySpeed={3000}
         centerMode={false}
-        className="py-6 gap-6"
+        className="py-6 "
         containerClass="container"
         dotListClass=""
         draggable
+        partialVisible={false}
         focusOnSelect={false}
         infinite
-        itemClass=""
+        itemClass="max-w-1/3 min-w-1/3 p-4"
         keyBoardControl
         minimumTouchDrag={80}
         pauseOnHover

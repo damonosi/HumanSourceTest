@@ -44,7 +44,7 @@ const CardBlog = ({ data, titlu, continut }: ICardBlog) => {
               },
             }}
             id="img-container"
-            className=" relative z-40 flex items-center justify-center  "
+            className=" relative z-40 flex items-center  justify-center  "
           >
             <Image
               alt="background"
@@ -92,19 +92,18 @@ const CardBlog = ({ data, titlu, continut }: ICardBlog) => {
 
         <motion.div
           key="container-text"
-
           layout
           transition={{
             layout: { type: "spring", stiffness: 40 },
           }}
-          className={`z-20 flex  flex-col justify-end gap-2 py-2 px-4 text-start md:justify-between ${
+          className={`z-20 flex h-5/6 flex-col justify-end gap-2 py-2 px-4 text-start md:justify-between ${
             hovered ? "text-alb-site " : "text-gri-brand"
           } `}
           id="container-text-bloguri"
         >
           <Typography
             variant="paragraph"
-            className="z-20 text-[18px] font-[350]  opacity-50 "
+            className="z-20 text-[18px] font-[350]   opacity-50 "
           >
             {data}
           </Typography>
