@@ -8,7 +8,7 @@ const ServiciiSection = () => {
     <section className="container flex w-full flex-col items-center  px-6 text-center md:gap-8 md:px-0 lg:mx-0  ">
       <Typography
         variant="h5"
-        className="pb-[60px] font-bold text-gri-brand md:text-3xl "
+        className="pb-[30px] md:pb-[60px] font-bold text-gri-brand md:text-3xl "
       >
         Serviciile Human Source
       </Typography>

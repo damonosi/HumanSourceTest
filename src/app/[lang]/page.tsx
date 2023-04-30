@@ -35,13 +35,13 @@ export default function Home({ params }: { params: { lang: string; country: stri
           <NevoiSection />
         </div>
         <div
-          className="mx-1 flex flex-col items-center  justify-center bg-alb-site  pb-36 pt-[100px] md:mx-2 md:px-16  "
+          className="mx-1 flex flex-col items-center  justify-center bg-alb-site pb-[80px] md:pb-36 pt-[50px] md:pt-[100px] md:mx-2 md:px-16  "
           id="background"
         >
           <ServiciiSection />
         </div>{" "}
         <div
-          className="mx-1 flex flex-col items-center justify-center  bg-gri-bg pb-[180px] md:mx-2 md:px-16  md:pb-[0px] "
+          className="mx-1 flex flex-col items-center justify-center  bg-gri-bg pb-10 md:mx-2 md:px-16  md:pb-[0px] "
           id="background"
         >
           {" "}
