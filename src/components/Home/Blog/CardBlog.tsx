@@ -28,9 +28,7 @@ const CardBlog = ({ data, titlu, continut }: ICardBlog) => {
     <div
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
-      onTouchEnd={() => {
-        setHovered(!hovered);
-      }}
+
       className="relative   flex h-[350px]  w-full flex-col justify-end overflow-hidden  rounded-2xl border-none bg-transparent text-[#383A3C] shadow  transition   md:h-[500px]  "
     >
       <AnimatePresence>
@@ -94,9 +92,7 @@ const CardBlog = ({ data, titlu, continut }: ICardBlog) => {
 
         <motion.div
           key="container-text"
-          style={{
-            height: hovered ? "40vh" : "100vh",
-          }}
+
           layout
           transition={{
             layout: { type: "spring", stiffness: 40 },

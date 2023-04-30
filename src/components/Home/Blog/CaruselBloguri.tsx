@@ -35,8 +35,8 @@ const CustomButtonGroupAsArrows = ({ next, previous }: { next: () => void, previ
   return (
     <>
 
-      <MdOutlineKeyboardArrowLeft className='hidden md:visible absolute left-0 top-1/2 w-8 h-8 cursor-pointer mr-4' onClick={previous} />
-      <MdOutlineKeyboardArrowRight className='hidden md:visible absolute right-0 top-1/2 w-8 h-8 cursor-pointer' onClick={next} />
+      <MdOutlineKeyboardArrowLeft className='hidden md:flex absolute left-0 top-1/2 w-8 h-8 cursor-pointer mr-4' onClick={previous} />
+      <MdOutlineKeyboardArrowRight className='hidden md:flex absolute right-0 top-1/2 w-8 h-8 cursor-pointer' onClick={next} />
     </>
   );
 };
@@ -72,6 +72,8 @@ const CaruselBloguri = () => {
         slidesToSlide={1}
         swipeable
         renderButtonGroupOutside={true}
+         // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
+          // @ts-ignore 
         customButtonGroup={<CustomButtonGroupAsArrows />}
       >
 
