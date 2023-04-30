@@ -106,7 +106,7 @@ export function Header({ params }: { params: { lang: string; country: string; };
           </button>
         </div>
       </div>
-      <MobileNav className="md:hidden  bg-alb-site px-4 text-center py-4" open={open}>
+      <MobileNav className="md:hidden  bg-alb-site px-4 text-center py-4" onClick={handleOpen} open={open}>
         <NavList params={params} />
      
       </MobileNav>
