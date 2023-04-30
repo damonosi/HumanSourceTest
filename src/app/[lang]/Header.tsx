@@ -79,9 +79,9 @@ export function Header({ params }: { params: { lang: string; country: string; };
   return (
     <Navbar
       fullWidth
-      className="fixed z-50 h-[60px] w-full  items-center  justify-center border-b border-alb-site bg-alb-site  py-0   md:px-[70px] "
+      className="fixed z-50 h-[60px] w-full  items-center  justify-center border-b border-alb-site bg-alb-site  py-0 px-0  md:px-[70px] "
     >
-      <div className="container mx-auto flex h-[60px]  w-full items-center justify-between   text-gri-brand md:px-0">
+      <div className="container mx-auto flex h-[60px]  w-full items-center justify-between  px-4 text-gri-brand md:px-0">
         <div className="flex w-1/3 ">
           <Typography
             as="a"
@@ -104,7 +104,7 @@ export function Header({ params }: { params: { lang: string; country: string; };
           </button>
         </div>
       </div>
-      <MobileNav className="  bg-alb-site " open={open}>
+      <MobileNav className="  bg-alb-site px-4 text-center py-4" open={open}>
         <NavList params={params} />
         <button className=" h-8  w-20 rounded-2xl bg-red-600 text-white ">
           {t('buton')}

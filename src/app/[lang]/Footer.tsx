@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="mx-auto  flex w-full flex-col items-center justify-center  pb-0   md:px-[70px]">
         <nav className="container z-30 flex w-full flex-col  items-center justify-between  md:items-start  ">
           <div className=" flex w-full  flex-col items-center justify-center md:items-start md:justify-between gap-8 gap-y-6  p-4 lg:flex-row ">
-            <div className="flex flex-col items-center justify-center md:items-start w-full gap-6 md:w-1/4 ">
+            <div className="flex flex-col items-center text-center md:text-start justify-center md:items-start w-full gap-6 md:w-1/4 ">
               <h6 className=" text-[16px]  font-bold leading-[20px]">HUMAN SOURCE</h6>
               <hr className="h-2 w-full" />
               <div className="flex flex-col gap-8 text-[16px]  font-[350] leading-[24px]">
@@ -30,7 +30,7 @@ const Footer = () => {
                 <Link href="/cerere-oferta">Payroll si administrare</Link>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center md:items-start w-full gap-6 md:w-1/4">
+            <div className="flex flex-col items-center text-center md:text-start justify-center md:items-start w-full gap-6 md:w-1/4">
               <h6 className="font-bold">CONTACT</h6>
               <hr className="h-2 w-full" />
              
@@ -42,7 +42,7 @@ const Footer = () => {
                 <p>Email : office@humansource.ro</p>
              
             </div>
-            <div className="flex flex-col items-center justify-center md:items-start w-full gap-6 md:w-1/4">
+            <div className="flex flex-col items-center justify-center md:text-start text-center md:items-start w-full gap-6 md:w-1/4">
               <h6 className="font-[500]">INFORMATII</h6>
               <hr className="h-2 w-full" />
               <div className="flex flex-col gap-8">
