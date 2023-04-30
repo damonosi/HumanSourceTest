@@ -96,7 +96,7 @@ const CardBlog = ({ data, titlu, continut }: ICardBlog) => {
           transition={{
             layout: { type: "spring", stiffness: 40 },
           }}
-          className={`z-20 flex h-5/6 flex-col justify-end gap-2 py-2 px-4 text-start md:justify-between ${
+          className={`z-20 flex  flex-col justify-end gap-2 py-2 px-4 text-start md:justify-between ${
             hovered ? "text-alb-site " : "text-gri-brand"
           } `}
           id="container-text-bloguri"

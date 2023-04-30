@@ -23,7 +23,7 @@ export default function Home({ params }: { params: { lang: string; country: stri
 
       <div className=" h-full  translate-y-[-10rem]  ">
         <div
-          className="mx-1 flex  flex-col items-center justify-center rounded-t-[10px] bg-alb-site px-4   md:mx-2    md:py-[100px] "
+          className="mx-1 flex  flex-col items-center justify-center rounded-t-[10px] bg-alb-site px-4   md:mx-2   py-[50px] md:py-[100px] "
           id="background"
         >
           <AvantajeSection />

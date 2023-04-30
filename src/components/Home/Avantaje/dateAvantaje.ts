@@ -20,7 +20,7 @@ const dateAvantaje = [
   {
     id: 4,
     icon: "suport",
-    titlu: "Suport si expertiza pe legislatia muncii",
+    titlu: " Suport si expertiza ",
     descriere: "Prin avocati si porsonalul nostru specializat",
   },
 ];
