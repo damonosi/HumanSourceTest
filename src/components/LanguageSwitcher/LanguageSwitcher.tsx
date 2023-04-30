@@ -6,7 +6,7 @@ import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 
 import It from "@/public/imagini/header/it.svg";
 import Ro from "@/public/imagini/header/ro.svg";
-import Link from 'next/link';
+
 import { useRouter } from "next/navigation";
 interface Iclass {
   className?: string;
