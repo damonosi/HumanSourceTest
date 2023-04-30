@@ -39,14 +39,12 @@ const CasetaServicii = ({
           },
         }}
         className={`container  ${
-          hovered && "shadow-xl"
+          hovered && "drop-shadow-xl"
         } my-5 flex  h-fit min-h-[335px] w-full max-w-[500px] flex-col items-center justify-between gap-4  rounded-[10px] bg-alb-site px-4 py-8 text-center  `}
         id="caseta-servicii"
         onMouseLeave={handleMouseLeave}
         onMouseEnter={handleMouseEnter}
-        onTouchEnd={() => {
-          setHovered(!hovered);
-        }}
+
       >
         <div className="flex w-full items-center justify-center text-rosu-brand">
           {icon === "leasing" && <HiOutlineUserGroup className="h-8 w-8" />}
