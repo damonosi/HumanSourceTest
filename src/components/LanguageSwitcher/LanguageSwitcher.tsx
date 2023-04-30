@@ -6,6 +6,7 @@ import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 
 import It from "@/public/imagini/header/it.svg";
 import Ro from "@/public/imagini/header/ro.svg";
+import Link from 'next/link';
 interface Iclass {
   className?: string;
   params: { lang: string; country: string; };
@@ -27,7 +28,7 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
   return (
     <div
       ref={ref}
-      className={`${className}  relative flex  w-72 flex-col items-start justify-center`}
+      className={`${className}  relative flex z-50  w-72 flex-col items-start justify-center`}
     >
       <div
         className="flex cursor-pointer items-center gap-2"
@@ -46,9 +47,9 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
       </div>
       {open && (
         <div className="absolute top-full mt-2 flex flex-col gap-4 rounded-b-2xl bg-alb-site py-5 px-5">
-          <button 
+          <Link href='/ro' 
             onClick={() => {
-              router.push('/ro')
+
               setOpened(false);
 
               setLanguage("ro");
@@ -63,15 +64,15 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
 "
             />{" "}
             <span>Romana</span>
-          </button>
-          <button onClick={() => {
-            router.push('/it')
+          </Link>
+          <Link href='/it' onClick={() => {
+
             setOpened(false);
             setLanguage("it");
           }} className={`${language === "it" && "font-bold"
               } flex items-center gap-4`} >
             <It className="h-5 w-5 " /> <span>Italiana</span>
-          </button>
+          </Link>
         </div>
       )}
     </div>

@@ -1,8 +1,6 @@
 "use client";
-import { useState } from "react";
 
 import { Button, Typography } from "@material-tailwind/react";
-import { AnimatePresence, motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -22,36 +20,14 @@ interface ICardJob {
 
 const CardJob = ({ data, titlu, descriere, id, src }: ICardJob) => {
 
-    const [hovered, setHovered] = useState(false);
-    const handleMouseEnter = () => {
-        setHovered(true);
-    };
-    const handleMouseLeave = () => {
-        setHovered(false);
-    };
+
 
     return (
         <div
             key={id}
-            onMouseLeave={handleMouseLeave}
-            onMouseEnter={handleMouseEnter}
-            onTouchEnd={() => {
-                setHovered(!hovered);
-            }}
             className="relative   flex h-[350px]  w-full flex-col justify-end overflow-hidden  rounded-2xl border-none bg-transparent text-[#383A3C] shadow  transition   md:h-[500px]  "
         >
-            <AnimatePresence>
-                {!hovered ? (
-                    <motion.div
-                        key="imagine"
-                        layout
-                        transition={{
-                            layout: {
-                                type: "spring",
-                                stiffness: 30,
-                                duration: 1,
-                            },
-                        }}
+            <div
                         id="img-container"
                         className=" relative z-40 flex items-center w-full justify-center  "
                     >
@@ -59,57 +35,11 @@ const CardJob = ({ data, titlu, descriere, id, src }: ICardJob) => {
                             alt="background"
                             className="w-full  object-cover"
                             src={src}
-                        />
-                        <motion.div
-                            key="mask"
-                            transition={{
-                                type: "spring",
-                                stiffness: 40,
-                                duration: 1,
-                                delay: 500,
-                            }}
-                            className="hidden"
-                        />
-                    </motion.div>
-                ) : (
-                    <motion.div
-                        key="imagine"
-                        layout
-                        transition={{
-                            layout: { type: "spring", stiffness: 30, duration: 1 },
-                        }}
-                        id="img-container"
-                        className="absolute top-0 bottom-0 left-0 right-0 object-fill"
-                    >
-                        <Image
-                            alt="background"
-                            className="relative h-full w-full  transform object-fill"
-                            src={src}
-                        />{" "}
-                        <motion.div
-                            key="mask"
-                            transition={{
-                                type: "spring",
-                                stiffness: 40,
-                                duration: 1,
-                                delay: 500,
-                            }}
-                            className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden rounded-2xl bg-black bg-fixed opacity-20"
-                        />
-                    </motion.div>
-                )}
-
-                <motion.div
+                />
+                </div>
+                <div
                     key="container-text"
-                    style={{
-                        height: hovered ? "40vh" : "100vh",
-                    }}
-                    layout
-                    transition={{
-                        layout: { type: "spring", stiffness: 40 },
-                    }}
-                    className={`z-20 flex  flex-col justify-end gap-2 py-2 px-4 text-start md:justify-between ${hovered ? "text-alb-site " : "text-gri-brand"
-                        } `}
+                    className="z-20 flex  flex-col justify-end gap-2 py-2 px-4 text-start md:justify-between "
                     id="container-text-bloguri"
                 >
                     <Typography
@@ -129,15 +59,15 @@ const CardJob = ({ data, titlu, descriere, id, src }: ICardJob) => {
                     </Typography>
                     <Link href={`/locuri-de-munca/${id.toString()}`}>
                         <Button
-                            className={`mt-4 bg-transparent text-start text-gri-deschis-bg shadow-none hover:scale-105 hover:shadow-none ${hovered && "text-alb-site"
-                                }`}
+
 
                         >
                             <span>Afla mai multe</span>
-                            {hovered && <ArrowForwardIcon />}
+                            <ArrowForwardIcon className='hidden hover:flex' />
                         </Button></Link>
-                </motion.div>
-            </AnimatePresence>
+                </div>
+
+       
         </div>
     );
 };
