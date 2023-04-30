@@ -48,13 +48,12 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
       </div>
       {open && (
         <div className="absolute top-full mt-2 flex flex-col gap-4 rounded-b-2xl bg-alb-site py-5 px-5">
-          <Link href='/ro' locale='ro'
+          <button
             onClick={() => {
-
               setOpened(false);
-
               setLanguage("ro");
-              router.refresh()
+              router.push('/ro');
+              router.refresh();
             }}
             className={`${
               language === "ro" && "font-bold"
@@ -66,16 +65,19 @@ const LanguageSwitcher = ({ className, params }: Iclass) => {
 "
             />{" "}
             <span>Romana</span>
-          </Link>
-          <Link href='/it' locale='it'
+          </button>
+          <button
             onClick={() => {
             setOpened(false);
-            setLanguage("it");
+              setLanguage("it");
               router.refresh()
-          }} className={`${language === "it" && "font-bold"
+              router.push('/it');
+
+            }}
+            className={`${language === "it" && "font-bold"
               } flex items-center gap-4`} >
             <It className="h-5 w-5 " /> <span>Italiana</span>
-          </Link>
+          </button>
         </div>
       )}
     </div>
