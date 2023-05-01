@@ -3,7 +3,7 @@
 import { Button, Typography } from "@material-tailwind/react";
 import Image, { StaticImageData } from "next/image";
 import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
 import Link from "next/link";
 
 interface ICardJob {

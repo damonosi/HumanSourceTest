@@ -1,7 +1,7 @@
 "use client";
 import muncaFiller from "@/components/Munca/muncaFiller";
 import { Breadcrumbs, Typography } from "@material-tailwind/react";
-import Image from "next/image";
+
 import Link from "next/link";
 import { FC } from "react";
 
@@ -18,7 +18,23 @@ const JobCategory: FC<IpageProps> = ({ params }) => {
           .filter((job) => job.id == params.id)
           .map(({ salariu, titlu, id }) =>
 
-            (<div key={id}> {salariu}</div>)
+          (<div key={id}>
+            <Breadcrumbs>
+              <Link className="text-gri-brand" href={`/${params.lang}`}>
+                Home
+              </Link>
+              <Link className="text-gri-brand" href={`/${params.lang}/locuri-de-munca`}>
+                Locuri de munca
+              </Link>
+              <Link className="text-red-600" href={`${params.lang}/locuri-de-munca/${params.id}`}>
+                {params.id}
+              </Link>
+            </Breadcrumbs>
+            <div>
+              <span>{titlu}</span>
+              <span>{salariu}</span>
+            </div>
+          </div>)
 
           )
         }

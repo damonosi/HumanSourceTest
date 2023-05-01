@@ -1,5 +1,5 @@
 import { Typography } from "@material-tailwind/react";
-import { getLocalePartsFrom, locales } from "i18n";
+
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 interface ICardBlogSecundar {
