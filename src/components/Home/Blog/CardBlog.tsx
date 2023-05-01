@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-import { Button, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
