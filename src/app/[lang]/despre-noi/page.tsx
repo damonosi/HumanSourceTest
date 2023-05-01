@@ -14,7 +14,6 @@ const DespreNoiPage = () => {
     <section className="bg-[#E5E5E5] px-5 pb-[100px] md:px-[70px] ">
       <div className="container mx-auto flex flex-col ">
         <Breadcrumbs
-
         >
           <Link className="text-gri-brand" href="/">
             Home
@@ -23,7 +22,7 @@ const DespreNoiPage = () => {
             Despre Noi
           </Link>
         </Breadcrumbs>
-        <div className="container mt-14 flex w-full flex-col-reverse gap-6 pb-[100px]  lg:flex-row ">
+        <div className="container mt-[30px] md:mt-14 flex w-full flex-col-reverse gap-6 pb-[100px]  lg:flex-row ">
           <PageTransitionWrapper
             className="grid w-full  items-start gap-6 text-left lg:w-1/2"
             id="text-about"
