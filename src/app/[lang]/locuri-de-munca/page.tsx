@@ -27,7 +27,7 @@ const CategorieJoburi = ({ params }: { params: { lang: string; country: string; 
         <Breadcrumbs
 
         >
-          <Link className="" href="/">
+          <Link className="" href={`/${params.lang}`}>
             Home
           </Link>
           <Link className="" href={`/${params.lang}/locuri-de-munca`}>
