@@ -1,6 +1,6 @@
 "use client";
 import muncaFiller from "@/components/Munca/muncaFiller";
-import { Breadcrumbs, Typography } from "@material-tailwind/react";
+import { Breadcrumbs } from "@material-tailwind/react";
 
 import Link from "next/link";
 import { FC } from "react";
