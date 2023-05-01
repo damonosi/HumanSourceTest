@@ -21,14 +21,13 @@ const ContactForm = () => {
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
   return (
 		<div className="flex justify-end rounded-2xl bg-alb-site p-5">
-			<form className="relative w-full bg-alb-site" onSubmit={handleSubmit(onSubmit)}>
+			<form className="relative w-full justify-between bg-alb-site" onSubmit={handleSubmit(onSubmit)}>
 				<div className="mb-4 grid grid-cols-1 gap-6 md:grid-cols-2">
 					<Input
 						variant="outlined"
 						type="text"
 						{...register("nume", { required: true })}
 						id="nume"
-						
 						label="Numele tau complet"
 						icon={<MdPersonOutline />}
 					/>
