@@ -18,7 +18,7 @@ const JobCategory: FC<IpageProps> = ({ params }) => {
           .filter((job) => job.id == params.id)
           .map(({ salariu, titlu, id }) =>
 
-          (<div key={id}>
+          (<div key={id} className="container mx-auto flex flex-col ">
             <Breadcrumbs>
               <Link className="text-gri-brand" href={`/${params.lang}`}>
                 Home

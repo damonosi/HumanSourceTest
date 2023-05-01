@@ -13,6 +13,9 @@ export async function generateStaticParams() {
   return locales.map((locale) => getLocalePartsFrom({ locale }));
 }
 
+
+
+
 const CategorieJoburi = ({ params }: { params: { lang: string; country: string; }; }) => {
   const [selectedCategory, setSelectedCategory] = useState('medical');
   const handleSetCategory = (category: string) => {
@@ -27,10 +30,10 @@ const CategorieJoburi = ({ params }: { params: { lang: string; country: string; 
           <Link className="" href="/">
             Home
           </Link>
-          <Link className="" href="/locuri-de-munca">
+          <Link className="" href={`/${params.lang}/locuri-de-munca`}>
             Locuri de munca
           </Link>
-          <Link className="text-red-600 capitalize" href="/locuri-de-munca">
+          <Link className="text-red-600 capitalize" href={`/${params.lang}/locuri-de-munca`}>
             {selectedCategory}
           </Link>
         </Breadcrumbs>
