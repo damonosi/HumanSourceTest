@@ -22,7 +22,7 @@ const DespreNoiPage = () => {
 					</Link>
 				</Breadcrumbs>
 				<div className="container mt-[30px] flex w-full flex-col-reverse gap-6 pb-[100px] md:mt-14  lg:flex-row ">
-					<PageTransitionWrapper className="grid w-full  items-start gap-6 text-left lg:w-1/2" id="text-about">
+					<div className="grid w-full  items-start gap-6 text-left lg:w-1/2" id="text-about">
 						<Typography variant="h3" className=" text-bold text-left text-gri-brand ">
 							Despre noi
 						</Typography>
@@ -37,7 +37,7 @@ const DespreNoiPage = () => {
 							enim id. Enim lacus enim donec eget elementum. Mi imperdiet viverra tellus adipiscing amet vel risus.
 							Nulla libero pulvinar nullam posuere blandit dignissim viverra eu magna. Blandit euismod risus vel leo.
 						</Typography>
-					</PageTransitionWrapper>{" "}
+					</div>{" "}
 					<div className="flex w-full items-center justify-center md:w-1/2" id="imagine-about">
 						{" "}
 						<Image alt="imagine-about" className="z-20 w-full" src={Hi5} />

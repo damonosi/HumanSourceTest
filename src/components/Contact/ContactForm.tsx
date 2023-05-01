@@ -13,11 +13,10 @@ type Inputs = {
 };
 const ContactForm = () => {
   const {
-    register,
-    handleSubmit,
-
-    formState: { errors },
-  } = useForm<Inputs>();
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
   return (
 		<div className="flex justify-end rounded-2xl bg-alb-site p-5">

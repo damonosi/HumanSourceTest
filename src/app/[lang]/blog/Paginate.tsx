@@ -55,7 +55,7 @@ const ContentPagination = ({
 };
 function PaginatedItems({ params }: { params: { lang: string; country: string; }; }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(0);
+  const [pageSize, setPageSize] = useState(1);
   const dataLength = dateBloguri.length;
   const numberOfPages = Math.round(dataLength / pageSize);
   const onNextPage = () => {
