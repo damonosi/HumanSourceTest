@@ -18,7 +18,7 @@ export type Idate = IdataJoburi[];
 const muncaFiller: Idate = [
   {
     id: 1,
-    data: "Luni, 24 Septembrie 2019",
+    data: "Prelata",
     src: ImgFillerMedical,
 
     descriere:
@@ -29,8 +29,7 @@ const muncaFiller: Idate = [
   },
   {
     id: 2,
-    data: "Luni, 24 Septembrie 2020",
-
+    data: "Prelata",
     src: ImgFillerMedical,
     titlu: "medic de tir Italia-Romania",
     descriere:
@@ -40,7 +39,7 @@ const muncaFiller: Idate = [
   },
   {
     id: 3,
-    data: "Luni, 24 Septembrie 2030",
+    data: "Prelata",
     src: ImgFillerMedical,
     titlu: "medic Italia-Romania",
     descriere:
@@ -50,7 +49,7 @@ const muncaFiller: Idate = [
   },
   {
     id: 4,
-    data: "Luni, 24 Septembrie 2030",
+    data: "Prelata",
     src: ImgFillerMedical,
     titlu: "medic Italia-Romania",
     descriere:
@@ -86,7 +85,7 @@ const muncaFiller: Idate = [
     descriere:
       "Lorem ipsum dolor sit amet consectetur. Massa tortor aliquam venenatis mauris sodales enim vel. Dui nec sed nec augu",
     categorie: "medical",
-    salariu: 1000,
+    salariu: 2000,
   },
   {
     id: 8,

@@ -9,10 +9,12 @@ import dateBloguri from "@/components/Blog/dateBloguri";
 
 import { StaticImageData } from "next/image";
 
+
 interface IPaginationData {
   currentPage: number;
   bloguri: Array<IPaginatedData>;
   pageSize: number;
+  params: { lang: string; country: string; };
 }
 
 interface IPaginatedData {
@@ -30,10 +32,11 @@ const ContentPagination = ({
   currentPage,
   bloguri,
   pageSize,
+  params
 }: IPaginationData) => {
   const paginatedPosts = paginate(bloguri, currentPage, pageSize);
   return (
-    <div className="grid gap-5 md:grid-cols-3">
+    <div className="grid gap-4 md:grid-cols-3">
       {paginatedPosts &&
         paginatedPosts.map(({ id, src, data, descriere, categorie, slug }: IPaginatedData) => (
           <CardBlogSecundar
@@ -43,12 +46,14 @@ const ContentPagination = ({
             slug={slug}
             descriere={descriere}
             categorie={categorie}
+            params={params}
+
           />
         ))}
     </div>
   );
 };
-function PaginatedItems() {
+function PaginatedItems({ params }: { params: { lang: string; country: string; }; }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(0);
   const dataLength = dateBloguri.length;
@@ -81,6 +86,7 @@ function PaginatedItems() {
   return (
     <>
       <ContentPagination
+        params={params}
         pageSize={pageSize}
         currentPage={currentPage}
         bloguri={dateBloguri}

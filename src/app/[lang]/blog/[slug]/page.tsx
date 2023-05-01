@@ -7,7 +7,7 @@ import Link from "next/link";
 import { FC } from "react";
 
 interface IpageProps {
-  params: { slug: string };
+  params: {lang:string; slug: string };
 }
 
 const Blog: FC<IpageProps> = ({ params }) => {
@@ -17,13 +17,13 @@ const Blog: FC<IpageProps> = ({ params }) => {
         <Breadcrumbs
 
         >
-          <Link className="text-gri-brand" href="/">
+          <Link className="text-gri-brand" href={`/${params.lang}`}>
             Home
           </Link>
-          <Link className="text-gri-brand" href="/bloguri">
+          <Link className="text-gri-brand" href={`/${params.lang}/blog`}>
             Bloguri
           </Link>
-          <Link className="text-red-600" href={`/bloguri/${params.slug}`}>
+          <Link className="text-red-600" href={`${params.lang}/blog/${params.slug}`}>
             {params.slug}
           </Link>
         </Breadcrumbs>

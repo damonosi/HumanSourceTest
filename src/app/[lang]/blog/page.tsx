@@ -2,23 +2,27 @@
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import BlogCover from "@/public/imagini/blog/heroBlogImg.png";
 import { Typography } from "@material-tailwind/react";
+import { getLocalePartsFrom, locales } from "i18n";
 import Image from "next/image";
 import Link from "next/link";
 import PaginatedItems from "./Paginate";
 
 
-const BloguriPage = () => {
-  return (
-    <section className="bg-gri-deschis    px-4 pb-[100px] md:px-[70px]">
-      <div className="container mx-auto flex flex-col  gap-16 ">
-        <Breadcrumbs
 
-        >
-          <Link className="text-gri-brand" href="/">
+export async function generateStaticParams() {
+  return locales.map((locale) => getLocalePartsFrom({ locale }));
+}
+
+const BloguriPage = ({ params }: { params: { lang: string; country: string; }; }) => {
+  return (
+    <section className="bg-[#E5E5E5]    px-4 pb-[100px] md:px-[70px]">
+      <div className="container mx-auto flex flex-col  gap-16 ">
+        <Breadcrumbs>
+          <Link className="text-gri-brand" href={`/${params.lang}`}>
             Home
           </Link>
-          <Link className="text-red-600" href="/bloguri">
-            Bloguri
+          <Link className="text-red-600" href={`/${params.lang}/blog`}>
+            Blog
           </Link>
         </Breadcrumbs>
         <section
@@ -48,7 +52,7 @@ const BloguriPage = () => {
           </div>
         </section>
         <div id="container-bloguri">
-          <PaginatedItems />
+          <PaginatedItems params={params} />
         </div>
       </div>
     </section>

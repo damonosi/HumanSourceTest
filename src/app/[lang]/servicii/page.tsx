@@ -15,17 +15,17 @@ type Props = { children: JSX.Element | JSX.Element[]; text: string; };
 
 const CardHeroServicii = ({ children, text }: Props) => {
   return (
-    <div className="flex items-center gap-4 rounded-full border text-gri-brand py-2 px-3 ">
+    <div className="flex items-center justify-center gap-4  rounded-full border bg-alb-site py-2  px-3 text-center text-gri-brand ">
       {children}
-      <span className='text-sm'>{text}</span>
+      <span className="text-sm">{text}</span>
     </div>
   );
 };
-const ButonHeroServicii = ({ children, text }: Props) => {
+const ButonSolicitaOferta = ({ children, text }: Props) => {
   return (
-    <button className="rounded-full items-center flex gap-4 border border-rosu-brand  py-2 px-3 font-bold text-rosu-brand ">
+    <button className="flex items-center gap-4 rounded-full border border-rosu-brand  py-2 px-3 font-bold text-rosu-brand ">
       {children}
-      <span className='text-sm'>{text}</span>
+      <span className="text-sm">{text}</span>
     </button>
   );
 };
@@ -34,10 +34,7 @@ const ServiciiPage = () => {
   return (
     <section className=" bg-[#E5E5E5] px-4 pb-28  md:px-[70px] ">
       <div className="container mx-auto flex flex-col ">
-        <Breadcrumbs
-
-
-        >
+        <Breadcrumbs>
           <Link className="text-gri-brand" href="/">
             Home
           </Link>
@@ -67,28 +64,22 @@ const ServiciiPage = () => {
                 partea de leasign de personal, recrutare, selecție cât și pe
                 partea de payroll si administrare de personal.
               </Typography>
-              <div className="flex text-sm w-full flex-col justify-between gap-5 md:flex-row md:gap-0">
-                <CardHeroServicii text=' Leasing de personal'>
+              <div className="flex w-full flex-col  gap-y-5 text-sm lg:flex-row justify-between">
+                <CardHeroServicii text=" Leasing de personal">
                   <Groups2OutlinedIcon className="text-[15px]" />
-
                 </CardHeroServicii>
-                <CardHeroServicii text='Payroll si administrare'>
+                <CardHeroServicii text="Payroll si administrare">
                   <AttachEmailOutlinedIcon className="text-[15px]" />
-
                 </CardHeroServicii>
-                <CardHeroServicii text='Recrutare si selectie'>
+                <CardHeroServicii text="Recrutare si selectie">
                   <GroupAddOutlinedIcon className="text-[15px]" />
-
                 </CardHeroServicii>
-
-
               </div>
             </div>
             <div
               className="flex w-full items-center justify-center md:w-1/2"
               id="container-imagine"
             >
-
               <Image alt="cover-servicii" src={ServiciiCover} />{" "}
             </div>
           </section>
@@ -114,10 +105,9 @@ const ServiciiPage = () => {
                 nunc ipsum urna. Nisi eget elementum elementum et dui ut id
                 turpis. Dui
               </Typography>
-              <ButonHeroServicii text='Solicita oferta' >
+              <ButonSolicitaOferta text="Solicita oferta">
                 <Groups2OutlinedIcon className="text-xl" />
-
-              </ButonHeroServicii>
+              </ButonSolicitaOferta>
             </div>
           </section>
           <section
@@ -135,9 +125,9 @@ const ServiciiPage = () => {
                 nunc ipsum urna. Nisi eget elementum elementum et dui ut id
                 turpis. Dui
               </Typography>
-              <ButonHeroServicii text='Solicita oferta'>
+              <ButonSolicitaOferta text="Solicita oferta">
                 <AttachEmailOutlinedIcon className="text-xl" />
-              </ButonHeroServicii>
+              </ButonSolicitaOferta>
             </div>
             <div
               className="flex items-center justify-center md:w-1/2"
@@ -169,9 +159,9 @@ const ServiciiPage = () => {
                 nunc ipsum urna. Nisi eget elementum elementum et dui ut id
                 turpis. Dui
               </Typography>
-              <ButonHeroServicii text='Solicita oferta'>
+              <ButonSolicitaOferta text="Solicita oferta">
                 <GroupAddOutlinedIcon className="text-xl" />
-              </ButonHeroServicii>
+              </ButonSolicitaOferta>
             </div>
           </section>
         </div>

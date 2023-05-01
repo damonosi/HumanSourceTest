@@ -4,18 +4,20 @@ import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import CardJob from '@/components/Munca/CardJob';
 import muncaFiller from "@/components/Munca/muncaFiller";
 import { Typography } from "@material-tailwind/react";
+import { getLocalePartsFrom, locales } from "i18n";
 import Link from "next/link";
 import { useState } from "react";
 import { GiHospital } from 'react-icons/gi';
 
-const CategorieJoburi = () => {
+export async function generateStaticParams() {
+  return locales.map((locale) => getLocalePartsFrom({ locale }));
+}
+
+const CategorieJoburi = ({ params }: { params: { lang: string; country: string; }; }) => {
   const [selectedCategory, setSelectedCategory] = useState('medical');
   const handleSetCategory = (category: string) => {
     setSelectedCategory(category);
   };
-
-
-
   return (
     <section className=" bg-[#E5E5E5] pb-16 md:px-[70px] ">
       <div className="container mx-auto grid grid-cols-1 gap-9">
@@ -60,7 +62,7 @@ const CategorieJoburi = () => {
               .filter((job) => job.categorie === selectedCategory)
               .map(({ src, titlu, id, data, descriere, salariu }) => {
                 return (
-                  <CardJob key={id} id={id} src={src} titlu={titlu} data={data} descriere={descriere} salariu={salariu} />
+                  <CardJob params={params} key={id} id={id} src={src} titlu={titlu} data={data} descriere={descriere} salariu={salariu} />
                 );
               })}</div>
         </section>

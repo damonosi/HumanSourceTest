@@ -1,4 +1,5 @@
 import { Typography } from "@material-tailwind/react";
+import { getLocalePartsFrom, locales } from "i18n";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 interface ICardBlogSecundar {
@@ -7,16 +8,19 @@ interface ICardBlogSecundar {
   descriere: string;
   categorie: string;
   slug: string;
+  params: { lang: string; country: string; };
 }
+
 const CardBlogSecundar = ({
   src,
   data,
   descriere,
   categorie,
   slug,
+  params
 }: ICardBlogSecundar) => {
   return (
-    <Link className="cursor-pointer hover:bg-gray-300" href={`/blog/${slug}`}>
+    <Link className="cursor-pointer hover:shadow-xl py-2 px-4" href={`${params.lang}/blog/${slug}`}>
       <div className="flex flex-col gap-5" id="container-card-blog-secundar">
         <div className="flex flex-col">
           <Image alt="imagine-blog" src={src} />
