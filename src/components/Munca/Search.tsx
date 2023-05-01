@@ -1,3 +1,4 @@
+"use client";
 import { Input, Select, Option } from "@material-tailwind/react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -20,14 +21,23 @@ const Search = () => {
 	const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 	const selectDomeniu = watch("domeniu");
 	const selectLocatie = watch("locatie");
+	/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
+       // @ts-ignore */
 	const handleChangeDomeniu = (e) => setValue("domeniu", e);
+	
+	/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
+      // @ts-ignore */
+	
 	const handleChangeLocatie = (e) => setValue("locatie", e);
 	useEffect(() => {
 		register("domeniu");
 		register("locatie");
 	}, [register]);
 	return (
-		<form onSubmit={handleSubmit(onSubmit)} className="flex w-3/5 items-center justify-between gap-4" action="">
+		<form
+			onSubmit={handleSubmit(onSubmit)}
+			className="flex flex-col items-center justify-between gap-4 md:w-3/5  md:flex-row"
+		>
 			<Input
 				size="lg"
 				variant="outlined"
@@ -37,6 +47,7 @@ const Search = () => {
 				label="cauta"
 				icon={<AiOutlineSearch />}
 			/>
+
 			<Select size="lg" onChange={handleChangeDomeniu} variant="outlined" value={selectDomeniu} label="Domeniu">
 				<Option value="medical">medical</Option>
 				<Option value="sofer">sofer</Option>
@@ -47,6 +58,7 @@ const Search = () => {
 				<Option value="italia">italia</Option>
 				<Option value="germania">germania</Option>
 			</Select>
+
 			<button type="submit" className="rounded-2xl bg-gri-deschis-bg py-4 px-12">
 				cauta
 			</button>

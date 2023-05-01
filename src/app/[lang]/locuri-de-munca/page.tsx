@@ -20,7 +20,7 @@ const CategorieJoburi = ({ params }: { params: { lang: string; country: string }
 		setSelectedCategory(category);
 	};
 	return (
-		<section className=" bg-[#E5E5E5] pb-16 md:px-[70px] ">
+		<section className=" bg-[#E5E5E5] px-5 pb-16 md:px-[70px] ">
 			<div className="container mx-auto grid grid-cols-1 gap-9">
 				<Breadcrumbs>
 					<Link className="" href={`/${params.lang}`}>
@@ -41,7 +41,7 @@ const CategorieJoburi = ({ params }: { params: { lang: string; country: string }
 						{" "}
 						Cele mai cautate locuri de munca
 					</Typography>
-					<div className="grid grid-cols-3 gap-5" id="container joburi">
+					<div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3" id="container joburi">
 						{muncaFiller
 							.filter((job) => job.categorie === selectedCategory)
 							.map(({ src, titlu, id, data, descriere, salariu }) => {
