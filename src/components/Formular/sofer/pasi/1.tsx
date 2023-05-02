@@ -4,9 +4,7 @@ import { useState } from "react";
 import CardRemorca from "../CardRemorca";
 import Cisterna2 from "../../../../public/imagini/formular/sofer/prelata.svg";
 
-const Pas1Trasport = (setValue: any) => {
-
-	
+const Pas1Trasport = ({ setValue }: any) => {
 	return (
 		<FormWrapper intrebare="Cu ce tip de remorca va doriti sa lucrati?">
 			<div className="grid grid-cols-3 place-items-center gap-8">
