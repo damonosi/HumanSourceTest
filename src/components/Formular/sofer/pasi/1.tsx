@@ -2,8 +2,7 @@
 import FormWrapper from "../../FormWrapper";
 import { useState } from "react";
 import CardRemorca from "../CardRemorca";
-
-import Cisterna2 from "../../../../public/imagini/formular/sofer/cisterna.svg";
+import Cisterna2 from "../../../../public/imagini/formular/sofer/prelata.svg";
 
 const Pas1Trasport = (setValue: any) => {
 	const [remorcaSelectata, setRemorcaSelectata] = useState("");
