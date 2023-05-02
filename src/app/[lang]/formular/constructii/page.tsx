@@ -4,7 +4,7 @@ import Pas1Constructii from "@/components/Formular/sofer/pasi/1";
 import Pas2Constructii from "@/components/Formular/sofer/pasi/2";
 import NavigatieFormular from "@/components/Formular/NavigatieFormular";
 import { useMultistepForm } from "@/components/Formular/useMultistepForm";
-import { useState } from "react";
+
 import Pas3Constructii from "@/components/Formular/constructii/pasi/3";
 import Pas4Constructii from "@/components/Formular/constructii/pasi/4";
 import Pas5Constructii from "@/components/Formular/constructii/pasi/5";
