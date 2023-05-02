@@ -23,7 +23,7 @@ const CardBlogSecundar = ({
 		<Link className="cursor-pointer rounded-2xl hover:shadow-xl " href={`${params.lang}/blog/${slug}`}>
 			<div className="flex flex-col gap-5" id="container-card-blog-secundar">
 				<div className="flex w-full flex-col overflow-hidden rounded-t-2xl">
-					<Image alt="imagine-blog" src={src} />
+					<Image alt="imagine-blog" placeholder="blur" src={src} />
 				</div>
 				<div className="flex flex-col gap-2 px-2 pb-4">
 					{" "}

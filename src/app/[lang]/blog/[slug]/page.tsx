@@ -31,24 +31,22 @@ const Blog: FC<IpageProps> = ({ params }) => {
           .filter((blog) => blog.slug === params.slug)
           .map(({ src, text, id }) => {
             return (
-              <div key={id} className="">
-                <div className="flex max-h-[405px] w-full justify-center py-6">
-                  <Image src={src} className="h-auto w-full" alt="cover-blog" />
-                </div>
-                <div className="flex flex-col gap-5 text-start">
-                  <Typography variant="small">By Author Name</Typography>{" "}
-                  <Typography variant="small">
-                    Luni, 24 Septembrie 2019
-                  </Typography>
-                  <Typography variant="h4" className="text-start font-bold">
-                    Lorem ipsum dolor sit amet consectetur. Magnis sem a.
-                  </Typography>
-                </div>
-                <div className="py-8">
-                  <Typography variant="paragraph">{text}</Typography>
-                </div>
-              </div>
-            );
+							<div key={id} className="">
+								<div className="flex max-h-[405px] w-full justify-center py-6">
+									<Image src={src} className="h-auto w-full" placeholder="blur" alt="cover-blog" />
+								</div>
+								<div className="flex flex-col gap-5 text-start">
+									<Typography variant="small">By Author Name</Typography>{" "}
+									<Typography variant="small">Luni, 24 Septembrie 2019</Typography>
+									<Typography variant="h4" className="text-start font-bold">
+										Lorem ipsum dolor sit amet consectetur. Magnis sem a.
+									</Typography>
+								</div>
+								<div className="py-8">
+									<Typography variant="paragraph">{text}</Typography>
+								</div>
+							</div>
+						);
           })}{" "}
       </div>
     </section>

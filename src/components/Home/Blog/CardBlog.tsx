@@ -45,7 +45,7 @@ const CardBlog = ({ data, titlu, continut }: ICardBlog) => {
 						id="img-container"
 						className=" relative z-40 flex items-center  justify-center  "
 					>
-						<Image alt="background" className="  object-cover" src={BackSmall} />
+						<Image alt="background" className="  object-cover" placeholder="blur" src={BackSmall} />
 						<motion.div
 							key="mask"
 							transition={{
@@ -67,7 +67,12 @@ const CardBlog = ({ data, titlu, continut }: ICardBlog) => {
 						id="img-container"
 						className="absolute top-0 bottom-0 left-0 right-0 object-fill"
 					>
-						<Image alt="background" className="relative h-full w-full  transform object-fill" src={BackSmall} />{" "}
+						<Image
+							alt="background"
+							placeholder="blur"
+							className="relative h-full w-full  transform object-fill"
+							src={BackSmall}
+						/>{" "}
 						<motion.div
 							key="mask"
 							transition={{

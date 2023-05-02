@@ -9,16 +9,20 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import ContactForm from "@/components/Contact/ContactForm";
 import imgContact from "@/public/imagini/contact/imgContact2.png";
+import { getLocalePartsFrom, locales } from "i18n";
+export async function generateStaticParams() {
+	return locales.map((locale) => getLocalePartsFrom({ locale }));
+}
 
-const Contact = () => {
-  return (
+const Contact = ({ params }: { params: { lang: string; country: string } }) => {
+	return (
 		<section className="  bg-[#E5E5E5] px-4 pb-[100px] md:px-[70px]">
 			<div className="container mx-auto flex flex-col ">
 				<Breadcrumbs>
-					<Link className="text-gri-brand" href="/">
+					<Link className="text-gri-brand" href={`${params.lang}/`}>
 						Home
 					</Link>
-					<Link className="text-red-600" href="/contact">
+					<Link className="text-red-600" href={`${params.lang}/contact`}>
 						Contact
 					</Link>
 				</Breadcrumbs>
@@ -44,7 +48,7 @@ const Contact = () => {
 						<ContactForm />
 					</div>
 					<div className="flex w-full md:w-1/2">
-						<Image alt="imagine contact" src={imgContact} />
+						<Image alt="imagine contact" placeholder="blur" src={imgContact} />
 					</div>
 				</div>
 			</div>

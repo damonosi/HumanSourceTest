@@ -12,49 +12,55 @@ import { useState } from "react";
 import Hamburger from "@/public/imagini/hamburger.svg";
 import Logo from "@/public/imagini/logo.svg";
 import { useTranslation } from "../i18n/client";
+import { useRouter } from "next/navigation";
 
 interface INavItem {
-  label: string;
-  href: string;
-  handleCloseMenu: () => void;
+	label: string;
+	href: string;
+	handleCloseMenu: () => void;
 }
 function NavItem({ label, href, handleCloseMenu }: INavItem) {
-  return (
-    <Link href={href}>
-      <Typography
-        variant="small"
-        className="flex  items-center gap-1.5 p-1 text-gri-brand"
-        onClick={handleCloseMenu}
-      >
-        {label}
-      </Typography>
-    </Link>
-  );
+	return (
+		<Link href={href}>
+			<Typography variant="small" className="flex  items-center gap-1.5 p-1 text-gri-brand" onClick={handleCloseMenu}>
+				{label}
+			</Typography>
+		</Link>
+	);
 }
 
-function NavList({ params, handleCloseMenu }: { params: { lang: string; country: string; }; handleCloseMenu: () => void; }) {
-  const { t } = useTranslation(params.lang, 'header');
-  return (
-    <ul className=" flex w-full flex-col justify-end  gap-3 md:flex-row md:items-center md:gap-8">
-      {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
+function NavList({
+	params,
+	handleCloseMenu,
+}: {
+	params: { lang: string; country: string };
+	handleCloseMenu: () => void;
+}) {
+	const router = useRouter();
+	const { t } = useTranslation(params.lang, "header");
+	return (
+		<ul className=" flex w-full flex-col justify-end  gap-3 md:flex-row md:items-center md:gap-8">
+			{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
               // @ts-ignore */}
-      <NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/despre-noi`} label={t('despre')} />
-      <NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/locuri-de-munca`} label={t('munca')} />
-      <NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/contact`} label={t('contact')} />
-      <NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/servicii`} label={t('servicii')} />
-      {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
+			<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/despre-noi`} label={t("despre")} />
+			<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/locuri-de-munca`} label={t("munca")} />
+			<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/contact`} label={t("contact")} />
+			<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/servicii`} label={t("servicii")} />
+			{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
               // @ts-ignore */}
-      <NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/blog`} label={t('blog')} />
-      <Button
-        ripple={true}
-        className="hidden hover:shadow-none  rounded-full bg-red-800 px-4 py-3 text-white md:inline-block"
-      >
-        {/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
+			<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/blog`} label={t("blog")} />
+
+			<Button
+				ripple={true}
+				className="hidden rounded-full  bg-red-800 px-4 py-3 text-white hover:shadow-none md:inline-block"
+				onClick={() => router.push(`${params.lang}/formular`)}
+			>
+				{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
               // @ts-ignore */}
-        {t('buton')}
-      </Button>
-    </ul>
-  );
+				{t("buton")}
+			</Button>
+		</ul>
+	);
 }
 
 export function Header({ params }: { params: { lang: string; country: string; }; }) {

@@ -38,40 +38,36 @@ const PinComponent = ({
   fill,
 }: IPinComponent) => {
   return (
-    <InViewWrapper
-      inView={{
-        translateY: translateY,
-        translateX: translateX,
-        opacity: 1,
-      }}
-      notInView={{
-        translateY: translateY - 10,
-        translateX: translateX - 10,
-        opacity: 0,
-      }}
-      transition={{
-        type: "spring",
-        ease: "linear",
-        damping: 10,
-        stiffness: 80,
-      }}
-      delay={delay}
-      className={`absolute  ${className} z-40 h-[${dimensions}px] w-[${dimensions}px] transform`}
-    >
-      <div className={`  relative h-[${dimensions}px] w-[${dimensions}px]`}>
-        <Pin1
-          width={dimensions}
-          height={dimensions}
-          fill={`${fill ? fill : "#fff"}`}
-        />
-        <Image
-          alt="img-ping-1"
-          className=" 	absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-2/3 transform "
-          src={src}
-        />
-      </div>
-    </InViewWrapper>
-  );
+		<InViewWrapper
+			inView={{
+				translateY: translateY,
+				translateX: translateX,
+				opacity: 1,
+			}}
+			notInView={{
+				translateY: translateY - 10,
+				translateX: translateX - 10,
+				opacity: 0,
+			}}
+			transition={{
+				type: "spring",
+				ease: "linear",
+				damping: 10,
+				stiffness: 80,
+			}}
+			delay={delay}
+			className={`absolute  ${className} z-40 h-[${dimensions}px] w-[${dimensions}px] transform`}
+		>
+			<div className={`  relative h-[${dimensions}px] w-[${dimensions}px]`}>
+				<Pin1 width={dimensions} height={dimensions} fill={`${fill ? fill : "#fff"}`} />
+				<Image
+					alt="img-ping-1"
+					className=" 	absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-2/3 transform "
+					src={src}
+				/>
+			</div>
+		</InViewWrapper>
+	);
 };
 export const HartaHeroDesktop = () => {
   return (

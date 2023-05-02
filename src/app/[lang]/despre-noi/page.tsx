@@ -8,16 +8,20 @@ import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import { CardEchipa, CardValori } from "./CarduriAbout";
 import { dateEchipa, dateValori } from "./dateCarduriAbout";
+import { getLocalePartsFrom, locales } from "i18n";
 
-const DespreNoiPage = () => {
-  return (
+export async function generateStaticParams() {
+	return locales.map((locale) => getLocalePartsFrom({ locale }));
+}
+const DespreNoiPage = ({ params }: { params: { lang: string; country: string } }) => {
+	return (
 		<section className="bg-[#E5E5E5] px-5 pb-[100px] md:px-[70px] ">
 			<div className="container mx-auto flex flex-col">
 				<Breadcrumbs>
-					<Link className="text-gri-brand" href="/">
+					<Link className="text-gri-brand" href={`${params.lang}/`}>
 						Home
 					</Link>
-					<Link className="text-red-600" href="/despre-noi">
+					<Link className="text-red-600" href={`${params.lang}/despre-noi`}>
 						Despre Noi
 					</Link>
 				</Breadcrumbs>
@@ -40,7 +44,7 @@ const DespreNoiPage = () => {
 					</div>{" "}
 					<div className="flex w-full items-center justify-center md:w-1/2" id="imagine-about">
 						{" "}
-						<Image alt="imagine-about" className="z-20 w-full" src={Hi5} />
+						<Image alt="imagine-about" placeholder="blur" className="z-20 w-full" src={Hi5} />
 					</div>
 				</div>
 				<section className="flex flex-col pb-[100px]  text-center md:px-0">

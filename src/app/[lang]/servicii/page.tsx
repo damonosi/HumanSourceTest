@@ -66,13 +66,13 @@ const ServiciiPage = () => {
 							</div>
 						</div>
 						<div className="flex w-full items-center justify-center md:w-1/2" id="container-imagine">
-							<Image alt="cover-servicii" src={ServiciiCover} />{" "}
+							<Image alt="cover-servicii" placeholder="blur" src={ServiciiCover} />{" "}
 						</div>
 					</section>
 					<section className="flex w-full flex-col items-center gap-8 md:flex-row" id="sectiune-servicii-1">
 						<div className="flex w-full items-center justify-center md:w-1/2" id="container-imagine">
 							{" "}
-							<Image alt="cover-servicii" src={ImgSec1} />{" "}
+							<Image alt="cover-servicii" placeholder="blur" src={ImgSec1} />{" "}
 						</div>
 						<div className="flex h-full flex-col items-start gap-12 md:w-1/2">
 							<Typography variant="h3">Asiguram nevoile de personal</Typography>
@@ -98,13 +98,13 @@ const ServiciiPage = () => {
 						</div>
 						<div className="flex items-center justify-center md:w-1/2" id="container-imagine">
 							{" "}
-							<Image alt="cover-servicii" src={ImgSec2} />{" "}
+							<Image alt="cover-servicii" placeholder="blur" src={ImgSec2} />{" "}
 						</div>
 					</section>
 					<section className="flex w-full flex-col items-center gap-8 md:flex-row" id="sectiune-servicii-3">
 						<div className="flex w-full items-center justify-center md:w-1/2" id="container-imagine">
 							{" "}
-							<Image alt="cover-servicii" src={ImgSec1} />{" "}
+							<Image alt="cover-servicii" placeholder="blur" src={ImgSec1} />{" "}
 						</div>
 						<div className="flex h-full flex-col items-start gap-12 md:w-1/2">
 							<Typography variant="h3">Iti construim echipa</Typography>
