@@ -1,7 +1,7 @@
 interface ICardProps {
 	text: string;
 	svg: JSX.Element;
-	onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+	onClick: () => void;
 }
 
 const CardRemorca = ({ svg, text, onClick }: ICardProps) => {
