@@ -1,7 +1,7 @@
 "use client";
 
-import Pas1Constructii from "@/components/Formular/sofer/pasi/1";
-import Pas2Constructii from "@/components/Formular/sofer/pasi/2";
+import Pas1Constructii from "@/components/Formular/constructii/pasi/1";
+import Pas2Constructii from "@/components/Formular/constructii/pasi/2";
 import NavigatieFormular from "@/components/Formular/NavigatieFormular";
 import { useMultistepForm } from "@/components/Formular/useMultistepForm";
 
