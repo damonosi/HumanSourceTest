@@ -7,7 +7,7 @@ import Cisterna2 from "../../../../public/imagini/formular/sofer/prelata.svg";
 const Pas1Trasport = (setValue: any) => {
 	const [remorcaSelectata, setRemorcaSelectata] = useState("");
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-		const remorcaAleasa = e.currentTarget.children[1].childNodes[0].textContent?.toLocaleLowerCase();
+		const remorcaAleasa = e.currentTarget.children[1].childNodes[0].textContent;
 		remorcaAleasa && setRemorcaSelectata(remorcaAleasa);
 		setValue("tipRemorca", remorcaAleasa);
 	};
