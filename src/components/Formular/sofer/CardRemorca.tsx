@@ -12,7 +12,7 @@ const CardRemorca = ({ svg, text, onClick, className }: ICardProps) => {
 		<button
 			onClick={onClick}
 			type="button"
-			className={`flex max-w-[272px] flex-col items-center justify-center rounded-2xl  bg-alb-site py-16 px-5 drop-shadow-xl active:bg-gri-brand ${className} `}
+			className={`flex max-w-[272px] flex-col items-center justify-center gap-9 rounded-2xl  bg-alb-site py-16 px-6 drop-shadow-xl active:bg-gri-brand ${className} `}
 		>
 			{svg}
 			<span>{text}</span>
