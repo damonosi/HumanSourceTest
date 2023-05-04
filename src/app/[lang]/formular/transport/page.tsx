@@ -2,7 +2,7 @@
 
 import NavigatieFormular from "@/components/Formular/NavigatieFormular";
 import { useMultistepForm } from "@/components/Formular/useMultistepForm";
-import { FormEvent } from "react";
+
 import Pas1Trasport from "@/components/Formular/sofer/pasi/1";
 import Pas2Trasport from "@/components/Formular/sofer/pasi/2";
 import Pas3Trasport from "@/components/Formular/sofer/pasi/3";
@@ -12,9 +12,7 @@ import Pas6Trasport from "@/components/Formular/sofer/pasi/6";
 import Pas7Trasport from "@/components/Formular/sofer/pasi/7";
 import Pas8Trasport from "@/components/Formular/sofer/pasi/8";
 import Pas9Trasport from "@/components/Formular/sofer/pasi/9";
-import Pas10Trasport from "@/components/Formular/sofer/pasi/10";
-import Pas11Trasport from "@/components/Formular/sofer/pasi/11";
-import Pas12Trasport from "@/components/Formular/sofer/pasi/12";
+
 import { useForm } from "react-hook-form";
 
 const FormularSofer = () => {
@@ -25,20 +23,28 @@ const FormularSofer = () => {
 		control,
 		setValue,
 		formState: { errors },
-	} = useForm({ defaultValues: { tipRemorca: "" } });
+	} = useForm({
+		defaultValues: {
+			tipRemorca: "",
+			vechime: "",
+			regim: "",
+			tahograf: "",
+			echipaj: "",
+			turaNoapte: "",
+			lbItaliana: "",
+			ultimulSalariu: "",
+		},
+	});
 	const { steps, currentStepIndex, isFirstStep, isLastStep, step, back, next } = useMultistepForm([
-		<Pas1Trasport setValue={setValue} control={control} register={register} />,
-		<Pas2Trasport />,
-		<Pas3Trasport />,
-		<Pas4Trasport />,
-		<Pas5Trasport />,
-		<Pas6Trasport />,
-		<Pas7Trasport />,
-		<Pas8Trasport />,
-		<Pas9Trasport />,
-		<Pas10Trasport />,
-		<Pas11Trasport />,
-		<Pas12Trasport />,
+		<Pas1Trasport setValue={setValue} />,
+		<Pas2Trasport register={register} />,
+		<Pas3Trasport setValue={setValue} />,
+		<Pas4Trasport setValue={setValue} />,
+		<Pas5Trasport setValue={setValue} />,
+		<Pas6Trasport setValue={setValue} />,
+		<Pas7Trasport setValue={setValue} />,
+		<Pas8Trasport register={register} />,
+		<Pas9Trasport register={register} />,
 	]);
 
 	const submitHandler = (data: object) => {

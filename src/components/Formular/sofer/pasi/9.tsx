@@ -1,7 +1,19 @@
+import { Input } from "@material-tailwind/react";
 import FormWrapper from "../../FormWrapper";
 
-const Pas9Trasport = () => {
-	return <FormWrapper intrebare="Unde doresti sa lucrezi in Italia?">9</FormWrapper>;
+const Pas9Trasport = ({ register }: any) => {
+	return (
+		<FormWrapper intrebare="Ne poti spune ce salariu iti doresti?">
+			{" "}
+			<Input
+				variant="outlined"
+				type="text"
+				{...register("salariuDorit", { required: true })}
+				id="salariuDorit"
+				label="Raspunsul Dumneavoastra"
+			/>
+		</FormWrapper>
+	);
 };
 
 export default Pas9Trasport;

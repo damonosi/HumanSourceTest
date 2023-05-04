@@ -9,10 +9,10 @@ interface IWrapperProps {
 const FormWrapper = ({ intrebare, children }: IWrapperProps) => {
 	return (
 		<div className=" flex flex-col ">
-			<Typography className="mb-16 ml-16 " variant="h3">
+			<Typography className=" " variant="h3">
 				{intrebare}
 			</Typography>
-			<div>{children}</div>
+			<div className="flex flex-col justify-center py-20">{children}</div>
 		</div>
 	);
 };

@@ -1,15 +1,28 @@
-import { Checkbox } from "@material-tailwind/react";
 import FormWrapper from "../../FormWrapper";
+import experienta from "./data";
 
-const Pas2Trasport = () => {
-	const var1 = undefined;
+const Checkbox = ({ varianta, value, register }: { varianta: string; value: string; register: any }) => (
+	<div className="mb-4 flex items-center">
+		<input
+			id="vechime"
+			type="radio"
+			value={value}
+			{...register("vechime", { required: true })}
+			name="vechime"
+			className="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800 dark:focus:ring-blue-600"
+		/>
+		<label htmlFor="vechime" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+			{varianta}
+		</label>
+	</div>
+);
+
+const Pas2Trasport = ({ register }: any) => {
 	return (
 		<FormWrapper intrebare="Ai mai lucrat ca sofer profesionist C+E?">
-			<Checkbox inputRef={var1} name="var1" label="Nu, sunt debutant /sub 1 ani  experiență" />
-			<Checkbox name="var2" label="Am 1-3 ani experineță" />
-			<Checkbox name="var3" label="Am 4-5 ani experiență" />
-			<Checkbox name="var4" label="Am 6-7 ani experiență" />
-			<Checkbox name="var5" label="Am 8+ ani experiență" />
+			{experienta.map((varianta) => (
+				<Checkbox register={register} value={varianta} varianta={varianta} />
+			))}
 		</FormWrapper>
 	);
 };
