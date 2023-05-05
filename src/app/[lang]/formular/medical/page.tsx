@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Pas1Medical from "@/components/Formular/medic/pasi/1";
 import Pas10Medical from "@/components/Formular/medic/pasi/10";
 import Pas11Medical from "@/components/Formular/medic/pasi/11";
@@ -15,6 +16,7 @@ import NavigatieFormular from "@/components/Formular/NavigatieFormular";
 import { useMultistepForm } from "@/components/Formular/useMultistepForm";
 
 const FormularMedic = () => {
+	const [disabled, setDisabled] = useState(true);
 	const { steps, currentStepIndex, isFirstStep, isLastStep, step, back, next } = useMultistepForm([
 		<Pas1Medical />,
 		<Pas2Medical />,
@@ -34,6 +36,7 @@ const FormularMedic = () => {
 			<form className="relative m-[70px] rounded-2xl bg-alb-site px-[60px] pt-8">
 				{step}
 				<NavigatieFormular
+					disabled={disabled}
 					back={back}
 					next={next}
 					isFirstStep={isFirstStep}
