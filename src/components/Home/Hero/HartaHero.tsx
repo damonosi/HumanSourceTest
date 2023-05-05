@@ -51,7 +51,7 @@ const PinComponent = ({ src, className, dimensions, translateX, translateY, dela
 			delay={delay}
 			className={`absolute  ${className} z-40 h-[${dimensions}px] w-[${dimensions}px] transform`}
 		>
-			<div className={`  relative h-[${dimensions}rem] w-[${dimensions}rem]`}>
+			<div className={`  relative h-[${dimensions}px ] w-[${dimensions}rem]`}>
 				<Pin1 width={dimensions} height={dimensions} fill={`${fill ? fill : "#fff"}`} />
 				<Image
 					alt="img-ping-1"
@@ -115,9 +115,9 @@ export const HartaHeroDesktop = () => {
 					key="pin6"
 					src={IPin6}
 					translateX={40}
-					translateY={-40}
+					translateY={-20}
 					className=" top-1/2 right-1/2 hidden 2xl:block"
-					dimensions={99}
+					dimensions={104}
 					delay={delayBase * 6}
 				/>
 				<PinComponent
