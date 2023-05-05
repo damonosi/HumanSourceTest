@@ -159,7 +159,7 @@ export const HartaHeroMobil = () => {
 				<AnimatePresence>
 					<Image src={HartaMobil} className="relative z-10 w-full " priority alt="imagine-harta" />
 					<PinuriMobil
-						className="absolute z-10 w-full -translate-y-5 overflow-visible"
+						className="absolute z-10 w-4/5  translate-x-2 translate-y-2 "
 						priority={true}
 						alt="imagine-harta"
 					/>
