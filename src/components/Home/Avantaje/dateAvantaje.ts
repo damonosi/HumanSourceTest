@@ -13,7 +13,7 @@ const dateAvantaje = [
     titlu: "Lucratori din toate tarile UE",
     descriere: "Portofoliu larg si constant updatat de lucratori",
   },
-  {
+  { 
     id: 3,
     icon: "manageri",
     titluMobil:"Manageri dedicati pe fiecare proiect",

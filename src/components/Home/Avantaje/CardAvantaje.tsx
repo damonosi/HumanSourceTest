@@ -4,9 +4,10 @@ import { GiEarthAmerica, GiPiggyBank } from "react-icons/gi";
 import { VscLaw } from "react-icons/vsc";
 
 interface ICardAvantaje {
-  titlu: string;
-  descriere: string;
-  icon: string;
+	titlu: string;
+	titluMobil: string;
+	descriere: string;
+	icon: string;
 }
 const CardAvantaje = ({ titlu,titluMobil, descriere, icon }: ICardAvantaje) => {
   return (
