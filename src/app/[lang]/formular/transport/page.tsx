@@ -52,7 +52,10 @@ const FormularSofer = () => {
 	};
 	return (
 		<div className="flex flex-col md:px-[70px] ">
-			<form className="relative m-[70px] rounded-2xl bg-alb-site px-[60px] pt-8" onSubmit={handleSubmit(submitHandler)}>
+			<form
+				className="relative mx-[10px] rounded-2xl bg-alb-site px-5 pt-8 md:mx-[70px]"
+				onSubmit={handleSubmit(submitHandler)}
+			>
 				{step}
 				<NavigatieFormular
 					back={back}

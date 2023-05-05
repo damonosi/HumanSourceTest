@@ -23,18 +23,18 @@ import AgabariticAlb from "../../../../public/imagini/formular/sofer/alb/agabari
 
 const Pas1Trasport = ({ setValue }: any) => {
 	const [selected, setSelected] = useState(0);
-	console.log(selected);
+	const clasaIconite = "w-full";
 	return (
 		<FormWrapper intrebare="Cu ce tip de remorca va doriti sa lucrati?">
-			<div className="mx-auto grid w-fit grid-cols-3 place-items-center gap-5  gap-x-5">
+			<div className=" grid w-fit grid-cols-3 place-items-center gap-[10px] md:gap-5 md:gap-x-5">
 				<CardRemorca
-					className={`${selected == 1 && "bg-gri-brand text-alb-site"}  px-6`}
+					className={`${selected == 1 && "bg-gri-brand text-alb-site"}  `}
 					onClick={() => {
 						setValue("tipRemorca", "cisterna");
 						setSelected(1);
 					}}
 					text="Cisterna"
-					svg={selected == 1 ? <CisternaAlb className="h-36 w-56 " /> : <Cisterna className="h-36 w-56 " />}
+					svg={selected == 1 ? <CisternaAlb className={clasaIconite} /> : <Cisterna className={clasaIconite} />}
 				/>
 				<CardRemorca
 					className={`${selected == 2 && "bg-gri-brand text-alb-site"}`}
@@ -43,7 +43,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 						setSelected(2);
 					}}
 					text="Frigorifica"
-					svg={selected == 2 ? <FrigorificaAlb className="h-36 w-56 " /> : <Frigorifica className="h-36 w-56 " />}
+					svg={selected == 2 ? <FrigorificaAlb className={clasaIconite} /> : <Frigorifica className={clasaIconite} />}
 				/>
 				<CardRemorca
 					className={`${selected == 3 && "bg-gri-brand text-alb-site"}`}
@@ -52,7 +52,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 						setSelected(3);
 					}}
 					text="Prelata"
-					svg={selected == 3 ? <PrelataAlb className="h-36 w-56 " /> : <Prelata className="h-36 w-56 " />}
+					svg={selected == 3 ? <PrelataAlb className={clasaIconite} /> : <Prelata className={clasaIconite} />}
 				/>
 				<CardRemorca
 					className={`${selected == 4 && "bg-gri-brand text-alb-site"}`}
@@ -61,7 +61,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 						setSelected(4);
 					}}
 					text="Basculanta"
-					svg={selected == 4 ? <BasculantaAlb className="h-36 w-56 " /> : <Basculanta className="h-36 w-56 " />}
+					svg={selected == 4 ? <BasculantaAlb className={clasaIconite} /> : <Basculanta className={clasaIconite} />}
 				/>
 				<CardRemorca
 					className={`${selected == 5 && "bg-gri-brand text-alb-site"}`}
@@ -70,7 +70,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 						setSelected(5);
 					}}
 					text="Box"
-					svg={selected == 5 ? <BoxAlb className="h-36 w-56 " /> : <Box className="h-36 w-56 " />}
+					svg={selected == 5 ? <BoxAlb className={clasaIconite} /> : <Box className={clasaIconite} />}
 				/>
 				<CardRemorca
 					className={`${selected == 6 && "bg-gri-brand text-alb-site"}`}
@@ -79,8 +79,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 						setSelected(6);
 					}}
 					text="Animale"
-					svg={selected == 6 ? <AnimaleAlb className="h-36 w-56 " /> : <Animale className="h-36 w-56 " />}
-
+					svg={selected == 6 ? <AnimaleAlb className={clasaIconite} /> : <Animale className={clasaIconite} />}
 				/>
 				<CardRemorca
 					className={`${selected == 7 && "bg-gri-brand text-alb-site"}`}
@@ -89,8 +88,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 						setSelected(7);
 					}}
 					text="Siloz"
-					svg={selected == 7 ? <SilozAlb className="h-36 w-56 " /> : <Siloz className="h-36 w-56 " />}
-				
+					svg={selected == 7 ? <SilozAlb className={clasaIconite} /> : <Siloz className={clasaIconite} />}
 				/>
 				<CardRemorca
 					className={`${selected == 8 && "bg-gri-brand text-alb-site"}`}
@@ -99,8 +97,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 						setSelected(8);
 					}}
 					text="Container"
-					svg={selected == 8 ? <ContainerAlb className="h-36 w-56 " /> : <Container className="h-36 w-56 " />}
-				
+					svg={selected == 8 ? <ContainerAlb className={clasaIconite} /> : <Container className={clasaIconite} />}
 				/>
 				<CardRemorca
 					className={`${selected == 9 && "bg-gri-brand text-alb-site"}`}
@@ -109,7 +106,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 						setSelected(9);
 					}}
 					text="Agabaritic"
-					svg={selected == 9 ? <AgabariticAlb className="h-36 w-56   " /> : <Agabaritic className="h-36 w-56  " />}
+					svg={selected == 9 ? <AgabariticAlb className={clasaIconite} /> : <Agabaritic className={clasaIconite} />}
 				/>
 			</div>
 		</FormWrapper>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+"use client";
 
 interface ICardProps {
 	text: string;
@@ -12,9 +12,9 @@ const CardRemorca = ({ svg, text, onClick, className }: ICardProps) => {
 		<button
 			onClick={onClick}
 			type="button"
-			className={`flex max-w-[272px] flex-col items-center justify-center gap-9 rounded-2xl  bg-alb-site py-16 px-6 drop-shadow-xl active:bg-gri-brand ${className} `}
+			className={`flex h-40 w-28 flex-col items-center  justify-center rounded-2xl bg-alb-site px-2 py-8 drop-shadow-xl active:bg-gri-brand  md:h-80 md:w-72 md:gap-9 md:py-16 md:px-6 ${className} `}
 		>
-			{svg}
+			<span>{svg}</span>
 			<span>{text}</span>
 		</button>
 	);
