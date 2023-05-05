@@ -12,49 +12,44 @@ import AvansatAlb from "../../../../public/imagini/formular/sofer/alb/avansat.sv
 const Pas7Trasport = ({ setValue }: any) => {
 	const [selected, setSelected] = useState(0);
 	const clasaCard =
-		"flex  w-1/3 flex-col items-center  max-h-[300px] justify-center rounded-2xl bg-alb-site px-5 py-8 drop-shadow-xl active:bg-gri-brand   lg:gap-9 lg:py-16 lg:px-6 max-w-[272px]";
+		"flex  w-1/3 flex-col items-center  max-h-[300px] justify-center rounded-2xl bg-alb-site px-3 py-8 drop-shadow-xl active:bg-gri-brand   lg:gap-9 lg:py-16 lg:px-6 max-w-[272px]";
+	const clasaIconita = "w-12 md:w-full";
 	return (
 		<FormWrapper intrebare="Vorbesti limba italiana?">
-			<div className="flex justify-center gap-5  ">
+			<div className="flex justify-center gap-3  ">
 				<button
 					onClick={() => {
 						setValue("lbItaliana", "deloc");
 						setSelected(1);
 					}}
 					type="button"
-					className={`${
-						selected == 1 && "bg-gri-brand text-alb-site"
-					} ${clasaCard}`}
+					className={`${selected == 1 && "bg-gri-brand text-alb-site"} ${clasaCard}`}
 				>
-					{selected == 1 ? <DelocAlb className="w-full" /> : <Deloc className="w-full" />}
+					{selected == 1 ? <DelocAlb className={clasaIconita} /> : <Deloc className={clasaIconita} />}
 
 					<span>Nu, deloc</span>
 				</button>
 				<button
-					className={`${
-						selected == 2 && "bg-gri-brand text-alb-site"
-					} ${clasaCard}`}
+					className={`${selected == 2 && "bg-gri-brand text-alb-site"} ${clasaCard}`}
 					onClick={() => {
 						setValue("lbItaliana", "mediu");
 						setSelected(2);
 					}}
 					type="button"
 				>
-					{selected == 2 ? <MediuAlb className="w-full" /> : <Mediu className="w-full" />}
+					{selected == 2 ? <MediuAlb className={clasaIconita} /> : <Mediu className={clasaIconita} />}
 
 					<span>Da, ma descurc</span>
 				</button>
 				<button
-					className={`${
-						selected == 3 && "bg-gri-brand text-alb-site"
-					} ${clasaCard}`}
+					className={`${selected == 3 && "bg-gri-brand text-alb-site"} ${clasaCard}`}
 					onClick={() => {
 						setValue("lbItaliana", "avansat");
 						setSelected(3);
 					}}
 					type="button"
 				>
-					{selected == 3 ? <AvansatAlb className="w-full" /> : <Avansat className="w-full" />}
+					{selected == 3 ? <AvansatAlb className={clasaIconita} /> : <Avansat className={clasaIconita} />}
 
 					<span>Vorbitor avansat</span>
 				</button>

@@ -53,7 +53,10 @@ function NavList({
 			<Button
 				ripple={true}
 				className=" rounded-full  bg-red-800 px-4 py-3 text-white hover:shadow-none md:inline-block"
-				onClick={() => router.push(`${params.lang}/formular`)}
+				onClick={() => {
+					router.push(`${params.lang}/formular`);
+					handleCloseMenu();
+				}}
 			>
 				{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
               // @ts-ignore */}

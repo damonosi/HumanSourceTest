@@ -31,7 +31,7 @@ const NavigatieFormular = ({
 					type="button"
 				>
 					<ArrowSmallLeftIcon strokeWidth={2} className="h-5 w-5" />
-					<span>Innapoi</span>
+					<span>Inapoi</span>
 				</button>
 			)}
 			<div className="mx-auto text-base md:text-xl">
@@ -47,7 +47,7 @@ const NavigatieFormular = ({
 					type="button"
 					disabled={disabled}
 				>
-					<span>CONTINUA</span> <ArrowSmallRightIcon strokeWidth={2} className="h-5 w-5" />
+					<span>Continua</span> <ArrowSmallRightIcon strokeWidth={2} className="h-5 w-5" />
 				</button>
 			) : (
 				<button

@@ -11,7 +11,8 @@ import InternationalAlb from "../../../../public/imagini/formular/sofer/alb/inte
 const Pas3Trasport = ({ setValue }: any) => {
 	const [selected, setSelected] = useState(0);
 	const clasaCard =
-		"flex w-1/3 flex-col max-h-[300px] items-center  justify-center rounded-2xl bg-alb-site px-5 py-8 drop-shadow-xl active:bg-gri-brand   lg:gap-9 lg:py-16 lg:px-6 max-w-[272px]";
+		"flex w-1/3 flex-col max-h-[300px] items-center  justify-center rounded-2xl bg-alb-site px-3 py-8 drop-shadow-xl active:bg-gri-brand   lg:gap-9 lg:py-16 lg:px-6 max-w-[272px]";
+	const clasaIconita = "w-12 md:w-full";
 	return (
 		<FormWrapper intrebare="In ce regim va doriti sa lucrati?">
 			<div className="flex justify-center gap-2  md:gap-5 ">
@@ -23,7 +24,7 @@ const Pas3Trasport = ({ setValue }: any) => {
 					type="button"
 					className={`${selected == 1 && "bg-gri-brand text-alb-site"} ${clasaCard}`}
 				>
-					{selected == 1 ? <RomaniaAlb className="w-full " /> : <Romania className="w-full" />}
+					{selected == 1 ? <RomaniaAlb className={clasaIconita} /> : <Romania className={clasaIconita} />}
 
 					<span className="font-[350]">Tur-retur</span>
 				</button>
@@ -35,7 +36,7 @@ const Pas3Trasport = ({ setValue }: any) => {
 					}}
 					type="button"
 				>
-					{selected == 2 ? <ItaliaAlb className="w-full " /> : <Italia className="w-full" />}
+					{selected == 2 ? <ItaliaAlb className={clasaIconita} /> : <Italia className={clasaIconita} />}
 
 					<span className="font-[350]">National Italia</span>
 				</button>
@@ -47,7 +48,7 @@ const Pas3Trasport = ({ setValue }: any) => {
 					}}
 					type="button"
 				>
-					{selected == 3 ? <InternationalAlb className="w-full" /> : <International className="w-full" />}
+					{selected == 3 ? <InternationalAlb className={clasaIconita} /> : <International className={clasaIconita} />}
 
 					<span className="mx-2 hidden break-words font-[350] md:flex">International</span>
 					<span className="mx-2 break-words font-[350] md:hidden">

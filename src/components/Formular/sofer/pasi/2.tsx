@@ -20,9 +20,11 @@ const Checkbox = ({ varianta, value, register }: { varianta: string; value: stri
 const Pas2Trasport = ({ register }: any) => {
 	return (
 		<FormWrapper intrebare="Ai mai lucrat ca sofer profesionist C+E?">
-			{experienta.map((varianta, index) => (
-				<Checkbox key={index} register={register} value={varianta} varianta={varianta} />
-			))}
+			<div className="flex w-full flex-col items-start gap-5">
+				{experienta.map((varianta, index) => (
+					<Checkbox key={index} register={register} value={varianta} varianta={varianta} />
+				))}
+			</div>
 		</FormWrapper>
 	);
 };
