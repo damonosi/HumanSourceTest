@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { getLocalePartsFrom, locales } from "../../../i18n";
 import Footer from "./Footer";
 import Header from "./Header";
+import Head from "next/head";
 export const metadata = {
   title: "Human Source",
 };
@@ -82,27 +83,26 @@ export default function RootLayout({
 
 }) {
   return (
-    <html id="root" lang={params.lang}>
-      <head />
-      <Providers>
-        <body
-          className={`${madera.variable} m-0 mx-auto flex  items-center justify-center  overflow-x-hidden bg-gri-deschis-bg font-sans text-gri-brand`}
-        >
-          <div
-            className="relative grid w-full grid-cols-1  overflow-hidden  "
-            id="site-container"
-          >
-            <Header params={params} />
-            <main className=" z-30 mt-14 flex w-full flex-col  ">
+		<html id="root" lang={params.lang}>
+			<Head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-              {children}
-              <Analytics />
-            </main>
+			</Head>
+			<Providers>
+				<body
+					className={`${madera.variable} m-0 mx-auto flex  items-center justify-center  overflow-x-hidden bg-gri-deschis-bg font-sans text-gri-brand`}
+				>
+					<div className="relative grid w-full grid-cols-1  overflow-hidden  " id="site-container">
+						<Header params={params} />
+						<main className=" z-30 mt-14 flex w-full flex-col  ">
+							{children}
+							<Analytics />
+						</main>
 
-            <Footer />
-          </div>
-        </body>
-      </Providers>
-    </html>
-  );
+						<Footer />
+					</div>
+				</body>
+			</Providers>
+		</html>
+	);
 }

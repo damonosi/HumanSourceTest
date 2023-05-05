@@ -4,7 +4,7 @@ import Pas1Constructii from "@/components/Formular/constructii/pasi/1";
 import Pas2Constructii from "@/components/Formular/constructii/pasi/2";
 import NavigatieFormular from "@/components/Formular/NavigatieFormular";
 import { useMultistepForm } from "@/components/Formular/useMultistepForm";
-
+import { useState } from "react";
 import Pas3Constructii from "@/components/Formular/constructii/pasi/3";
 import Pas4Constructii from "@/components/Formular/constructii/pasi/4";
 import Pas5Constructii from "@/components/Formular/constructii/pasi/5";
@@ -17,6 +17,7 @@ import Pas11Constructii from "@/components/Formular/constructii/pasi/11";
 import Pas12Constructii from "@/components/Formular/constructii/pasi/12";
 
 const FormularConstructii = () => {
+	const [disabled, setDisabled] = useState(true);
 	const { steps, currentStepIndex, isFirstStep, isLastStep, step, back, next } = useMultistepForm([
 		<Pas1Constructii />,
 		<Pas2Constructii />,
@@ -36,6 +37,7 @@ const FormularConstructii = () => {
 			<form action="">
 				{step}
 				<NavigatieFormular
+					disabled={disabled}
 					back={back}
 					next={next}
 					isFirstStep={isFirstStep}
