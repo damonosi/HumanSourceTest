@@ -1,6 +1,7 @@
 "use client";
 import Harta from "@/public/imagini/hero/Harta.svg";
 import HartaMobil from "@/public/imagini/hero/HartaMobil.png";
+import PinuriMobil from "@/public/imagini/hero/PinuriMobil.svg";
 import IPin1 from "@/public/imagini/hero/pinguri/iPing1.png";
 import IPin2 from "@/public/imagini/hero/pinguri/iPing2.png";
 import IPin3 from "@/public/imagini/hero/pinguri/iPing3.png";
@@ -54,7 +55,7 @@ const PinComponent = ({ src, className, dimensions, translateX, translateY, dela
 				<Pin1 width={dimensions} height={dimensions} fill={`${fill ? fill : "#fff"}`} />
 				<Image
 					alt="img-ping-1"
-					className=" 	absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-2/3 transform "
+					className="absolute top-1/2 left-1/2  -translate-x-1/2 -translate-y-2/3 transform "
 					src={src}
 				/>
 			</div>
@@ -156,7 +157,13 @@ export const HartaHeroMobil = () => {
 		<Fragment>
 			<div className="relative mb-9 flex w-full">
 				<AnimatePresence>
-					<Image src={HartaMobil} className="relative z-10 w-full " priority alt="imagine-harta" />;
+					<Image src={HartaMobil} className="relative z-10 w-full " priority alt="imagine-harta" />
+					<PinuriMobil
+						className="absolute z-10 w-full -translate-y-5 overflow-visible"
+						priority={true}
+						alt="imagine-harta"
+					/>
+					;
 				</AnimatePresence>
 			</div>
 		</Fragment>
