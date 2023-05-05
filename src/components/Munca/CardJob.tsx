@@ -29,14 +29,14 @@ const CardJob = ({
   return (
 		<div
 			key={id}
-			className="relative   flex h-[350px]  w-full flex-col justify-end overflow-hidden  rounded-2xl border-none bg-transparent text-[#383A3C]  shadow hover:shadow-xl    md:h-[500px]  "
+			className="relative   flex h-[350px]  w-full flex-col justify-end overflow-hidden  rounded-2xl border-none bg-transparent text-[#383A3C]  shadow hover:border  hover:shadow-xl  md:h-[420px]  "
 		>
 			<div id="img-container" className=" relative z-40 flex h-2/5  w-full ">
 				<Image alt="background" className="w-full object-fill " placeholder="blur" src={src} />
 			</div>
 			<div
 				key="container-text"
-				className="z-20 flex  h-3/5 flex-col justify-center gap-5 py-2 px-4 text-start  "
+				className="z-20 flex  h-3/5 flex-col justify-center gap-3 py-2 px-4 text-start  "
 				id="container-text-bloguri"
 			>
 				<Typography variant="paragraph" className="z-20 text-[18px] font-[350]  opacity-50 ">
@@ -48,7 +48,7 @@ const CardJob = ({
 				<Typography variant="paragraph" className=" text-[14px] font-[350] leading-[22px]">
 					{descriere}
 				</Typography>
-				<div className="flex justify-between py-5">
+				<div className="flex items-center justify-between ">
 					<Link href={`${params.lang}/locuri-de-munca/${id.toString()}`}>
 						<Button
 							variant="text"
@@ -56,7 +56,7 @@ const CardJob = ({
 							className={`flex w-full items-center gap-2  px-0 capitalize  text-[#B21E23] hover:bg-transparent active:bg-transparent md:text-left `}
 						>
 							Aplica acum
-							<ArrowSmallRightIcon strokeWidth={2} className="ml-2 h-5 w-5 hover:flex" />
+							<ArrowSmallRightIcon strokeWidth={1} className=" ml-1 h-5 w-5 " />
 						</Button>
 					</Link>
 					<Typography variant="paragraph" className="text-[18px] font-[700] leading-[22px] text-gri-bg">

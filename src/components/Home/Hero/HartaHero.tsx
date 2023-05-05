@@ -160,7 +160,7 @@ export const HartaHeroMobil = () => {
 					<Image src={HartaMobil} className="relative z-10 w-full " priority alt="imagine-harta" />
 					<PinuriMobil
 						className="absolute z-10 w-4/5  translate-x-2 translate-y-2 "
-						priority={true}
+						priority="true"
 						alt="imagine-harta"
 					/>
 					;
