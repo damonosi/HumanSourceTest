@@ -8,7 +8,7 @@ import EchipajAlb from "../../../../public/imagini/formular/sofer/alb/echipaj.sv
 const Pas5Trasport = ({ setValue }: any) => {
 	const [selected, setSelected] = useState(0);
 	const clasaCard =
-		"flex w-1/2 flex-col items-center  justify-center gap-9 rounded-2xl py-9 px-3 lg:py-16  shadow-lg  drop-shadow-xl max-w-[272px]";
+		"flex w-1/2 flex-col items-center max-h-[300px]  justify-center gap-9 rounded-2xl py-9 px-3 lg:py-16  shadow-lg  drop-shadow-xl max-w-[272px]";
 	return (
 		<FormWrapper intrebare="Lucrati singur sau in echipaj?">
 			<div className="flex justify-center gap-5  ">

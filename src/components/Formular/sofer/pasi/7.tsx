@@ -12,7 +12,7 @@ import AvansatAlb from "../../../../public/imagini/formular/sofer/alb/avansat.sv
 const Pas7Trasport = ({ setValue }: any) => {
 	const [selected, setSelected] = useState(0);
 	const clasaCard =
-		"flex  w-1/3 flex-col items-center  justify-center rounded-2xl bg-alb-site px-5 py-8 drop-shadow-xl active:bg-gri-brand   lg:gap-9 lg:py-16 lg:px-6 max-w-[272px]";
+		"flex  w-1/3 flex-col items-center  max-h-[300px] justify-center rounded-2xl bg-alb-site px-5 py-8 drop-shadow-xl active:bg-gri-brand   lg:gap-9 lg:py-16 lg:px-6 max-w-[272px]";
 	return (
 		<FormWrapper intrebare="Vorbesti limba italiana?">
 			<div className="flex justify-center gap-5  ">
