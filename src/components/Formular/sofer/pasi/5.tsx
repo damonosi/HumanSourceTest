@@ -7,6 +7,8 @@ import EchipajAlb from "../../../../public/imagini/formular/sofer/alb/echipaj.sv
 
 const Pas5Trasport = ({ setValue }: any) => {
 	const [selected, setSelected] = useState(0);
+	const clasaCard =
+		"flex w-1/2 flex-col items-center  justify-center gap-9 rounded-2xl py-9 px-3 lg:py-16  shadow-lg  drop-shadow-xl max-w-[272px]";
 	return (
 		<FormWrapper intrebare="Lucrati singur sau in echipaj?">
 			<div className="flex justify-center gap-5  ">
@@ -16,25 +18,21 @@ const Pas5Trasport = ({ setValue }: any) => {
 						setSelected(1);
 					}}
 					type="button"
-					className={`${
-						selected == 1 && "bg-gri-brand text-alb-site"
-					} flex w-1/3 flex-col items-center  justify-center gap-9 rounded-2xl py-16 px-[70px] shadow-lg  drop-shadow-xl`}
+					className={`${selected == 1 && "bg-gri-brand text-alb-site"} ${clasaCard}`}
 				>
-					{selected == 1 ? <SingurAlb className="h-36 w-56 " /> : <Singur className="h-36 w-36" />}
+					{selected == 1 ? <SingurAlb className="w-full" /> : <Singur className="w-full" />}
 
 					<span>Singur</span>
 				</button>
 				<button
-					className={`${
-						selected == 2 && "bg-gri-brand text-alb-site"
-					} flex w-1/3 flex-col items-center justify-center gap-9 rounded-2xl py-16 px-[70px] shadow-lg  drop-shadow-xl`}
+					className={`${selected == 2 && "bg-gri-brand text-alb-site"} ${clasaCard}`}
 					onClick={() => {
 						setValue("echipaj", "echipaj");
 						setSelected(2);
 					}}
 					type="button"
 				>
-					{selected == 2 ? <EchipajAlb className="h-36 w-56 " /> : <Echipaj className="h-36 w-36" />}
+					{selected == 2 ? <EchipajAlb className="w-full" /> : <Echipaj className="w-full" />}
 
 					<span>Echipaj</span>
 				</button>

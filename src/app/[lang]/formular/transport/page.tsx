@@ -2,7 +2,7 @@
 
 import NavigatieFormular from "@/components/Formular/NavigatieFormular";
 import { useMultistepForm } from "@/components/Formular/useMultistepForm";
-
+import { useState } from "react";
 import Pas1Trasport from "@/components/Formular/sofer/pasi/1";
 import Pas2Trasport from "@/components/Formular/sofer/pasi/2";
 import Pas3Trasport from "@/components/Formular/sofer/pasi/3";
@@ -14,13 +14,20 @@ import Pas8Trasport from "@/components/Formular/sofer/pasi/8";
 import Pas9Trasport from "@/components/Formular/sofer/pasi/9";
 
 import { useForm } from "react-hook-form";
+import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
+import Link from "next/link";
+import { getLocalePartsFrom, locales } from "i18n";
 
-const FormularSofer = () => {
+export async function generateStaticParams() {
+	return locales.map((locale) => getLocalePartsFrom({ locale }));
+}
+
+const FormularSofer = ({ params }: { params: { lang: string; country: string } }) => {
 	const {
 		register,
 		watch,
 		handleSubmit,
-		control,
+		getValues,
 		setValue,
 		formState: { errors },
 	} = useForm({
@@ -35,8 +42,10 @@ const FormularSofer = () => {
 			ultimulSalariu: "",
 		},
 	});
+	const [disabled, setDisabled] = useState(true);
+
 	const { steps, currentStepIndex, isFirstStep, isLastStep, step, back, next } = useMultistepForm([
-		<Pas1Trasport setValue={setValue} />,
+		<Pas1Trasport setValue={setValue} setDisabled={setDisabled} />,
 		<Pas2Trasport register={register} />,
 		<Pas3Trasport setValue={setValue} />,
 		<Pas4Trasport setValue={setValue} />,
@@ -51,13 +60,22 @@ const FormularSofer = () => {
 		console.log(data);
 	};
 	return (
-		<div className="flex flex-col md:px-[70px] ">
-			<form
-				className="relative mx-[10px] rounded-2xl bg-alb-site px-5 pt-8 md:mx-[70px]"
-				onSubmit={handleSubmit(submitHandler)}
-			>
+		<div className="flex flex-col px-5 pb-9 md:px-[70px] ">
+			<Breadcrumbs>
+				<Link className="text-gri-brand" href={`${params.lang}/`}>
+					Home
+				</Link>
+				<Link className="text-gri-brand" href={`${params.lang}/formular`}>
+					Formular
+				</Link>
+				<Link className="text-red-600" href={`${params.lang}/formular`}>
+					Transport
+				</Link>
+			</Breadcrumbs>
+			<form className="relative  rounded-2xl bg-alb-site px-5 pt-8 " onSubmit={handleSubmit(submitHandler)}>
 				{step}
 				<NavigatieFormular
+					disabled={disabled}
 					back={back}
 					next={next}
 					isFirstStep={isFirstStep}

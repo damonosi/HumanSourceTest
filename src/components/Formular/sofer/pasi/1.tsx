@@ -1,6 +1,6 @@
 "use client";
 import FormWrapper from "../../FormWrapper";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CardRemorca from "../CardRemorca";
 import Cisterna from "../../../../public/imagini/formular/sofer/negru/cisterna.svg";
 import CisternaAlb from "../../../../public/imagini/formular/sofer/alb/cisterna.svg";
@@ -21,9 +21,10 @@ import ContainerAlb from "../../../../public/imagini/formular/sofer/alb/containe
 import Agabaritic from "../../../../public/imagini/formular/sofer/negru/agabaritic.svg";
 import AgabariticAlb from "../../../../public/imagini/formular/sofer/alb/agabaritic.svg";
 
-const Pas1Trasport = ({ setValue }: any) => {
+const Pas1Trasport = ({ setValue, setDisabled }: any) => {
 	const [selected, setSelected] = useState(0);
 	const clasaIconite = "w-full";
+
 	return (
 		<FormWrapper intrebare="Cu ce tip de remorca va doriti sa lucrati?">
 			<div className=" grid w-fit grid-cols-3 place-items-center gap-[10px] md:gap-5 md:gap-x-5">
@@ -32,6 +33,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("tipRemorca", "cisterna");
 						setSelected(1);
+						setDisabled(false);
 					}}
 					text="Cisterna"
 					svg={selected == 1 ? <CisternaAlb className={clasaIconite} /> : <Cisterna className={clasaIconite} />}
@@ -41,6 +43,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("tipRemorca", "frigorifica");
 						setSelected(2);
+						setDisabled(false);
 					}}
 					text="Frigorifica"
 					svg={selected == 2 ? <FrigorificaAlb className={clasaIconite} /> : <Frigorifica className={clasaIconite} />}
@@ -50,6 +53,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("tipRemorca", "prelata");
 						setSelected(3);
+						setDisabled(false);
 					}}
 					text="Prelata"
 					svg={selected == 3 ? <PrelataAlb className={clasaIconite} /> : <Prelata className={clasaIconite} />}
@@ -59,6 +63,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("tipRemorca", "basculanta");
 						setSelected(4);
+						setDisabled(false);
 					}}
 					text="Basculanta"
 					svg={selected == 4 ? <BasculantaAlb className={clasaIconite} /> : <Basculanta className={clasaIconite} />}
@@ -68,6 +73,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("tipRemorca", "animale");
 						setSelected(5);
+						setDisabled(false);
 					}}
 					text="Box"
 					svg={selected == 5 ? <BoxAlb className={clasaIconite} /> : <Box className={clasaIconite} />}
@@ -77,6 +83,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("tipRemorca", "cisterna");
 						setSelected(6);
+						setDisabled(false);
 					}}
 					text="Animale"
 					svg={selected == 6 ? <AnimaleAlb className={clasaIconite} /> : <Animale className={clasaIconite} />}
@@ -86,6 +93,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("tipRemorca", "siloz");
 						setSelected(7);
+						setDisabled(false);
 					}}
 					text="Siloz"
 					svg={selected == 7 ? <SilozAlb className={clasaIconite} /> : <Siloz className={clasaIconite} />}
@@ -95,6 +103,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("tipRemorca", "container");
 						setSelected(8);
+						setDisabled(false);
 					}}
 					text="Container"
 					svg={selected == 8 ? <ContainerAlb className={clasaIconite} /> : <Container className={clasaIconite} />}
@@ -104,6 +113,7 @@ const Pas1Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("tipRemorca", "agabaritic");
 						setSelected(9);
+						setDisabled(false);
 					}}
 					text="Agabaritic"
 					svg={selected == 9 ? <AgabariticAlb className={clasaIconite} /> : <Agabaritic className={clasaIconite} />}

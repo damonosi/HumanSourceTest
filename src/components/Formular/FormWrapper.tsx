@@ -1,5 +1,8 @@
 import { Typography } from "@material-tailwind/react";
+import { getLocalePartsFrom, locales } from "i18n";
+import Link from "next/link";
 import { ReactNode } from "react";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 
 interface IWrapperProps {
 	intrebare: string;

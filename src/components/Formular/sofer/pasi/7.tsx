@@ -11,6 +11,8 @@ import AvansatAlb from "../../../../public/imagini/formular/sofer/alb/avansat.sv
 
 const Pas7Trasport = ({ setValue }: any) => {
 	const [selected, setSelected] = useState(0);
+	const clasaCard =
+		"flex  w-1/3 flex-col items-center  justify-center rounded-2xl bg-alb-site px-5 py-8 drop-shadow-xl active:bg-gri-brand   lg:gap-9 lg:py-16 lg:px-6 max-w-[272px]";
 	return (
 		<FormWrapper intrebare="Vorbesti limba italiana?">
 			<div className="flex justify-center gap-5  ">
@@ -22,37 +24,37 @@ const Pas7Trasport = ({ setValue }: any) => {
 					type="button"
 					className={`${
 						selected == 1 && "bg-gri-brand text-alb-site"
-					} flex w-1/3 flex-col items-center  justify-center gap-9 rounded-2xl py-16 px-[70px] shadow-lg  drop-shadow-xl`}
+					} ${clasaCard}`}
 				>
-					{selected == 1 ? <DelocAlb className="h-36 w-56 " /> : <Deloc className="h-36 w-36" />}
+					{selected == 1 ? <DelocAlb className="w-full" /> : <Deloc className="w-full" />}
 
 					<span>Nu, deloc</span>
 				</button>
 				<button
 					className={`${
 						selected == 2 && "bg-gri-brand text-alb-site"
-					} flex w-1/3 flex-col items-center justify-center gap-9 rounded-2xl py-16 px-[70px] shadow-lg  drop-shadow-xl`}
+					} ${clasaCard}`}
 					onClick={() => {
 						setValue("lbItaliana", "mediu");
 						setSelected(2);
 					}}
 					type="button"
 				>
-					{selected == 2 ? <MediuAlb className="h-36 w-56 " /> : <Mediu className="h-36 w-36" />}
+					{selected == 2 ? <MediuAlb className="w-full" /> : <Mediu className="w-full" />}
 
 					<span>Da, ma descurc</span>
 				</button>
 				<button
 					className={`${
 						selected == 3 && "bg-gri-brand text-alb-site"
-					} flex w-1/3 flex-col items-center justify-center  gap-9 rounded-2xl  px-[70px] py-16  shadow-lg drop-shadow-xl`}
+					} ${clasaCard}`}
 					onClick={() => {
 						setValue("lbItaliana", "avansat");
 						setSelected(3);
 					}}
 					type="button"
 				>
-					{selected == 3 ? <AvansatAlb className="h-36 w-56 " /> : <Avansat className="h-36 w-36" />}
+					{selected == 3 ? <AvansatAlb className="w-full" /> : <Avansat className="w-full" />}
 
 					<span>Vorbitor avansat</span>
 				</button>
