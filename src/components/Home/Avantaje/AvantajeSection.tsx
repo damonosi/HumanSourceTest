@@ -15,8 +15,9 @@ const AvantajeSection = () => {
       </Typography>
 
       <div className="mb-20 grid w-full grid-cols-2 place-items-center gap-x-5 gap-y-10 md:px-2 2xl:grid-cols-4    ">
-        {dateAvantaje.map(({ titlu, descriere, icon, id }) => (
+        {dateAvantaje.map(({ titlu,titluMobil, descriere, icon, id }) => (
           <CardAvantaje
+          titluMobil={titluMobil}
             key={id}
             titlu={titlu}
             descriere={descriere}

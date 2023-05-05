@@ -11,7 +11,7 @@ const IntrebariSection = () => {
 			<div className="flex  h-full items-center justify-center  lg:w-1/2" id="container-imagine-intrebari">
 				<Image className=" w-full translate-y-[-8%]" alt="imagine-intrebari" placeholder="blur" src={ImgIntrebari} />
 			</div>
-			<div className="relative flex flex-col gap-8 pb-6 pt-[30px] sm:w-full md:pt-[60px] lg:w-1/2   ">
+			<div className="relative flex flex-col gap-6  pt-[30px] sm:w-full md:pt-[60px] lg:w-1/2   ">
 				<Typography variant="h5" className=" text-start font-bold text-alb-site  md:text-2xl">
 					Intrebari frecvente adresate de clientii <br /> Human Source
 				</Typography>

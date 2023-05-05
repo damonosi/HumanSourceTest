@@ -34,7 +34,7 @@ const DropdownIntrebare = ({
 			</button>
 			<Typography
 				variant="paragraph"
-				className={` mt-[4px] px-1 pb-4 pt-2  text-start text-alb-site  opacity-60  lg:opacity-80 ${
+				className={` mt-[4px] px-1  pt-2  text-start text-alb-site  opacity-60  lg:opacity-80 ${
 					!showRaspuns ? "hidden" : "block"
 				} `}
 			>

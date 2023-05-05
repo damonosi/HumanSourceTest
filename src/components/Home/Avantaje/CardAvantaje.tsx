@@ -8,7 +8,7 @@ interface ICardAvantaje {
   descriere: string;
   icon: string;
 }
-const CardAvantaje = ({ titlu, descriere, icon }: ICardAvantaje) => {
+const CardAvantaje = ({ titlu,titluMobil, descriere, icon }: ICardAvantaje) => {
   return (
     <Card className="w-full  max-w-[300px] border-0 border-l-0 bg-alb-site shadow-none md:px-2   ">
       <CardBody className="flex h-fit flex-col items-center gap-2 px-0  ">
@@ -20,7 +20,11 @@ const CardAvantaje = ({ titlu, descriere, icon }: ICardAvantaje) => {
             {icon === "suport" && <VscLaw className="h-8 w-8" />}
           </div>
           <div className="flex flex-col gap-2 text-gri-brand">
-            <Typography variant="h6" className="font-medium  md:px-14 ">
+
+            <Typography variant="h6" className="font-medium md:hidden md:px-14 ">
+              {titluMobil}
+            </Typography>
+            <Typography variant="h6" className="font-medium hidden md:block md:px-14 ">
               {titlu}
             </Typography>
             <Typography variant="paragraph" className=" opacity-50 md:px-4">
