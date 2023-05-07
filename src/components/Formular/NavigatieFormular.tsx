@@ -11,6 +11,7 @@ interface IButtonProps {
 	disabled: boolean;
 	back: () => void;
 	next: () => void;
+
 }
 
 const NavigatieFormular = ({

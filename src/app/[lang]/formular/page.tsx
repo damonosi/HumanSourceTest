@@ -21,11 +21,11 @@ const Formular = ({ params }: { params: { lang: string; country: string } }) => 
 	const [selectedCategory, setSelectedCategory] = useState("");
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 		const eventul = e.currentTarget.childNodes[1].textContent?.toString();
-		console.log(eventul);
+
 		eventul && setSelectedCategory(eventul);
 	};
 	const clasaCard =
-		"flex max-w-[272px] flex-col items-center gap-2 justify-center rounded-2xl bg-alb-site px-2 py-8 w-1/3  md:p-16 shadow-2xl";
+		"flex max-w-[272px] flex-col items-center gap-2 justify-center rounded-2xl bg-alb-site px-2 py-8 w-1/2  md:p-16 shadow-2xl";
 	const clasaIconite = "h-9 w-8 md:h-36 md:w-28";
 
 	return (
@@ -46,20 +46,6 @@ const Formular = ({ params }: { params: { lang: string; country: string } }) => 
 					In ce domeniu vrei sa lucrezi?
 				</Typography>
 				<div className="flex w-full items-center justify-center gap-3 md:gap-8" id="container-carduri-alege-domeniu">
-					<button
-						onClick={handleClick}
-						className={` ${selectedCategory === "Constructii" && "bg-gri-brand"} ${clasaCard}`}
-					>
-						{selectedCategory === "Constructii" ? (
-							<IcoConstructiiAlb className={clasaIconite} />
-						) : (
-							<IcoConstructii className={clasaIconite} />
-						)}
-
-						<span className={` ${selectedCategory === "Constructii" && "text-alb-site"} text-sm md:text-2xl `}>
-							Constructii
-						</span>
-					</button>
 					<button
 						onClick={handleClick}
 						className={` ${selectedCategory === "Transport" && "bg-gri-brand"} ${clasaCard} `}

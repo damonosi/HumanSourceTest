@@ -1,7 +1,7 @@
 import { Input } from "@material-tailwind/react";
 import FormWrapper from "../../FormWrapper";
 
-const Pas8Trasport = ({ register }: any) => {
+const Pas8Trasport = ({ register, setDisabled }: any) => {
 	return (
 		<FormWrapper intrebare="Ne poti spune care a fost ultimul tau salariu??">
 			<Input
@@ -9,6 +9,7 @@ const Pas8Trasport = ({ register }: any) => {
 				type="text"
 				{...register("ultimulSalariu", { required: true })}
 				id="ultimulSalariu"
+				onChange={() => setDisabled(false)}
 				label="Raspunsul Dumneavoastra"
 			/>
 		</FormWrapper>

@@ -16,6 +16,7 @@
     "@emotion/styled": "^11.10.6",
     "@formatjs/intl-localematcher": "^0.2.32",
     "@heroicons/react": "^2.0.16",
+    "@hookform/error-message": "^2.0.1",
     "@material-tailwind/react": "^1.4.2",
     "@mui/icons-material": "^5.11.11",
     "@types/node": "18.14.6",

@@ -7,7 +7,7 @@ import DaAlb from "../../../../public/imagini/formular/sofer/alb/da.svg";
 import Nu from "../../../../public/imagini/formular/sofer/negru/nu.svg";
 import NuAlb from "../../../../public/imagini/formular/sofer/alb/nu.svg";
 
-const Pas4Trasport = ({ setValue }: any) => {
+const Pas4Trasport = ({ setValue, setDisabled }: any) => {
 	const [selected, setSelected] = useState(0);
 	const clasaCard =
 		"flex w-1/2 flex-col items-center max-h-[300px] justify-center gap-9 rounded-2xl py-9 px-3 lg:py-16  shadow-lg  drop-shadow-xl max-w-[272px]";
@@ -18,6 +18,7 @@ const Pas4Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("tahograf", "da");
 						setSelected(1);
+						setDisabled(false);
 					}}
 					type="button"
 					className={`${selected == 1 && "bg-gri-brand text-alb-site"} ${clasaCard}`}
@@ -31,6 +32,7 @@ const Pas4Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("tahograf", "nu");
 						setSelected(2);
+						setDisabled(false);
 					}}
 					type="button"
 				>

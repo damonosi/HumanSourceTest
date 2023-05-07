@@ -17,6 +17,7 @@ import { useForm } from "react-hook-form";
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import Link from "next/link";
 import { getLocalePartsFrom, locales } from "i18n";
+import { ErrorMessage } from "@hookform/error-message";
 
 export async function generateStaticParams() {
 	return locales.map((locale) => getLocalePartsFrom({ locale }));
@@ -27,10 +28,13 @@ const FormularSofer = ({ params }: { params: { lang: string; country: string } }
 		register,
 		watch,
 		handleSubmit,
-		getValues,
+		setError,
 		setValue,
-		formState: { errors },
+		getFieldState,
+
+		formState: { errors, isDirty, dirtyFields, touchedFields, isValid },
 	} = useForm({
+		mode: "onChange",
 		defaultValues: {
 			tipRemorca: "",
 			vechime: "",
@@ -40,24 +44,32 @@ const FormularSofer = ({ params }: { params: { lang: string; country: string } }
 			turaNoapte: "",
 			lbItaliana: "",
 			ultimulSalariu: "",
+			salariuDorit: "",
 		},
 	});
 	const [disabled, setDisabled] = useState(true);
 
-	const { steps, currentStepIndex, isFirstStep, isLastStep, step, back, next } = useMultistepForm([
-		<Pas1Trasport setValue={setValue} setDisabled={setDisabled} />,
-		<Pas2Trasport register={register} />,
-		<Pas3Trasport setValue={setValue} />,
-		<Pas4Trasport setValue={setValue} />,
-		<Pas5Trasport setValue={setValue} />,
-		<Pas6Trasport setValue={setValue} />,
-		<Pas7Trasport setValue={setValue} />,
-		<Pas8Trasport register={register} />,
-		<Pas9Trasport register={register} />,
-	]);
+	const { steps, currentStepIndex, isFirstStep, isLastStep, step, back, next } = useMultistepForm(
+		[
+			<Pas1Trasport setValue={setValue} setDisabled={setDisabled} />,
+			<Pas2Trasport register={register} setDisabled={setDisabled} />,
+			<Pas3Trasport setValue={setValue} setDisabled={setDisabled} />,
+			<Pas4Trasport setValue={setValue} setDisabled={setDisabled} />,
+			<Pas5Trasport setValue={setValue} setDisabled={setDisabled} />,
+			<Pas6Trasport setValue={setValue} setDisabled={setDisabled} />,
+			<Pas7Trasport setValue={setValue} setDisabled={setDisabled} />,
+			<Pas8Trasport register={register} setDisabled={setDisabled} />,
+			<Pas9Trasport register={register} setDisabled={setDisabled} />,
+		],
+		setDisabled,
+	);
 
 	const submitHandler = (data: object) => {
+		const stateVechime = getFieldState("vechime");
+		console.log("form state", stateVechime.isDirty);
+		stateVechime.isDirty && setError("vechime", { type: "focus" }, { shouldFocus: true });
 		console.log(data);
+		console.log("submited");
 	};
 	return (
 		<div className="flex flex-col px-5 pb-9 md:px-[70px] ">
@@ -74,6 +86,7 @@ const FormularSofer = ({ params }: { params: { lang: string; country: string } }
 			</Breadcrumbs>
 			<form className="relative  rounded-2xl bg-alb-site px-5 pt-8 " onSubmit={handleSubmit(submitHandler)}>
 				{step}
+
 				<NavigatieFormular
 					disabled={disabled}
 					back={back}

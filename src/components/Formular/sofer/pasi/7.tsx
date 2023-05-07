@@ -9,7 +9,7 @@ import MediuAlb from "../../../../public/imagini/formular/sofer/alb/mediu.svg";
 import Avansat from "../../../../public/imagini/formular/sofer/negru/avansat.svg";
 import AvansatAlb from "../../../../public/imagini/formular/sofer/alb/avansat.svg";
 
-const Pas7Trasport = ({ setValue }: any) => {
+const Pas7Trasport = ({ setValue, setDisabled }: any) => {
 	const [selected, setSelected] = useState(0);
 	const clasaCard =
 		"flex  w-1/3 flex-col items-center  max-h-[300px] justify-center rounded-2xl bg-alb-site px-3 py-8 drop-shadow-xl active:bg-gri-brand   lg:gap-9 lg:py-16 lg:px-6 max-w-[272px]";
@@ -21,6 +21,7 @@ const Pas7Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("lbItaliana", "deloc");
 						setSelected(1);
+						setDisabled(false);
 					}}
 					type="button"
 					className={`${selected == 1 && "bg-gri-brand text-alb-site"} ${clasaCard}`}
@@ -34,6 +35,7 @@ const Pas7Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("lbItaliana", "mediu");
 						setSelected(2);
+						setDisabled(false);
 					}}
 					type="button"
 				>
@@ -46,6 +48,7 @@ const Pas7Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("lbItaliana", "avansat");
 						setSelected(3);
+						setDisabled(false);
 					}}
 					type="button"
 				>

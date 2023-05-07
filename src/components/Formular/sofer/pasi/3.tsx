@@ -8,7 +8,7 @@ import ItaliaAlb from "../../../../public/imagini/formular/sofer/alb/italia.svg"
 import International from "../../../../public/imagini/formular/sofer/negru/international.svg";
 import InternationalAlb from "../../../../public/imagini/formular/sofer/alb/international.svg";
 
-const Pas3Trasport = ({ setValue }: any) => {
+const Pas3Trasport = ({ setValue, setDisabled }: any) => {
 	const [selected, setSelected] = useState(0);
 	const clasaCard =
 		"flex w-1/3 flex-col max-h-[300px] items-center  justify-center rounded-2xl bg-alb-site px-3 py-8 drop-shadow-xl active:bg-gri-brand   lg:gap-9 lg:py-16 lg:px-6 max-w-[272px]";
@@ -20,6 +20,7 @@ const Pas3Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("regim", "tur-retur");
 						setSelected(1);
+						setDisabled(false);
 					}}
 					type="button"
 					className={`${selected == 1 && "bg-gri-brand text-alb-site"} ${clasaCard}`}
@@ -33,6 +34,7 @@ const Pas3Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("regim", "italia");
 						setSelected(2);
+						setDisabled(false);
 					}}
 					type="button"
 				>
@@ -45,6 +47,7 @@ const Pas3Trasport = ({ setValue }: any) => {
 					onClick={() => {
 						setValue("regim", "international");
 						setSelected(3);
+						setDisabled(false);
 					}}
 					type="button"
 				>
