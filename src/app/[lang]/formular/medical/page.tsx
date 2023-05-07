@@ -17,20 +17,23 @@ import { useMultistepForm } from "@/components/Formular/useMultistepForm";
 
 const FormularMedic = () => {
 	const [disabled, setDisabled] = useState(true);
-	const { steps, currentStepIndex, isFirstStep, isLastStep, step, back, next } = useMultistepForm([
-		<Pas1Medical />,
-		<Pas2Medical />,
-		<Pas3Medical />,
-		<Pas4Medical />,
-		<Pas5Medical />,
-		<Pas6Medical />,
-		<Pas7Medical />,
-		<Pas8Medical />,
-		<Pas9Medical />,
-		<Pas10Medical />,
-		<Pas11Medical />,
-		<Pas12Medical />,
-	]);
+	const { steps, currentStepIndex, isFirstStep, isLastStep, step, back, next } = useMultistepForm(
+		[
+			<Pas1Medical />,
+			<Pas2Medical />,
+			<Pas3Medical />,
+			<Pas4Medical />,
+			<Pas5Medical />,
+			<Pas6Medical />,
+			<Pas7Medical />,
+			<Pas8Medical />,
+			<Pas9Medical />,
+			<Pas10Medical />,
+			<Pas11Medical />,
+			<Pas12Medical />,
+		],
+		setDisabled,
+	);
 	return (
 		<div className="flex flex-col md:px-[70px] ">
 			<form className="relative m-[70px] rounded-2xl bg-alb-site px-[60px] pt-8">
