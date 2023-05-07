@@ -14,8 +14,15 @@ import Pas8Medical from "@/components/Formular/medic/pasi/8";
 import Pas9Medical from "@/components/Formular/medic/pasi/9";
 import NavigatieFormular from "@/components/Formular/NavigatieFormular";
 import { useMultistepForm } from "@/components/Formular/useMultistepForm";
+import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
+import Link from "next/link";
+import { getLocalePartsFrom, locales } from "i18n";
 
-const FormularMedic = () => {
+export async function generateStaticParams() {
+	return locales.map((locale) => getLocalePartsFrom({ locale }));
+}
+
+const FormularMedic = ({ params }: { params: { lang: string; country: string } }) => {
 	const [disabled, setDisabled] = useState(true);
 	const { steps, currentStepIndex, isFirstStep, isLastStep, step, back, next } = useMultistepForm(
 		[
@@ -35,8 +42,19 @@ const FormularMedic = () => {
 		setDisabled,
 	);
 	return (
-		<div className="flex flex-col md:px-[70px] ">
-			<form className="relative m-[70px] rounded-2xl bg-alb-site px-[60px] pt-8">
+		<div className="flex flex-col px-5 pb-9 md:px-[70px] ">
+			<Breadcrumbs>
+				<Link className="text-gri-brand" href={`${params.lang}/`}>
+					Home
+				</Link>
+				<Link className="text-gri-brand" href={`${params.lang}/formular`}>
+					Formular
+				</Link>
+				<Link className="text-red-600" href={`${params.lang}/formular`}>
+					Medical
+				</Link>
+			</Breadcrumbs>
+			<form className="relative  rounded-2xl bg-alb-site px-5 pt-8 ">
 				{step}
 				<NavigatieFormular
 					disabled={disabled}

@@ -11,11 +11,11 @@ import InternationalAlb from "../../../../public/imagini/formular/sofer/alb/inte
 const Pas3Trasport = ({ setValue, setDisabled }: any) => {
 	const [selected, setSelected] = useState(0);
 	const clasaCard =
-		"flex w-1/3 flex-col max-h-[300px] items-center  justify-center rounded-2xl bg-alb-site px-3 py-8 drop-shadow-xl active:bg-gri-brand   lg:gap-9 lg:py-16 lg:px-6 max-w-[272px]";
-	const clasaIconita = "w-12 md:w-full";
+		"flex w-1/3 flex-col max-h-[300px] items-center  justify-center rounded-2xl bg-alb-site px-1 py-8 drop-shadow-xl active:bg-gri-brand   lg:gap-9 lg:py-16 lg:px-6 max-w-[272px]";
+	const clasaIconita = "w-full";
 	return (
 		<FormWrapper intrebare="In ce regim va doriti sa lucrati?">
-			<div className="flex justify-center gap-2  md:gap-5 ">
+			<div className="flex justify-center gap-4  md:gap-5 ">
 				<button
 					onClick={() => {
 						setValue("regim", "tur-retur");
