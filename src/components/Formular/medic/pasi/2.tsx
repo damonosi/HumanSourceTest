@@ -41,7 +41,7 @@ const Pas2Medical = ({ setValue, setDisabled }: any) => {
 				>
 					{selected == 2 ? <SpitalAlb className={clasaIconita} /> : <Spital className={clasaIconita} />}
 
-					<span className="font-[350]">National Italia</span>
+					<span className="font-[350]">Spital</span>
 				</button>
 				<button
 					className={`${selected == 3 && "bg-gri-brand text-alb-site"} ${clasaCard}`}
