@@ -34,7 +34,7 @@ export const CardValori = ({ titlu, descriere, src }: IValoriInfo) => {
 	return (
 		<div className="flex flex-col items-center gap-7 rounded-2xl bg-white px-8 py-16  md:px-8 lg:px-6 ">
 			<div className="flex w-full items-center justify-center p-1" id="imgsection">
-				<Image placeholder="blur" alt="icon-card-about" className="h-auto w-10" src={src} />
+				<Image alt="icon-card-about" className="h-auto w-10" src={src} />
 			</div>
 			<div className="flex flex-col  items-center gap-6 text-center text-gri-brand" id="text-section">
 				<Typography variant="h6" className=" font-[500] ">

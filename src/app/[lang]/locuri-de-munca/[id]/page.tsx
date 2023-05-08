@@ -41,7 +41,7 @@ const JobCategory: FC<IpageProps> = ({ params }) => {
 											{" "}
 											Sofer de tir - Transport animale
 										</Typography>
-										<Typography variant="5" className="text- font-bold  ">
+										<Typography variant="h5" className="text- font-bold  ">
 											Tur-cento Trans S.R.L
 										</Typography>
 										<div className="flex gap-2 text-[14px]" id="container butoane titlu">

@@ -26,13 +26,12 @@ export async function generateStaticParams() {
 const FormularSofer = ({ params }: { params: { lang: string; country: string } }) => {
 	const {
 		register,
-		watch,
-		handleSubmit,
-		setError,
-		setValue,
-		getFieldState,
 
-		formState: { errors, isDirty, dirtyFields, touchedFields, isValid },
+		handleSubmit,
+
+		setValue,
+
+		formState: { errors },
 	} = useForm({
 		mode: "onChange",
 		defaultValues: {
@@ -65,9 +64,6 @@ const FormularSofer = ({ params }: { params: { lang: string; country: string } }
 	);
 
 	const submitHandler = (data: object) => {
-		const stateVechime = getFieldState("vechime");
-		console.log("form state", stateVechime.isDirty);
-		stateVechime.isDirty && setError("vechime", { type: "focus" }, { shouldFocus: true });
 		console.log(data);
 		console.log("submited");
 	};

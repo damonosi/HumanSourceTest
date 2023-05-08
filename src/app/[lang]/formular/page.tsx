@@ -5,25 +5,27 @@ import { useState } from "react";
 import { Typography } from "@material-tailwind/react";
 import { getLocalePartsFrom, locales } from "i18n";
 import Link from "next/link";
-import IcoConstructii from "@/public/imagini/formular/selectDomeniu/negru/constructii.svg";
-import IcoConstructiiAlb from "@/public/imagini/formular/selectDomeniu/alb/constructii.svg";
+
 import IcoTransport from "@/public/imagini/formular/selectDomeniu/negru/transport.svg";
 import IcoTransportAlb from "@/public/imagini/formular/selectDomeniu/alb/transport.svg";
 import IcoMedical from "@/public/imagini/formular/selectDomeniu/negru/medical.svg";
 import IcoMedicalAlb from "@/public/imagini/formular/selectDomeniu/alb/medical.svg";
 
 import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
 
 export async function generateStaticParams() {
 	return locales.map((locale) => getLocalePartsFrom({ locale }));
 }
 const Formular = ({ params }: { params: { lang: string; country: string } }) => {
+	const [disabled, setDisabled] = useState(true);
 	const [selectedCategory, setSelectedCategory] = useState("");
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 		const eventul = e.currentTarget.childNodes[1].textContent?.toString();
-
+		setDisabled(false);
 		eventul && setSelectedCategory(eventul);
 	};
+	const router = useRouter();
 	const clasaCard =
 		"flex max-w-[272px] flex-col items-center gap-2 justify-center rounded-2xl bg-alb-site px-2 py-8 w-1/2  md:p-16 shadow-2xl";
 	const clasaIconite = "h-9 w-8 md:h-36 md:w-28";
@@ -48,7 +50,7 @@ const Formular = ({ params }: { params: { lang: string; country: string } }) => 
 				<div className="flex w-full items-center justify-center gap-3 md:gap-8" id="container-carduri-alege-domeniu">
 					<button
 						onClick={handleClick}
-						className={` ${selectedCategory === "Transport" && "bg-gri-brand"} ${clasaCard} `}
+						className={` ${selectedCategory === "Transport" && "bg-gri-brand"} ${clasaCard}  `}
 					>
 						{selectedCategory === "Transport" ? (
 							<IcoTransportAlb className={clasaIconite} />
@@ -72,12 +74,17 @@ const Formular = ({ params }: { params: { lang: string; country: string } }) => 
 					</button>
 				</div>
 				<div className="flex w-full items-center justify-center">
-					<Link
-						href={`${params.lang}/formular/${selectedCategory.toLowerCase()}`}
-						className="flex w-fit items-center justify-center gap-3  rounded-2xl px-5 py-8 text-gri-brand hover:bg-gri-brand hover:text-alb-site"
+					<button
+						onClick={() => router.push(`${params.lang}/formular/${selectedCategory.toLowerCase()}`)}
+						disabled={disabled}
+						className={`md:px-5"  flex w-fit items-center justify-center gap-3 rounded-2xl border border-gri-brand px-2 py-2 text-gri-brand md:py-4  ${
+							disabled
+								? "cursor-not-allowed bg-gri-bg text-gri-brand opacity-50"
+								: "bg-alb-site hover:bg-gri-brand hover:text-alb-site"
+						} `}
 					>
 						<span>CONTINUA</span> <ArrowSmallRightIcon strokeWidth={2} className="h-5 w-5" />
-					</Link>
+					</button>
 				</div>
 			</div>
 		</div>
