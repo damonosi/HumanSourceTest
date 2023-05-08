@@ -1,21 +1,14 @@
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Typography,
-} from "@material-tailwind/react";
+import { Button, Card, CardBody, CardFooter, CardHeader, Typography } from "@material-tailwind/react";
 import Image, { StaticImageData } from "next/image";
 
 interface IServiciiData {
-  src: StaticImageData;
-  titlu: string;
-  descriere: string;
+	src: StaticImageData;
+	titlu: string;
+	descriere: string;
 }
 
 const CardServicii = ({ src, titlu, descriere }: IServiciiData) => {
-  return (
+	return (
 		<Card color="transparent" className="w-full max-w-[26rem] ">
 			<CardHeader color="transparent" floated={false} className="m-0">
 				<Image alt="card-image" placeholder="blur" className="w-full" src={src} />

@@ -7,26 +7,18 @@ import { ArrowSmallRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
 interface ICardJob {
-  data: string;
-  titlu: string;
-  descriere: string;
-  src: StaticImageData;
+	data: string;
+	titlu: string;
+	descriere: string;
+	src: StaticImageData;
 
-  salariu?: number;
-  id: number;
-  params: { lang: string; country: string };
+	salariu?: number;
+	id: number;
+	params: { lang: string; country: string };
 }
 
-const CardJob = ({
-  params,
-  data,
-  titlu,
-  descriere,
-  id,
-  src,
-  salariu,
-}: ICardJob) => {
-  return (
+const CardJob = ({ params, data, titlu, descriere, id, src, salariu }: ICardJob) => {
+	return (
 		<div
 			key={id}
 			className="relative   flex h-[350px]  w-full flex-col justify-end overflow-hidden  rounded-2xl border-none bg-transparent text-[#383A3C]  shadow hover:border  hover:shadow-xl  md:h-[420px]  "

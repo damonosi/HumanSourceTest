@@ -10,8 +10,7 @@ import Groups2OutlinedIcon from "@mui/icons-material/Groups2Outlined";
 import Image from "next/image";
 import Link from "next/link";
 
-
-type Props = { children: JSX.Element | JSX.Element[]; text: string; };
+type Props = { children: JSX.Element | JSX.Element[]; text: string };
 
 const CardHeroServicii = ({ children, text }: Props) => {
 	return (

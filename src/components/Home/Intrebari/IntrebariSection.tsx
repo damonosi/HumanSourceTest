@@ -6,7 +6,7 @@ import dateIntrebari from "./dateIntrebari";
 import DropdownIntrebare from "./DropdownIntrebare";
 
 const IntrebariSection = () => {
-  return (
+	return (
 		<section className="container relative flex w-full flex-col gap-10 px-[14px]   text-start  md:text-center  lg:flex-row lg:px-0">
 			<div className="flex  h-full items-center justify-center  lg:w-1/2" id="container-imagine-intrebari">
 				<Image className=" w-full translate-y-[-8%]" alt="imagine-intrebari" placeholder="blur" src={ImgIntrebari} />

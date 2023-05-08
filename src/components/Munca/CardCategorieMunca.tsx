@@ -5,20 +5,20 @@ import Link from "next/link";
 import { useState } from "react";
 
 interface ICardCategorie {
-  src: StaticImageData;
-  domeniu: string;
+	src: StaticImageData;
+	domeniu: string;
 }
 
 const CardCategorieMunca = ({ src, domeniu }: ICardCategorie) => {
-  const [hovered, setHovered] = useState(false);
-  const handleMouseEnter = () => {
-    setHovered(true);
-  };
-  const handleMouseLeave = () => {
-    setHovered(false);
-  };
+	const [hovered, setHovered] = useState(false);
+	const handleMouseEnter = () => {
+		setHovered(true);
+	};
+	const handleMouseLeave = () => {
+		setHovered(false);
+	};
 
-  return (
+	return (
 		<Link
 			href={`/locuri-de-munca/${domeniu}`}
 			onMouseEnter={handleMouseEnter}

@@ -1,7 +1,7 @@
 "use client";
 
 import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
-import CardJob from '@/components/Munca/CardJob';
+import CardJob from "@/components/Munca/CardJob";
 import muncaFiller from "@/components/Munca/muncaFiller";
 import Search from "@/components/Munca/Search";
 import { Typography } from "@material-tailwind/react";

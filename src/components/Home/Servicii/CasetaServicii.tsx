@@ -7,26 +7,21 @@ import { HiOutlineUserGroup } from "react-icons/hi";
 import { IoDocumentAttachOutline } from "react-icons/io5";
 
 interface ICasetaServicii {
-  titlu: string;
-  descriere: string;
-  textButon: string;
-  icon: string;
+	titlu: string;
+	descriere: string;
+	textButon: string;
+	icon: string;
 }
 
-const CasetaServicii = ({
-  titlu,
-  descriere,
-  textButon,
-  icon,
-}: ICasetaServicii) => {
-  const [hovered, setHovered] = useState(false);
-  const handleMouseEnter = () => {
-    setHovered(true);
-  };
-  const handleMouseLeave = () => {
-    setHovered(false);
-  };
-  return (
+const CasetaServicii = ({ titlu, descriere, textButon, icon }: ICasetaServicii) => {
+	const [hovered, setHovered] = useState(false);
+	const handleMouseEnter = () => {
+		setHovered(true);
+	};
+	const handleMouseLeave = () => {
+		setHovered(false);
+	};
+	return (
 		<AnimatePresence>
 			<motion.div
 				key="shadow"

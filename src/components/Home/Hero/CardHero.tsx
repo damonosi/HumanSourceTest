@@ -9,22 +9,22 @@ import { MdEngineering, MdPersonSearch } from "react-icons/md";
 import dateHero from "./dateHero";
 
 interface ICardHero {
-  titlu: string;
-  icon: string;
-  descriere: string;
-  link: string;
-  textButon: string;
+	titlu: string;
+	icon: string;
+	descriere: string;
+	link: string;
+	textButon: string;
 }
 
 const CardHero = ({ titlu, icon, descriere, link, textButon }: ICardHero) => {
-  const [hovered, setHovered] = useState(false);
-  const handleMouseEnter = () => {
-    setHovered(true);
-  };
-  const handleMouseLeave = () => {
-    setHovered(false);
-  };
-  return (
+	const [hovered, setHovered] = useState(false);
+	const handleMouseEnter = () => {
+		setHovered(true);
+	};
+	const handleMouseLeave = () => {
+		setHovered(false);
+	};
+	return (
 		<AnimatePresence>
 			<motion.div
 				key="container-card"
@@ -111,23 +111,16 @@ const CardHero = ({ titlu, icon, descriere, link, textButon }: ICardHero) => {
 };
 
 const CarduriHero = () => {
-  return (
-    <div
-      id="container-carduri  "
-      className="relative z-20  px-5 flex w-full  items-center justify-center gap-4    md:px-0 "
-    >
-      {dateHero.map(({ titlu, icon, descriere, link, textButon, id }) => (
-        <CardHero
-          key={id}
-          titlu={titlu}
-          icon={icon}
-          descriere={descriere}
-          link={link}
-          textButon={textButon}
-        />
-      ))}
-    </div>
-  );
+	return (
+		<div
+			id="container-carduri  "
+			className="relative z-20  flex w-full items-center  justify-center gap-4 px-5    md:px-0 "
+		>
+			{dateHero.map(({ titlu, icon, descriere, link, textButon, id }) => (
+				<CardHero key={id} titlu={titlu} icon={icon} descriere={descriere} link={link} textButon={textButon} />
+			))}
+		</div>
+	);
 };
 
 export default CarduriHero;

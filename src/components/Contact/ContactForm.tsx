@@ -4,21 +4,21 @@ import { FiPhone } from "react-icons/fi";
 import { Checkbox, Input, Textarea } from "@material-tailwind/react";
 import { SubmitHandler, useForm } from "react-hook-form";
 type Inputs = {
-  nume: string;
-  dataNastere: string;
-  email: string;
-  telefon: string;
-  mesaj: string;
-  privacy: boolean;
+	nume: string;
+	dataNastere: string;
+	email: string;
+	telefon: string;
+	mesaj: string;
+	privacy: boolean;
 };
 const ContactForm = () => {
-  const {
+	const {
 		register,
 		handleSubmit,
 		formState: { errors },
 	} = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
-  return (
+	const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+	return (
 		<div className="flex justify-end rounded-2xl bg-alb-site p-5">
 			<form className="relative w-full justify-between bg-alb-site" onSubmit={handleSubmit(onSubmit)}>
 				<div className="mb-4 grid grid-cols-1 gap-6 md:grid-cols-2">

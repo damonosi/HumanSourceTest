@@ -21,7 +21,6 @@ import ContainerAlb from "../../../../public/imagini/formular/sofer/alb/containe
 import Agabaritic from "../../../../public/imagini/formular/sofer/negru/agabaritic.svg";
 import AgabariticAlb from "../../../../public/imagini/formular/sofer/alb/agabaritic.svg";
 
-
 interface IClickProps {
 	cardSelectat: number;
 	valoareFormular: string;

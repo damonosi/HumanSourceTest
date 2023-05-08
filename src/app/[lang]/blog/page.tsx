@@ -7,14 +7,12 @@ import Image from "next/image";
 import Link from "next/link";
 import PaginatedItems from "./Paginate";
 
-
-
 export async function generateStaticParams() {
-  return locales.map((locale) => getLocalePartsFrom({ locale }));
+	return locales.map((locale) => getLocalePartsFrom({ locale }));
 }
 
-const BloguriPage = ({ params }: { params: { lang: string; country: string; }; }) => {
-  return (
+const BloguriPage = ({ params }: { params: { lang: string; country: string } }) => {
+	return (
 		<section className="bg-[#E5E5E5]    px-4 pb-[100px] md:px-[70px]">
 			<div className="container mx-auto flex flex-col  gap-16 ">
 				<Breadcrumbs>

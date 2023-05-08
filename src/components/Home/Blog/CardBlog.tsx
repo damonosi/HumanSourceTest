@@ -10,21 +10,21 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import BackSmall from "@/public/imagini/blog/cover-blog-small.png";
 
 interface ICardBlog {
-  data: string;
-  titlu: string;
-  continut: string;
-  id: number;
+	data: string;
+	titlu: string;
+	continut: string;
+	id: number;
 }
 
 const CardBlog = ({ data, titlu, continut }: ICardBlog) => {
-  const [hovered, setHovered] = useState(false);
-  const handleMouseEnter = () => {
-    setHovered(true);
-  };
-  const handleMouseLeave = () => {
-    setHovered(false);
-  };
-  return (
+	const [hovered, setHovered] = useState(false);
+	const handleMouseEnter = () => {
+		setHovered(true);
+	};
+	const handleMouseLeave = () => {
+		setHovered(false);
+	};
+	return (
 		<div
 			onMouseLeave={handleMouseLeave}
 			onMouseEnter={handleMouseEnter}

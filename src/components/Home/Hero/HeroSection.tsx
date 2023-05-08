@@ -1,22 +1,14 @@
-
 import CarduriHero from "./CardHero";
 
 import { Typography } from "@material-tailwind/react";
 
-
-
-import { useTranslation } from './../../../app/i18n/client';
+import { useTranslation } from "./../../../app/i18n/client";
 import { HartaHeroDesktop, HartaHeroMobil } from "./HartaHero";
 
+const HeroSection = ({ params }: { params: { lang: string; country: string } }) => {
+	const { t } = useTranslation(params.lang, "home-hero");
 
-
-const HeroSection = (
-  { params }: { params: { lang: string; country: string; }; }
-) => {
-
-  const { t } = useTranslation(params.lang, 'home-hero');
-
-  return (
+	return (
 		<section
 			id="hero-section"
 			className=" relative mx-0 flex flex-col   items-center overflow-hidden  bg-gri-bg  pt-14  md:flex-row    md:justify-center    "

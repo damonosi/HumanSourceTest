@@ -24,10 +24,10 @@ const Search = () => {
 	/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
        // @ts-ignore */
 	const handleChangeDomeniu = (e) => setValue("domeniu", e);
-	
+
 	/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
       // @ts-ignore */
-	
+
 	const handleChangeLocatie = (e) => setValue("locatie", e);
 	useEffect(() => {
 		register("domeniu");

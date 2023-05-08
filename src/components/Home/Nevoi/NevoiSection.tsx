@@ -3,7 +3,7 @@ import { Typography } from "@material-tailwind/react";
 import Image from "next/image";
 
 const NevoiSection = () => {
-  return (
+	return (
 		<section className="container relative flex w-full items-start justify-start bg-[#506673] px-2 pb-[100px] md:pb-0       ">
 			<div className="flex w-full flex-col-reverse items-center lg:flex-row ">
 				<div className="flex  max-w-[606px] flex-col justify-center gap-12   text-alb-site md:w-full md:pr-2" id="text">

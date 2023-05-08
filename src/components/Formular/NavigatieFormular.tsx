@@ -1,6 +1,5 @@
 import { ArrowSmallRightIcon, ArrowSmallLeftIcon } from "@heroicons/react/24/outline";
 
-
 import { ReactElement, useEffect } from "react";
 
 interface IButtonProps {
@@ -11,7 +10,6 @@ interface IButtonProps {
 	disabled: boolean;
 	back: () => void;
 	next: () => void;
-
 }
 
 const NavigatieFormular = ({

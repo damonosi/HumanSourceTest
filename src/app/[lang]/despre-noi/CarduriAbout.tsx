@@ -3,14 +3,14 @@ import { Card, CardHeader, Typography } from "@material-tailwind/react";
 import Image, { StaticImageData } from "next/image";
 
 interface IEchipaInfo {
-  src: StaticImageData;
-  nume: string;
-  pozitie: string;
+	src: StaticImageData;
+	nume: string;
+	pozitie: string;
 }
 interface IValoriInfo {
-  src: StaticImageData;
-  titlu: string;
-  descriere: string;
+	src: StaticImageData;
+	titlu: string;
+	descriere: string;
 }
 export const CardEchipa = ({ src, nume, pozitie }: IEchipaInfo) => {
 	return (

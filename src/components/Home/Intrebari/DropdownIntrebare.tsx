@@ -2,26 +2,22 @@ import { Typography } from "@material-tailwind/react";
 import { useState } from "react";
 import useOnclickOutside from "react-cool-onclickoutside";
 interface IDropdownInfo {
-  intrebare: string;
-  raspuns: string;
-  ultimaIntrebare?: boolean;
+	intrebare: string;
+	raspuns: string;
+	ultimaIntrebare?: boolean;
 }
 
-const DropdownIntrebare = ({
-  intrebare,
-  raspuns,
-
-}: IDropdownInfo) => {
-  const [showRaspuns, setShowRaspuns] = useState(false);
-  const ref = useOnclickOutside(() => {
-    setTimeout(() => {
-      setShowRaspuns(!showRaspuns && false);
-    }, 100);
-  });
-  const handleClick = () => {
-    setShowRaspuns(!showRaspuns);
-  };
-  return (
+const DropdownIntrebare = ({ intrebare, raspuns }: IDropdownInfo) => {
+	const [showRaspuns, setShowRaspuns] = useState(false);
+	const ref = useOnclickOutside(() => {
+		setTimeout(() => {
+			setShowRaspuns(!showRaspuns && false);
+		}, 100);
+	});
+	const handleClick = () => {
+		setShowRaspuns(!showRaspuns);
+	};
+	return (
 		<div ref={ref} className="mb-5 flex flex-col gap-5" id="container-dd">
 			<button onClick={handleClick} className="flex items-center justify-between text-start">
 				<Typography variant="h6" className=" text-start font-[500] text-alb-site md:text-xl ">

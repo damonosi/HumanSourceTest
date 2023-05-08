@@ -1,6 +1,5 @@
 import FormWrapper from "../../FormWrapper";
 
-
 import { useState } from "react";
 import Da from "../../../../public/imagini/formular/sofer/negru/da.svg";
 import DaAlb from "../../../../public/imagini/formular/sofer/alb/da.svg";
