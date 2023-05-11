@@ -79,11 +79,12 @@ const Formular = ({ params }: { params: { lang: string; country: string } }) => 
 						disabled={disabled}
 						className={`md:px-5"  flex w-fit items-center justify-center gap-3 rounded-2xl border border-gri-brand px-2 py-2 text-gri-brand md:py-4  ${
 							disabled
-								? "cursor-not-allowed bg-gri-bg text-gri-brand opacity-50"
+								? "cursor-not-allowed bg-gri-bg text-gri-brand opacity-20"
 								: "bg-alb-site hover:bg-gri-brand hover:text-alb-site"
 						} `}
 					>
-						<span>CONTINUA</span> <ArrowSmallRightIcon strokeWidth={2} className="h-5 w-5" />
+						<span className={`  ${disabled ? " text-gri-bg " : ""} `}>CONTINUA</span>{" "}
+						<ArrowSmallRightIcon strokeWidth={2} className={`h-5 w-5  ${disabled ? " text-gri-bg " : ""} `} />
 					</button>
 				</div>
 			</div>

@@ -15,7 +15,7 @@ const FormWrapper = ({ intrebare, children }: IWrapperProps) => {
 					{intrebare}
 				</Typography>
 			</div>
-			<div className="flex min-h-[200px]  w-full flex-col items-center justify-center pt-7 md:min-h-[400px] md:py-12">
+			<div className="flex min-h-[250px]  w-full flex-col items-center justify-center pt-7 md:min-h-[400px] md:py-12">
 				{children}
 			</div>
 		</div>
