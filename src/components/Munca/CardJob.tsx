@@ -21,14 +21,14 @@ const CardJob = ({ params, data, titlu, descriere, id, src, salariu }: ICardJob)
 	return (
 		<div
 			key={id}
-			className="relative   flex h-[350px]  w-full flex-col justify-end overflow-hidden  rounded-2xl border-none bg-transparent text-[#383A3C]  shadow hover:border  hover:shadow-xl  md:h-[420px]  "
+			className="relative flex  h-fit   w-full flex-col justify-end overflow-hidden  rounded-2xl border-none bg-transparent text-[#383A3C]  shadow hover:border  hover:shadow-xl    "
 		>
-			<div id="img-container" className=" relative z-40 flex h-2/5  w-full ">
-				<Image alt="background" className="w-full object-fill " placeholder="blur" src={src} />
+			<div id="img-container" className=" relative z-40 flex h-1/3 w-full overflow-hidden ">
+				<Image alt="background" className="w-full " placeholder="blur" src={src} />
 			</div>
 			<div
 				key="container-text"
-				className="z-20 flex  h-3/5 flex-col justify-center gap-3 py-2 px-4 text-start  "
+				className="z-20 flex  h-2/3 flex-col justify-center gap-3 py-2 px-4 text-start  "
 				id="container-text-bloguri"
 			>
 				<Typography variant="paragraph" className="z-20 text-[18px] font-[350]  opacity-50 ">

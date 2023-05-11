@@ -107,7 +107,7 @@ const CardBlog = ({ data, titlu, continut }: ICardBlog) => {
 						{continut}
 					</Typography>
 					<button
-						className={`font-sm md:font-base mt-4 bg-transparent py-5 text-start text-gri-bg shadow-none hover:scale-105 hover:shadow-none ${
+						className={`bg-transparent py-2 text-start text-sm text-gri-bg shadow-none hover:scale-105 hover:shadow-none md:mt-4 md:py-5 md:text-base ${
 							hovered && "text-alb-site"
 						}`}
 					>

@@ -14,7 +14,7 @@ const AvantajeSection = () => {
 				Avantajele Human Source
 			</Typography>
 
-			<div className="mb-20 grid w-full grid-cols-2 place-items-center gap-x-5 gap-y-10 md:px-2 2xl:grid-cols-4    ">
+			<div className="mb-20 grid w-full grid-cols-2 place-items-center gap-x-5 gap-y-10 2xl:grid-cols-4    ">
 				{dateAvantaje.map(({ titlu, titluMobil, descriere, icon, id }) => (
 					<CardAvantaje titluMobil={titluMobil} key={id} titlu={titlu} descriere={descriere} icon={icon} />
 				))}

@@ -15,7 +15,7 @@ export async function generateStaticParams() {
 }
 
 const CategorieJoburi = ({ params }: { params: { lang: string; country: string } }) => {
-	const [selectedCategory, setSelectedCategory] = useState("medical");
+	const [selectedCategory, setSelectedCategory] = useState("transport");
 	const handleSetCategory = (category: string) => {
 		setSelectedCategory(category);
 	};
@@ -33,7 +33,7 @@ const CategorieJoburi = ({ params }: { params: { lang: string; country: string }
 						{selectedCategory}
 					</Link>
 				</Breadcrumbs>
-				<Search />
+				<Search setSelectedCategory={setSelectedCategory} />
 
 				{/* joburi dupa categorie */}
 				<section className="flex flex-col gap-9">

@@ -11,7 +11,7 @@ interface ICardAvantaje {
 }
 const CardAvantaje = ({ titlu, titluMobil, descriere, icon }: ICardAvantaje) => {
 	return (
-		<Card className="w-full  max-w-[300px] border-0 border-l-0 bg-alb-site shadow-none md:px-2   ">
+		<Card className="w-full  max-w-[300px] border-0 border-l-0 bg-alb-site shadow-none    ">
 			<CardBody className="flex h-fit flex-col items-center gap-2 px-0  ">
 				<div className="flex flex-col gap-4">
 					<div className="flex items-center justify-center text-[#BF4546]">

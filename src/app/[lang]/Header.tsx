@@ -47,7 +47,7 @@ function NavList({
 
 			<Button
 				ripple={true}
-				className=" rounded-full  bg-red-800 px-4 py-3 text-white hover:shadow-none md:inline-block"
+				className=" rounded-full  bg-rosu-brand px-4 py-2 text-white hover:shadow-none md:inline-block"
 				onClick={() => {
 					router.push(`${params.lang}/formular`);
 					handleCloseMenu();
@@ -104,16 +104,16 @@ export function Header({ params }: { params: { lang: string; country: string } }
 					<LanguageSwitcher params={params} className=" md:flex" />
 				</div>
 
-				<div className="hidden  w-full items-center justify-end gap-6 md:flex">
+				<div className="hidden  w-full items-center justify-end gap-6 lg:flex">
 					<NavList handleCloseMenu={handleCloseMenu} params={params} />
 				</div>
-				<div className="flex gap-2">
-					<button className="md:hidden" onClick={handleOpen}>
+				<div className="flex gap-2 lg:hidden">
+					<button className="" onClick={handleOpen}>
 						{open ? menuCloseIcon : menuOpenIcon}
 					</button>
 				</div>
 			</div>
-			<MobileNav className="bg-alb-site  px-4 py-4 text-center md:hidden" open={open}>
+			<MobileNav className="bg-alb-site  px-4 py-4 text-center lg:hidden" open={open}>
 				<NavList handleCloseMenu={handleCloseMenu} params={params} />
 			</MobileNav>
 		</Navbar>

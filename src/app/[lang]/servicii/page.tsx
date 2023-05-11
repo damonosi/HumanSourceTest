@@ -22,7 +22,7 @@ const CardHeroServicii = ({ children, text }: Props) => {
 };
 const ButonSolicitaOferta = () => {
 	return (
-		<button className="flex items-center gap-4 rounded-2xl border border-gri-bg  py-4 px-5 font-bold text-gri-brand ">
+		<button className="flex items-center gap-4 rounded-2xl border border-gri-bg py-4 px-5  font-bold text-gri-brand hover:bg-gri-brand hover:text-alb-site ">
 			<span className="text-sm">Solicita oferta</span>
 		</button>
 	);

@@ -2,7 +2,7 @@
 import { Input, Select, Option } from "@material-tailwind/react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { AiOutlineSearch } from "react-icons/ai";
-import { useEffect } from "react";
+import { Dispatch, SetStateAction, useEffect } from "react";
 
 type Inputs = {
 	searchInput: string;
@@ -10,7 +10,7 @@ type Inputs = {
 	locatie: string;
 };
 
-const Search = () => {
+const Search = ({ setSelectedCategory }: { setSelectedCategory: Dispatch<SetStateAction<string>> }) => {
 	const {
 		register,
 		handleSubmit,
@@ -23,7 +23,10 @@ const Search = () => {
 	const selectLocatie = watch("locatie");
 	/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
        // @ts-ignore */
-	const handleChangeDomeniu = (e) => setValue("domeniu", e);
+	const handleChangeDomeniu = (e) => {
+		setSelectedCategory(e);
+		setValue("domeniu", e);
+	};
 
 	/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
       // @ts-ignore */
@@ -50,13 +53,12 @@ const Search = () => {
 
 			<Select size="lg" onChange={handleChangeDomeniu} variant="outlined" value={selectDomeniu} label="Domeniu">
 				<Option value="medical">medical</Option>
-				<Option value="sofer">sofer</Option>
+				<Option value="sofer">transport</Option>
 				<Option value="constructii">constructii</Option>
 			</Select>
 			<Select onChange={handleChangeLocatie} variant="outlined" size="lg" value={selectLocatie} label="Locatie">
 				<Option value="romania">romania</Option>
 				<Option value="italia">italia</Option>
-				<Option value="germania">germania</Option>
 			</Select>
 
 			<button type="submit" className="rounded-2xl bg-gri-deschis-bg py-4 px-12">
