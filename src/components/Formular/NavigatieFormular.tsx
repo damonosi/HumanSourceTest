@@ -22,12 +22,12 @@ const NavigatieFormular = ({
 	disabled,
 }: IButtonProps) => {
 	const stilComunButon =
-		"absolute flex  w-fit items-center justify-center border border-gri-brand gap-1 rounded-2xl px-2 py-2 text-gri-brand md:py-4 md:px-5";
+		"absolute flex  w-fit items-center text-center justify-center border border-gri-brand gap-1 rounded-2xl px-2 py-2 text-gri-brand md:py-4 md:px-5";
 	return (
 		<div className="relative flex w-full items-center justify-between px-2 py-12  md:px-16">
 			{!isFirstStep && (
 				<button
-					className={`${stilComunButon} left-0 hover:bg-gri-brand hover:text-alb-site`}
+					className={` ${stilComunButon} left-0 hover:bg-gri-brand hover:text-alb-site`}
 					onClick={back}
 					type="button"
 				>
@@ -42,13 +42,13 @@ const NavigatieFormular = ({
 			{!isLastStep ? (
 				<button
 					className={` right-0 ${stilComunButon}   ${
-						disabled ? "cursor-not-allowed bg-gri-bg  opacity-20" : "bg-alb-site hover:bg-gri-brand hover:text-alb-site"
+						disabled ? "cursor-not-allowed bg-gri-bg  opacity-50" : "bg-alb-site hover:bg-gri-brand hover:text-alb-site"
 					}`}
 					onClick={next}
 					type="button"
 					disabled={disabled}
 				>
-					<span className={` ${disabled ? "text-gri-bg" : " "}      text-sm md:text-lg`}>Continua</span>{" "}
+					<span className={` ${disabled ? "#1d2328" : " "}      text-sm md:text-lg`}>Continua</span>{" "}
 					<ArrowSmallRightIcon
 						strokeWidth={2}
 						className={` ${disabled ? "text-gri-bg" : " "}  h-3 w-3 md:h-5 md:w-5 `}

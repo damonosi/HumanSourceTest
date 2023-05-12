@@ -77,13 +77,13 @@ const Formular = ({ params }: { params: { lang: string; country: string } }) => 
 					<button
 						onClick={() => router.push(`${params.lang}/formular/${selectedCategory.toLowerCase()}`)}
 						disabled={disabled}
-						className={`md:px-5"  flex w-fit items-center justify-center gap-3 rounded-2xl border border-gri-brand px-2 py-2 text-gri-brand md:py-4  ${
+						className={`md:px-5"  flex w-fit items-center justify-center gap-1 rounded-2xl border border-gri-brand px-2 py-2 text-center text-gri-brand md:py-4  ${
 							disabled
-								? "cursor-not-allowed bg-gri-bg text-gri-brand opacity-40"
+								? "cursor-not-allowed border-0 bg-gri-bg text-gri-brand opacity-40"
 								: "bg-alb-site hover:bg-gri-brand hover:text-alb-site"
 						} `}
 					>
-						<span className={`  ${disabled ? " #1d2328" : ""} `}>CONTINUA</span>{" "}
+						<span className={`  ${disabled ? "#1d2328" : ""} `}>CONTINUA</span>{" "}
 						<ArrowSmallRightIcon strokeWidth={2} className={`h-5 w-5  ${disabled ? " text-gri-bg " : ""} `} />
 					</button>
 				</div>
