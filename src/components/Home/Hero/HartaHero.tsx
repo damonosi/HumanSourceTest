@@ -11,7 +11,7 @@ import IPin6 from "@/public/imagini/hero/pinguri/iPing6.png";
 import IPin7 from "@/public/imagini/hero/pinguri/iPing7.png";
 import IPin8 from "@/public/imagini/hero/pinguri/iPing8.png";
 import IPin9 from "@/public/imagini/hero/pinguri/iPing9.png";
-import MPin1 from "@/public/imagini/hero/pinguri/mobil/MPing1.png";
+
 import Pin1 from "@/public/imagini/hero/pinguri/ping1.svg";
 import InViewWrapper from "@/utils/InViewWrapper";
 import { AnimatePresence } from "framer-motion";

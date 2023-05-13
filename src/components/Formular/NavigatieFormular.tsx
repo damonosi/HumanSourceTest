@@ -22,7 +22,7 @@ const NavigatieFormular = ({
 	disabled,
 }: IButtonProps) => {
 	const stilComunButon =
-		"absolute flex  w-fit items-center text-center justify-center border border-gri-brand gap-1 rounded-2xl px-2 py-2 text-gri-brand md:py-4 md:px-5";
+		"absolute flex  w-fit items-center content-center text-center justify-center border border-gri-brand gap-1 rounded-2xl px-2 py-2 text-gri-brand md:py-4 md:px-5";
 	return (
 		<div className="relative flex w-full items-center justify-between px-2 py-12  md:px-16">
 			{!isFirstStep && (
