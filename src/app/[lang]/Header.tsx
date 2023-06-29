@@ -45,9 +45,9 @@ const DropdownAplica = ({
 	return (
 		<Menu open={openMenu} handler={setOpenMenu} placement="bottom">
 			<MenuHandler>
-				<Button
+				<button
 					{...triggers}
-					className=" flex w-fit items-center justify-start gap-[10px] rounded-full bg-transparent px-4 py-2 pl-1 text-center text-gri-brand shadow-none hover:shadow-none focus:shadow-none  md:h-[60px] md:gap-[0.62rem] "
+					className="flex w-fit items-center justify-start gap-[10px]  px-4 py-2 pl-1  text-center text-xs font-bold text-gri-brand    md:h-[60px] md:gap-[0.62rem]"
 				>
 					{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
                 // @ts-ignore */}
@@ -62,7 +62,7 @@ const DropdownAplica = ({
 					>
 						<path d="M0.773438 8.5L5.01608 12.7426L9.25872 8.5" stroke="#383A3C" strokeWidth="2" />
 					</svg>
-				</Button>
+				</button>
 			</MenuHandler>
 			<MenuList {...triggers}>
 				<MenuItem>
@@ -93,12 +93,12 @@ const DropdownServicii = ({
 	return (
 		<Menu open={openMenu} handler={setOpenMenu} placement="bottom">
 			<MenuHandler>
-				<Button
+				<button
 					{...triggers}
-					className="flex w-fit items-center justify-start gap-[10px] rounded-full bg-transparent px-4 py-2 pl-1 text-center text-gri-brand shadow-none hover:shadow-none focus:shadow-none  md:h-[60px] md:gap-[0.62rem]"
+					className="flex w-fit items-center justify-start gap-[10px]  px-4 py-2 pl-1  text-center text-xs font-bold text-gri-brand    md:h-[60px] md:gap-[0.62rem]"
 				>
 					{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
-                // @ts-ignore */}
+                    // @ts-ignore */}
 					{t("servicii")}
 					<svg
 						width="10"
@@ -110,7 +110,7 @@ const DropdownServicii = ({
 					>
 						<path d="M0.773438 8.5L5.01608 12.7426L9.25872 8.5" stroke="#383A3C" strokeWidth="2" />
 					</svg>
-				</Button>
+				</button>
 			</MenuHandler>
 			<MenuList {...triggers}>
 				<MenuItem>
@@ -191,7 +191,7 @@ export function Header({ params }: { params: { lang: string; country: string } }
 	return (
 		<Navbar
 			fullWidth
-			className="fixed z-50 h-[60px] w-full  items-center  justify-center border-b border-alb-site bg-alb-site  py-0 px-0  md:px-[70px] "
+			className="fixed z-50 h-[60px] w-full  items-center  justify-center border-b border-alb-site bg-alb-site  bg-opacity-100 py-0  px-0 md:px-[70px] "
 		>
 			<div className="container mx-auto flex h-[60px]  w-full items-center justify-between  px-4 text-gri-brand md:px-0">
 				<div className="flex w-1/3 ">
