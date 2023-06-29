@@ -1,6 +1,6 @@
 "use client";
 import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcher";
-import { Button, MobileNav, Navbar, Typography } from "@material-tailwind/react";
+import { Button, Menu, MenuHandler, MenuItem, MenuList, MobileNav, Navbar, Typography } from "@material-tailwind/react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -8,6 +8,7 @@ import Hamburger from "@/public/imagini/hamburger.svg";
 import Logo from "@/public/imagini/logo.svg";
 import { useTranslation } from "../i18n/client";
 import { useRouter } from "next/navigation";
+import { ArrowSmallDownIcon } from "@heroicons/react/24/outline";
 
 interface INavItem {
 	label: string;
@@ -16,13 +17,128 @@ interface INavItem {
 }
 function NavItem({ label, href, handleCloseMenu }: INavItem) {
 	return (
-		<Link href={href}>
-			<Typography variant="small" className="flex  items-center gap-1.5 p-1 text-gri-brand" onClick={handleCloseMenu}>
+		<Link className="flex items-center md:h-[60px] md:justify-center" href={href}>
+			<Typography
+				variant="small"
+				className="flex  items-center gap-1.5 p-1 font-[350]  text-gri-brand"
+				onClick={handleCloseMenu}
+			>
 				{label}
 			</Typography>
 		</Link>
 	);
 }
+const DropdownAplica = ({
+	t,
+	params,
+	handleCloseMenu,
+}: {
+	t: any;
+	params: { lang: string; country: string };
+	handleCloseMenu: () => void;
+}) => {
+	const [openMenu, setOpenMenu] = useState(false);
+
+	const triggers = {
+		onMouseEnter: () => setOpenMenu(true),
+		onMouseLeave: () => setOpenMenu(false),
+	};
+	return (
+		<Menu open={openMenu} handler={setOpenMenu} placement="bottom">
+			<MenuHandler>
+				<Button
+					{...triggers}
+					className=" flex w-fit items-center justify-start gap-[10px] rounded-full bg-transparent px-4 py-2 pl-1 text-center text-gri-brand shadow-none hover:shadow-none  md:h-[60px] md:gap-[0.62rem]"
+				>
+					{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
+                // @ts-ignore */}
+					{t("aplica")}
+					<svg
+						width="10"
+						className={` ${openMenu ? "rotate-180" : ""}  `}
+						height="17"
+						viewBox="0 0 10 17"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path d="M0.773438 8.5L5.01608 12.7426L9.25872 8.5" stroke="#383A3C" strokeWidth="2" />
+					</svg>
+				</Button>
+			</MenuHandler>
+			<MenuList {...triggers}>
+				<MenuItem>
+					<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/servicii`} label={t("aplicaMuncitor")} />
+				</MenuItem>
+				<MenuItem>
+					<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/servicii`} label={t("aplicaAngajator")} />
+				</MenuItem>
+			</MenuList>
+		</Menu>
+	);
+};
+const DropdownServicii = ({
+	t,
+	params,
+	handleCloseMenu,
+}: {
+	t: any;
+	params: { lang: string; country: string };
+	handleCloseMenu: () => void;
+}) => {
+	const [openMenu, setOpenMenu] = useState(false);
+
+	const triggers = {
+		onMouseEnter: () => setOpenMenu(true),
+		onMouseLeave: () => setOpenMenu(false),
+	};
+	return (
+		<Menu open={openMenu} handler={setOpenMenu} placement="bottom">
+			<MenuHandler>
+				<Button
+					{...triggers}
+					className="flex w-fit items-center justify-start gap-[10px] rounded-full bg-transparent px-4 py-2 pl-1 text-center text-gri-brand shadow-none hover:shadow-none  md:h-[60px] md:gap-[0.62rem]"
+				>
+					{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
+                // @ts-ignore */}
+					{t("servicii")}
+					<svg
+						width="10"
+						className={` ${openMenu ? "rotate-180" : ""}  `}
+						height="17"
+						viewBox="0 0 10 17"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path d="M0.773438 8.5L5.01608 12.7426L9.25872 8.5" stroke="#383A3C" strokeWidth="2" />
+					</svg>
+				</Button>
+			</MenuHandler>
+			<MenuList {...triggers}>
+				<MenuItem>
+					<NavItem
+						handleCloseMenu={handleCloseMenu}
+						href={`${params.lang}/servicii/#sectiune-servicii-1`}
+						label={t("serviciiLeasing")}
+					/>
+				</MenuItem>
+				<MenuItem>
+					<NavItem
+						handleCloseMenu={handleCloseMenu}
+						href={`${params.lang}/servicii/#sectiune-servicii-2`}
+						label={t("serviciiRecrutare")}
+					/>
+				</MenuItem>
+				<MenuItem>
+					<NavItem
+						handleCloseMenu={handleCloseMenu}
+						href={`${params.lang}/servicii//#sectiune-servicii-3`}
+						label={t("serviciiPayroll")}
+					/>
+				</MenuItem>
+			</MenuList>
+		</Menu>
+	);
+};
 
 function NavList({
 	params,
@@ -31,32 +147,20 @@ function NavList({
 	params: { lang: string; country: string };
 	handleCloseMenu: () => void;
 }) {
-	const router = useRouter();
 	const { t } = useTranslation(params.lang, "header");
 	return (
-		<ul className=" flex w-full flex-col justify-end  gap-3 md:flex-row md:items-center md:gap-8">
+		<ul className=" flex w-full flex-col justify-end gap-3 text-gri-brand  md:h-[60px] md:flex-row md:items-center md:gap-[1.25rem]">
 			{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
-              // @ts-ignore */}
+            // @ts-ignore */}
 			<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/despre-noi`} label={t("despre")} />
 			<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/locuri-de-munca`} label={t("munca")} />
 			<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/contact`} label={t("contact")} />
-			<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/servicii`} label={t("servicii")} />
+			<DropdownServicii params={params} handleCloseMenu={handleCloseMenu} t={t} />
 			{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
-              // @ts-ignore */}
+            // @ts-ignore */}
 			<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/blog`} label={t("blog")} />
 
-			<Button
-				ripple={true}
-				className=" rounded-full  bg-rosu-brand px-4 py-2 text-white hover:shadow-none md:inline-block"
-				onClick={() => {
-					router.push(`${params.lang}/formular`);
-					handleCloseMenu();
-				}}
-			>
-				{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
-              // @ts-ignore */}
-				{t("buton")}
-			</Button>
+			<DropdownAplica params={params} handleCloseMenu={handleCloseMenu} t={t} />
 		</ul>
 	);
 }

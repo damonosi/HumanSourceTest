@@ -3,6 +3,11 @@
 	"munca": "Lavori",
 	"contact": "Contatto",
 	"servicii": "Servizi",
+	"serviciiLeasing": "PERSONALE",
+	"serviciiRecrutare": "RECLUTAMENTO E SELEZIONE",
+	"serviciiPayroll": "PAGA E AMMINISTRAZIONE",
 	"blog": "Blog",
-	"buton": "FARE DOMANDA A"
+	"aplica": "FARE DOMANDA A",
+	"aplicaMuncitor": "LAVORATORE",
+	"aplicaAngajator": "DATORE DI LAVORO"
 }

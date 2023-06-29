@@ -3,6 +3,11 @@
 	"munca": "Locuri de munca",
 	"contact": "Contact",
 	"servicii": "Servicii",
+	"serviciiLeasing": "LEASING DE PERSONAL",
+	"serviciiRecrutare": "RECRUTARE SI SELECTIE",
+	"serviciiPayroll": "PAYROLL SI ADMINISTRARE",
 	"blog": "Blog",
-	"buton": "APLICA"
+	"aplica": "APLICA",
+	"aplicaMuncitor": "MUNCITOR",
+	"aplicaAngajator": "ANGAJATOR"
 }

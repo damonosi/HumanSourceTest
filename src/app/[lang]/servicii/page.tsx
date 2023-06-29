@@ -3,6 +3,7 @@ import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 import ServiciiCover from "@/public/imagini/servicii/hero-servicii.png";
 import ImgSec1 from "@/public/imagini/servicii/img-sec-1.png";
 import ImgSec2 from "@/public/imagini/servicii/img-sec-2.png";
+import ImgSec3 from "@/public/imagini/servicii/img-sec-3.png";
 import { Typography } from "@material-tailwind/react";
 import AttachEmailOutlinedIcon from "@mui/icons-material/AttachEmailOutlined";
 import GroupAddOutlinedIcon from "@mui/icons-material/GroupAddOutlined";
@@ -68,7 +69,9 @@ const ServiciiPage = () => {
 							<Image alt="cover-servicii" placeholder="blur" src={ServiciiCover} />{" "}
 						</div>
 					</section>
-					<section className="flex w-full flex-col items-center gap-8 md:flex-row" id="sectiune-servicii-1">
+					<div className='h-[1px] w-full ' id='sectiune-servicii-1'></div>
+
+					<section className="flex w-full flex-col items-center gap-8 md:flex-row" >
 						<div className="flex w-full items-center justify-center md:w-1/2" id="container-imagine">
 							{" "}
 							<Image alt="cover-servicii" placeholder="blur" src={ImgSec1} />{" "}
@@ -84,7 +87,8 @@ const ServiciiPage = () => {
 							<ButonSolicitaOferta />
 						</div>
 					</section>
-					<section className="flex w-full flex-col-reverse items-center gap-8 md:flex-row" id="sectiune-servicii-2">
+					<div className='h-[1px] w-full' id='sectiune-servicii-2'></div>
+					<section className="flex w-full flex-col-reverse items-center gap-8 md:flex-row" >
 						<div className="flex h-full flex-col items-start gap-12 md:w-1/2">
 							<Typography variant="h3">Administram documentatia</Typography>
 							<Typography variant="paragraph">
@@ -100,10 +104,11 @@ const ServiciiPage = () => {
 							<Image alt="cover-servicii" placeholder="blur" src={ImgSec2} />{" "}
 						</div>
 					</section>
-					<section className="flex w-full flex-col items-center gap-8 md:flex-row" id="sectiune-servicii-3">
+					<div className='h-[1px] w-full' id='sectiune-servicii-3'></div>
+					<section className="flex w-full flex-col items-center gap-8 md:flex-row" >
 						<div className="flex w-full items-center justify-center md:w-1/2" id="container-imagine">
 							{" "}
-							<Image alt="cover-servicii" placeholder="blur" src={ImgSec1} />{" "}
+							<Image alt="cover-servicii" placeholder="blur" src={ImgSec3} />{" "}
 						</div>
 						<div className="flex h-full flex-col items-start gap-12 md:w-1/2">
 							<Typography variant="h3">Iti construim echipa</Typography>
