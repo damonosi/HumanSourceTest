@@ -65,10 +65,10 @@ const FormularMedic = ({ params }: { params: { lang: string; country: string } }
 				<Link className="text-gri-brand" href={`${params.lang}/`}>
 					Home
 				</Link>
-				<Link className="text-gri-brand" href={`${params.lang}/formular`}>
+				<Link className="text-gri-brand" href={`${params.lang}/formular/muncitor`}>
 					Formular
 				</Link>
-				<Link className="text-red-600" href={`${params.lang}/formular`}>
+				<Link className="text-red-600" href={`${params.lang}/formular/muncitor`}>
 					Medical
 				</Link>
 			</Breadcrumbs>

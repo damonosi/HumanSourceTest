@@ -14,7 +14,7 @@ interface IpageProps {
 	params: { lang: string; id: number };
 }
 
-const JobCategory: FC<IpageProps> = ({ params }) => {
+const AplicareJob: FC<IpageProps> = ({ params }) => {
 	return (
 		<section className="min-h-screen bg-[#E5E5E5]  pb-24 text-start md:px-20">
 			<div className="container mx-auto grid ">
@@ -161,4 +161,4 @@ const JobCategory: FC<IpageProps> = ({ params }) => {
 	);
 };
 
-export default JobCategory;
+export default AplicareJob;

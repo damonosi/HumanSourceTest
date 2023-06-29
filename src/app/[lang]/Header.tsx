@@ -75,10 +75,18 @@ const DropdownAplica = ({
 			</MenuHandler>
 			<MenuList {...triggers}>
 				<MenuItem>
-					<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/servicii`} label={t("aplicaMuncitor")} />
+					<NavItem
+						handleCloseMenu={handleCloseMenu}
+						href={`${params.lang}/formular/muncitor`}
+						label={t("aplicaMuncitor")}
+					/>
 				</MenuItem>
 				<MenuItem>
-					<NavItem handleCloseMenu={handleCloseMenu} href={`${params.lang}/servicii`} label={t("aplicaAngajator")} />
+					<NavItem
+						handleCloseMenu={handleCloseMenu}
+						href={`${params.lang}/formular/angajator`}
+						label={t("aplicaAngajator")}
+					/>
 				</MenuItem>
 			</MenuList>
 		</Menu>
