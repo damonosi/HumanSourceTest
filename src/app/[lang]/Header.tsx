@@ -7,8 +7,7 @@ import { useState } from "react";
 import Hamburger from "@/public/imagini/hamburger.svg";
 import Logo from "@/public/imagini/logo.svg";
 import { useTranslation } from "../i18n/client";
-import { useRouter } from "next/navigation";
-import { ArrowSmallDownIcon } from "@heroicons/react/24/outline";
+
 
 interface INavItem {
 	label: string;
@@ -48,7 +47,7 @@ const DropdownAplica = ({
 			<MenuHandler>
 				<Button
 					{...triggers}
-					className=" flex w-fit items-center justify-start gap-[10px] rounded-full bg-transparent px-4 py-2 pl-1 text-center text-gri-brand shadow-none hover:shadow-none  md:h-[60px] md:gap-[0.62rem]"
+					className=" flex w-fit items-center justify-start gap-[10px] rounded-full bg-transparent px-4 py-2 pl-1 text-center text-gri-brand shadow-none hover:shadow-none focus:shadow-none  md:h-[60px] md:gap-[0.62rem] "
 				>
 					{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
                 // @ts-ignore */}
@@ -96,7 +95,7 @@ const DropdownServicii = ({
 			<MenuHandler>
 				<Button
 					{...triggers}
-					className="flex w-fit items-center justify-start gap-[10px] rounded-full bg-transparent px-4 py-2 pl-1 text-center text-gri-brand shadow-none hover:shadow-none  md:h-[60px] md:gap-[0.62rem]"
+					className="flex w-fit items-center justify-start gap-[10px] rounded-full bg-transparent px-4 py-2 pl-1 text-center text-gri-brand shadow-none hover:shadow-none focus:shadow-none  md:h-[60px] md:gap-[0.62rem]"
 				>
 					{/* // eslint-disable-next-line @typescript-eslint/ban-ts-comment 
                 // @ts-ignore */}
