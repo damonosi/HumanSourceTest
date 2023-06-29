@@ -1,3 +1,4 @@
+"use client";
 import FormWrapper from "../../FormWrapper";
 import experienta from "./data";
 
